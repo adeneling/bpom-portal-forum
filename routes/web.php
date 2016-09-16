@@ -24,6 +24,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('media-promosi','MediaPromosiController');
 	Route::resource('pasar-aman','PasarAmanController');
 	Route::resource('pedoman','PedomanController');
+	Route::resource('sipaman','SipamanController');
 	Route::resource('peta-situs','PetaSitusController');
 	Route::resource('program','ProgramController');
 });
