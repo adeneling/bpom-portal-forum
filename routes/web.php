@@ -31,4 +31,5 @@ Route::group(['namespace' => 'Front'], function(){
 /* BACK */
 Route::group(['namespace' => 'Back'], function(){
 	Route::resource('admin', 'BackController');
+	Route::resource('groups', 'UserControl\GroupController');
 });

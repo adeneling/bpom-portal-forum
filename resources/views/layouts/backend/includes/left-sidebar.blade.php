@@ -24,16 +24,16 @@
 				</div>
 			</div>
 		</li>
-		<li class="bold"><a href="{{ url('/') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> {{ trans('menu.dashboard') }}</a>
+		<li class="bold"><a href="{{ url('admin') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
 		</li>
 		<li class="no-padding">
 			<ul class="collapsible collapsible-accordion">
-				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> {{ trans('menu.userControl') }}</a>
+				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
 					<div class="collapsible-body">
 						<ul>
-							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{-- route('groups') --}}">{{ trans('menu.group') }}</a>
+							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{-- route('groups') --}}"> Grup</a>
 							</li>                                   
-							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{-- route('users') --}}">{{ trans('menu.user') }}</a>
+							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{-- route('users') --}}"> User</a>
 							</li>
 						</ul>
 					</div>
