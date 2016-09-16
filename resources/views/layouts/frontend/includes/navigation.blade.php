@@ -8,27 +8,6 @@
 				<li><a href="hubungi-kami">HUBUNGI KAMI</a></li>
 				<li><a href="sipaman">SIPAMAN</a></li>
 				<li><a href="peta-situs">PETA SITUS</a></li>
-				<li>
-					<div class="btn-group">
-						<button type="button" class="btn btn-link dropdown-toggle btn-xs" data-toggle="dropdown"><img src="{{ asset('assets/frontend/img/flags/United-Kingdom.png', config('app.https')) }}" alt="United Kingdom"> United Kingdom <span class="caret"></span></button>
-						<ul class="dropdown-menu dropdown-menu-right country-selector" role="menu">
-							<li>
-								<a href="#"><img src="{{ asset('assets/frontend/img/flags/United-Kingdom.png', config('app.https')) }}" alt="United Kingdom"> United Kingdom</a>
-							</li>
-							<li>
-								<a href="#"><img src="{{ asset('assets/frontend/img/flags/Japan.png', config('app.https')) }}" alt="Japan"> Japan</a>
-							</li>
-							<li>
-								<a href="#"><img src="{{ asset('assets/frontend/img/flags/China.png', config('app.https')) }}" alt="China"> China</a>
-							</li>
-							<li>
-								<a href="#"><img src="{{ asset('assets/frontend/img/flags/Germany.png', config('app.https')) }}" alt="Germany"> Germany</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li><a href="#">Help</a></li>
-				<li><a href="#">Support</a></li>
 			</ul>
 			<div class="searchbox">
 				<form method="post">
