@@ -7,9 +7,9 @@
 	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
 	<meta name="author" content="The Develovers">
 	<!-- CSS -->
-	<link href="{{ asset('assets/frontend/css/bootstrap.css', config('app.https')) }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/font-awesome.min.css', config('app.https')) }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/frontend/css/main.css', config('app.https')) }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/my-custom-styles.css', config('app.https')) }}" rel="stylesheet" type="text/css">
 	<!-- IE 9 Fallback-->
 	<!--[if IE 9]>
