@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+/* FRONT */
 Route::group(['namespace' => 'Front'], function(){
 	Route::resource('beranda','BerandaController');
 	Route::resource('faq','FAQController');
