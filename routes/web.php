@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/backend/dashboard')->withTitle('Dashboard');
 });
 /* FRONT */
-Route::group(['namespace' => 'Front'], function(){
+Route::group(['namespace' => 'Front', 'https' => config('app.https')], function(){
 	Route::resource('beranda','BerandaController');
 	Route::resource('faq','FAQController');
 	Route::resource('forum-fasilitator','ForumFasilitatorController');
