@@ -27,7 +27,7 @@
 				<i class="fa fa-bars"></i>
 			</button>
 			<a href="#" class="navbar-brand navbar-logo navbar-logo-bigger">
-				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png', config('app.https')) }}" alt="Repute - Responsive Multipurpose Bootstrap Theme">
+				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}" alt="Repute - Responsive Multipurpose Bootstrap Theme">
 			</a>
 		</div>
 		<!-- MAIN NAVIGATION -->

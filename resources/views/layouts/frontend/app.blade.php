@@ -8,9 +8,9 @@
 	<meta name="author" content="The Develovers">
 	<!-- CSS -->
 	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/frontend/css/font-awesome.min.css', config('app.https')) }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/frontend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/frontend/css/my-custom-styles.css', config('app.https')) }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/frontend/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
 	<!-- IE 9 Fallback-->
 	<!--[if IE 9]>
 		<link href="assets/css/ie.css" rel="stylesheet">
@@ -19,11 +19,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
 	<!-- FAVICONS -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/frontend/ico/repute144x144.png', config('app.https')) }}">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/frontend/ico/repute114x114.png', config('app.https')) }}">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/frontend/ico/repute72x72.png', config('app.https')) }}">
-	<link rel="apple-touch-icon-precomposed" href="{{ asset('assets/frontend/ico/repute57x57.png', config('app.https')) }}">
-	<link rel="shortcut icon" href="{{ asset('assets/frontend/ico/favicon.png', config('app.https')) }}">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/frontend/ico/repute144x144.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/frontend/ico/repute114x114.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/frontend/ico/repute72x72.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ asset('assets/frontend/ico/repute57x57.png') }}">
+	<link rel="shortcut icon" href="{{ asset('assets/frontend/ico/favicon.png') }}">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 			<div id="carousel-hero" class="slick-carousel">
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="{{ asset('assets/frontend/img/sliders/slider3-h500.png', config('app.https')) }}" class="img-responsive" alt="Slider Image">
+						<img src="{{ asset('assets/frontend/img/sliders/slider3-h500.png') }}" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">CLEAN &amp; ELEGANT DESIGN</h2>
 							<p class="lead">Giving valuable reputation and credibility to your business</p>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png', config('app.https')) }}" class="img-responsive" alt="Slider Image">
+						<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png') }}" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">ULTRA RESPONSIVE</h2>
 							<p class="lead">Leave it to the theme, it knows how to deal with screen sizes</p>
@@ -51,7 +51,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="{{ asset('assets/frontend/img/sliders/slider1-h500.png', config('app.https')) }}" class="img-responsive" alt="Slider Image">
+						<img src="{{ asset('assets/frontend/img/sliders/slider1-h500.png') }}" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">EASY TO CUSTOMIZE</h2>
 							<p class="lead">Readable code, well documented and FREE support</p>
@@ -89,7 +89,7 @@
 						<p>Dynamically customize backward-compatible processes via front-end models. Distinctively evisculate an expanded array of scenarios after virtual information. Professionally predominate technically sound resources through impactful mindshare. Efficiently drive viral interfaces without inexpensive value. Credibly.</p>
 					</div>
 					<div class="col-md-6">
-						<img src="{{ asset('assets/frontend/img/intro-img.png', config('app.https')) }}" class="img-responsive" alt="Image Intro">
+						<img src="{{ asset('assets/frontend/img/intro-img.png') }}" class="img-responsive" alt="Image Intro">
 					</div>
 				</div>
 			</div>
@@ -137,22 +137,22 @@
 				<h2 class="section-heading sr-only">WHY REPUTE</h2>
 				<div class="tab-content">
 					<div class="tab-pane fade in active text-center" id="tab-bottom1">
-						<img src="{{ asset('assets/frontend/img/hero-unit-obj.png', config('app.https')) }}" class="img-responsive center-block margin-bottom-30px" alt="Ultra Responsive">
+						<img src="{{ asset('assets/frontend/img/hero-unit-obj.png') }}" class="img-responsive center-block margin-bottom-30px" alt="Ultra Responsive">
 						<h3 class="text-accent-color">ULTRA RESPONSIVE</h3>
 						<p class="lead">Phosfluorescently revolutionize viral leadership via turnkey technology. Synergistically monetize intermandated strategic theme areas through multimedia based.</p>
 					</div>
 					<div class="tab-pane fade text-center" id="tab-bottom2">
-						<img src="{{ asset('assets/frontend/img/hero-unit-obj3.png', config('app.https')) }}" class="img-responsive center-block margin-bottom-30px" alt="Easy to Customize">
+						<img src="{{ asset('assets/frontend/img/hero-unit-obj3.png') }}" class="img-responsive center-block margin-bottom-30px" alt="Easy to Customize">
 						<h3 class="text-accent-color">IT'S EASY TO CUSTOMIZE</h3>
 						<p class="lead">Efficiently incentivize leading-edge alignments with go forward expertise. Conveniently myocardinate leveraged process improvements through progressive models.</p>
 					</div>
 					<div class="tab-pane fade text-center" id="tab-bottom3">
-						<img src="{{ asset('assets/frontend/img/hero-unit-obj.png', config('app.https')) }}" class="img-responsive center-block margin-bottom-30px" alt="Clean and Elegant Design">
+						<img src="{{ asset('assets/frontend/img/hero-unit-obj.png') }}" class="img-responsive center-block margin-bottom-30px" alt="Clean and Elegant Design">
 						<h3 class="text-accent-color">CLEAN &amp; ELEGANT DESIGN</h3>
 						<p class="lead">Competently implement bricks-and-clicks collaboration and idea-sharing rather than visionary internal or "organic" sources. Rapidiously matrix premium core competencies for.</p>
 					</div>
 					<div class="tab-pane fade text-center" id="tab-bottom4">
-						<img src="{{ asset('assets/frontend/img/free.png', config('app.https')) }}" class="img-responsive center-block margin-bottom-30px" alt="Free Updates and Support">
+						<img src="{{ asset('assets/frontend/img/free.png') }}" class="img-responsive center-block margin-bottom-30px" alt="Free Updates and Support">
 						<h3 class="text-accent-color">GET UPDATES &amp; SUPPORT FOR FREE</h3>
 						<p class="lead">Dramatically supply adaptive imperatives and stand-alone content. Exceptional solutions after web-enabled potentialities. Synergistically negotiate alternative best practices whereas professional "outside the box" thinking.</p>
 					</div>
@@ -185,7 +185,7 @@
 									<a href="#" class="btn">read more</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png', config('app.https')) }}" alt="Item Thumbnail" />
+									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png') }}" alt="Item Thumbnail" />
 								</div>
 							</div>
 						</div>
@@ -198,7 +198,7 @@
 									<a href="#" class="btn">read more</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png', config('app.https')) }}" alt="Item Thumbnail" />
+									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png') }}" alt="Item Thumbnail" />
 								</div>
 							</div>
 						</div>
@@ -211,7 +211,7 @@
 									<a href="#" class="btn">read more</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png', config('app.https')) }}" alt="Item Thumbnail" />
+									<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
 								</div>
 							</div>
 						</div>
@@ -227,7 +227,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="news-item news-featured">
-							<a href="#"><img src="{{ asset('assets/frontend/img/news/featured-news.png', config('app.https')) }}" class="img-responsive" alt="News Thumbnail"></a>
+							<a href="#"><img src="{{ asset('assets/frontend/img/news/featured-news.png') }}" class="img-responsive" alt="News Thumbnail"></a>
 							<h3 class="news-title"><a href="#">In Demand: Collaboration Skill</a></h3>
 							<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 							<div class="news-meta">
@@ -240,7 +240,7 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
 								<div class="news-item margin-bottom-30px clearfix">
-									<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png', config('app.https')) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+									<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 									<div class="right">
 										<h3 class="news-title"><a href="#">Growth Strategies We Must Know</a></h3>
 										<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
@@ -249,7 +249,7 @@
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<div class="news-item margin-bottom-30px clearfix">
-									<a href="#"><img src="{{ asset('assets/frontend/img/news/news2.png', config('app.https')) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+									<a href="#"><img src="{{ asset('assets/frontend/img/news/news2.png') }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 									<div class="right">
 										<h3 class="news-title"><a href="#">Alternative E-commerce</a></h3>
 										<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
@@ -258,7 +258,7 @@
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<div class="news-item margin-bottom-30px clearfix">
-									<a href="#"><img src="{{ asset('assets/frontend/img/news/news3.png', config('app.https')) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+									<a href="#"><img src="{{ asset('assets/frontend/img/news/news3.png') }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 									<div class="right">
 										<h3 class="news-title"><a href="#">Products Research Methodology &amp; Principles </a></h3>
 										<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
@@ -267,7 +267,7 @@
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<div class="news-item margin-bottom-30px clearfix">
-									<a href="#"><img src="{{ asset('assets/frontend/img/news/news4.png', config('app.https')) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+									<a href="#"><img src="{{ asset('assets/frontend/img/news/news4.png') }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 									<div class="right">
 										<h3 class="news-title"><a href="#">Understanding Globally Scale Quality Network</a></h3>
 										<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
@@ -276,7 +276,7 @@
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<div class="news-item margin-bottom-30px clearfix">
-									<a href="#"><img src="{{ asset('assets/frontend/img/news/news5.png', config('app.https')) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+									<a href="#"><img src="{{ asset('assets/frontend/img/news/news5.png') }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 									<div class="right">
 										<h3 class="news-title"><a href="#">Professional Leverage</a></h3>
 										<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
@@ -334,21 +334,21 @@
 						<div class="testimonial-body">
 							<p>Credibly extend parallel relationships after clicks-and-mortar content. Credibly pontificate team building alignments rather than diverse quality vectors.</p>
 							<div class="testimonial-author">
-								<img src="{{ asset('assets/frontend/img/user2.png', config('app.https')) }}" alt="Author" class="pull-left">
+								<img src="{{ asset('assets/frontend/img/user2.png') }}" alt="Author" class="pull-left">
 								<span><span class="author-name">Antonius</span> <em>CEO of TheCompany</em></span>
 							</div>
 						</div>
 						<div class="testimonial-body">
 							<p>Credibly pontificate team building alignments rather than diverse quality vectors. Monotonectally benchmark business communities for distinctive mindshare.</p>
 							<div class="testimonial-author">
-								<img src="{{ asset('assets/frontend/img/user1.png', config('app.https')) }}" alt="Author" class="pull-left">
+								<img src="{{ asset('assets/frontend/img/user1.png') }}" alt="Author" class="pull-left">
 								<span><span class="author-name">Michael</span> <em>General Manager of DreamCorp</em></span>
 							</div>
 						</div>
 						<div class="testimonial-body">
 							<p>Appropriately morph low-risk high-yield process improvements through progressive partnerships. Uniquely brand enabled. Globally network timely imperatives without plug-and-play schemas.</p>
 							<div class="testimonial-author">
-								<img src="{{ asset('assets/frontend/img/user5.png', config('app.https')) }}" alt="Author" class="pull-left">
+								<img src="{{ asset('assets/frontend/img/user5.png') }}" alt="Author" class="pull-left">
 								<span><span class="author-name">Palmer</span> <em>Freelance Web Developer</em></span>
 							</div>
 						</div>
@@ -363,19 +363,19 @@
 				<h2 class="section-heading">OUR CLIENTS</h2>
 				<ul class="list-inline list-client-logo">
 					<li>
-						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo1.png', config('app.https')) }}" alt="logo"></a>
+						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo1.png') }}" alt="logo"></a>
 					</li>
 					<li>
-						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo2.png', config('app.https')) }}" alt="logo"></a>
+						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo2.png') }}" alt="logo"></a>
 					</li>
 					<li>
-						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo3.png', config('app.https')) }}" alt="logo"></a>
+						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo3.png') }}" alt="logo"></a>
 					</li>
 					<li>
-						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo4.png', config('app.https')) }}" alt="logo"></a>
+						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo4.png') }}" alt="logo"></a>
 					</li>
 					<li>
-						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo5.png', config('app.https')) }}" alt="logo"></a>
+						<a href="#"><img src="{{ asset('assets/frontend/img/clients/logo5.png') }}" alt="logo"></a>
 					</li>
 				</ul>
 			</div>
@@ -400,7 +400,7 @@
 					<div class="col-md-4">
 						<!-- COLUMN 1 -->
 						<h3 class="sr-only">ABOUT US</h3>
-						<img src="{{ asset('assets/frontend/img/logo/repute-logo-light.png', config('app.https')) }}" class="logo" alt="Repute">
+						<img src="{{ asset('assets/frontend/img/logo/repute-logo-light.png') }}" class="logo" alt="Repute">
 						<p>Proactively aggregate B2B initiatives before extensive channels. Monotonectally extend interactive methods of empowerment through excellent applications. Rapidiously synergize visionary products with sticky technology.</p>
 						<br>
 						<address class="margin-bottom-30px">
@@ -475,12 +475,12 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- JAVASCRIPTS -->
-	<script src="{{ asset('assets/frontend/js/jquery-2.1.1.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/bootstrap.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/plugins/slick/slick.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/plugins/stellar/jquery.stellar.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js', config('app.https')) }}"></script>
-	<script src="{{ asset('assets/frontend/js/repute-scripts.js', config('app.https')) }}"></script>
+	<script src="{{ asset('assets/frontend/js/jquery-2.1.1.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/plugins/slick/slick.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/plugins/stellar/jquery.stellar.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/repute-scripts.js') }}"></script>
 
 </html>
