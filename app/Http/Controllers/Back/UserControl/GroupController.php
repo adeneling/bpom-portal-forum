@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\UserControl\Role;
 
 class GroupController extends Controller
 {
@@ -17,7 +18,8 @@ class GroupController extends Controller
     public function index()
     {
         //
-        return view('pages.backend.userControl.index')->withTitle('Groups');
+        $roles = Role::all();
+        return view('pages.backend.userControl.groups.index', ['roles' => $roles])->withTitle('Groups');
     }
 
     /**
@@ -28,6 +30,7 @@ class GroupController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.userControl.groups.create')->withTitle('Groups');
     }
 
     /**
@@ -39,6 +42,13 @@ class GroupController extends Controller
     public function store(Request $request)
     {
         //
+        $role = new Role;
+        $role->name = $request->get('name');
+        $role->display_name = $request->get('display_name');
+        $role->description = $request->get('deskripsi');
+        $role->save();
+
+        return view('pages.backend.userControl.groups._tableGroup', ['roles' => Role::all()]);
     }
 
     /**
@@ -61,6 +71,9 @@ class GroupController extends Controller
     public function edit($id)
     {
         //
+        $role = Role::find(decrypt($id));
+
+        return view('pages.backend.userControl.groups.edit', ['role' => $role]);
     }
 
     /**
@@ -73,6 +86,14 @@ class GroupController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $role = Role::findOrFail(decrypt($id));
+        $role->name = $request->get('name');
+        $role->display_name = $request->get('display_name');
+        $role->description = $request->get('deskripsi');
+        $role->save();
+
+        return view('pages.backend.userControl.groups._tableGroup', ['roles' => Role::all()]);
+
     }
 
     /**
@@ -84,5 +105,9 @@ class GroupController extends Controller
     public function destroy($id)
     {
         //
+        $role = Role::find(decrypt($id));
+        $role->delete();
+
+        return view('pages.backend.userControl.groups._tableGroup', ['roles' => Role::all()]); 
     }
 }

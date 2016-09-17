@@ -30,6 +30,8 @@
 	<link href="{{ asset('assets/backend/js/plugins/prism/prism.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+	@yield('css')
+
 </head>
 
 <body>
@@ -94,14 +96,14 @@
 	<!--scrollbar-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 	<!-- chartist -->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.js') }}"></script>   
+	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.js') }}"></script>
+
+	@yield('js')
 	
 	<!--plugins.js - Some Specific JS codes for Plugin Settings-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins.min.js') }}"></script>
 	<!--custom-script.js - Add your own theme custom JS-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/custom-script.js') }}"></script>
-
-	@yield('js')
 </body>
 
 </html>

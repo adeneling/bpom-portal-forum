@@ -31,7 +31,7 @@
 				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
 					<div class="collapsible-body">
 						<ul>
-							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{-- route('groups') --}}"> Grup</a>
+							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{ route('groups.index') }}"> Grup</a>
 							</li>                                   
 							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{-- route('users') --}}"> User</a>
 							</li>
