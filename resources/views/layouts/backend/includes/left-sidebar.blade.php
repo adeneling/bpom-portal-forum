@@ -33,7 +33,7 @@
 						<ul>
 							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{ route('groups.index') }}"> Grup</a>
 							</li>                                   
-							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{-- route('users') --}}"> User</a>
+							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{ route('users.index') }}"> User</a>
 							</li>
 						</ul>
 					</div>

@@ -31,8 +31,10 @@ Route::group(['namespace' => 'Front'], function(){
 /* BACK */
 Route::group(['namespace' => 'Back'], function(){
 	Route::auth();
+	Route::get('logout', 'Auth\LoginController@logout');
 	Route::group(['middleware' => ['auth', 'auth.basic']], function(){
 		Route::resource('admin', 'BackController');
 		Route::resource('groups', 'UserControl\GroupController');
+		Route::resource('users', 'UserControl\UserController');
 	});
 });
