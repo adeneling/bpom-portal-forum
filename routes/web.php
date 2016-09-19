@@ -16,6 +16,7 @@ Route::get('/', 'Front\BerandaController@index');
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
 	Route::resource('beranda','BerandaController');
+	Route::resource('berita','BeritaController');
 	Route::resource('faq','FAQController');
 	Route::resource('forum-fasilitator','ForumFasilitatorController');
 	Route::resource('galeri','GaleriController');

@@ -37,6 +37,9 @@
 					<a href="{{ url('beranda') }}">BERANDA </a>
 				</li>
 				<li>
+					<a href="{{ url('berita') }}">BERITA </a>
+				</li>
+				<li>
 					<a href="{{ url('galeri') }}">GALERI </a>
 				</li>
 				<li>

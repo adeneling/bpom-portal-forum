@@ -8,7 +8,7 @@
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
 	<meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-	<title>@yield('title') | Materialize - Material Design Admin Template</title>
+	<title>@yield('title') | Badan Pengawas Obat dan Makanan</title>
 
 	<!-- Favicons-->
 	<link rel="icon" href="{{ asset('assets/backend/images/favicon/favicon-32x32.png') }}" sizes="32x32">
@@ -18,8 +18,6 @@
 	<meta name="msapplication-TileColor" content="#00bcd4">
 	<meta name="msapplication-TileImage" content="{{ asset('assets/backend/images/favicon/mstile-144x144.png') }}">
 	<!-- For Windows Phone -->
-
-
 	<!-- CORE CSS-->
 	<link href="{{ asset('assets/backend/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/css/style.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
@@ -43,13 +41,9 @@
 	</div>
 	<!-- End Page Loading -->
 
-	<!-- //////////////////////////////////////////////////////////////////////////// -->
-
 	<!-- START HEADER -->
 	@include('layouts/backend/includes/header')
 	<!-- END HEADER -->
-
-	<!-- //////////////////////////////////////////////////////////////////////////// -->
 
 	<!-- START MAIN -->
 	<div id="main">
@@ -60,28 +54,40 @@
 			@include('layouts/backend/includes/left-sidebar')
 			<!-- END LEFT SIDEBAR NAV-->
 
-			<!-- //////////////////////////////////////////////////////////////////////////// -->
-
 			<!-- START CONTENT -->
 			<section id="content">
+				<!--breadcrumbs start-->
+				<div id="breadcrumbs-wrapper">
+					<!-- Search for small screen -->
+					<div class="header-search-wrapper grey hide-on-large-only">
+						<i class="mdi-action-search active"></i>
+						<input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<h5 class="breadcrumbs-title">{{ $title }}</h5>
+								<ol class="breadcrumbs">
+									<li><a href="index.html">Navigasi</a></li>
+									<li><a href="#">{{ $title }}</a></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--breadcrumbs end-->
 				@yield('content')
 			</section>
 			<!-- END CONTENT -->
 
-			<!-- //////////////////////////////////////////////////////////////////////////// -->
 			<!-- START RIGHT SIDEBAR NAV-->
 			@include('layouts/backend/includes/right-sidebar')
 			<!-- RIGHT RIGHT SIDEBAR NAV-->
 
 		</div>
 		<!-- END WRAPPER -->
-
 	</div>
 	<!-- END MAIN -->
-
-
-
-	<!-- //////////////////////////////////////////////////////////////////////////// -->
 
 	<!-- START FOOTER -->
 	@include('layouts/backend/includes/footer')
