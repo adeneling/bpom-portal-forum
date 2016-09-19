@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -8,31 +8,33 @@
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
 	<meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-	<title>@yield('title') | Badan Pengawas Obat dan Makanan</title>
+	<title>Login Page | Materialize - Material Design Admin Template</title>
 
 	<!-- Favicons-->
-	<link rel="icon" href="{{ asset('assets/backend/images/favicon/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="icon" href="../images/favicon/favicon-32x32.png" sizes="32x32">
 	<!-- Favicons-->
-	<link rel="apple-touch-icon-precomposed" href="{{ asset('assets/backend/images/favicon/apple-touch-icon-152x152.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="../images/favicon/apple-touch-icon-152x152.png">
 	<!-- For iPhone -->
 	<meta name="msapplication-TileColor" content="#00bcd4">
-	<meta name="msapplication-TileImage" content="{{ asset('assets/backend/images/favicon/mstile-144x144.png') }}">
+	<meta name="msapplication-TileImage" content="../images/favicon/mstile-144x144.png">
 	<!-- For Windows Phone -->
+
+
 	<!-- CORE CSS-->
 	<link href="{{ asset('assets/backend/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/css/style.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+
 	<!-- Custome CSS-->    
 	<link href="{{ asset('assets/backend/css/custom/custom.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+	<link href="{{ asset('assets/backend/css/layouts/page-center.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 
 	<!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
 	<link href="{{ asset('assets/backend/js/plugins/prism/prism.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
-	<link href="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
-	@yield('css')
-
+	
 </head>
 
-<body>
+<body class="cyan">
 	<!-- Start Page Loading -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>        
@@ -41,75 +43,72 @@
 	</div>
 	<!-- End Page Loading -->
 
-	<!-- START HEADER -->
-	@include('layouts/backend/includes/header')
-	<!-- END HEADER -->
 
-	<!-- START MAIN -->
-	<div id="main">
-		<!-- START WRAPPER -->
-		<div class="wrapper">
 
-			<!-- START LEFT SIDEBAR NAV-->
-			@include('layouts/backend/includes/left-sidebar')
-			<!-- END LEFT SIDEBAR NAV-->
-
-			<!-- START CONTENT -->
-			<section id="content">
-				<!--breadcrumbs start-->
-				<div id="breadcrumbs-wrapper">
-					<!-- Search for small screen -->
-					<div class="header-search-wrapper grey hide-on-large-only">
-						<i class="mdi-action-search active"></i>
-						<input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col s12 m12 l12">
-								<h5 class="breadcrumbs-title">{{ $title }}</h5>
-								<ol class="breadcrumbs">
-									<li><a href="index.html">Navigasi</a></li>
-									<li><a href="#">{{ $title }}</a></li>
-								</ol>
-							</div>
-						</div>
+	<div id="login-page" class="row">
+		<div class="col s12 z-depth-4 card-panel">
+			{!! Form::open(['url' => route('login'), 'class' => 'login-form']) !!}
+				<div class="row">
+					<div class="input-field col s12 center">
+						<img src="{{ asset('assets/backend/images/login-logo.png') }}" alt="" class="circle responsive-img valign profile-image-login">
+						<p class="center login-form-text">Material Design Admin Template</p>
 					</div>
 				</div>
-				<!--breadcrumbs end-->
-				@yield('content')
-			</section>
-			<!-- END CONTENT -->
-
-			<!-- START RIGHT SIDEBAR NAV-->
-			@include('layouts/backend/includes/right-sidebar')
-			<!-- RIGHT RIGHT SIDEBAR NAV-->
-
+				<div class="row margin">
+					<div class="input-field col s12">
+						<i class="mdi-social-person-outline prefix"></i>
+						{!! Form::email('email', null, ['id' => 'email']) !!}
+						<label for="email" class="center-align">Username</label>
+					</div>
+				</div>
+				<div class="row margin">
+					<div class="input-field col s12">
+						<i class="mdi-action-lock-outline prefix"></i>
+						<input id="password" name="password" type="password">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row">          
+					<div class="input-field col s12 m12 l12  login-text">
+						<input type="checkbox" id="remember-me" />
+						<label for="remember-me">Remember me</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<button class="btn waves-effect waves-light col s12" type="submit">Login</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6 m6 l6">
+						<p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
+					</div>
+					<div class="input-field col s6 m6 l6">
+						<p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+					</div>          
+				</div>
+			{!! Form::close() !!}
 		</div>
-		<!-- END WRAPPER -->
 	</div>
-	<!-- END MAIN -->
 
-	<!-- START FOOTER -->
-	@include('layouts/backend/includes/footer')
-	<!-- END FOOTER -->
-		
+
+
+	<!-- ================================================
+		Scripts
+		================================================ -->
+
 	<!-- jQuery Library -->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/jquery-1.11.2.min.js') }}"></script>    
+	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/jquery-1.11.2.min.js') }}"></script>
 	<!--materialize js-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/materialize.min.js') }}"></script>
-	<!-- prism -->
+	<!--prism-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/prism/prism.js') }}"></script>
 	<!--scrollbar-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-	<!-- chartist -->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.js') }}"></script>
-
-	@yield('js')
-	
 	<!--plugins.js - Some Specific JS codes for Plugin Settings-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins.min.js') }}"></script>
 	<!--custom-script.js - Add your own theme custom JS-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/custom-script.js') }}"></script>
-</body>
 
+</body>
 </html>

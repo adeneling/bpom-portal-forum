@@ -16,7 +16,7 @@
 						<li class="divider"></li>
 						<li><a href="#"><i class="mdi-action-lock-outline"></i> Lock</a>
 						</li>
-						<li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+						<li><a href="{{ url('logout') }}"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
 						</li>
 					</ul>
 					<a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Administrator<i class="mdi-navigation-arrow-drop-down right"></i></a>
@@ -40,7 +40,7 @@
 				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
 					<div class="collapsible-body">
 						<ul>
-							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{-- route('groups') --}}"> Grup</a>
+							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{ route('groups.index') }}"> Grup</a>
 							</li>                                   
 							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{-- route('users') --}}"> User</a>
 							</li>
