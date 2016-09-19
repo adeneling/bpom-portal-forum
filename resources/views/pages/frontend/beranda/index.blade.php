@@ -143,4 +143,110 @@
 	</div>
 </section>
 <!-- END LATEST NEWS -->
+
+<!-- PASAR AMAN -->
+<section class="recent-works">
+	<div class="container">
+		<h2 class="section-heading pull-left">PASAR AMAN</h2>
+		<a href="#" class="btn btn-primary pull-right">Lihat semua</a>
+		<div class="clearfix"></div>
+		<div class="portfolio-static">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Raining</h4>
+							<p class="brief-description">Photography</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Perfect Edge</h4>
+							<p class="brief-description">Product Design</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Sunny Day</h4>
+							<p class="brief-description">Photography</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Raining</h4>
+							<p class="brief-description">Photography</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Perfect Edge</h4>
+							<p class="brief-description">Product Design</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="portfolio-item">
+						<div class="overlay"></div>
+						<div class="info">
+							<h4 class="title">Sunny Day</h4>
+							<p class="brief-description">Photography</p>
+							<a href="#" class="btn">read more</a>
+						</div>
+						<div class="media-wrapper">
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>		
+<!-- END PASAR AMAN -->
+
+<!-- CALL-TO-ACTION -->
+<section class="call-to-action">
+	<div class="container">
+		<div class="pull-left">
+			<h2 class="section-heading">GET IN TOUCH</h2>
+		</div>
+		<div class="pull-right">
+			<span>Hubungi Kami - 1500533</span>&nbsp;&nbsp;<a href="#" class="btn btn-lg btn-primary">Halo BPOM</a>
+		</div>
+	</div>
+</section>
+<!-- END CALL-TO-ACTION -->
+
 @stop

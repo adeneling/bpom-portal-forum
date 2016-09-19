@@ -4,6 +4,7 @@
 		<!-- TOPBAR -->
 		<div class="topbar">
 			<ul class="list-inline top-nav">
+				<li><a href="profile">PROFILE</a></li>
 				<li><a href="faq">FAQ</a></li>
 				<li><a href="hubungi-kami">HUBUNGI KAMI</a></li>
 				<li><a href="sipaman">SIPAMAN</a></li>

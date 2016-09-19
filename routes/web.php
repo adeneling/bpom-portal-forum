@@ -15,18 +15,21 @@ Route::get('/', 'Front\BerandaController@index');
 
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
-	Route::resource('beranda','BerandaController');
-	Route::resource('berita','BeritaController');
+	/**/
+	Route::resource('profile','ProfileController');
 	Route::resource('faq','FAQController');
-	Route::resource('forum-fasilitator','ForumFasilitatorController');
-	Route::resource('galeri','GaleriController');
 	Route::resource('hubungi-kami','HubungiKamiController');
-	Route::resource('media-promosi','MediaPromosiController');
-	Route::resource('pasar-aman','PasarAmanController');
-	Route::resource('pedoman','PedomanController');
 	Route::resource('sipaman','SipamanController');
 	Route::resource('peta-situs','PetaSitusController');
+	/**/
+	Route::resource('beranda','BerandaController');
+	Route::resource('berita','BeritaController');
+	Route::resource('galeri','GaleriController');
 	Route::resource('program','ProgramController');
+	Route::resource('pedoman','PedomanController');
+	Route::resource('media-promosi','MediaPromosiController');
+	Route::resource('forum-fasilitator','ForumFasilitatorController');	
+	Route::resource('pasar-aman','PasarAmanController');
 });
 
 /* BACK */

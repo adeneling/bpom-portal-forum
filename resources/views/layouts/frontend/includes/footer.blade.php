@@ -16,6 +16,25 @@
 			</div>
 			<div class="col-md-4">
 				<!-- COLUMN 2 -->
+				<h3 class="footer-heading">Navigasi</h3>
+				<div class="row margin-bottom-30px">
+					<div class="col-xs-6">
+						<ul class="list-unstyled footer-nav">
+							<li><a href="#">Galeri</a></li>
+							<li><a href="#">Program</a></li>
+							<li><a href="#">Pedoman</a></li>
+							<li><a href="#">Media Promosi</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<ul class="list-unstyled footer-nav">
+							<li><a href="#">Forum Fasilitator</a></li>
+							<li><a href="#">Pasar Aman</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Hubungi Kami</a></li>
+						</ul>
+					</div>
+				</div>
 				<!-- END COLUMN 2 -->
 			</div>
 			<div class="col-md-4">
