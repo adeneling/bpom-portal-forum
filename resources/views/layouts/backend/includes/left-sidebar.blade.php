@@ -19,13 +19,22 @@
 						<li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
 						</li>
 					</ul>
-					<a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+					<a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Administrator<i class="mdi-navigation-arrow-drop-down right"></i></a>
 					<p class="user-roal">Administrator</p>
 				</div>
 			</div>
 		</li>
-		<li class="bold"><a href="{{ url('admin') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
-		</li>
+		<li class="bold"><a href="{{ url('admin') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
+
+		<li class="bold"><a href="{{ url('kelola-berita') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
+		<li class="bold"><a href="{{ url('kelola-galeri') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a></li>
+		<li class="bold"><a href="{{ url('kelola-program') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a></li>
+		<li class="bold"><a href="{{ url('kelola-pedoman') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a></li>
+		<li class="bold"><a href="{{ url('kelola-media-promosi') }}" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Kelola Media Promosi</a></li>
+		<li class="bold"><a href="{{ url('kelola-pasar-aman') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a></li>
+		<li class="bold"><a href="{{ url('kelola-faq') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a></li>
+		<li class="bold"><a href="{{ url('kelola-hubungi-kami') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a></li>
+		<br>
 		<li class="no-padding">
 			<ul class="collapsible collapsible-accordion">
 				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>

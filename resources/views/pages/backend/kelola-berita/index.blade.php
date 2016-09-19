@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-		<!--start container-->
+	<!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">Dashboard</p>
+			<p class="caption">Kelola Berita</p>
 			<div class="divider"></div>
 			<!--Responsive Table-->
 			<div class="divider"></div>
