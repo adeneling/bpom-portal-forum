@@ -46,4 +46,5 @@
 	<script src="{{ asset('assets/frontend/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}"></script>
 	<script src="{{ asset('assets/frontend/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js') }}"></script>
 	<script src="{{ asset('assets/frontend/js/repute-scripts.js') }}"></script>
+	@yield('js')
 </html>

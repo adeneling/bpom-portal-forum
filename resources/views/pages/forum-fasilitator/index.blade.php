@@ -40,7 +40,7 @@
 				<input type="text" class="form-control" placeholder="Cari di forum">
 			</div>
 			<div class="col-md-8">
-				<a href="" class="btn btn-primary pull-right"> Buat Thread </a>
+				<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
 			</div>
 		</div>
 	</div>

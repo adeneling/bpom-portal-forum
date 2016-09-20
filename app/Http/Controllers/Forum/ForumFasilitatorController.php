@@ -28,6 +28,7 @@ class ForumFasilitatorController extends Controller
     public function create()
     {
         //
+        return view('pages.forum-fasilitator.create');
     }
 
     /**
