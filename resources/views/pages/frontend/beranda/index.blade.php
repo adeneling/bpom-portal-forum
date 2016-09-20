@@ -161,7 +161,7 @@
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png') }}" alt="Item Thumbnail" />
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work1.png') }}" alt="Item Thumbnail" />
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png') }}" alt="Item Thumbnail" />
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work2.png') }}" alt="Item Thumbnail" />
 						</div>
 					</div>
 				</div>
@@ -187,7 +187,7 @@
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
+							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Item Thumbnail" />
 						</div>
 					</div>
 				</div>
