@@ -16,7 +16,7 @@ class PasarAmanController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.frontend.pasar-aman.index');
     }
 
     /**

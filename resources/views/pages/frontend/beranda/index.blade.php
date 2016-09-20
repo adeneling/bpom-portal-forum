@@ -57,9 +57,9 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h2 class="section-heading">TENTANG KAMI</h2>
-				<p class="lead">Badan Pengawasan Obat dan Makanan</p>
-				<p>Energistically architect leading-edge users and inexpensive internal or "organic" sources. Distinctively evolve e-business resources after progressive intellectual capital. Objectively architect maintainable technologies via strategic convergence. Continually optimize stand-alone expertise with e-business e-services. Continually conceptualize client-centered opportunities and.</p>
-				<p>Dynamically customize backward-compatible processes via front-end models. Distinctively evisculate an expanded array of scenarios after virtual information. Professionally predominate technically sound resources through impactful mindshare. Efficiently drive viral interfaces without inexpensive value. Credibly.</p>
+				<p class="lead"><b>Badan Pengawas Obat dan Makanan</b></p>
+				<p align="justify">Badan Pengawas Obat dan Makanan. Badan Pengawas Obat dan Makanan atau disingkat Badan POM adalah sebuah lembaga di Indonesia yang bertugas mengawasi peredaran obat-obatan dan makanan di Indonesia. Fungsi dan tugas badan ini yaitu mengatur makanan, suplemen makanan, obat-obatan, produk biofarmasi, transfusi darah, piranti medis, piranti untuk terapi dengan radiasi, produk kedokteran hewan, dan kosmetik.</p>
+				<p align="justify">Berdirinya Badan Pengawas Obat dan Makanan di Indonesia yang pada masa penjajahan Belanda dikenal dengan apoteker yang berperan dalam pelayanan kesehatan di bidang kefarmasian yang membantu pemerintah dalam melindungi masyarakat dalam pengawasan obat yang beredar di masyarakat.</p>
 			</div>
 			<div class="col-md-6">
 				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="Image Intro">
@@ -156,8 +156,7 @@
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
-							<h4 class="title">Raining</h4>
-							<p class="brief-description">Photography</p>
+							<h4 class="title">Pasar Aman</h4>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -169,8 +168,7 @@
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
-							<h4 class="title">Perfect Edge</h4>
-							<p class="brief-description">Product Design</p>
+							<h4 class="title">Pasar Aman</h4>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -182,8 +180,7 @@
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
-							<h4 class="title">Sunny Day</h4>
-							<p class="brief-description">Photography</p>
+							<h4 class="title">Pasar Aman</h4>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -196,7 +193,6 @@
 						<div class="overlay"></div>
 						<div class="info">
 							<h4 class="title">Raining</h4>
-							<p class="brief-description">Photography</p>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -208,8 +204,7 @@
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
-							<h4 class="title">Perfect Edge</h4>
-							<p class="brief-description">Product Design</p>
+							<h4 class="title">Pasar Aman</h4>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -221,8 +216,7 @@
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
-							<h4 class="title">Sunny Day</h4>
-							<p class="brief-description">Photography</p>
+							<h4 class="title">Pasar Aman</h4>
 							<a href="#" class="btn">read more</a>
 						</div>
 						<div class="media-wrapper">
@@ -235,18 +229,4 @@
 	</div>
 </section>		
 <!-- END PASAR AMAN -->
-
-<!-- CALL-TO-ACTION -->
-<section class="call-to-action">
-	<div class="container">
-		<div class="pull-left">
-			<h2 class="section-heading">GET IN TOUCH</h2>
-		</div>
-		<div class="pull-right">
-			<span>Hubungi Kami - 1500533</span>&nbsp;&nbsp;<a href="#" class="btn btn-lg btn-primary">Halo BPOM</a>
-		</div>
-	</div>
-</section>
-<!-- END CALL-TO-ACTION -->
-
 @stop

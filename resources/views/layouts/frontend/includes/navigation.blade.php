@@ -27,7 +27,7 @@
 				<span class="sr-only">Toggle Navigation</span>
 				<i class="fa fa-bars"></i>
 			</button>
-			<a href="#" class="navbar-brand navbar-logo navbar-logo-bigger">
+			<a href="{{ url('/') }}" class="navbar-brand navbar-logo navbar-logo-bigger">
 				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}" alt="Repute - Responsive Multipurpose Bootstrap Theme">
 			</a>
 		</div>
