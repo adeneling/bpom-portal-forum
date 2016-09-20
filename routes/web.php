@@ -27,9 +27,12 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('galeri','GaleriController');
 	Route::resource('program','ProgramController');
 	Route::resource('pedoman','PedomanController');
-	Route::resource('media-promosi','MediaPromosiController');
-	Route::resource('forum-fasilitator','ForumFasilitatorController');	
+	Route::resource('media-promosi','MediaPromosiController');	
 	Route::resource('pasar-aman','PasarAmanController');
+});
+
+Route::group(['namespace' => 'Forum'], function(){
+	Route::resource('forum-fasilitator','ForumFasilitatorController');
 });
 
 /* BACK */
