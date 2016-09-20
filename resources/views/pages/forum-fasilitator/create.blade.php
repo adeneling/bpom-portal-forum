@@ -66,8 +66,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-12">
-							<button type="submit" class="btn btn-primary">Submit Message</button>
+						<div class="col-sm-2"></div>
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary">Buat Thread</button>
 						</div>
 					</div>
 				</form>
