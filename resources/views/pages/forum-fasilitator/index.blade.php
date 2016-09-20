@@ -59,6 +59,46 @@
 						<div class="form-horizontal">
 							<div class="form-group">
 								<div class="col-md-12">
+									<table class="table">
+										<thead>
+											<th>Topik</th>
+											<th>Post</th>
+											<th>Komentar Terakhir</th>
+											<th>Komentar</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+										</tbody>
+									</table>
 									<a href="" class="btn btn-primary pull-right"> Tampilkan Semua </a>
 								</div>
 							</div>
@@ -78,6 +118,46 @@
 						<div class="form-horizontal">
 							<div class="form-group">
 								<div class="col-md-12">
+									<table class="table">
+										<thead>
+											<th>Topik</th>
+											<th>Post</th>
+											<th>Komentar Terakhir</th>
+											<th>Komentar</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+											<tr>
+												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
+												<td>12 Agustus 2016</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">42</span></td>
+											</tr>
+										</tbody>
+									</table>
 									<a href="" class="btn btn-primary pull-right"> Tampilkan Semua </a>
 								</div>
 							</div>
