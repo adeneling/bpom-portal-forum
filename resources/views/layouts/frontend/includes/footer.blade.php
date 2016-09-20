@@ -5,7 +5,7 @@
 			<h2 class="section-heading">GET IN TOUCH</h2>
 		</div>
 		<div class="pull-right">
-			<span>Hubungi Kami - 1500533</span>&nbsp;&nbsp;<a href="#" class="btn btn-lg btn-primary">Halo BPOM</a>
+			<span>Hubungi Kami - 1500533</span>&nbsp;&nbsp;<a href="{{ url('hubungi-kami') }}" class="btn btn-lg btn-primary">Halo BPOM</a>
 		</div>
 	</div>
 </section>

@@ -7,7 +7,7 @@
 <!-- BREADCRUMBS -->
 <div class="page-header">
 	<div class="container">
-		<h1 class="page-title pull-left">PASAR AMAN</h1>
+		<h1 class="page-title pull-left">@yield('title')</h1>
 		<ol class="breadcrumb">
 			<li><a href="#">Navigasi</a></li>
 			<li class="active">@yield('title')</li>

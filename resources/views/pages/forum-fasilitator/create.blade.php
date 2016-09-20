@@ -35,11 +35,8 @@
 <div class="page-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-				<input type="text" class="form-control" placeholder="Cari di forum">
-			</div>
-			<div class="col-md-8">
-				<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
+			<div class="col-md-12">
+				<a href="{{ url('forum-fasilitator') }}" class="btn btn-danger pull-right"> Kembali </a>
 			</div>
 		</div>
 	</div>

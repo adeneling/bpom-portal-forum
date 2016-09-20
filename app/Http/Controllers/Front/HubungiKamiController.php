@@ -16,7 +16,7 @@ class HubungiKamiController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.frontend.hubungi-kami.index');
     }
 
     /**
