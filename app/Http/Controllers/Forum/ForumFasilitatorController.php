@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Forum\Thread;
+
 use App\Http\Requests\Forum\ForumRequests;
 
 class ForumFasilitatorController extends Controller
@@ -42,7 +44,11 @@ class ForumFasilitatorController extends Controller
     public function store(ForumRequests $request)
     {
         //
-        dd($request->all());
+        $thread = new Thread;
+        $thread->judulThread = $request->get('judul-thread');
+        $thread->konten = $request->get('konten');
+        $thread->save();
+        return redirect()->back();
     }
 
     /**

@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Models\UserControl\Role;
 use App\Models\UserControl\Permission;
 use App\Models\UserControl\User;
+use App\Models\UserControl\ForumUsers;
 
 class FirstRunSeeder extends Seeder
 {
@@ -88,6 +89,14 @@ class FirstRunSeeder extends Seeder
 			]);
 
 		$user->attachRole($superAdmin);
+
+		ForumUsers::create([
+				'name' => 'Super Admin',
+				'photo' => 'null',
+				'email' => 'super@admin.com',
+				'password' => bcrypt('admin'),
+				'remember_token' => str_random(10),
+			]);
 
 	}
 }

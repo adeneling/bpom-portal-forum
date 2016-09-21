@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'forum' => [
+            'driver' => 'session',
+            'provider' => 'forumUsers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\UserControl\User::class,
+        ],
+
+        'forumUsers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\UserControl\ForumUsers::class,
         ],
 
         // 'users' => [
