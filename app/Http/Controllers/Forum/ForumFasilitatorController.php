@@ -60,6 +60,7 @@ class ForumFasilitatorController extends Controller
     public function show($id)
     {
         //
+        return view('pages.forum-fasilitator.show');
     }
 
     /**

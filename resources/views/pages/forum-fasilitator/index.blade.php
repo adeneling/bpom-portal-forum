@@ -70,7 +70,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b></td>
+												<td><b><a href="{{ route('forum-fasilitator.show', 1) }}">Judul forum yang dibuat oleh admin</a></b></td>
 												<td>12 Agustus 2016</td>
 												<td>12 Agustus 2016</td>
 												<td><span class="badge">42</span></td>
