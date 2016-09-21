@@ -34,6 +34,7 @@ Route::group(['namespace' => 'Front'], function(){
 Route::group(['namespace' => 'Forum'], function(){
 	Route::group(['prefix' => 'forum'], function(){
 		Route::auth();
+		Route::get('logout', 'Auth\LoginController@logout');
 	});
 	Route::resource('forum-fasilitator','ForumFasilitatorController');
 });
