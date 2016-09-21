@@ -39,9 +39,11 @@
 			<div class="col-md-4">
 				<input type="text" class="form-control" placeholder="Cari di forum">
 			</div>
-			<div class="col-md-8">
-				<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
-			</div>
+			@if(auth('forum')->check())
+				<div class="col-md-8">
+					<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
+				</div>
+			@endif
 		</div>
 	</div>
 </div>
