@@ -21,7 +21,8 @@ class ForumFasilitatorController extends Controller
     public function index()
     {
         //
-        return view('pages.forum-fasilitator.index');
+        $threads = Thread::all();
+        return view('pages.forum-fasilitator.index', ['threads' => $threads]);
     }
 
     /**

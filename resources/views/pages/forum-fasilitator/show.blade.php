@@ -37,6 +37,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+
 				<ul class="media-list forum">
 					<li class="media well">
 						<div class="pull-left user-info" href="#">
@@ -50,6 +51,7 @@
 							<a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
 							<strong class="btn btn-success">+451</strong>
 							</small>
+							<hr>
 						</div>
 						<div class="media-body">
 							<!-- Post Info Buttons -->
@@ -93,6 +95,11 @@
 							<p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. <b>Mauris massa</b>. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
 							<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. <b>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa</b>. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. <b>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis</b>. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. </p>
 							<!-- Post Text EMD -->
+						</div>
+						<div class="media footer">
+							<div class="pull-right">
+								sdad
+							</div>
 						</div>
 					</li>
 				</ul>

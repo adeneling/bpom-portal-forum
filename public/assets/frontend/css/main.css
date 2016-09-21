@@ -7170,9 +7170,9 @@ ul.nav-categories > li > a:hover {
     margin: 0 auto;
 }
 
-.forum.media-list li .user-info {
+.forum.media-list .user-info {
     text-align: center;
-    width: 8em;
+    width: 15em;
 }
 
 @media (max-width: 760px) {
@@ -7181,4 +7181,10 @@ ul.nav-categories > li > a:hover {
         width: 100%;
         margin-bottom: 1em;
     }
+}
+
+/*END FORUM*/
+
+.mycontent-left {
+  border-right: 1px dashed #333;
 }
