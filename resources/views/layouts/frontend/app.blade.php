@@ -33,6 +33,58 @@
 		{{-- CONTENT --}}
 		@yield('content')
 
+		{{-- MODAL LOGIN FORUM --}}
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Login</h4>
+					</div>
+					<div class="modal-body">
+						{!! Form::open(['url' => 'forum/login', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+							<div class="form-group">
+								<label for="email" class="col-sm-2 control-label">Email</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										{!! Form::email('email', old('email'), ['class' => 'form-control', 'id' => 'email']) !!}
+										<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-sm-2 control-label">Password</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										{!! Form::password('password', ['class' => 'form-control', 'id' => 'password']) !!}
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<label class="fancy-checkbox">
+										<input type="checkbox">
+										<span>Remember me</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Sign in</button>
+								</div>
+							</div>
+						{!! Form::close() !!}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{-- END MODAL LOGIN FORUM --}}
+
 		<!-- FOOTER -->
 		@include('layouts.frontend.includes.footer')
 		<!-- END FOOTER -->

@@ -4,7 +4,13 @@
 		<!-- TOPBAR -->
 		<div class="topbar">
 			<ul class="list-inline top-nav">
-				<li><a href="profile">PROFILE</a></li>
+				@if(auth('forum')->check())
+					<li><b>Hay, {{ auth('forum')->user()->name }} |</b></li>
+					<li><a href="profile">LOGOUT</a></li>
+					<li><a href="profile">PROFILE</a></li>
+				@else
+					<li><a href="#" data-toggle="modal" data-target="#myModal">PROFILE</a></li>
+				@endif
 				<li><a href="faq">FAQ</a></li>
 				<li><a href="hubungi-kami">HUBUNGI KAMI</a></li>
 				<li><a href="sipaman">SIPAMAN</a></li>
