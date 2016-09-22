@@ -48,6 +48,7 @@ class ForumFasilitatorController extends Controller
         $thread = new Thread;
         $thread->forum_user_id = auth('forum')->user()->id;
         $thread->judulThread = $request->get('judul-thread');
+        $thread->tipe = "umum";
         $thread->konten = $request->get('konten');
         $thread->save();
         return redirect()->back();
