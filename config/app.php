@@ -107,6 +107,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'salt' => env('APP_SALT'),
+
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration

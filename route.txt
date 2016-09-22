@@ -10,8 +10,8 @@
 |        | GET|HEAD  | admin/{admin}                              | admin.show                | App\Http\Controllers\Back\BackController@show                                | web,auth,auth.basic,auth |
 |        | GET|HEAD  | admin/{admin}/edit                         | admin.edit                | App\Http\Controllers\Back\BackController@edit                                | web,auth,auth.basic,auth |
 |        | GET|HEAD  | api/user                                   |                           | Closure                                                                      | api,auth:api             |
-|        | GET|HEAD  | beranda                                    | beranda.index             | App\Http\Controllers\Front\BerandaController@index                           | web                      |
 |        | POST      | beranda                                    | beranda.store             | App\Http\Controllers\Front\BerandaController@store                           | web                      |
+|        | GET|HEAD  | beranda                                    | beranda.index             | App\Http\Controllers\Front\BerandaController@index                           | web                      |
 |        | GET|HEAD  | beranda/create                             | beranda.create            | App\Http\Controllers\Front\BerandaController@create                          | web                      |
 |        | PUT|PATCH | beranda/{beranda}                          | beranda.update            | App\Http\Controllers\Front\BerandaController@update                          | web                      |
 |        | DELETE    | beranda/{beranda}                          | beranda.destroy           | App\Http\Controllers\Front\BerandaController@destroy                         | web                      |
@@ -27,9 +27,9 @@
 |        | GET|HEAD  | faq                                        | faq.index                 | App\Http\Controllers\Front\FAQController@index                               | web                      |
 |        | POST      | faq                                        | faq.store                 | App\Http\Controllers\Front\FAQController@store                               | web                      |
 |        | GET|HEAD  | faq/create                                 | faq.create                | App\Http\Controllers\Front\FAQController@create                              | web                      |
-|        | DELETE    | faq/{faq}                                  | faq.destroy               | App\Http\Controllers\Front\FAQController@destroy                             | web                      |
-|        | GET|HEAD  | faq/{faq}                                  | faq.show                  | App\Http\Controllers\Front\FAQController@show                                | web                      |
 |        | PUT|PATCH | faq/{faq}                                  | faq.update                | App\Http\Controllers\Front\FAQController@update                              | web                      |
+|        | GET|HEAD  | faq/{faq}                                  | faq.show                  | App\Http\Controllers\Front\FAQController@show                                | web                      |
+|        | DELETE    | faq/{faq}                                  | faq.destroy               | App\Http\Controllers\Front\FAQController@destroy                             | web                      |
 |        | GET|HEAD  | faq/{faq}/edit                             | faq.edit                  | App\Http\Controllers\Front\FAQController@edit                                | web                      |
 |        | POST      | forum-fasilitator                          | forum-fasilitator.store   | App\Http\Controllers\Forum\ForumFasilitatorController@store                  | web                      |
 |        | GET|HEAD  | forum-fasilitator                          | forum-fasilitator.index   | App\Http\Controllers\Forum\ForumFasilitatorController@index                  | web                      |
@@ -38,18 +38,19 @@
 |        | DELETE    | forum-fasilitator/{forum_fasilitator}      | forum-fasilitator.destroy | App\Http\Controllers\Forum\ForumFasilitatorController@destroy                | web                      |
 |        | PUT|PATCH | forum-fasilitator/{forum_fasilitator}      | forum-fasilitator.update  | App\Http\Controllers\Forum\ForumFasilitatorController@update                 | web                      |
 |        | GET|HEAD  | forum-fasilitator/{forum_fasilitator}/edit | forum-fasilitator.edit    | App\Http\Controllers\Forum\ForumFasilitatorController@edit                   | web                      |
+|        | GET|HEAD  | forum/forum-fasilitator/{id}/{judul}       |                           | App\Http\Controllers\Forum\ForumFasilitatorController@show                   | web                      |
 |        | GET|HEAD  | forum/login                                | login                     | App\Http\Controllers\Forum\Auth\LoginController@showLoginForm                | web,guest                |
 |        | POST      | forum/login                                |                           | App\Http\Controllers\Forum\Auth\LoginController@login                        | web,guest                |
 |        | GET|HEAD  | forum/logout                               |                           | App\Http\Controllers\Forum\Auth\LoginController@logout                       | web                      |
 |        | POST      | forum/logout                               |                           | App\Http\Controllers\Forum\Auth\LoginController@logout                       | web                      |
 |        | POST      | forum/password/email                       |                           | App\Http\Controllers\Forum\Auth\ForgotPasswordController@sendResetLinkEmail  | web,guest                |
-|        | POST      | forum/password/reset                       |                           | App\Http\Controllers\Forum\Auth\ResetPasswordController@reset                | web,guest                |
 |        | GET|HEAD  | forum/password/reset                       |                           | App\Http\Controllers\Forum\Auth\ForgotPasswordController@showLinkRequestForm | web,guest                |
+|        | POST      | forum/password/reset                       |                           | App\Http\Controllers\Forum\Auth\ResetPasswordController@reset                | web,guest                |
 |        | GET|HEAD  | forum/password/reset/{token}               |                           | App\Http\Controllers\Forum\Auth\ResetPasswordController@showResetForm        | web,guest                |
 |        | POST      | forum/register                             |                           | App\Http\Controllers\Forum\Auth\RegisterController@register                  | web,guest                |
 |        | GET|HEAD  | forum/register                             |                           | App\Http\Controllers\Forum\Auth\RegisterController@showRegistrationForm      | web,guest                |
-|        | GET|HEAD  | galeri                                     | galeri.index              | App\Http\Controllers\Front\GaleriController@index                            | web                      |
 |        | POST      | galeri                                     | galeri.store              | App\Http\Controllers\Front\GaleriController@store                            | web                      |
+|        | GET|HEAD  | galeri                                     | galeri.index              | App\Http\Controllers\Front\GaleriController@index                            | web                      |
 |        | GET|HEAD  | galeri/create                              | galeri.create             | App\Http\Controllers\Front\GaleriController@create                           | web                      |
 |        | GET|HEAD  | galeri/{galeri}                            | galeri.show               | App\Http\Controllers\Front\GaleriController@show                             | web                      |
 |        | PUT|PATCH | galeri/{galeri}                            | galeri.update             | App\Http\Controllers\Front\GaleriController@update                           | web                      |
@@ -59,33 +60,33 @@
 |        | GET|HEAD  | groups                                     | groups.index              | App\Http\Controllers\Back\UserControl\GroupController@index                  | web,auth,auth.basic,auth |
 |        | GET|HEAD  | groups/create                              | groups.create             | App\Http\Controllers\Back\UserControl\GroupController@create                 | web,auth,auth.basic,auth |
 |        | GET|HEAD  | groups/{group}                             | groups.show               | App\Http\Controllers\Back\UserControl\GroupController@show                   | web,auth,auth.basic,auth |
-|        | PUT|PATCH | groups/{group}                             | groups.update             | App\Http\Controllers\Back\UserControl\GroupController@update                 | web,auth,auth.basic,auth |
 |        | DELETE    | groups/{group}                             | groups.destroy            | App\Http\Controllers\Back\UserControl\GroupController@destroy                | web,auth,auth.basic,auth |
+|        | PUT|PATCH | groups/{group}                             | groups.update             | App\Http\Controllers\Back\UserControl\GroupController@update                 | web,auth,auth.basic,auth |
 |        | GET|HEAD  | groups/{group}/edit                        | groups.edit               | App\Http\Controllers\Back\UserControl\GroupController@edit                   | web,auth,auth.basic,auth |
-|        | GET|HEAD  | hubungi-kami                               | hubungi-kami.index        | App\Http\Controllers\Front\HubungiKamiController@index                       | web                      |
 |        | POST      | hubungi-kami                               | hubungi-kami.store        | App\Http\Controllers\Front\HubungiKamiController@store                       | web                      |
+|        | GET|HEAD  | hubungi-kami                               | hubungi-kami.index        | App\Http\Controllers\Front\HubungiKamiController@index                       | web                      |
 |        | GET|HEAD  | hubungi-kami/create                        | hubungi-kami.create       | App\Http\Controllers\Front\HubungiKamiController@create                      | web                      |
+|        | DELETE    | hubungi-kami/{hubungi_kami}                | hubungi-kami.destroy      | App\Http\Controllers\Front\HubungiKamiController@destroy                     | web                      |
 |        | GET|HEAD  | hubungi-kami/{hubungi_kami}                | hubungi-kami.show         | App\Http\Controllers\Front\HubungiKamiController@show                        | web                      |
 |        | PUT|PATCH | hubungi-kami/{hubungi_kami}                | hubungi-kami.update       | App\Http\Controllers\Front\HubungiKamiController@update                      | web                      |
-|        | DELETE    | hubungi-kami/{hubungi_kami}                | hubungi-kami.destroy      | App\Http\Controllers\Front\HubungiKamiController@destroy                     | web                      |
 |        | GET|HEAD  | hubungi-kami/{hubungi_kami}/edit           | hubungi-kami.edit         | App\Http\Controllers\Front\HubungiKamiController@edit                        | web                      |
-|        | GET|HEAD  | login                                      | login                     | App\Http\Controllers\Back\Auth\LoginController@showLoginForm                 | web,guest                |
 |        | POST      | login                                      |                           | App\Http\Controllers\Back\Auth\LoginController@login                         | web,guest                |
+|        | GET|HEAD  | login                                      | login                     | App\Http\Controllers\Back\Auth\LoginController@showLoginForm                 | web,guest                |
 |        | POST      | logout                                     |                           | App\Http\Controllers\Back\Auth\LoginController@logout                        | web                      |
 |        | GET|HEAD  | logout                                     |                           | App\Http\Controllers\Back\Auth\LoginController@logout                        | web                      |
 |        | GET|HEAD  | media-promosi                              | media-promosi.index       | App\Http\Controllers\Front\MediaPromosiController@index                      | web                      |
 |        | POST      | media-promosi                              | media-promosi.store       | App\Http\Controllers\Front\MediaPromosiController@store                      | web                      |
 |        | GET|HEAD  | media-promosi/create                       | media-promosi.create      | App\Http\Controllers\Front\MediaPromosiController@create                     | web                      |
-|        | GET|HEAD  | media-promosi/{media_promosi}              | media-promosi.show        | App\Http\Controllers\Front\MediaPromosiController@show                       | web                      |
 |        | PUT|PATCH | media-promosi/{media_promosi}              | media-promosi.update      | App\Http\Controllers\Front\MediaPromosiController@update                     | web                      |
 |        | DELETE    | media-promosi/{media_promosi}              | media-promosi.destroy     | App\Http\Controllers\Front\MediaPromosiController@destroy                    | web                      |
+|        | GET|HEAD  | media-promosi/{media_promosi}              | media-promosi.show        | App\Http\Controllers\Front\MediaPromosiController@show                       | web                      |
 |        | GET|HEAD  | media-promosi/{media_promosi}/edit         | media-promosi.edit        | App\Http\Controllers\Front\MediaPromosiController@edit                       | web                      |
 |        | GET|HEAD  | pasar-aman                                 | pasar-aman.index          | App\Http\Controllers\Front\PasarAmanController@index                         | web                      |
 |        | POST      | pasar-aman                                 | pasar-aman.store          | App\Http\Controllers\Front\PasarAmanController@store                         | web                      |
 |        | GET|HEAD  | pasar-aman/create                          | pasar-aman.create         | App\Http\Controllers\Front\PasarAmanController@create                        | web                      |
-|        | DELETE    | pasar-aman/{pasar_aman}                    | pasar-aman.destroy        | App\Http\Controllers\Front\PasarAmanController@destroy                       | web                      |
-|        | PUT|PATCH | pasar-aman/{pasar_aman}                    | pasar-aman.update         | App\Http\Controllers\Front\PasarAmanController@update                        | web                      |
 |        | GET|HEAD  | pasar-aman/{pasar_aman}                    | pasar-aman.show           | App\Http\Controllers\Front\PasarAmanController@show                          | web                      |
+|        | PUT|PATCH | pasar-aman/{pasar_aman}                    | pasar-aman.update         | App\Http\Controllers\Front\PasarAmanController@update                        | web                      |
+|        | DELETE    | pasar-aman/{pasar_aman}                    | pasar-aman.destroy        | App\Http\Controllers\Front\PasarAmanController@destroy                       | web                      |
 |        | GET|HEAD  | pasar-aman/{pasar_aman}/edit               | pasar-aman.edit           | App\Http\Controllers\Front\PasarAmanController@edit                          | web                      |
 |        | POST      | password/email                             |                           | App\Http\Controllers\Back\Auth\ForgotPasswordController@sendResetLinkEmail   | web,guest                |
 |        | POST      | password/reset                             |                           | App\Http\Controllers\Back\Auth\ResetPasswordController@reset                 | web,guest                |
@@ -98,12 +99,12 @@
 |        | DELETE    | pedoman/{pedoman}                          | pedoman.destroy           | App\Http\Controllers\Front\PedomanController@destroy                         | web                      |
 |        | PUT|PATCH | pedoman/{pedoman}                          | pedoman.update            | App\Http\Controllers\Front\PedomanController@update                          | web                      |
 |        | GET|HEAD  | pedoman/{pedoman}/edit                     | pedoman.edit              | App\Http\Controllers\Front\PedomanController@edit                            | web                      |
-|        | GET|HEAD  | peta-situs                                 | peta-situs.index          | App\Http\Controllers\Front\PetaSitusController@index                         | web                      |
 |        | POST      | peta-situs                                 | peta-situs.store          | App\Http\Controllers\Front\PetaSitusController@store                         | web                      |
+|        | GET|HEAD  | peta-situs                                 | peta-situs.index          | App\Http\Controllers\Front\PetaSitusController@index                         | web                      |
 |        | GET|HEAD  | peta-situs/create                          | peta-situs.create         | App\Http\Controllers\Front\PetaSitusController@create                        | web                      |
-|        | GET|HEAD  | peta-situs/{peta_situs}                    | peta-situs.show           | App\Http\Controllers\Front\PetaSitusController@show                          | web                      |
 |        | DELETE    | peta-situs/{peta_situs}                    | peta-situs.destroy        | App\Http\Controllers\Front\PetaSitusController@destroy                       | web                      |
 |        | PUT|PATCH | peta-situs/{peta_situs}                    | peta-situs.update         | App\Http\Controllers\Front\PetaSitusController@update                        | web                      |
+|        | GET|HEAD  | peta-situs/{peta_situs}                    | peta-situs.show           | App\Http\Controllers\Front\PetaSitusController@show                          | web                      |
 |        | GET|HEAD  | peta-situs/{peta_situs}/edit               | peta-situs.edit           | App\Http\Controllers\Front\PetaSitusController@edit                          | web                      |
 |        | POST      | profile                                    | profile.store             | App\Http\Controllers\Front\ProfileController@store                           | web                      |
 |        | GET|HEAD  | profile                                    | profile.index             | App\Http\Controllers\Front\ProfileController@index                           | web                      |

@@ -134,7 +134,7 @@
 												?>
 												<tr>
 													<td>
-														<b><a href="">{{ $thread->judulThread }}</a></b><br>
+														<b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b><br>
 														<a href=""><small>By {{ $thread->forumUsers->name }}</small></a>
 													</td>
 													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>

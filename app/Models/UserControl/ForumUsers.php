@@ -37,6 +37,6 @@ class ForumUsers extends Authenticatable
     }
 
     public function comment(){
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class, 'forum_user_id');
     }
 }

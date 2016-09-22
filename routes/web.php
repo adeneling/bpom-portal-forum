@@ -37,6 +37,7 @@ Route::group(['namespace' => 'Forum'], function(){
 		Route::get('logout', 'Auth\LoginController@logout');
 	});
 	Route::resource('forum-fasilitator','ForumFasilitatorController');
+	Route::get('forum-fasilitator/{id}/{judul}', ['uses' => 'ForumFasilitatorController@showThread', 'as' => 'thread.show']);
 });
 
 /* BACK */

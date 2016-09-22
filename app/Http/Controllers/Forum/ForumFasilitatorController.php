@@ -66,6 +66,21 @@ class ForumFasilitatorController extends Controller
         return view('pages.forum-fasilitator.show');
     }
 
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function showThread($id, $judul)
+    {
+        //
+        $id = str_replace(config('app.salt'), '', base64_decode($id));
+        $thread = Thread::where('id', $id)->where('judulThread', 'like', str_replace('-', ' ', $judul))->first();
+        return view('pages.forum-fasilitator.show', ['thread' => $thread]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

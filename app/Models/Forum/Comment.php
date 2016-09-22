@@ -14,7 +14,7 @@ class Comment extends Model
     }
 
     public function forumUsers(){
-    	return $this->belongsTo(ForumUsers::class);
+    	return $this->belongsTo(ForumUsers::class, 'forum_user_id');
     }
 
     public function scopeLastComment($query, $thread_id){
