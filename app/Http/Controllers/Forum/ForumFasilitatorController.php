@@ -51,7 +51,7 @@ class ForumFasilitatorController extends Controller
         $thread->tipe = "umum";
         $thread->konten = $request->get('konten');
         $thread->save();
-        return redirect()->back();
+        return redirect('forum-fasilitator');
     }
 
     /**

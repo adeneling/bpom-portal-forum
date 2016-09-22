@@ -135,7 +135,7 @@
 												<tr>
 													<td>
 														<b><a href="">{{ $thread->judulThread }}</a></b><br>
-														<a href="">{{ $thread->forumUsers->name }}</a>
+														<a href=""><small>By {{ $thread->forumUsers->name }}</small></a>
 													</td>
 													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
 													<td>{{ $countComment != 0 ? date("d F Y", strtotime($thread->comment()->lastComment($thread->id)->first()['created_at'])) : '-' }}</td>
