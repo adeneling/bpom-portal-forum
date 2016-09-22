@@ -17,6 +17,7 @@ class CreateThreadsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('forum_user_id');
             $table->string('judulThread');
+            $table->enum('tipe', ['guide', 'umum']);
             $table->text('konten');
             $table->timestamps();
 

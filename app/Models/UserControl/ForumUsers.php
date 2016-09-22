@@ -4,6 +4,8 @@ namespace App\Models\UserControl;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Forum\Thread;
+use App\Models\Forum\Comment;
 
 class ForumUsers extends Authenticatable
 {
@@ -29,4 +31,12 @@ class ForumUsers extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function thread(){
+        return $this->hasMany(Thread::class, 'forum_user_id');
+    }
+
+    public function comment(){
+        return $this->hasMany(Comment::class);
+    }
 }

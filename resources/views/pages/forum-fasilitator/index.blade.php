@@ -128,12 +128,20 @@
 											<th>Komentar</th>
 										</thead>
 										<tbody>
-											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b><br>By Kecamatan Banjar</td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
+											@foreach($threads as $thread)
+												<?php
+													$countComment = $thread->comment()->commentThread($thread->id)->count();
+												?>
+												<tr>
+													<td>
+														<b><a href="">{{ $thread->judulThread }}</a></b><br>
+														<a href="">{{ $thread->forumUsers->name }}</a>
+													</td>
+													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
+													<td>{{ $countComment != 0 ? date("d F Y", strtotime($thread->comment()->lastComment($thread->id)->first()['created_at'])) : '-' }}</td>
+													<td><span class="badge">{{ $countComment }}</span></td>
+												</tr>
+											@endforeach
 										</tbody>
 									</table>
 									<a href="" class="btn btn-primary pull-right"> Tampilkan Semua </a>
