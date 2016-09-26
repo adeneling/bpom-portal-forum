@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')Galeri
-@stop
+@section('title', 'Galeri')
 
 @section('content')
 <!-- BREADCRUMBS -->

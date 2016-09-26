@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')Hubungi Kami
-@stop
+@section('title', 'Hubungi Kami')
 
 @section('content')
 <!-- BREADCRUMBS -->

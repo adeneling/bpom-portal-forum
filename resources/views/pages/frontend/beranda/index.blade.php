@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')Beranda
-@stop
+@section('title', 'Beranda')
 
 @section('content')
 <!-- SLIDER -->

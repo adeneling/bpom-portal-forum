@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')FAQ
-@stop
+@section('title', 'FAQ')
 
 @section('content')
 <!-- BREADCRUMBS -->

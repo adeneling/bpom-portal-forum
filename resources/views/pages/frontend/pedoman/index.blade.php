@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')Pedoman
-@stop
+@section('title', 'Pedoman')
 
 @section('content')
 <!-- BREADCRUMBS -->
