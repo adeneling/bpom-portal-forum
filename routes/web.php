@@ -38,6 +38,8 @@ Route::group(['namespace' => 'Forum'], function(){
 	});
 	Route::resource('forum-fasilitator','ForumFasilitatorController');
 	Route::get('forum-fasilitator/{id}/{judul}', ['uses' => 'ForumFasilitatorController@showThread', 'as' => 'thread.show']);
+	Route::get('forum-fasilitator/{id}/reply-thread', ['uses' => 'ForumFasilitatorController@replyThread', 'as' => 'thread.reply']);
+	Route::post('forum-fasilitator/reply-thread', ['uses' => 'ForumFasilitatorController@postReplyThread', 'as' => 'thread.post.reply'])
 });
 
 /* BACK */

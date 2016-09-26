@@ -37,7 +37,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<a href="" class="btn btn-primary pull-left">Tanggapi Thread</a>
+				<a href="{{ route('thread.reply', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
 			</div>
 			<div class="col-md-8">
 				<div class="row">
