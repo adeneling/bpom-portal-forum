@@ -11,7 +11,7 @@
 			<div class="item active">
 				<img src="{{ asset('assets/frontend/img/sliders/slider3-h500.png') }}" class="img-responsive" alt="Slider Image">
 				<div class="carousel-caption">
-					<h2 class="hero-heading">Badan Pengawasan Obat dan Makanan</h2>
+					<h2 class="hero-heading">Badan Pengawas Obat dan Makanan</h2>
 					<p class="lead">Pasar Aman</p>
 				</div>
 			</div>
@@ -19,14 +19,14 @@
 				<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png') }}" class="img-responsive" alt="Slider Image">
 				<div class="carousel-caption">
 					<h2 class="hero-heading">FORUM</h2>
-					<p class="lead">Badan Pengawasan Obat dan Makanan</p>
+					<p class="lead">Badan Pengawas Obat dan Makanan</p>
 					<a href="#" class="btn btn-lg hero-button">Ikut Forum</a>
 				</div>
 			</div>
 			<div class="item">
 				<img src="{{ asset('assets/frontend/img/sliders/slider1-h500.png') }}" class="img-responsive" alt="Slider Image">
 				<div class="carousel-caption">
-					<h2 class="hero-heading">Badan Pengawasan Obat dan Makanan</h2>
+					<h2 class="hero-heading">Badan Pengawas Obat dan Makanan</h2>
 					<p class="lead">Pasar Aman</p>
 				</div>
 			</div>
