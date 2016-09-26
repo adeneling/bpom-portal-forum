@@ -71,7 +71,7 @@
 	</div>
 	<!-- COPYRIGHT -->
 	<div class="text-center copyright">
-		&copy;2016 Badan Pengawasan Obat dan Makanan
+		&copy;2016 {{ config('app.name') }}
 	</div>
 	<!-- END COPYRIGHT -->
 </footer>
