@@ -60,6 +60,18 @@ class ForumFasilitatorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function replyThread($id)
+    {
+        //
+        return view('pages.forum-fasilitator.reply-thread');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         //
