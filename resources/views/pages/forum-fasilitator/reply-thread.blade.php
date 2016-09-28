@@ -1,7 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title')Forum Fasilitator
-@stop
+@section('title', 'Forum Fasilitator')
 
 @section('content')
 <!-- SLIDER -->
@@ -12,7 +11,7 @@
 				<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png') }}" class="img-responsive" alt="Slider Image">
 				<div class="carousel-caption">
 					<h2 class="hero-heading">FORUM</h2>
-					<p class="lead">Badan Pengawasan Obat dan Makanan</p>
+					<p class="lead">{{ config('app.name') }}</p>
 				</div>
 			</div>
 		</div>
