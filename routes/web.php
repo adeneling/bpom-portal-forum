@@ -31,15 +31,14 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('pasar-aman','PasarAmanController');
 });
 
-Route::group(['namespace' => 'Forum'], function(){
-	Route::group(['prefix' => 'forum'], function(){
-		Route::auth();
-		Route::get('logout', 'Auth\LoginController@logout');
-	});
-	Route::resource('forum-fasilitator','ForumFasilitatorController');
-	Route::get('forum-fasilitator/{id}/show/{judul}', ['uses' => 'ForumFasilitatorController@showThread', 'as' => 'thread.show']);
-	Route::get('forum-fasilitator/{id}/reply-thread', ['uses' => 'ForumFasilitatorController@replyThread', 'as' => 'thread.reply']);
-	Route::post('forum-fasilitator/reply-thread', ['uses' => 'ForumFasilitatorController@postReplyThread', 'as' => 'thread.post.reply']);
+Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function(){
+	Route::auth();
+	Route::get('logout', 'Auth\LoginController@logout');
+
+	Route::resource('thread','ForumFasilitatorController');
+	Route::get('thread/{id}/show/{judul}', ['uses' => 'ForumFasilitatorController@showThread', 'as' => 'thread.show.detail']);
+	Route::get('thread/{id}/reply-thread', ['uses' => 'ForumFasilitatorController@replyThread', 'as' => 'thread.reply']);
+	Route::post('reply-thread', ['uses' => 'ForumFasilitatorController@postReplyThread', 'as' => 'thread.post.reply']);
 });
 
 /* BACK */

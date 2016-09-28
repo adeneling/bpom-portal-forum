@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/forum-fasilitator';
+    protected $redirectTo = '/forum-fasilitator/thread';
 
     protected $guard = 'forum';
 

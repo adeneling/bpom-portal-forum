@@ -33,25 +33,27 @@
 <!-- END BREADCRUMBS -->
 <!-- TOPBAR -->
 <!-- PAGE CONTENT -->
-<div class="page-content">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<a href="{{ route('thread.reply', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
-			</div>
-			<div class="col-md-8">
-				<div class="row">
-					<div class="col-sm-8">
-						<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right">Buat Thread</a>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" class="form-control" placeholder="Cari di forum">
+@if(auth('forum')->check())
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{ route('thread.reply', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
+				</div>
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-sm-8">
+							<a href="{{ route('thread.create') }}" class="btn btn-primary pull-right">Buat Thread</a>
+						</div>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" placeholder="Cari di forum">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+@endif
 
 <div class="page-content">
 	<div class="container">

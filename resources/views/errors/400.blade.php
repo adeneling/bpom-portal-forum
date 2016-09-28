@@ -7,11 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h1>503</h1>
-                    <h2>SERVICE UNAVAILABLE</h2>
+                    <h1>400</h1>
+                    <h2>OOPS! BAD REQUEST EXCEPTION</h2>
                     <hr />
                     <div class="error-description">
-                        <p>The server is currently unavailable (overloaded or down)</p>
+                        <p>The request cannot be fulfilled due to bad syntax</p>
                     </div>
                     <form class="form-horizontal">
                         <div class="input-group">

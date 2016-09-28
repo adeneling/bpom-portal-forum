@@ -41,7 +41,7 @@
 			</div>
 			@if(auth('forum')->check())
 				<div class="col-md-8">
-					<a href="{{ route('forum-fasilitator.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
+					<a href="{{ route('thread.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
 				</div>
 			@endif
 		</div>
@@ -70,7 +70,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td><b><a href="{{ route('forum-fasilitator.show', 1) }}">Judul forum yang dibuat oleh admin</a></b></td>
+												<td><b><a href="">Judul forum yang dibuat oleh admin</a></b></td>
 												<td>12 Agustus 2016</td>
 												<td>12 Agustus 2016</td>
 												<td><span class="badge">42</span></td>

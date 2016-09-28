@@ -7,11 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h1>503</h1>
-                    <h2>SERVICE UNAVAILABLE</h2>
+                    <h1>404</h1>
+                    <h2>OOPS! PAGE NOT FOUND EXCEPTION</h2>
                     <hr />
                     <div class="error-description">
-                        <p>The server is currently unavailable (overloaded or down)</p>
+                        <p>The requested page could not be found but may be available again in the future</p>
                     </div>
                     <form class="form-horizontal">
                         <div class="input-group">

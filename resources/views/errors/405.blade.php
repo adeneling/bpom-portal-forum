@@ -7,11 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h1>503</h1>
-                    <h2>SERVICE UNAVAILABLE</h2>
+                    <h1>405</h1>
+                    <h2>OOPS! METHOD NOT ALLOWED EXCEPTION</h2>
                     <hr />
                     <div class="error-description">
-                        <p>The server is currently unavailable (overloaded or down)</p>
+                        <p>A request was made of a page using a request method not supported by that page</p>
                     </div>
                     <form class="form-horizontal">
                         <div class="input-group">

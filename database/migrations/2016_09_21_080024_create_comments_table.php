@@ -17,6 +17,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('forum_user_id');
             $table->unsignedInteger('thread_id');
+            $table->integer('counter');
             $table->text('comment');
             $table->timestamps();
 

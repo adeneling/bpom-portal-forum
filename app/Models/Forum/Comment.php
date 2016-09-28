@@ -35,6 +35,11 @@ class Comment extends Model
         return $this;
     }
 
+    public function withCounter($counter){
+        $this->counter = $counter+=1;
+        return $this;
+    }
+
     public function saveComment(){
         $this->save();
         return $this;

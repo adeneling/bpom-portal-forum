@@ -60,7 +60,7 @@
 					<a href="{{ url('media-promosi') }}">MEDIA PROMOSI </a>
 				</li>
 				<li>
-					<a href="{{ url('forum-fasilitator') }}">FORUM FASILITATOR </a>
+					<a href="{{ route('thread.index') }}">FORUM FASILITATOR </a>
 				</li>
 				<li>
 					<a href="{{ url('pasar-aman') }}">PASAR AMAN </a>

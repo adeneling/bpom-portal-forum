@@ -43,7 +43,7 @@
 						<h4 class="modal-title">Login</h4>
 					</div>
 					<div class="modal-body">
-						{!! Form::open(['url' => 'forum/login', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+						{!! Form::open(['url' => 'forum-fasilitator/login', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
 							<div class="form-group">
 								<label for="email" class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-10">

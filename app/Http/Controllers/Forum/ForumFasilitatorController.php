@@ -15,6 +15,12 @@ use App\Http\Requests\Forum\ForumRequests;
 
 class ForumFasilitatorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:forum', ['except' => ['index', 'showThread']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -71,18 +77,24 @@ class ForumFasilitatorController extends Controller
         return view('pages.forum-fasilitator.reply-thread', ['thread' => $thread, 'comments' => $comments]);
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function postReplyThread(Request $request)
     {
         //
         $id = str_replace(config('app.salt'), '', base64_decode($request->get('id')));
+        $thread = Thread::find($id);
         $comment = Thread::find($id)
                    ->newComment()
                    ->withComment($request->get('komentar'))
+                   ->withCounter($thread->comment()->commentThread($thread->id)->count())
                    ->saveComment();
 
-        $thread = Thread::find($id);
-
-        return redirect()->route('thread.show', [base64_encode(config('app.salt').$thread->id), strtolower(str_replace(' ', '-', $thread->judulThread))]);
+        return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$thread->id), strtolower(str_replace(' ', '-', $thread->judulThread))]);
     }
 
     /**
