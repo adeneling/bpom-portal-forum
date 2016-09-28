@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', '403')
+@section('title', '401')
 
 @section('content')
 	<div class="page-content page-error text-center">
