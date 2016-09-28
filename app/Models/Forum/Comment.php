@@ -24,4 +24,19 @@ class Comment extends Model
     public function scopeCommentThread($query, $thread_id){
     	return $query->where('thread_id', $thread_id);
     }
+
+    public function withUser(){
+        $this->forum_user_id = auth('forum')->user()->id;
+        return $this;
+    }
+
+    public function withComment($comment){
+        $this->comment = $comment;
+        return $this;
+    }
+
+    public function saveComment(){
+        $this->save();
+        return $this;
+    }
 }

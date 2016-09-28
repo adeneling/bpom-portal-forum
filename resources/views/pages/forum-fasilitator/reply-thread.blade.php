@@ -51,8 +51,9 @@
 				{{-- END ALERT ERROR --}}
 
 				<!-- THREAD BARU -->
-				<h2 class="section-heading">Thread Baru</h2>
-				{!! Form::open(['url' => 'forum-fasilitator', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+				<h2 class="section-heading"> Tanggapi Thread</h2>
+				{!! Form::open(['route' => 'thread.post.reply', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+					{!! Form::hidden('id', base64_encode(config('app.salt').$thread->id)) !!}
 					<div class="form-group">
 						<label for="komentar" class="col-sm-2 control-label">Komentar</label>
 						<div class="col-sm-10">
@@ -75,6 +76,45 @@
 				<!-- END THREAD BARU -->
 			</div>
 		</div>
+		<hr>
+		<ul class="media-list forum">
+
+			@foreach($comments as $comment)
+				<li class="media well">
+					<div class="pull-left user-info" href="#">
+						<img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
+							width="64" alt="Generic placeholder image">
+						<strong><a href="user.html">{{ $comment->forumUsers->name }}</a></strong>
+						<small>Member</small>
+						<br>
+						<small class="btn-group btn-group-xs">
+						<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
+						<a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
+						<strong class="btn btn-success">+451</strong>
+						</small>
+					</div>
+					<div class="media-body">
+						<!-- Post Info Buttons -->
+						<div class="forum-post-panel btn-group btn-group-xs">
+							<a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> Posted 3 weeks ago</a>
+							<a href="#" class="btn btn-danger"><i class="fa fa-warning"></i> Report post</a>
+						</div>
+						<!-- Post Info Buttons END -->
+						<!-- Post Text -->
+						{!! $comment->comment !!}
+						<!-- Post Text EMD -->
+					</div>
+					<div class="media footer">
+						<div class="pull-right">
+							sdad
+						</div>
+					</div>
+				</li>
+			@endforeach
+
+			{{ $comments->links() }}
+
+		</ul>
 	</div>
 </div>
 @stop

@@ -88,7 +88,7 @@
 
 					<hr>
 
-					@foreach($thread->comment as $comment)
+					@foreach($comments as $comment)
 
 						<li class="media well">
 							<div class="pull-left user-info" href="#">
@@ -121,6 +121,8 @@
 							</div>
 						</li>
 					@endforeach
+
+					{{ $comments->links() }}
 
 				</ul>
 

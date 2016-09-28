@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Forum\Thread;
 
+use App\Helpers\AppHelpers;
+
 use App\Http\Requests\Forum\ForumRequests;
 
 class ForumFasilitatorController extends Controller
@@ -63,7 +65,24 @@ class ForumFasilitatorController extends Controller
     public function replyThread($id)
     {
         //
-        return view('pages.forum-fasilitator.reply-thread');
+        $id = str_replace(config('app.salt'), '', base64_decode($id));
+        $thread = Thread::find($id);
+        $comments = $thread->comment()->orderBy('created_at', 'desc')->paginate(10);
+        return view('pages.forum-fasilitator.reply-thread', ['thread' => $thread, 'comments' => $comments]);
+    }
+
+    public function postReplyThread(Request $request)
+    {
+        //
+        $id = str_replace(config('app.salt'), '', base64_decode($request->get('id')));
+        $comment = Thread::find($id)
+                   ->newComment()
+                   ->withComment($request->get('komentar'))
+                   ->saveComment();
+
+        $thread = Thread::find($id);
+
+        return redirect()->route('thread.show', [base64_encode(config('app.salt').$thread->id), strtolower(str_replace(' ', '-', $thread->judulThread))]);
     }
 
     /**
@@ -90,7 +109,8 @@ class ForumFasilitatorController extends Controller
         //
         $id = str_replace(config('app.salt'), '', base64_decode($id));
         $thread = Thread::where('id', $id)->where('judulThread', 'like', str_replace('-', ' ', $judul))->first();
-        return view('pages.forum-fasilitator.show', ['thread' => $thread]);
+        $comments = $thread->comment()->paginate(10);
+        return view('pages.forum-fasilitator.show', ['thread' => $thread, 'comments' => $comments]);
     }
 
     /**

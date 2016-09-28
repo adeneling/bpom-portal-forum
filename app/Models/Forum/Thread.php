@@ -16,4 +16,12 @@ class Thread extends Model
     public function comment(){
     	return $this->hasMany(Comment::class);
     }
+
+    public function newComment(){
+    	$comment = new Comment;
+    	$comment->thread()->associate($this);
+    	$comment->withUser();
+
+    	return $comment;
+    }
 }
