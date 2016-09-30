@@ -23,10 +23,7 @@
 <div class="page-header">
 	<div class="container">
 		<h1 class="page-title pull-left">@yield('title')</h1>
-		<ol class="breadcrumb">
-			<li>Navigasi</li>
-			<li class="active">@yield('title')</li>
-		</ol>
+		{!! Breadcrumbs::render('buat-thread') !!}
 	</div>
 </div>
 <!-- END BREADCRUMBS -->

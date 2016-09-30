@@ -171,6 +171,7 @@ return [
         Laratrust\LaratrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
 
         //
 
@@ -233,6 +234,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
 
     ],
 

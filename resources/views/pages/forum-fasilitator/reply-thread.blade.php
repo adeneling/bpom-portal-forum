@@ -22,11 +22,8 @@
 <!-- BREADCRUMBS -->
 <div class="page-header">
 	<div class="container">
-		<h1 class="page-title pull-left">@yield('title')</h1>
-		<ol class="breadcrumb">
-			<li>Navigasi</li>
-			<li class="active">@yield('title')</li>
-		</ol>
+		<h1 class="page-title pull-left">{{ $thread->judulThread }}</h1>
+		{!! Breadcrumbs::render('tanggapi-thread', $thread) !!}
 	</div>
 </div>
 <!-- END BREADCRUMBS -->
