@@ -81,6 +81,7 @@ class ForumFasilitatorController extends Controller
 	 */
 	public function storeImage(Request $request)
 	{
+		Storage::makeDirectory('threadImage');
 		$filename = 'threadImage/'.str_random(10).'.'.$request->file('image')->getClientOriginalExtension();
 
 		Storage::put($filename, file_get_contents($request->file('image')));
