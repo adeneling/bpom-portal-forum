@@ -144,7 +144,7 @@
 										<div class="pull-right">
 											<a href="{{ route('thread.edit.reply', encrypt($comment->id)) }}">Edit</a>
 											&nbsp;&nbsp;&nbsp;
-											<a href="">Reply</a>
+											<a href="{{ route('thread.quote.reply', encrypt($comment->id)) }}">Reply</a>
 										</div>
 									</div>
 								</div>

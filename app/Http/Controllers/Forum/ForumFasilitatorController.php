@@ -180,6 +180,21 @@ class ForumFasilitatorController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
+	public function quoteReplyThread($id)
+	{
+		//
+		$comment = Comment::find(decrypt($id));
+		$comment->comment = "<blockquote><b>".$comment->ForumUsers->name." menulis:</b><br><br>".$comment->comment."</blockquote>"."<p></p>";
+
+		return view('pages.forum-fasilitator.quote-reply-thread', ['comment' => $comment]);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
 	public function show($id)
 	{
 		//
