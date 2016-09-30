@@ -41,6 +41,7 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 	Route::post('reply-thread', ['uses' => 'ForumFasilitatorController@postReplyThread', 'as' => 'thread.post.reply']);
 	Route::post('post-image-thread', ['uses' => 'ForumFasilitatorController@storeImage', 'as' => 'thread.post.image']);
 	Route::delete('delete-image-thread/{id}', ['uses' => 'ForumFasilitatorController@deleteImage', 'as' => 'thread.delete.image']);
+	Route::get('profile', ['uses' => 'ForumFasilitatorController@showProfile', 'as' => 'thread.profile']);
 });
 
 /* BACK */

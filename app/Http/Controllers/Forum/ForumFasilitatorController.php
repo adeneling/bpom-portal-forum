@@ -20,6 +20,12 @@ use Storage;
 class ForumFasilitatorController extends Controller
 {
 
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
 	public function __construct()
 	{
 		$this->middleware('auth:forum', ['except' => ['index', 'showThread']]);
@@ -65,11 +71,14 @@ class ForumFasilitatorController extends Controller
 		$thread->konten = $request->get('konten');
 		$thread->save();
 		return redirect()->route('thread.index');
-
-		// Storage::put($request->file('image')->getClientOriginalName(), file_get_contents($request->file('image')));
-		// echo '<img src="'.asset(Storage::url($request->file('image')->getClientOriginalName())).'" class="img-responsive">';
 	}
 
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
 	public function storeImage(Request $request)
 	{
 		$filename = 'threadImage/'.str_random(10).'.'.$request->file('image')->getClientOriginalExtension();
@@ -84,6 +93,12 @@ class ForumFasilitatorController extends Controller
 		return view('pages.forum-fasilitator._tableImageThread', ['threadsImages' => $threadImages]);
 	}
 
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
 	public function deleteImage($id)
 	{
 		$threadImage = ThreadImage::find(decrypt($id));
@@ -155,6 +170,19 @@ class ForumFasilitatorController extends Controller
 		$thread = Thread::where('id', $id)->orWhere('judulThread', 'like', str_replace('-', ' ', $judul))->first();
 		$thread->comment()->count() > 0 ? $comments = $thread->comment()->paginate(10) : $comments = null;
 		return view('pages.forum-fasilitator.show', ['thread' => $thread, 'comments' => $comments]);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showProfile()
+	{
+		//
+		$user = ForumUsers::find(auth('forum')->user()->id);
+		return view('pages.forum-fasilitator.profile', ['user' => $user]);
 	}
 
 	/**

@@ -13,8 +13,8 @@
 	<link href="{{ asset('assets/frontend/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
 
 	<!-- GOOGLE FONTS -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/fonts/font-googleapis-open-sans.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/fonts/font-googleapis-roboto-condensed.css') }}">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
 
 	<!-- FAVICONS -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/frontend/ico/repute144x144.png') }}">
