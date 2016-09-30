@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\Forum\Thread;
+use App\Models\Forum\Comment;
 use App\Models\Forum\ThreadImage;
 use App\Models\UserControl\ForumUsers;
 
@@ -143,6 +144,34 @@ class ForumFasilitatorController extends Controller
 				   ->saveComment();
 
 		return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$thread->id), strtolower(str_replace(' ', '-', $thread->judulThread))]);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function editReplyThread($id)
+	{
+		//
+		$comment = Comment::find(decrypt($id));
+		return view('pages.forum-fasilitator.edit-reply-thread', ['comment' => $comment]);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function updateReplyThread(Request $request, $id)
+	{
+		$comment = Comment::find(decrypt($id));
+		$comment->comment = $request->get('komentar');
+		$comment->update();
+
+		return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$comment->thread->id), strtolower(str_replace(' ', '-', $comment->thread->judulThread))]);
 	}
 
 	/**

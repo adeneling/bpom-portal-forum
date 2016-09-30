@@ -112,7 +112,7 @@
 							<div class="panel-footer">
 								&nbsp;
 								<div class="pull-right">
-									<a href="">Edit</a>
+									<a href="{{ route('thread.edit.reply', encrypt($comment->id)) }}">Edit</a>
 									&nbsp;&nbsp;&nbsp;
 									<a href="">Reply</a>
 								</div>
