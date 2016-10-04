@@ -49,7 +49,7 @@
 
 				<!-- THREAD BARU -->
 				<h2 class="section-heading"> Edit Tanggapan Thread</h2>
-				{!! Form::open(['route' => 'thread.post.reply', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+				{!! Form::open(['route' => 'comment.store', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
 					{!! Form::hidden('id', base64_encode(config('app.salt').$comment->thread->id)) !!}
 					<div class="form-group">
 						<label for="komentar" class="col-sm-2 control-label">Komentar</label>

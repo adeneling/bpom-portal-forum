@@ -49,12 +49,12 @@
 
 				<!-- THREAD BARU -->
 				<h2 class="section-heading"> Tanggapi Thread</h2>
-				{!! Form::open(['route' => 'thread.post.reply', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
+				{!! Form::open(['route' => 'comment.store', 'class' => 'form-horizontal left-aligned', 'role' => 'form']) !!}
 					{!! Form::hidden('id', base64_encode(config('app.salt').$thread->id)) !!}
 					<div class="form-group">
 						<label for="komentar" class="col-sm-2 control-label">Komentar</label>
 						<div class="col-sm-10">
-							{!! Form::textarea('komentar', null, ['id' => 'komentar', 'class' => 'form-control']) !!}
+							{!! Form::textarea('komentar', old('komentar'), ['id' => 'komentar', 'class' => 'form-control']) !!}
 						</div>
 					</div>
 					<div class="form-group">
@@ -112,7 +112,7 @@
 							<div class="panel-footer">
 								&nbsp;
 								<div class="pull-right">
-									<a href="{{ route('thread.edit.reply', encrypt($comment->id)) }}">Edit</a>
+									<a href="{{ route('comment.edit', encrypt($comment->id)) }}">Edit</a>
 									&nbsp;&nbsp;&nbsp;
 									<a href="">Reply</a>
 								</div>

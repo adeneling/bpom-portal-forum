@@ -5,7 +5,7 @@
 		<div class="topbar">
 			<ul class="list-inline top-nav">
 				@if(auth('forum')->check())
-					<li><b>Hay <a href="{{ route('thread.profile') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
+					<li><b>Hay <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
 					<li><a href="{{ url('forum/logout') }}">LOGOUT</a></li>
 					<li>&nbsp; | &nbsp;</li>
 				@else

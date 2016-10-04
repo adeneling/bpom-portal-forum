@@ -31,22 +31,26 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('pasar-aman','PasarAmanController');
 });
 
+// Forum
 Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function(){
+	// Authentication Forum
 	Route::auth();
 	Route::get('logout', 'Auth\LoginController@logout');
 
+	// Thread
 	Route::resource('thread','ForumFasilitatorController');
-	Route::get('thread/{id}/show/{judul}', ['uses' => 'ForumFasilitatorController@showThread', 'as' => 'thread.show.detail']);
+	Route::get('thread/{id}/show/{judul}', 'ForumFasilitatorController@show')->name('thread.show.detail');
 
-	Route::get('thread/{id}/reply-thread', ['uses' => 'ForumFasilitatorController@replyThread', 'as' => 'thread.reply']);
-	Route::post('reply-thread', ['uses' => 'ForumFasilitatorController@postReplyThread', 'as' => 'thread.post.reply']);
-	Route::get('reply-thread/{id}/edit', ['uses' => 'ForumFasilitatorController@editReplyThread', 'as' => 'thread.edit.reply']);
-	Route::put('reply-thread/{id}', ['uses' => 'ForumFasilitatorController@updateReplyThread', 'as' => 'thread.update.reply']);
-	Route::get('quote-reply-thread/{id}', ['uses' => 'ForumFasilitatorController@quoteReplyThread', 'as' => 'thread.quote.reply']);
+	// Comment
+	Route::resource('comment', 'CommentController');
+	Route::get('comment/create/{id}', 'CommentController@create')->name('comment.create');
+	Route::get('comment/quote/{id}', 'CommentController@quote')->name('comment.quote');
 
-	Route::post('post-image-thread', ['uses' => 'ForumFasilitatorController@storeImage', 'as' => 'thread.post.image']);
-	Route::delete('delete-image-thread/{id}', ['uses' => 'ForumFasilitatorController@deleteImage', 'as' => 'thread.delete.image']);
-	Route::get('profile', ['uses' => 'ForumFasilitatorController@showProfile', 'as' => 'thread.profile']);
+	// Image on Thread
+	Route::resource('image-thread', 'ImageController');
+
+	// Profile Forum
+	Route::resource('profile', 'ProfileController');
 });
 
 /* BACK */

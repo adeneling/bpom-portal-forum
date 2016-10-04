@@ -7,7 +7,7 @@ class AppHelpers{
 	public static function urlThreadForum($id, $judul){
 
 		//
-		return route('thread.show.detail', [base64_encode(config('app.salt').$id), strtolower(AppHelpers::seo_friendly_url($judul))]);
+		return route('thread.show.detail', [base64_encode(config('app.salt').$id), str_slug($judul, '-')]);
 	}
 
 	public static function seo_friendly_url($string){

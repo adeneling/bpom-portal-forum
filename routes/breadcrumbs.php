@@ -71,13 +71,13 @@ Breadcrumbs::register('thread', function($breadcrumbs, $thread) {
 // Beranda > Forum Fasilitator > [Thread] > Tanggapi Thread
 Breadcrumbs::register('tanggapi-thread', function($breadcrumbs, $thread) {
     $breadcrumbs->parent('thread', $thread);
-    $breadcrumbs->push('Tanggapi Thread', route('thread.reply', base64_encode(config('app.salt').$thread->id)));
+    $breadcrumbs->push('Tanggapi Thread', route('comment.create', base64_encode(config('app.salt').$thread->id)));
 });
 
 // Beranda > Forum Fasilitator > [Thread] > Edit Tanggapan Thread
 Breadcrumbs::register('edit-tanggapan-thread', function($breadcrumbs, $comment) {
     $breadcrumbs->parent('thread', $comment->thread);
-    $breadcrumbs->push('Edit Tanggapan Thread', route('thread.edit.reply', encrypt($comment->id)));
+    $breadcrumbs->push('Edit Tanggapan Thread', route('comment.edit', encrypt($comment->id)));
 });
 
 // Beranda > Pasar Aman

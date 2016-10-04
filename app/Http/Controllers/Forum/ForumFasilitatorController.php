@@ -8,15 +8,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\Forum\Thread;
-use App\Models\Forum\Comment;
 use App\Models\Forum\ThreadImage;
-use App\Models\UserControl\ForumUsers;
-
-use App\Helpers\AppHelpers;
 
 use App\Http\Requests\Forum\ForumRequests;
-
-use Storage;
 
 class ForumFasilitatorController extends Controller
 {
@@ -29,7 +23,7 @@ class ForumFasilitatorController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth:forum', ['except' => ['index', 'showThread']]);
+		$this->middleware('auth:forum', ['except' => ['index', 'show']]);
 	}
 
 	/**
@@ -80,154 +74,13 @@ class ForumFasilitatorController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function storeImage(Request $request)
-	{
-		Storage::makeDirectory('threadImage');
-		$filename = 'threadImage/'.str_random(10).'.'.$request->file('image')->getClientOriginalExtension();
-
-		Storage::put($filename, file_get_contents($request->file('image')));
-		$image = ForumUsers::find(auth('forum')->user()->id)
-				 ->newThreadImage()
-				 ->withLocated(Storage::url($filename))
-				 ->saveImage();
-
-		$threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
-		return view('pages.forum-fasilitator._tableImageThread', ['threadsImages' => $threadImages]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function deleteImage($id)
-	{
-		$threadImage = ThreadImage::find(decrypt($id));
-		Storage::delete($threadImage->located);
-		$threadImage->delete();
-		
-		$threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
-		return view('pages.forum-fasilitator._tableImageThread', ['threadsImages' => $threadImages]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function replyThread($id)
-	{
-		//
-		$id = str_replace(config('app.salt'), '', base64_decode($id));
-		$thread = Thread::find($id);
-		$comments = $thread->comment()->orderBy('created_at', 'desc')->paginate(10);
-		return view('pages.forum-fasilitator.reply-thread', ['thread' => $thread, 'comments' => $comments]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function postReplyThread(Request $request)
-	{
-		//
-		$id = str_replace(config('app.salt'), '', base64_decode($request->get('id')));
-		$thread = Thread::find($id);
-		$comment = Thread::find($id)
-				   ->newComment()
-				   ->withComment($request->get('komentar'))
-				   ->withCounter($thread->comment()->commentThread($thread->id)->count())
-				   ->saveComment();
-
-		return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$thread->id), strtolower(str_replace(' ', '-', $thread->judulThread))]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function editReplyThread($id)
-	{
-		//
-		$comment = Comment::find(decrypt($id));
-		return view('pages.forum-fasilitator.edit-reply-thread', ['comment' => $comment]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function updateReplyThread(Request $request, $id)
-	{
-		$comment = Comment::find(decrypt($id));
-		$comment->comment = $request->get('komentar');
-		$comment->update();
-
-		return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$comment->thread->id), strtolower(str_replace(' ', '-', $comment->thread->judulThread))]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function quoteReplyThread($id)
-	{
-		//
-		$comment = Comment::find(decrypt($id));
-		$comment->comment = "<blockquote><b>".$comment->ForumUsers->name." menulis:</b><br><br>".$comment->comment."</blockquote>"."<p></p>";
-
-		return view('pages.forum-fasilitator.quote-reply-thread', ['comment' => $comment]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function show($id)
-	{
-		//
-		return view('pages.forum-fasilitator.show');
-	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function showThread($id, $judul)
+	public function show($id, $judul)
 	{
 		//
 		$id = str_replace(config('app.salt'), '', base64_decode($id));
 		$thread = Thread::where('id', $id)->orWhere('judulThread', 'like', str_replace('-', ' ', $judul))->first();
 		$thread->comment()->count() > 0 ? $comments = $thread->comment()->paginate(10) : $comments = null;
 		return view('pages.forum-fasilitator.show', ['thread' => $thread, 'comments' => $comments]);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function showProfile()
-	{
-		//
-		$user = ForumUsers::find(auth('forum')->user()->id);
-		return view('pages.forum-fasilitator.profile', ['user' => $user]);
 	}
 
 	/**

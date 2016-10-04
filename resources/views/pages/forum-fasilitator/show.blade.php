@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="{{ route('thread.reply', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
+					<a href="{{ route('comment.create', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
 				</div>
 				<div class="col-md-8">
 					<div class="row">
@@ -142,9 +142,9 @@
 									<div class="panel-footer">
 										&nbsp;
 										<div class="pull-right">
-											<a href="{{ route('thread.edit.reply', encrypt($comment->id)) }}">Edit</a>
+											<a href="{{ route('comment.edit', encrypt($comment->id)) }}">Edit</a>
 											&nbsp;&nbsp;&nbsp;
-											<a href="{{ route('thread.quote.reply', encrypt($comment->id)) }}">Reply</a>
+											<a href="{{ route('comment.quote', encrypt($comment->id)) }}">Reply</a>
 										</div>
 									</div>
 								</div>

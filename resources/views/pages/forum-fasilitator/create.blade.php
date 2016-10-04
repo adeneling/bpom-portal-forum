@@ -33,7 +33,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<a href="{{ url('forum-fasilitator') }}" class="btn btn-danger pull-right"> Kembali </a>
+				<a href="{{ route('thread.index') }}" class="btn btn-danger pull-right"> Kembali </a>
 			</div>
 		</div>
 	</div>
@@ -149,7 +149,7 @@
 					var formdata = new FormData(form);
 					$.ajax({
 						async: true,
-						url: "{{ route('thread.post.image') }}",
+						url: "{{ route('image-thread.store') }}",
 						type: 'POST',
 						processData: false,
 						contentType: false,
@@ -173,7 +173,7 @@
 				e.preventDefault();
 
 				$.ajax({
-					url: "{{ url('forum-fasilitator/delete-image-thread') }}"+"/"+this.getAttribute('data-id'),
+					url: "{{ url('forum-fasilitator/image-thread') }}"+"/"+this.getAttribute('data-id'),
 					type: 'DELETE',
 					data: { _token: this.getAttribute('data-token')},
 					cache: true,

@@ -49,7 +49,7 @@
 
 				<!-- THREAD BARU -->
 				<h2 class="section-heading"> Edit Tanggapan Thread</h2>
-				{!! Form::model($comment, ['route' => ['thread.update.reply', encrypt($comment->id)], 'method' => 'PUT', 'class' => 'form-horizontal left-aligned', 'role' => 'form', 'files' => true]) !!}
+				{!! Form::model($comment, ['route' => ['comment.update', encrypt($comment->id)], 'method' => 'PUT', 'class' => 'form-horizontal left-aligned', 'role' => 'form', 'files' => true]) !!}
 					<div class="form-group">
 						<label for="komentar" class="col-sm-2 control-label">Komentar</label>
 						<div class="col-sm-10">
