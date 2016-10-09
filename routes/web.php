@@ -54,12 +54,29 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 });
 
 /* BACK */
-Route::group(['namespace' => 'Back'], function(){
+Route::group(['namespace' => 'Back', 'prefix' => 'admin'], function(){
+	// Auth 
 	Route::auth();
 	Route::get('logout', 'Auth\LoginController@logout');
-	Route::group(['middleware' => ['auth', 'auth.basic']], function(){
-		Route::resource('admin', 'BackController');
-		Route::resource('groups', 'UserControl\GroupController');
-		Route::resource('users', 'UserControl\UserController');
-	});
+	// Dashboard
+	Route::resource('dashboard', 'BackController');
+	// Kelola Berita
+	Route::resource('berita', 'Berita\BeritaController');
+	// Kelola Galeri
+	Route::resource('galeri', 'Galeri\GaleriController');
+	// Kelola Program
+	Route::resource('program', 'Program\ProgramController');
+	// Kelola Pedoman
+	Route::resource('pedoman', 'Pedoman\PedomanController');
+	// Kelola Media Promosi
+	Route::resource('media-promosi', 'MediaPromosi\MediaPromosiController');
+	// Kelola Pasar Aman
+	Route::resource('pasar-aman', 'PasarAman\PasarAmanController');
+	// Kelola FAQ
+	Route::resource('faq', 'FAQ\FAQController');
+	// Kelola Hubungi Kami
+	Route::resource('hubungi-kami', 'HubungiKami\HubungiKamiController');
+	// User Control
+	Route::resource('groups', 'UserControl\GroupController');
+	Route::resource('users', 'UserControl\UserController');
 });

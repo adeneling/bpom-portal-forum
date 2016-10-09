@@ -35,7 +35,7 @@ class ForumFasilitatorController extends Controller
 	{
 		//
 		$threads = Thread::all();
-		return view('pages.forum-fasilitator.index', ['threads' => $threads]);
+		return view('pages.forum-fasilitator.thread.index', ['threads' => $threads]);
 	}
 
 	/**
@@ -47,7 +47,7 @@ class ForumFasilitatorController extends Controller
 	{
 		//
 		$threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
-		return view('pages.forum-fasilitator.create', ['threadsImages' => $threadImages]);
+		return view('pages.forum-fasilitator.thread.create', ['threadsImages' => $threadImages]);
 	}
 
 	/**
@@ -80,7 +80,7 @@ class ForumFasilitatorController extends Controller
 		$id = str_replace(config('app.salt'), '', base64_decode($id));
 		$thread = Thread::where('id', $id)->orWhere('judulThread', 'like', str_replace('-', ' ', $judul))->first();
 		$thread->comment()->count() > 0 ? $comments = $thread->comment()->paginate(10) : $comments = null;
-		return view('pages.forum-fasilitator.show', ['thread' => $thread, 'comments' => $comments]);
+		return view('pages.forum-fasilitator.thread.show', ['thread' => $thread, 'comments' => $comments]);
 	}
 
 	/**
@@ -92,6 +92,10 @@ class ForumFasilitatorController extends Controller
 	public function edit($id)
 	{
 		//
+		$id = str_replace(config('app.salt'), '', base64_decode($id));
+		$thread = Thread::find($id);
+		$threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
+		return view('pages.forum-fasilitator.thread.edit', ['thread' => $thread, 'threadsImages' => $threadImages]);
 	}
 
 	/**
@@ -101,9 +105,16 @@ class ForumFasilitatorController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id)
+	public function update(ForumRequests $request, $id)
 	{
 		//
+		$thread = Thread::find(decrypt($id));
+		$thread->forum_user_id = auth('forum')->user()->id;
+		$thread->judulThread = $request->get('judul-thread');
+		$thread->tipe = "umum";
+		$thread->konten = $request->get('konten');
+		$thread->update();
+		return redirect()->route('thread.index');
 	}
 
 	/**

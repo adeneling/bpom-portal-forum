@@ -10,6 +10,10 @@ class AppHelpers{
 		return route('thread.show.detail', [base64_encode(config('app.salt').$id), str_slug($judul, '-')]);
 	}
 
+	public static function photoProfile($email){
+		return 'http://www.gravatar.com/avatar/'.md5(strtolower(trim($email))).'?s=85&d=identicon';
+	}
+
 	public static function seo_friendly_url($string){
 		$string = preg_replace('/[^A-Za-z0-9\. -]/', '', $string);
 		$string = str_replace(array('[\', \']'), '', $string);

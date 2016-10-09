@@ -51,7 +51,7 @@
 				<div class="row">
 					<div class="input-field col s12 center">
 						<img src="{{ asset('assets/backend/images/login-logo.png') }}" alt="" class="circle responsive-img valign profile-image-login">
-						<p class="center login-form-text">Material Design Admin Template</p>
+						<p class="center login-form-text">Badan Pengawas Obat dan Makanan</p>
 					</div>
 				</div>
 				<div class="row margin">

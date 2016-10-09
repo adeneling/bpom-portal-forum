@@ -52,7 +52,7 @@ Breadcrumbs::register('forum-fasilitator', function($breadcrumbs)
 Breadcrumbs::register('profile', function($breadcrumbs)
 {
     $breadcrumbs->parent('forum-fasilitator');
-    $breadcrumbs->push('Profile', route('thread.profile'));
+    $breadcrumbs->push('Profile', route('profile.index'));
 });
 
 // Beranda > Forum Fasilitator > Buat Thread

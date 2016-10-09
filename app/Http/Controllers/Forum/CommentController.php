@@ -47,7 +47,7 @@ class CommentController extends Controller
         $id = str_replace(config('app.salt'), '', base64_decode($id));
         $thread = Thread::find($id);
         $comments = $thread->comment()->orderBy('created_at', 'desc')->paginate(10);
-        return view('pages.forum-fasilitator.reply-thread', ['thread' => $thread, 'comments' => $comments]);
+        return view('pages.forum-fasilitator.comment.create', ['thread' => $thread, 'comments' => $comments]);
     }
 
     /**
@@ -91,7 +91,7 @@ class CommentController extends Controller
     {
         //
         $comment = Comment::find(decrypt($id));
-        return view('pages.forum-fasilitator.edit-reply-thread', ['comment' => $comment]);
+        return view('pages.forum-fasilitator.comment.edit', ['comment' => $comment]);
     }
 
     /**
@@ -123,7 +123,7 @@ class CommentController extends Controller
         $comment = Comment::find(decrypt($id));
         $comment->comment = "<blockquote><b>".$comment->ForumUsers->name." menulis:</b><br><br>".$comment->comment."</blockquote>"."<p></p>";
 
-        return view('pages.forum-fasilitator.quote-reply-thread', ['comment' => $comment]);
+        return view('pages.forum-fasilitator.comment.quote', ['comment' => $comment]);
     }
 
     /**

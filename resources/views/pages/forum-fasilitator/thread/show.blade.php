@@ -84,7 +84,7 @@
 											</div>
 										</center>
 									</div>
-									{{-- <div class="col-md-10" style="padding-top: 2em; padding-bottom: 2em; padding-left: 2em; padding-right: 2em;"> --}}
+
 									<div class="col-md-10" style="padding: 2em 2em 2em 2em;">
 										{!! $thread->konten !!}
 									</div>
@@ -93,7 +93,7 @@
 							<div class="panel-footer">
 								&nbsp;
 								<div class="pull-right">
-									<a href="">Edit</a>
+									<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}">Edit</a>
 									&nbsp;&nbsp;&nbsp;
 									<a href="">Reply</a>
 								</div>

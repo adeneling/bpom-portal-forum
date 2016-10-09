@@ -66,7 +66,7 @@ class ImageController extends Controller
                  ->saveImage();
 
         $threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
-        return view('pages.forum-fasilitator._tableImageThread', ['threadsImages' => $threadImages]);
+        return view('pages.forum-fasilitator.thread._tableImageThread', ['threadsImages' => $threadImages]);
     }
 
     /**
@@ -117,6 +117,6 @@ class ImageController extends Controller
         $threadImage->delete();
         
         $threadImages = ThreadImage::where('forum_user_id', auth('forum')->user()->id)->get();
-        return view('pages.forum-fasilitator._tableImageThread', ['threadsImages' => $threadImages]);
+        return view('pages.forum-fasilitator.thread._tableImageThread', ['threadsImages' => $threadImages]);
     }
 }

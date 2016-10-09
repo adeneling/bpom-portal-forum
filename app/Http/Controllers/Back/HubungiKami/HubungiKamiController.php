@@ -1,27 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Forum;
+namespace App\Http\Controllers\Back\HubungiKami;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Models\UserControl\ForumUsers;
-
-class ProfileController extends Controller
+class HubungiKamiController extends Controller
 {
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function __construct()
     {
-        $this->middleware('auth:forum');
+        $this->middleware('auth');
     }
-
+    
     /**
      * Display a listing of the resource.
      *
@@ -30,8 +22,6 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        $user = ForumUsers::find(auth('forum')->user()->id);
-        return view('pages.forum-fasilitator.profile.index', ['user' => $user]);
     }
 
     /**
@@ -75,8 +65,6 @@ class ProfileController extends Controller
     public function edit($id)
     {
         //
-        $user = ForumUsers::find(decrypt($id));
-        return view('pages.forum-fasilitator.profile.edit', ['user' => $user]);
     }
 
     /**

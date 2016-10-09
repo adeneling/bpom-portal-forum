@@ -46,16 +46,18 @@
 			<div class="col-md-12">
 
 				{{-- ALERT ERROR --}}
-				@if(count($errors) > 0)
-					<div class="alert alert-danger alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<ul>
-							@foreach($errors->all() as $message)
-								<li>{{ $message }}</li>
-							@endforeach
-						</ul>
-					</div>
-				@endif
+				<div id="alert-container">
+					@if(count($errors) > 0)
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<ul>
+								@foreach($errors->all() as $message)
+									<li>{{ $message }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
+				</div>
 				{{-- END ALERT ERROR --}}
 
 				<!-- THREAD BARU -->
@@ -64,13 +66,13 @@
 					<div class="form-group">
 						<label for="judul-thread" class="col-sm-2 control-label">Judul Thread</label>
 						<div class="col-sm-10">
-							{!! Form::text('judul-thread', null, ['class' => 'form-control', 'id' => 'judul-thread', 'placeholder' => 'Judul Thread']) !!}
+							{!! Form::text('judul-thread', old('judul-thread'), ['class' => 'form-control', 'id' => 'judul-thread', 'placeholder' => 'Judul Thread']) !!}
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="konten" class="col-sm-2 control-label">Konten</label>
 						<div class="col-sm-10">
-							{!! Form::textarea('konten', null, ['id' => 'konten', 'class' => 'form-control']) !!}
+							{!! Form::textarea('konten', old('konten'), ['id' => 'konten', 'class' => 'form-control']) !!}
 						</div>
 					</div>
 					<div class="form-group">
@@ -121,7 +123,7 @@
 				</div>
 				<div class="modal-body">
 					<div id="table-image-container">
-						@include('pages.forum-fasilitator._tableImageThread')
+						@include('pages.forum-fasilitator.thread._tableImageThread')
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -155,6 +157,11 @@
 						contentType: false,
 						data: formdata,
 						cache: false,
+						error: function(data){
+							var errors = data.responseJSON;
+							console.log(errors['image']);
+							// Render the errors with js ...
+						},
 						success: function(data) {
 							$('#table-image-container').html(data);
 							$('#modal-image-thread').modal('show');

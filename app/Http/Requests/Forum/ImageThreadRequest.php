@@ -26,7 +26,7 @@ class ImageThreadRequest extends FormRequest
         return [
             //
             'image' => 'file|image|max:4000',
-            'g-recaptcha-response' => 'required|recaptcha',
+            // 'g-recaptcha-response' => 'required|recaptcha',
         ];
     }
 
@@ -38,7 +38,10 @@ class ImageThreadRequest extends FormRequest
     public function messages()
     {
         return [
-            'g-recaptcha-response.required'  => 'Google captcha tidak boleh kosong',
+            'image.file' => 'Upload hanya file',
+            'image.image' => 'Hanya file gambar yang dapat diupload',
+            'image.max' => 'Maksimal gambar yang diupload sebesar 4 MB',
+            // 'g-recaptcha-response.required'  => 'Google captcha tidak boleh kosong',
         ];
     }
 }
