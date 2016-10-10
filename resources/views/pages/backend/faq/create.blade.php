@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.pedoman') !!}
+					{!! Breadcrumbs::render('admin.berita.create') !!}
 				</div>
 			</div>
 		</div>
@@ -28,13 +28,6 @@
 			<!--Responsive Table-->
 			<div class="divider"></div>
 		</div>
-		<!-- Floating Action Button -->
-		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-			<button class="btn-floating btn-large">
-				<i class="mdi-content-add-circle"></i>
-			</button>
-		</div>
-		<!-- Floating Action Button -->
 	</div>
 <!--end container-->
 @endsection

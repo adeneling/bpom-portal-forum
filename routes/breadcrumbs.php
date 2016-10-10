@@ -108,6 +108,13 @@ Breadcrumbs::register('admin.berita', function($breadcrumbs)
     $breadcrumbs->push('Kelola Berita', route('admin.berita.index'));
 });
 
+// Dashboard > Kelola Berita > Buat Berita
+Breadcrumbs::register('admin.berita.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.berita');
+    $breadcrumbs->push('Tambah Berita', route('admin.berita.create'));
+});
+
 // Dashboard > Kelola Galeri
 Breadcrumbs::register('admin.galeri', function($breadcrumbs)
 {

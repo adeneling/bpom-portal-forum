@@ -33,6 +33,7 @@ class BeritaController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.berita.create')->withTitle('Tambah Berita');
     }
 
     /**

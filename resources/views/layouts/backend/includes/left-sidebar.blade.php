@@ -26,7 +26,7 @@
 		</li>
 		<li class="bold {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
 
-		<li class="bold {{ Request::segment(2) == 'b erita' ? 'active' : '' }}"><a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
+		<li class="bold {{ Request::segment(2) == 'berita' ? 'active' : '' }}"><a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
 		<li class="bold {{ Request::segment(2) == 'galeri' ? 'active' : '' }}"><a href="{{ route('admin.galeri.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a></li>
 		<li class="bold {{ Request::segment(2) == 'program' ? 'active' : '' }}"><a href="{{ route('admin.program.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a></li>
 		<li class="bold {{ Request::segment(2) == 'pedoman' ? 'active' : '' }}"><a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a></li>
