@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePedomenTable extends Migration
+class CreatePasarAmanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreatePedomenTable extends Migration
      */
     public function up()
     {
-        Schema::create('pedomen', function (Blueprint $table) {
+        Schema::create('pasar_aman', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->string('judul');
+            $table->text('konten');
+            $table->text('media_promosi');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -26,6 +32,6 @@ class CreatePedomenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedomen');
+        Schema::dropIfExists('pasar_aman');
     }
 }

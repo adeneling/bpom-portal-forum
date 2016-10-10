@@ -15,7 +15,10 @@ class CreateMediaPromosisTable extends Migration
     {
         Schema::create('media_promosis', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

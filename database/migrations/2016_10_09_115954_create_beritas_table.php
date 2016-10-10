@@ -15,7 +15,15 @@ class CreateBeritasTable extends Migration
     {
         Schema::create('beritas', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->string('judul');
+            $table->text('konten');
+            $table->text('media_foto');
+            $table->text('media_video');
+            $table->text('media-dokumen');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
