@@ -33,6 +33,7 @@ class MediaPromosiController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.media-promosi.create')->withTitle('Tambah Media Promosi');
     }
 
     /**

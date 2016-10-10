@@ -23,10 +23,28 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
+			<div id="striped-table">
+				<div class="row">
+					<div class="col s12">
+						<table class="striped">
+						<thead>
+							<tr>
+							<th data-field="id">No</th>
+							<th data-field="name">Judul</th>
+							<th data-field="price">Tanggal Bikin</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alvin</td>
+								<td>Eclair</td>
+								<td>$0.87</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">

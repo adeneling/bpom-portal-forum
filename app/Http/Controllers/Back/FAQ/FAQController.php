@@ -33,6 +33,7 @@ class FAQController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.faq.create')->withTitle('Tambah FAQ');
     }
 
     /**

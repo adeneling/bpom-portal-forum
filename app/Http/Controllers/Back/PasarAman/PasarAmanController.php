@@ -33,6 +33,7 @@ class PasarAmanController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.pasar-aman.create')->withTitle('Tambah Pasar Aman');
     }
 
     /**

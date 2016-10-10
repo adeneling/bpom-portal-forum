@@ -23,10 +23,6 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
 		</div>
 	</div>
 <!--end container-->

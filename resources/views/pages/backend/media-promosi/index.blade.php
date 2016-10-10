@@ -30,9 +30,9 @@
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-			<button class="btn-floating btn-large">
+			<a class="btn-floating btn-large" href="{{ route('admin.media-promosi.create') }}">
 				<i class="mdi-content-add-circle"></i>
-			</button>
+			</a>
 		</div>
 		<!-- Floating Action Button -->
 	</div>

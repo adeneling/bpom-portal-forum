@@ -33,6 +33,7 @@ class PedomanController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.pedoman.create')->withTitle('Tambah Pedoman');
     }
 
     /**

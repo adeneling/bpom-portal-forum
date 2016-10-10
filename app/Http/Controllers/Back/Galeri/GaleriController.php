@@ -33,6 +33,7 @@ class GaleriController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.galeri.create')->withTitle('Tambah Galeri');
     }
 
     /**

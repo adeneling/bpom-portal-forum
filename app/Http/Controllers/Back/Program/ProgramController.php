@@ -33,6 +33,7 @@ class ProgramController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.program.create')->withTitle('Tambah Program');
     }
 
     /**

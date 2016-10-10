@@ -33,6 +33,7 @@ class HubungiKamiController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.hubungi-kami.create')->withTitle('Tambah Hubungi Kami');
     }
 
     /**

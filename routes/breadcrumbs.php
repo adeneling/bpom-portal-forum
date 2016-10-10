@@ -122,11 +122,25 @@ Breadcrumbs::register('admin.galeri', function($breadcrumbs)
     $breadcrumbs->push('Kelola Galeri', route('admin.galeri.index'));
 });
 
+// Dashboard > Kelola Galeri > Tambah Galeri
+Breadcrumbs::register('admin.galeri.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.galeri');
+    $breadcrumbs->push('Tambah Galeri', route('admin.galeri.create'));
+});
+
 // Dashboard > Kelola Program
 Breadcrumbs::register('admin.program', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Kelola Program', route('admin.program.index'));
+});
+
+// Dashboard > Kelola Program > Tambah Program
+Breadcrumbs::register('admin.program.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.program');
+    $breadcrumbs->push('Tambah Program', route('admin.program.create'));
 });
 
 // Dashboard > Kelola Pedoman
@@ -136,11 +150,25 @@ Breadcrumbs::register('admin.pedoman', function($breadcrumbs)
     $breadcrumbs->push('Kelola Pedoman', route('admin.pedoman.index'));
 });
 
+// Dashboard > Kelola Pedoman > Tambah Pedoman
+Breadcrumbs::register('admin.pedoman.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.pedoman');
+    $breadcrumbs->push('Tambah Pedoman', route('admin.pedoman.create'));
+});
+
 // Dashboard > Kelola Media Promosi
 Breadcrumbs::register('admin.media-promosi', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Kelola Media Promosi', route('admin.media-promosi.index'));
+});
+
+// Dashboard > Kelola Media Promosi > Tambah Media Promosi
+Breadcrumbs::register('admin.media-promosi.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.media-promosi');
+    $breadcrumbs->push('Tambah Media Promosi', route('admin.media-promosi.create'));
 });
 
 // Dashboard > Kelola Pasar Aman
@@ -150,6 +178,13 @@ Breadcrumbs::register('admin.pasar-aman', function($breadcrumbs)
     $breadcrumbs->push('Kelola Pasar Aman', route('admin.pasar-aman.index'));
 });
 
+// Dashboard > Kelola Pasar Aman > Tambah Pasar Aman
+Breadcrumbs::register('admin.pasar-aman.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.pasar-aman');
+    $breadcrumbs->push('Tambah Pasar Aman', route('admin.pasar-aman.create'));
+});
+
 // Dashboard > Kelola FAQ
 Breadcrumbs::register('admin.faq', function($breadcrumbs)
 {
@@ -157,9 +192,23 @@ Breadcrumbs::register('admin.faq', function($breadcrumbs)
     $breadcrumbs->push('Kelola FAQ', route('admin.faq.index'));
 });
 
+// Dashboard > Kelola FAQ > Tambah FAQ
+Breadcrumbs::register('admin.faq.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.faq');
+    $breadcrumbs->push('Tambah FAQ', route('admin.faq.create'));
+});
+
 // Dashboard > Kelola Hubungi Kami
 Breadcrumbs::register('admin.hubungi-kami', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Kelola Hubungi Kami', route('admin.hubungi-kami.index'));
+});
+
+// Dashboard > Kelola Hubungi Kami > Tambah Hubungi Kami
+Breadcrumbs::register('admin.hubungi-kami.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.hubungi-kami');
+    $breadcrumbs->push('Tambah Hubungi Kami', route('admin.hubungi-kami.create'));
 });
