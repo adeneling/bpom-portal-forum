@@ -24,25 +24,25 @@
 				</div>
 			</div>
 		</li>
-		<li class="bold"><a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
+		<li class="bold {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
 
-		<li class="bold"><a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
-		<li class="bold"><a href="{{ route('admin.galeri.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a></li>
-		<li class="bold"><a href="{{ route('admin.program.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a></li>
-		<li class="bold"><a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a></li>
-		<li class="bold"><a href="{{ route('admin.media-promosi.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Kelola Media Promosi</a></li>
-		<li class="bold"><a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a></li>
-		<li class="bold"><a href="{{ route('admin.faq.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a></li>
-		<li class="bold"><a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a></li>
+		<li class="bold {{ Request::segment(2) == 'b erita' ? 'active' : '' }}"><a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
+		<li class="bold {{ Request::segment(2) == 'galeri' ? 'active' : '' }}"><a href="{{ route('admin.galeri.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a></li>
+		<li class="bold {{ Request::segment(2) == 'program' ? 'active' : '' }}"><a href="{{ route('admin.program.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a></li>
+		<li class="bold {{ Request::segment(2) == 'pedoman' ? 'active' : '' }}"><a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a></li>
+		<li class="bold {{ Request::segment(2) == 'media-promosi' ? 'active' : '' }}"><a href="{{ route('admin.media-promosi.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Kelola Media Promosi</a></li>
+		<li class="bold {{ Request::segment(2) == 'pasar-aman' ? 'active' : '' }}"><a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a></li>
+		<li class="bold {{ Request::segment(2) == 'faq' ? 'active' : '' }}"><a href="{{ route('admin.faq.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a></li>
+		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}"><a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a></li>
 		<br>
 		<li class="no-padding">
 			<ul class="collapsible collapsible-accordion">
-				<li class="bold"><a class="collapsible-header  waves-effect waves-cyan {{ Request::is(App::getLocale().'/userControl/*') ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
+				<li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ Request::segment(2) == 'groups' || Request::segment(2) == 'users' ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
 					<div class="collapsible-body">
 						<ul>
-							<li class="{{ Request::is(App::getLocale().'/userControl/groups') || Request::is(App::getLocale().'/userControl/groups/*') ? 'active' : '' }}"><a href="{{ route('admin.groups.index') }}"> Grup</a>
+							<li class="{{ Request::segment(2) == 'groups' ? 'active' : '' }}"><a href="{{ route('admin.groups.index') }}"> Grup</a>
 							</li>                                   
-							<li class="{{ Request::is(App::getLocale().'/userControl/users') || Request::is(App::getLocale().'/userControl/users/*') ? 'active' : '' }}"><a href="{{ route('admin.users.index') }}"> User</a>
+							<li class="{{ Request::segment(2) == 'users' ? 'active' : '' }}"><a href="{{ route('admin.users.index') }}"> User</a>
 							</li>
 						</ul>
 					</div>

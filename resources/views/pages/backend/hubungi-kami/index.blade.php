@@ -14,10 +14,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					<ol class="breadcrumbs">
-						<li><a href="index.html">Navigasi</a></li>
-						<li><a href="#">{{ $title }}</a></li>
-					</ol>
+					{!! Breadcrumbs::render('admin.hubungi-kami') !!}
 				</div>
 			</div>
 		</div>

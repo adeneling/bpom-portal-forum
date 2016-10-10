@@ -1,5 +1,7 @@
 <?php
 
+// FRONT END BREADCRUMBS
+
 // Beranda
 Breadcrumbs::register('beranda', function($breadcrumbs)
 {
@@ -85,4 +87,72 @@ Breadcrumbs::register('pasar-aman', function($breadcrumbs)
 {
     $breadcrumbs->parent('beranda');
     $breadcrumbs->push('Pasar Aman', route('pasar-aman.index'));
+});
+
+// END FRONT END BREADCRUMBS
+
+// -------------------------------------------------------------------------------------------------------------
+
+// BACK END BREADCRUMBS
+
+// Dashboard
+Breadcrumbs::register('admin.dashboard', function($breadcrumbs)
+{
+    $breadcrumbs->push('Dashboard', route('admin.dashboard.index'));
+});
+
+// Dashboard > Kelola Berita
+Breadcrumbs::register('admin.berita', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Berita', route('admin.berita.index'));
+});
+
+// Dashboard > Kelola Galeri
+Breadcrumbs::register('admin.galeri', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Galeri', route('admin.galeri.index'));
+});
+
+// Dashboard > Kelola Program
+Breadcrumbs::register('admin.program', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Program', route('admin.program.index'));
+});
+
+// Dashboard > Kelola Pedoman
+Breadcrumbs::register('admin.pedoman', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Pedoman', route('admin.pedoman.index'));
+});
+
+// Dashboard > Kelola Media Promosi
+Breadcrumbs::register('admin.media-promosi', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Media Promosi', route('admin.media-promosi.index'));
+});
+
+// Dashboard > Kelola Pasar Aman
+Breadcrumbs::register('admin.pasar-aman', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Pasar Aman', route('admin.pasar-aman.index'));
+});
+
+// Dashboard > Kelola FAQ
+Breadcrumbs::register('admin.faq', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola FAQ', route('admin.faq.index'));
+});
+
+// Dashboard > Kelola Hubungi Kami
+Breadcrumbs::register('admin.hubungi-kami', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Hubungi Kami', route('admin.hubungi-kami.index'));
 });

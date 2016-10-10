@@ -16,10 +16,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					<ol class="breadcrumbs">
-						<li><a href="index.html">Navigasi</a></li>
-						<li><a href="#">{{ $title }}</a></li>
-					</ol>
+					{!! Breadcrumbs::render('admin.dashboard') !!}
 				</div>
 			</div>
 		</div>
@@ -28,7 +25,7 @@
 	<!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">Dashboard</p>
+			<p class="caption">{{ $title }}</p>
 			<div class="divider"></div>
 			<!--Responsive Table-->
 			<div class="divider"></div>
