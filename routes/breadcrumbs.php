@@ -3,7 +3,7 @@
 // Beranda
 Breadcrumbs::register('beranda', function($breadcrumbs)
 {
-    $breadcrumbs->push('Beranda', route('beranda.index'));
+    $breadcrumbs->push('Beranda', route('index'));
 });
 
 // Beranda > Berita

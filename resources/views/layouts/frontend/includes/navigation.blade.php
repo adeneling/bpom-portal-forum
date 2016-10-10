@@ -6,7 +6,7 @@
 			<ul class="list-inline top-nav">
 				@if(auth('forum')->check())
 					<li><b>Hay <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
-					<li><a href="{{ url('forum/logout') }}">LOGOUT</a></li>
+					<li><a href="{{ url('forum-fasilitator/logout') }}">LOGOUT</a></li>
 					<li>&nbsp; | &nbsp;</li>
 				@else
 					<li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
@@ -34,7 +34,7 @@
 				<span class="sr-only">Toggle Navigation</span>
 				<i class="fa fa-bars"></i>
 			</button>
-			<a href="{{ url('/') }}" class="navbar-brand navbar-logo navbar-logo-bigger">
+			<a href="{{ route('index') }}" class="navbar-brand navbar-logo navbar-logo-bigger">
 				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}" alt="Repute - Responsive Multipurpose Bootstrap Theme">
 			</a>
 		</div>
@@ -42,28 +42,28 @@
 		<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="{{ url('beranda') }}">BERANDA </a>
+					<a href="{{ route('index') }}">BERANDA </a>
 				</li>
 				<li>
-					<a href="{{ url('berita') }}">BERITA </a>
+					<a href="{{ route('berita.index') }}">BERITA </a>
 				</li>
 				<li>
-					<a href="{{ url('galeri') }}">GALERI </a>
+					<a href="{{ route('galeri.index') }}">GALERI </a>
 				</li>
 				<li>
-					<a href="{{ url('program') }}">PROGRAM </a>
+					<a href="{{ route('program.index') }}">PROGRAM </a>
 				</li>
 				<li>
-					<a href="{{ url('pedoman') }}">PEDOMAN </a>
+					<a href="{{ route('pedoman.index') }}">PEDOMAN </a>
 				</li>
 				<li>
-					<a href="{{ url('media-promosi') }}">MEDIA PROMOSI </a>
+					<a href="{{ route('media-promosi.index') }}">MEDIA PROMOSI </a>
 				</li>
 				<li>
 					<a href="{{ route('thread.index') }}">FORUM FASILITATOR </a>
 				</li>
 				<li>
-					<a href="{{ url('pasar-aman') }}">PASAR AMAN </a>
+					<a href="{{ route('pasar-aman.index') }}">PASAR AMAN </a>
 				</li>
 			</ul>
 		</div>

@@ -71,7 +71,7 @@
 				e.preventDefault();
 				$.ajax({
 					type: "GET",
-					url: "{{ route('groups.create') }}",
+					url: "{{ route('admin.groups.create') }}",
 					success: function(data){
 						$('#modal-body').html(data);
 						$('#modal1').openModal();
@@ -82,7 +82,7 @@
 			$('.modal').on('click', '#submit', function(){
 				$.ajax({
 					type: "POST",
-					url: "{{ url('groups') }}",
+					url: "{{ url('admin/groups') }}",
 					data: $('#groups-form').serialize(),
 					cache: false,
 					success: function(data){
@@ -96,7 +96,7 @@
 				e.preventDefault();
 				$.ajax({
 					type: "GET",
-					url: "{{ url('groups') }}"+"/"+$(this).attr('data-id')+"/edit",
+					url: "{{ url('admin/groups') }}"+"/"+$(this).attr('data-id')+"/edit",
 					cache: false,
 					success: function(data){
 						$('#modal-body').html(data);
@@ -108,7 +108,7 @@
 			$('.modal').on('click', '#submitEdit', function(){
 				$.ajax({
 					type: "PUT",
-					url: "{{ url('groups') }}"+"/"+$('#id').val(),
+					url: "{{ url('admin/groups') }}"+"/"+$('#id').val(),
 					data: $('#groups-form-edit').serialize(),
 					cache: false,
 					success: function(data){
@@ -135,7 +135,7 @@
 					if (isConfirm) {     
 						$.ajax({
 							type: "DELETE",
-							url: "{{ url('groups') }}"+"/"+id,
+							url: "{{ url('admin/groups') }}"+"/"+id,
 							data: {_token: "{{ csrf_token() }}"},
 							cache: false,
 							success: function(data){

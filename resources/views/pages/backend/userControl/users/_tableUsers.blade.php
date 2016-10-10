@@ -10,12 +10,12 @@
 	<tbody>
 		@foreach($users as $user)
 			<tr>
-				<td>{{ $role->name }}</td>
-				<td>{{ $role->display_name }}</td>
-				<td>{{ $role->description }}</td>
+				<td>{{ $user->name }}</td>
+				<td>{{ $user->display_name }}</td>
+				<td>{{ $user->description }}</td>
 				<td>
-					<a class="btn-floating waves-effect waves-light blue" id="edit-group" data-id="{{ encrypt($role->id) }}"><i class="mdi-image-edit"></i></a>
-					<a class="btn-floating waves-effect waves-light red" id="delete-group" data-id="{{ encrypt($role->id) }}"><i class="mdi-action-delete"></i></a>
+					<a class="btn-floating waves-effect waves-light blue" id="edit-group" data-id="{{ encrypt($user->id) }}"><i class="mdi-image-edit"></i></a>
+					<a class="btn-floating waves-effect waves-light red" id="delete-group" data-id="{{ encrypt($user->id) }}"><i class="mdi-action-delete"></i></a>
 				</td>
 			</tr>
 			@endforeach

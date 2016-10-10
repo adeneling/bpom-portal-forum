@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Front\BerandaController@index');
+// Route::get('/', 'Front\BerandaController@index')->name('index');
 
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('sipaman','SipamanController');
 	Route::resource('peta-situs','PetaSitusController');
 	/**/
-	Route::resource('beranda','BerandaController');
+	Route::resource('/','BerandaController');
 	Route::resource('berita','BeritaController');
 	Route::resource('galeri','GaleriController');
 	Route::resource('program','ProgramController');
@@ -54,10 +54,10 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 });
 
 /* BACK */
-Route::group(['namespace' => 'Back', 'prefix' => 'admin'], function(){
+Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], function(){
 	// Auth 
 	Route::auth();
-	Route::get('logout', 'Auth\LoginController@logout');
+	Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 	// Dashboard
 	Route::resource('dashboard', 'BackController');
 	// Kelola Berita

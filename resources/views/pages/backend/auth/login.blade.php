@@ -47,7 +47,7 @@
 
 	<div id="login-page" class="row">
 		<div class="col s12 z-depth-4 card-panel">
-			{!! Form::open(['url' => route('login'), 'class' => 'login-form']) !!}
+			{!! Form::open(['url' => route('admin.login'), 'class' => 'login-form']) !!}
 				<div class="row">
 					<div class="input-field col s12 center">
 						<img src="{{ asset('assets/backend/images/login-logo.png') }}" alt="" class="circle responsive-img valign profile-image-login">

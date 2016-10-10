@@ -117,7 +117,7 @@ hr {
 .page-header .container {
   position: relative;
 }
-.page-header .breadcrumb {
+.page-header .breadcrumbs {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -128,12 +128,12 @@ hr {
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
-  .page-header .breadcrumb,
+  .page-header .breadcrumbs,
   .page-header .page-title {
     float: none !important;
     text-align: center;
   }
-  .page-header .breadcrumb {
+  .page-header .breadcrumbs {
     position: inherit;
     top: inherit;
     right: inherit;
@@ -142,7 +142,7 @@ hr {
 .page-header.one-column {
   padding: 20px 0;
 }
-.page-header.one-column .breadcrumb {
+.page-header.one-column .breadcrumbs {
   position: relative;
   padding: 15px 0 0 0;
   right: 0;
@@ -175,7 +175,7 @@ hr {
     width: 100%;
     margin-bottom: 15px;
   }
-  .page-header.has-intro .breadcrumb {
+  .page-header.has-intro .breadcrumbs {
     margin-bottom: 0;
   }
 }
@@ -4988,31 +4988,31 @@ ul.sidebar-nav ul.submenu li:first-child a {
   padding-top: 0;
 }
 
-/* breadcrumb */
-.breadcrumb {
+/* breadcrumbs */
+.breadcrumbs {
   background-color: transparent;
 }
-.breadcrumb > li.active {
+.breadcrumbs > li.active {
   color: #406da4;
 }
-.breadcrumb a {
+.breadcrumbs a {
   color: #7b7b7b;
 }
-.breadcrumb a:hover, .breadcrumb a:focus {
+.breadcrumbs a:hover, .breadcrumbs a:focus {
   text-decoration: none;
   color: #406da4;
 }
-.breadcrumb.link-accent > li.active {
+.breadcrumbs.link-accent > li.active {
   color: inherit;
 }
-.breadcrumb.link-accent a {
+.breadcrumbs.link-accent a {
   color: #406da4;
 }
-.breadcrumb.link-accent a:hover, .breadcrumb.link-accent a:focus {
+.breadcrumbs.link-accent a:hover, .breadcrumbs.link-accent a:focus {
   text-decoration: none;
   color: #355987;
 }
-.breadcrumb.separator-arrow > li + li:before {
+.breadcrumbs.separator-arrow > li + li:before {
   padding: 0 8px;
   font-family: "FontAwesome";
   content: '\f105';

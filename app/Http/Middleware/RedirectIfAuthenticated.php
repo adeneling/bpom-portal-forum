@@ -17,8 +17,10 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/admin');
+        if (Auth::guard($guard)->check() && $guard = 'forum') {
+            return redirect()->route('thread.index');
+        } else if(Auth::guard($guard)->check()) {
+            return redirect()->route('admin.dashboard.index');
         }
 
         return $next($request);

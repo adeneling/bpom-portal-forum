@@ -48,7 +48,7 @@
 								<label for="email" class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-10">
 									<div class="input-group">
-										{!! Form::email('email', old('email'), ['class' => 'form-control', 'id' => 'email']) !!}
+										{!! Form::email('email', null, ['class' => 'form-control', 'id' => 'email']) !!}
 										<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 									</div>
 								</div>
