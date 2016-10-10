@@ -22,6 +22,7 @@ class ProgramController extends Controller
     public function index()
     {
         //
+        return view('pages.backend.program.index')->withTitle('Kelola Program');
     }
 
     /**

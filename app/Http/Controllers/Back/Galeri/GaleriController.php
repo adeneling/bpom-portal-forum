@@ -22,6 +22,7 @@ class GaleriController extends Controller
     public function index()
     {
         //
+        return view('pages.backend.galeri.index')->withTitle('Kelola Galeri');
     }
 
     /**

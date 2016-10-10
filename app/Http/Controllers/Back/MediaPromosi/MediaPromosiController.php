@@ -22,6 +22,7 @@ class MediaPromosiController extends Controller
     public function index()
     {
         //
+        return view('pages.backend.media-promosi.index')->withTitle('Kelola Media Promosi');
     }
 
     /**
