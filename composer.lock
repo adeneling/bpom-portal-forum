@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca708718f1d16ccf9d09359227559bc3",
-    "content-hash": "7b7e2f585362fe78a22a2a4778ce234c",
+    "hash": "e91710e5306698db92e8540426b41521",
+    "content-hash": "8d227b293e7330ff353e3df09305957a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1183,6 +1183,48 @@
                 "uuid"
             ],
             "time": "2016-10-02 15:51:17"
+        },
+        {
+            "name": "rifkyekayama/rajaongkir-laravel",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rifkyekayama/rajaongkir-laravel.git",
+                "reference": "9eb51a6b116545a9e9b29ea315085f97aeb4d781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rifkyekayama/rajaongkir-laravel/zipball/9eb51a6b116545a9e9b29ea315085f97aeb4d781",
+                "reference": "9eb51a6b116545a9e9b29ea315085f97aeb4d781",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "RifkyEkayama\\RajaOngkir\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rifky Ekayama",
+                    "email": "rifqykiw@gmail.com"
+                }
+            ],
+            "description": "Package untuk request API RajaOngkir, Support Starter, Basic, dan Pro",
+            "keywords": [
+                "application programming interface",
+                "laravel",
+                "rajaongkir"
+            ],
+            "time": "2016-09-14 02:57:17"
         },
         {
             "name": "santigarcor/laratrust",

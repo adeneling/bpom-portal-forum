@@ -16,9 +16,12 @@ class CreatePasarAmanTable extends Migration
         Schema::create('pasar_aman', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('judul');
-            $table->text('konten');
-            $table->text('media_promosi');
+            $table->string('nama_pasar');
+            $table->string('kepala_pasar');
+            $table->string('petugas_pasar');
+            $table->text('alamat_pasar');
+            $table->string('kota');
+            $table->string('provinsi');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

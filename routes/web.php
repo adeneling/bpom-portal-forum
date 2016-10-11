@@ -11,8 +11,6 @@
 |
 */
 
-// Route::get('/', 'Front\BerandaController@index')->name('index');
-
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
 	/**/
