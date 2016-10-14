@@ -27,19 +27,13 @@
 	<!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
 	<link href="{{ asset('assets/backend/js/plugins/prism/prism.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+	<link href="{{ asset('assets/backend/js/plugins/data-tables/css/jquery.dataTables.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	@yield('css')
 
 </head>
 
 <body>
-	<!-- Start Page Loading -->
-	{{-- <div id="loader-wrapper">
-		<div id="loader"></div>        
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
-	</div> --}}
-	<!-- End Page Loading -->
 
 	<!-- START HEADER -->
 	@include('layouts/backend/includes/header')
@@ -83,7 +77,9 @@
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 	<!-- chartist -->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.js') }}"></script>
-
+	<!-- data-tables -->
+    <script type="text/javascript" src="{{ asset('assets/backend/js/plugins/data-tables/js/jquery.dataTables.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('assets/backend/js/plugins/data-tables/data-tables-script.js')}}"></script>
 	@yield('js')
 	
 	<!--plugins.js - Some Specific JS codes for Plugin Settings-->

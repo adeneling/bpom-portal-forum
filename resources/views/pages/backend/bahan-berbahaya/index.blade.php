@@ -27,6 +27,51 @@
 			<div class="divider"></div>
 			<!--Responsive Table-->
 			<div class="divider"></div>
+
+			<div id="table-datatables">
+				<h4 class="header">DAFTAR BAHAN BERBAHAYA</h4>
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<table id="data-table-simple" class="responsive-table display" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Aksi</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Aksi</th>
+								</tr>
+							</tfoot>
+
+							<tbody>
+								<tr>
+									<td>Tiger Nixon</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td>61</td>
+									<td>2011/04/25</td>
+									<td>
+										<a class="btn waves-effect waves-light teal">button</a>
+                         				<a class="btn waves-effect waves-light blue">button</a>
+                         				<a class="btn waves-effect waves-light red">button</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div> 
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
@@ -37,4 +82,5 @@
 		<!-- Floating Action Button -->
 	</div>
 <!--end container-->
+
 @endsection
