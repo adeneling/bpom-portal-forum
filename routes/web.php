@@ -76,6 +76,8 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('faq', 'FAQ\FAQController');
 	// Kelola Hubungi Kami
 	Route::resource('hubungi-kami', 'HubungiKami\HubungiKamiController');
+	// Kelola Bahan Berbahaya
+	Route::resource('bahan-berbahaya', 'BahanBerbahaya\BahanBerbahayaController');
 	// User Control
 	Route::resource('groups', 'UserControl\GroupController');
 	Route::resource('users', 'UserControl\UserController');

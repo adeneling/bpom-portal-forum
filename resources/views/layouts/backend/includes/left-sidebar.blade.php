@@ -1,6 +1,6 @@
 <aside id="left-sidebar-nav">
 	<ul id="slide-out" class="side-nav fixed leftside-navigation">
-		<li class="user-details cyan darken-2">
+		<li class="user-details blue darken-2">
 			<div class="row">
 				<div class="col col s4 m4 l4">
 						<img src="{{ asset('assets/backend/images//avatar.jpg') }}" alt="" class="circle responsive-img valign profile-image">
@@ -24,16 +24,39 @@
 				</div>
 			</div>
 		</li>
-		<li class="bold {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
+		<li class="bold {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}">
+			<a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'berita' ? 'active' : '' }}">
+			<a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'galeri' ? 'active' : '' }}">
+			<a href="{{ route('admin.galeri.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'program' ? 'active' : '' }}">
+			<a href="{{ route('admin.program.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'pedoman' ? 'active' : '' }}">
+			<a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'bahan-berbahaya' ? 'active' : '' }}">
+			<a href="{{ route('admin.bahan-berbahaya.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-center-focus-strong"></i> Kelola Bahan Berbahaya</a>
+		</li>
 
-		<li class="bold {{ Request::segment(2) == 'berita' ? 'active' : '' }}"><a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a></li>
-		<li class="bold {{ Request::segment(2) == 'galeri' ? 'active' : '' }}"><a href="{{ route('admin.galeri.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Kelola Galeri</a></li>
-		<li class="bold {{ Request::segment(2) == 'program' ? 'active' : '' }}"><a href="{{ route('admin.program.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Kelola Program</a></li>
-		<li class="bold {{ Request::segment(2) == 'pedoman' ? 'active' : '' }}"><a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a></li>
-		<li class="bold {{ Request::segment(2) == 'media-promosi' ? 'active' : '' }}"><a href="{{ route('admin.media-promosi.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Kelola Media Promosi</a></li>
-		<li class="bold {{ Request::segment(2) == 'pasar-aman' ? 'active' : '' }}"><a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a></li>
-		<li class="bold {{ Request::segment(2) == 'faq' ? 'active' : '' }}"><a href="{{ route('admin.faq.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a></li>
-		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}"><a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a></li>
+		{{-- PENDING --}}
+		<li class="bold {{ Request::segment(2) == 'media-promosi' ? 'active' : '' }}">
+			<a href="{{ route('admin.media-promosi.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Kelola Media Promosi</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'pasar-aman' ? 'active' : '' }}">
+			<a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'faq' ? 'active' : '' }}">
+			<a href="{{ route('admin.faq.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a>
+		</li>
+		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}">
+			<a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a>
+		</li>
+		{{-- END  --}}
 		<br>
 		<li class="no-padding">
 			<ul class="collapsible collapsible-accordion">
