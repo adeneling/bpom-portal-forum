@@ -41,7 +41,7 @@ class ForumRequests extends FormRequest
 		return [
 			'judul-thread.required' => 'Judul thread tidak boleh kosong',
 			'konten.required' => 'Konten thread tidak boleh kosong',
-			'g-recaptcha-response.required'  => 'Google captcha tidak boleh kosong',
+			'g-recaptcha-response.required'  => 'Google Captcha tidak boleh kosong',
 		];
 	}
 }
