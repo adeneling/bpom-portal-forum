@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBeritasTable extends Migration
+class CreateBahanBerbahayaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateBeritasTable extends Migration
      */
     public function up()
     {
-        Schema::create('beritas', function (Blueprint $table) {
+        Schema::create('bahan-berbahaya', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('judul');
-            $table->text('konten');
-            $table->text('media_foto');
-            $table->text('media_video');
-            $table->text('media_dokumen');
+            $table->string('nama');
+            $table->text('deskripsi')->nullable();
+            $table->text('media_foto')->nullable();
+            $table->text('media_video')->nullable();
+            $table->text('media_dokumen')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -34,6 +34,6 @@ class CreateBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('beritas');
+        Schema::dropIfExists('bahan-berbahaya');
     }
 }
