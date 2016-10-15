@@ -212,3 +212,17 @@ Breadcrumbs::register('admin.hubungi-kami.create', function($breadcrumbs)
     $breadcrumbs->parent('admin.hubungi-kami');
     $breadcrumbs->push('Tambah Hubungi Kami', route('admin.hubungi-kami.create'));
 });
+
+// Dashboard > Kelola Bahan Berbahaya
+Breadcrumbs::register('admin.bahan-berbahaya', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Bahan Berbahaya', route('admin.bahan-berbahaya.index'));
+});
+
+// Dashboard > Kelola Bahan Berbahaya > Tambah Bahan Berbahaya
+Breadcrumbs::register('admin.bahan-berbahaya.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.bahan-berbahaya');
+    $breadcrumbs->push('Tambah Bahan Berbahaya', route('admin.bahan-berbahaya.create'));
+});
