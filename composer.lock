@@ -987,16 +987,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1030,7 +1030,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
@@ -1228,16 +1228,16 @@
         },
         {
             "name": "santigarcor/laratrust",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "64980d811222e5041ef6bf9891ff37bb74a7268b"
+                "reference": "0be6f36f8dcccd92f7d4ab76373d5018b91a74e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/64980d811222e5041ef6bf9891ff37bb74a7268b",
-                "reference": "64980d811222e5041ef6bf9891ff37bb74a7268b",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/0be6f36f8dcccd92f7d4ab76373d5018b91a74e1",
+                "reference": "0be6f36f8dcccd92f7d4ab76373d5018b91a74e1",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "rbac",
                 "roles"
             ],
-            "time": "2016-09-26 17:24:33"
+            "time": "2016-10-12 20:42:22"
         },
         {
             "name": "swiftmailer/swiftmailer",
