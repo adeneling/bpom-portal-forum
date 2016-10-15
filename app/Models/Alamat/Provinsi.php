@@ -3,6 +3,7 @@
 namespace App\Models\Alamat;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PasarAman\PasarAman;
 use RajaOngkir;
 
 class Provinsi extends Model
@@ -20,5 +21,10 @@ class Provinsi extends Model
 			$province->provinsi = $value->province;
 			$province->save();
 		}
+	}
+
+	public function pasarAman()
+	{
+		return $this->hasMany(PasarAman::class);
 	}
 }

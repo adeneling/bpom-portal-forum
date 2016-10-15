@@ -29,7 +29,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_tpm_bengkulu.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -42,7 +42,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_induk_tanjung_pandan.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -55,7 +55,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_lipat_kajang.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -68,7 +68,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_bestari_bintan_center.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -81,7 +81,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_mayestik.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -94,7 +94,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_23_maret.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -107,7 +107,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_petobo.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -120,7 +120,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_karisa_jeneponto.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;
@@ -133,7 +133,7 @@ class PasarAmanSeeder extends Seeder
 		$pasarAman->photo = Storage::url($filename);
 		$pasarAman->save();
 
-		$path = public_path('seeder/pasar_aman/pasar_titipapan.jpeg');
+		$path = public_path('seeder/pasar_aman/pasar_kota.jpeg');
 		$filename = 'pasarAman/'.str_random(10).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pasarAman = new PasarAman;

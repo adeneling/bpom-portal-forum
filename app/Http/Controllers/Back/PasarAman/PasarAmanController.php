@@ -31,7 +31,8 @@ class PasarAmanController extends Controller
     public function index()
     {
         //
-        return view('pages.backend.pasar-aman.index')->withTitle('Kelola Pasar Aman');
+        $pasarAman = PasarAman::orderBy('id', 'desc')->get();
+        return view('pages.backend.pasar-aman.index', compact('pasarAman'))->withTitle('Kelola Pasar Aman');
     }
 
     /**

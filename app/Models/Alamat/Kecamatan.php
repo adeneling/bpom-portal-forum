@@ -3,6 +3,7 @@
 namespace App\Models\Alamat;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PasarAman\PasarAman;
 use RajaOngkir;
 
 class Kecamatan extends Model
@@ -29,5 +30,10 @@ class Kecamatan extends Model
 				$subdistrict->save();
 			}
 		}
+	}
+
+	public function pasarAman()
+	{
+		return $this->hasMany(PasarAman::class);
 	}
 }

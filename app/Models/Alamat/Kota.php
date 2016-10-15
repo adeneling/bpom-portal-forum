@@ -3,6 +3,7 @@
 namespace App\Models\Alamat;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PasarAman\PasarAman;
 use RajaOngkir;
 
 class Kota extends Model
@@ -23,5 +24,10 @@ class Kota extends Model
 			$city->kode_pos = $value->postal_code;
 			$city->save();
 		}
+	}
+
+	public function pasarAman()
+	{
+		return $this->hasMany(PasarAman::class);
 	}
 }

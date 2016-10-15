@@ -23,7 +23,37 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			
+			<div id="striped-table">
+				<div class="row">
+					<div class="col s12">
+						<table class="striped">
+						<thead>
+							<tr>
+							<th data-field="no">No</th>
+							<th data-field="photo">Photo</th>
+							<th data-field="nama_pasar">Nama Pasar</th>
+							<th data-field="provinsi">Provinsi</th>
+							<th data-field="kota">Kota</th>
+							<th data-field="kabupaten">Kabupaten</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php $no=1;?>
+							@foreach($pasarAman as $pasar)
+								<tr>
+									<td>{{ $no++ }}</td>
+									<td><img src="{{ asset($pasar->photo) }}" width=50 height=50></td>
+									<td>{{ $pasar->nama_pasar }}</td>
+									<td>{{ $pasar->provinsi->provinsi }}</td>
+									<td>{{ $pasar->kota->kota }}</td>
+									<td>{{-- !is_null($pasar->kecamatan->kecamatan) ? $pasar->kecamatan->kecamatan : '' --}}</td>
+								</tr>
+							@endforeach
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
