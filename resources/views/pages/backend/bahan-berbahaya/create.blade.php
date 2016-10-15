@@ -27,7 +27,7 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::open(['url' => 'admin/bahan-berbahaya','class' =>'col s12']) !!}
+				{!! Form::open(['url' => 'admin/bahan-berbahaya','class' =>'col s12','files' => true]) !!}
 				{{ csrf_field() }}
 					@include('pages.backend.bahan-berbahaya._form')
 				{!! Form::close() !!}

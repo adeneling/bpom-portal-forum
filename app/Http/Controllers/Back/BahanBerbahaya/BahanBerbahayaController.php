@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\BahanBerbahaya\BahanBerbahaya;
 use Auth;
+use Storage;
 
 class BahanBerbahayaController extends Controller
 {
@@ -46,13 +47,33 @@ class BahanBerbahayaController extends Controller
         $this->validate($request, [
             'nama' => 'required',
         ]);
+        /* make directory */
+        Storage::makeDirectory('bahan-berbahaya/foto');
+        Storage::makeDirectory('bahan-berbahaya/video');
+        Storage::makeDirectory('bahan-berbahaya/dokumen');
+        $file_foto = '';
+        $file_video = '';
+        $file_dokumen = '';
+        if($request->hasFile('media_foto')){
+            $file_foto = 'bahan-berbahaya/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
+            Storage::put($file_foto, file_get_contents($request->file('media_foto')));
+        }
+        if($request->hasFile('media_video')){
+            $file_video = 'bahan-berbahaya/video/'.str_random(10).'.'.$request->file('media_video')->getClientOriginalExtension();
+            Storage::put($file_video, file_get_contents($request->file('media_video')));
+        }
+        if($request->hasFile('media_dokumen')){
+            $file_dokumen = 'bahan-berbahaya/dokumen/'.str_random(10).'.'.$request->file('media_dokumen')->getClientOriginalExtension();
+            Storage::put($file_dokumen, file_get_contents($request->file('media_dokumen')));
+        }
+
         $bahan = new BahanBerbahaya;
         $bahan->user_id = Auth::user()->id;
         $bahan->nama = $request->input('nama');
         $bahan->deskripsi = $request->input('deskripsi');
-        $bahan->media_foto = $request->input('media_foto');
-        $bahan->media_video = $request->input('media_video');
-        $bahan->media_dokumen = $request->input('media_dokumen');
+        $bahan->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
+        $bahan->media_video = !is_null($file_video) ? Storage::url($file_video) : '';
+        $bahan->media_dokumen = !is_null($file_dokumen) ? Storage::url($file_dokumen) : '';
         $bahan->save();
         return redirect('admin/bahan-berbahaya');
     }
@@ -66,7 +87,7 @@ class BahanBerbahayaController extends Controller
     public function show($id)
     {
         $bahanBerbahaya = BahanBerbahaya::findOrFail(decrypt($id));
-        return view('pages.backend.bahan-berbahaya.show', compact('bahanBerbahaya'));
+        return view('pages.backend.bahan-berbahaya.show', compact('bahanBerbahaya'))->withTitle('Lihat Bahan Berbahaya');
     }
 
     /**

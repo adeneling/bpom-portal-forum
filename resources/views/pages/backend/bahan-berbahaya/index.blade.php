@@ -54,7 +54,7 @@
 									<td>{{ $bahan->created_at }}</td>
 									<td>
 										{!! Form::model($bahan, ['route' => ['admin.bahan-berbahaya.destroy', $bahan], 'method' => 'delete'] ) !!}
-										<a class="btn waves-effect waves-light teal">Lihat</a>
+										<a href="{{ route('admin.bahan-berbahaya.show', encrypt($bahan->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
                          				<a href="{{ route('admin.bahan-berbahaya.edit', encrypt($bahan->id))}}" class="btn waves-effect waves-light blue">Edit</a>
                          				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
                          				{!! Form::close()!!}

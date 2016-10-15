@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="input-field col s6">
+	<div class="input-field col s8">
 		{!! Form::text('nama', null, ['class'=>'validate']) !!}
 		<label for="first_name">Nama Bahan Berbahaya</label>
 	</div>

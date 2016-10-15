@@ -19,7 +19,7 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::model($bahanBerbahaya, ['route' => ['admin.bahan-berbahaya.update', $bahanBerbahaya],'method' =>'put','role'=>'form','class'=>'col s12'])!!}
+				{!! Form::model($bahanBerbahaya, ['route' => ['admin.bahan-berbahaya.update', $bahanBerbahaya],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 				{{ csrf_field() }}
 					@include('pages.backend.bahan-berbahaya._form')
 				{!! Form::close() !!}
