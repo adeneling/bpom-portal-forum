@@ -46,7 +46,7 @@
 									<td>{{ $pasar->nama_pasar }}</td>
 									<td>{{ $pasar->provinsi->provinsi }}</td>
 									<td>{{ $pasar->kota->kota }}</td>
-									<td>{{-- !is_null($pasar->kecamatan->kecamatan) ? $pasar->kecamatan->kecamatan : '' --}}</td>
+									<td>{{ !empty($pasar->kecamatan->kecamatan) ? $pasar->kecamatan->kecamatan : '' }}</td>
 								</tr>
 							@endforeach
 						</tbody>
