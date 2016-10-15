@@ -19,35 +19,25 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA BAHAN BERBAHAYA</h4>
+				<h4 class="header">DATA PEDOMAN</h4>
 				<div class="row">
 					<div class="col s8">
-						{{ $bahanBerbahaya->nama }}
+						{{ $pedoman->judul }}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s8">
-						{{ $bahanBerbahaya->deskripsi }}
+						{{ $pedoman->konten }}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_foto) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_video) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_dokumen) }}">
+						<img src="{{ asset($pedoman->media_dokumen) }}">
 					</div>
 				</div>
 				<div class="row">
 					<center>
-						<a href="{{ url('admin/bahan-berbahaya') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>
+						<a href="{{ url('admin/pedoman') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>
 					</center>
 				</div>
 			</div>

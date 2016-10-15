@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Back\Pedoman;
 
 use Illuminate\Http\Request;
-
+use Auth;
+use Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Pedoman\Pedoman;
 
 class PedomanController extends Controller
 {
@@ -21,8 +23,8 @@ class PedomanController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.backend.pedoman.index')->withTitle('Kelola Pedoman');
+        $pedomans = Pedoman::orderBy('created_at','desc')->get();
+        return view('pages.backend.pedoman.index', compact('pedomans'))->withTitle('Kelola Pedoman');
     }
 
     /**
@@ -44,7 +46,24 @@ class PedomanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'judul' => 'required',
+        ]);
+        /* make directory */
+        Storage::makeDirectory('pedoman/dokumen');
+        $file_dokumen = '';
+        if($request->hasFile('media_dokumen')){
+            $file_dokumen = 'pedoman/dokumen/'.str_random(10).'.'.$request->file('media_dokumen')->getClientOriginalExtension();
+            Storage::put($file_dokumen, file_get_contents($request->file('media_dokumen')));
+        }
+
+        $pedoman = new Pedoman;
+        $pedoman->user_id = Auth::user()->id;
+        $pedoman->judul = $request->input('judul');
+        $pedoman->konten = $request->input('konten');
+        $pedoman->media_dokumen = !is_null($file_dokumen) ? Storage::url($file_dokumen) : '';
+        $pedoman->save();
+        return redirect('admin/pedoman');
     }
 
     /**
@@ -55,7 +74,8 @@ class PedomanController extends Controller
      */
     public function show($id)
     {
-        //
+        $pedoman = Pedoman::findOrFail(decrypt($id));
+        return view('pages.backend.pedoman.show', compact('pedoman'))->withTitle('Lihat Pedoman');
     }
 
     /**
@@ -66,7 +86,8 @@ class PedomanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pedoman = Pedoman::findOrFail(decrypt($id));
+        return view('pages.backend.pedoman.edit', compact('pedoman'))->withTitle('Edit Pedoman');
     }
 
     /**
@@ -78,7 +99,23 @@ class PedomanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'judul' => 'required',
+        ]);
+        /* make directory */
+        Storage::makeDirectory('pedoman/dokumen');
+        $file_dokumen = '';
+        if($request->hasFile('media_dokumen')){
+            $file_dokumen = 'pedoman/dokumen/'.str_random(10).'.'.$request->file('media_dokumen')->getClientOriginalExtension();
+            Storage::put($file_dokumen, file_get_contents($request->file('media_dokumen')));
+        }
+        
+        $pedoman = Pedoman::findOrFail($id);
+        $pedoman->judul = $request->input('judul');
+        $pedoman->konten = $request->input('konten');
+        $pedoman->media_dokumen = !is_null($file_dokumen) ? Storage::url($file_dokumen) : '';
+        $pedoman->save();
+        return redirect('admin/pedoman');
     }
 
     /**
@@ -89,6 +126,8 @@ class PedomanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pedoman = Pedoman::find($id);
+        Pedoman::find($id)->delete();
+        return redirect('admin/pedoman');
     }
 }

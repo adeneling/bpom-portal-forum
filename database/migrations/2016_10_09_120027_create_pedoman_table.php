@@ -17,7 +17,8 @@ class CreatePedomanTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('judul');
-            $table->text('konten');
+            $table->text('konten')->nullable();
+            $table->text('media_dokumen')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
