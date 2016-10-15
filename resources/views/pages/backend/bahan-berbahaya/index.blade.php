@@ -23,11 +23,6 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
-
 			<div id="table-datatables">
 				<h4 class="header">DAFTAR BAHAN BERBAHAYA</h4>
 				<div class="row">
@@ -35,38 +30,37 @@
 						<table id="data-table-simple" class="responsive-table display" cellspacing="0">
 							<thead>
 								<tr>
-									<th>Name</th>
-									<th>Position</th>
-									<th>Office</th>
-									<th>Age</th>
-									<th>Start date</th>
-									<th>Aksi</th>
+									<th>No</th>
+									<th>Nama Bahan</th>
+									<th>Tanggal dibuat</th>
+									<th width="35%">Aksi</th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<th>Name</th>
-									<th>Position</th>
-									<th>Office</th>
-									<th>Age</th>
-									<th>Start date</th>
+									<th>No</th>
+									<th>Nama Bahan</th>
+									<th>Tanggal dibuat</th>
 									<th>Aksi</th>
 								</tr>
 							</tfoot>
 
 							<tbody>
+								<?php $no=1 ?>
+								@foreach($bahanBerbahaya as $bahan)
 								<tr>
-									<td>Tiger Nixon</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
-									<td>61</td>
-									<td>2011/04/25</td>
+									<td>{{ $no++ }}</td>
+									<td>{{ $bahan->nama}}</td>
+									<td>{{ $bahan->created_at }}</td>
 									<td>
-										<a class="btn waves-effect waves-light teal">button</a>
-                         				<a class="btn waves-effect waves-light blue">button</a>
-                         				<a class="btn waves-effect waves-light red">button</a>
+										{!! Form::model($bahan, ['route' => ['admin.bahan-berbahaya.destroy', $bahan], 'method' => 'delete'] ) !!}
+										<a href="{{ route('admin.bahan-berbahaya.show', encrypt($bahan->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
+                         				<a href="{{ route('admin.bahan-berbahaya.edit', encrypt($bahan->id))}}" class="btn waves-effect waves-light blue">Edit</a>
+                         				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
+                         				{!! Form::close()!!}
 									</td>
 								</tr>
+								@endforeach
 							</tbody>
 						</table>
 					</div>

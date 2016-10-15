@@ -219,7 +219,6 @@ Breadcrumbs::register('admin.bahan-berbahaya', function($breadcrumbs)
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Kelola Bahan Berbahaya', route('admin.bahan-berbahaya.index'));
 });
-
 // Dashboard > Kelola Bahan Berbahaya > Tambah Bahan Berbahaya
 Breadcrumbs::register('admin.bahan-berbahaya.create', function($breadcrumbs)
 {

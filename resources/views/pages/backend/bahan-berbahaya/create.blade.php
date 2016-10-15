@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.pedoman.create') !!}
+					{!! Breadcrumbs::render('admin.bahan-berbahaya.create') !!}
 				</div>
 			</div>
 		</div>
@@ -27,9 +27,9 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::open(['url' => 'admin/pedoman','class' =>'col s12','files' => true]) !!}
+				{!! Form::open(['url' => 'admin/bahan-berbahaya','class' =>'col s12','files' => true]) !!}
 				{{ csrf_field() }}
-					@include('pages.backend.pedoman._form')
+					@include('pages.backend.bahan-berbahaya._form')
 				{!! Form::close() !!}
 			</div>
 		</div>

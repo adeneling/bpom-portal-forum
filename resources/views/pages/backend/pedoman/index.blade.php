@@ -23,10 +23,49 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
+			<div id="table-datatables">
+				<h4 class="header">DAFTAR PEDOMAN</h4>
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<table id="data-table-simple" class="responsive-table display" cellspacing="0">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Judul Pedoman</th>
+									<th>Tanggal dibuat</th>
+									<th width="35%">Aksi</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<th>No</th>
+									<th>Judul Pedoman</th>
+									<th>Tanggal dibuat</th>
+									<th>Aksi</th>
+								</tr>
+							</tfoot>
+
+							<tbody>
+								<?php $no=1 ?>
+								@foreach($pedomans as $pedoman)
+								<tr>
+									<td>{{ $no++ }}</td>
+									<td>{{ $pedoman->judul}}</td>
+									<td>{{ $pedoman->created_at }}</td>
+									<td>
+										{!! Form::model($pedoman, ['route' => ['admin.pedoman.destroy', $pedoman], 'method' => 'delete'] ) !!}
+										<a href="{{ route('admin.pedoman.show', encrypt($pedoman->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
+                         				<a href="{{ route('admin.pedoman.edit', encrypt($pedoman->id))}}" class="btn waves-effect waves-light blue">Edit</a>
+                         				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
+                         				{!! Form::close()!!}
+									</td>
+								</tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div> 
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">

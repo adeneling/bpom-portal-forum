@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePedomanTable extends Migration
+class CreateBahanBerbahayaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreatePedomanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pedoman', function (Blueprint $table) {
+        Schema::create('bahan-berbahaya', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('judul');
-            $table->text('konten')->nullable();
+            $table->string('nama');
+            $table->text('deskripsi')->nullable();
+            $table->text('media_foto')->nullable();
+            $table->text('media_video')->nullable();
             $table->text('media_dokumen')->nullable();
             $table->timestamps();
 
@@ -32,6 +34,6 @@ class CreatePedomanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedoman');
+        Schema::dropIfExists('bahan-berbahaya');
     }
 }

@@ -20,7 +20,7 @@ class CreateBeritasTable extends Migration
             $table->text('konten');
             $table->text('media_foto');
             $table->text('media_video');
-            $table->text('media-dokumen');
+            $table->text('media_dokumen');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

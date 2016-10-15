@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class BahanBerbahaya extends Model
 {
-    //
+    protected $table = 'bahan-berbahaya';
+
+    protected $fillable = [
+        'nama', 
+        'deskripsi', 
+        'media_foto', 
+        'media_video', 
+        'media_dokumen', 
+    ];
 }
