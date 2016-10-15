@@ -172,6 +172,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+        RifkyEkayama\RajaOngkir\RajaOngkirServiceProvider::class,
 
         //
 
@@ -235,6 +236,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+        'RajaOngkir' => RifkyEkayama\RajaOngkir\RajaOngkirFacade::class,
 
     ],
 

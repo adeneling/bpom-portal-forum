@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasarAmanTable extends Migration
+class CreateKecamatansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,16 @@ class CreatePasarAmanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pasar_aman', function (Blueprint $table) {
+        Schema::create('kecamatans', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->string('nama_pasar');
-            $table->string('kepala_pasar')->nullable();
-            $table->string('petugas_pasar')->nullable();
-            $table->text('alamat_pasar')->nullable();
             $table->unsignedInteger('provinsi_id');
             $table->unsignedInteger('kota_id');
-            $table->unsignedInteger('kecamatan_id')->nullable();
-            $table->string('photo')->nullable();
+            $table->string('tipe');
+            $table->string('kecamatan');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('provinsi_id')->references('id')->on('provinsis')->onDelete('cascade');
             $table->foreign('kota_id')->references('id')->on('kotas')->onDelete('cascade');
-            $table->foreign('kecamatan_id')->references('id')->on('kecamatans')->onDelete('cascade');
         });
     }
 
@@ -40,6 +33,6 @@ class CreatePasarAmanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pasar_aman');
+        Schema::dropIfExists('kecamatans');
     }
 }

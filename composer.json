@@ -10,7 +10,9 @@
         "santigarcor/laratrust": "3.0.*",
         "laravelcollective/html": "5.3.*",
         "greggilbert/recaptcha": "dev-master",
-        "davejamesmiller/laravel-breadcrumbs": "^3.0"
+        "davejamesmiller/laravel-breadcrumbs": "^3.0",
+        "rifkyekayama/rajaongkir-laravel": "^1.0",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

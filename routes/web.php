@@ -11,8 +11,6 @@
 |
 */
 
-// Route::get('/', 'Front\BerandaController@index')->name('index');
-
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
 	/**/
@@ -72,6 +70,8 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('media-promosi', 'MediaPromosi\MediaPromosiController');
 	// Kelola Pasar Aman
 	Route::resource('pasar-aman', 'PasarAman\PasarAmanController');
+	Route::get('pasar-aman/get-city/{province_id}', 'PasarAman\PasarAmanController@getCity');
+	Route::get('pasar-aman/get-subdistrict/{province_id}/{city_id}', 'PasarAman\PasarAmanController@getSubdistrict');
 	// Kelola FAQ
 	Route::resource('faq', 'FAQ\FAQController');
 	// Kelola Hubungi Kami
