@@ -33,7 +33,7 @@
 									<th>No</th>
 									<th>Nama Bahan</th>
 									<th>Tanggal dibuat</th>
-									<th width="30%">Aksi</th>
+									<th width="35%">Aksi</th>
 								</tr>
 							</thead>
 							<tfoot>
