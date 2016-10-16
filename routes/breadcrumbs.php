@@ -185,6 +185,13 @@ Breadcrumbs::register('admin.pasar-aman.create', function($breadcrumbs)
     $breadcrumbs->push('Tambah Pasar Aman', route('admin.pasar-aman.create'));
 });
 
+// Dashboard > Kelola Pasar Aman > Ubah Pasar Aman
+Breadcrumbs::register('admin.pasar-aman.edit', function($breadcrumbs, $pasarAman)
+{
+    $breadcrumbs->parent('admin.pasar-aman');
+    $breadcrumbs->push($pasarAman->nama_pasar, route('admin.pasar-aman.edit', encrypt($pasarAman->id)));
+});
+
 // Dashboard > Kelola FAQ
 Breadcrumbs::register('admin.faq', function($breadcrumbs)
 {

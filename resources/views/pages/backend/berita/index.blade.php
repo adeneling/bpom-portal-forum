@@ -35,11 +35,12 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Alvin</td>
-								<td>Eclair</td>
-								<td>$0.87</td>
-							</tr>
+							
+								<tr>
+									<td>Alvin</td>
+									<td>Eclair</td>
+									<td>$0.87</td>
+								</tr>
 						</tbody>
 						</table>
 					</div>
