@@ -21,9 +21,20 @@
 	</div>
 <!--breadcrumbs end-->
 <!--start container-->
-	<div class="container">
-		<div class="section">
+<div class="container">
+	<div class="section">
+	</div>
+	<div id="input-fields">
+		<div class="row">
+			<div class="col s12">
+				{!! Form::open(['url' => 'admin/galeri','class' =>'col s12','files' => true]) !!}
+				{{ csrf_field() }}
+					@include('pages.backend.galeri._form')
+				{!! Form::close() !!}
+			</div>
 		</div>
 	</div>
+</div>
+
 <!--end container-->
 @endsection
