@@ -23,28 +23,49 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<div id="striped-table">
+			<div id="table-datatables">
+				<h4 class="header">DAFTAR PEDOMAN</h4>
 				<div class="row">
-					<div class="col s12">
-						<table class="striped">
-						<thead>
-							<tr>
-							<th data-field="id">No</th>
-							<th data-field="name">Judul</th>
-							<th data-field="price">Tanggal Bikin</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Alvin</td>
-								<td>Eclair</td>
-								<td>$0.87</td>
-							</tr>
-						</tbody>
+					<div class="col s12 m12 l12">
+						<table id="data-table-simple" class="responsive-table display" cellspacing="0">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Judul Pedoman</th>
+									<th>Tanggal dibuat</th>
+									<th width="35%">Aksi</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<th>No</th>
+									<th>Judul Pedoman</th>
+									<th>Tanggal dibuat</th>
+									<th>Aksi</th>
+								</tr>
+							</tfoot>
+
+							<tbody>
+								<?php $no=1 ?>
+								@foreach($beritas as $berita)
+								<tr>
+									<td>{{ $no++ }}</td>
+									<td>{{ $berita->judul}}</td>
+									<td>{{ $berita->created_at }}</td>
+									<td>
+										{!! Form::model($berita, ['route' => ['admin.berita.destroy', $berita], 'method' => 'delete'] ) !!}
+										<a href="{{ route('admin.berita.show', encrypt($berita->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
+                         				<a href="{{ route('admin.berita.edit', encrypt($berita->id))}}" class="btn waves-effect waves-light blue">Edit</a>
+                         				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
+                         				{!! Form::close()!!}
+									</td>
+								</tr>
+								@endforeach
+							</tbody>
 						</table>
 					</div>
 				</div>
-			</div>
+			</div> 
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
