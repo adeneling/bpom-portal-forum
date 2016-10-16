@@ -17,10 +17,10 @@ class CreateGalerisTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('judul');
-            $table->string('located');
-            $table->text('keterangan');
+            $table->string('located')->nullable();
+            $table->text('keterangan')->nullable();
+            $table->text('media_foto')->nullable();
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
