@@ -54,6 +54,10 @@
 		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}">
 			<a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a>
 		</li>
+		<div class="divider"></div>
+		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}">
+			<a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Forum</a>
+		</li>
 		{{-- END  --}}
 		<br>
 		<li class="no-padding">

@@ -151,31 +151,21 @@
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
-				<div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work1.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work2.png') }}" alt="Item Thumbnail" />
+				@foreach($pasarAman as $pasar)
+					<div class="col-md-2">
+						<div class="portfolio-item">
+							<div class="overlay"></div>
+							<div class="info">
+								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
+								<a href="#" class="btn">read more</a>
+							</div>
+							<div class="media-wrapper">
+								<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" />
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-2">
+				@endforeach
+				{{-- <div class="col-md-2">
 					<div class="portfolio-item">
 						<div class="overlay"></div>
 						<div class="info">
@@ -222,7 +212,7 @@
 							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>

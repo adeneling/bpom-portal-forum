@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Back\ForumUsers;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Models\PasarAman\PasarAman;
-
-class BerandaController extends Controller
+class ForumUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +16,8 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        $pasarAman = PasarAman::take(6)->get();
-        return view('pages.frontend.beranda.index', compact('pasarAman'));
+        //
+        return view('pages.backend.forum-users.index')->withTitle('Kelola Pengguna Forum')
     }
 
     /**
