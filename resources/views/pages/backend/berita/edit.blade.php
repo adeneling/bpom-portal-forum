@@ -10,24 +10,17 @@
 			<i class="mdi-action-search active"></i>
 			<input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col s12 m12 l12">
-					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.berita.create') !!}
-				</div>
-			</div>
-		</div>
+		
 	</div>
 <!--breadcrumbs end-->
 <!--start container-->
-	<div class="container">
+<div class="container">
 	<div class="section">
 	</div>
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::open(['url' => 'admin/berita','class' =>'col s12','files' => true]) !!}
+				{!! Form::model($berita, ['route' => ['admin.berita.update', $berita],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 				{{ csrf_field() }}
 					@include('pages.backend.berita._form')
 				{!! Form::close() !!}
@@ -36,13 +29,4 @@
 	</div>
 </div>
 <!--end container-->
-@endsection
-
-@section('js')
-	<script src="//cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			CKEDITOR.replace('konten');
-		});
-	</script>
 @endsection
