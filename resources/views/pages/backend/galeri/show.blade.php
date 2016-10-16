@@ -10,14 +10,6 @@
 			<i class="mdi-action-search active"></i>
 			<input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col s12 m12 l12">
-					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.galeri.create') !!}
-				</div>
-			</div>
-		</div>
 	</div>
 <!--breadcrumbs end-->
 <!--start container-->
@@ -27,14 +19,25 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::open(['url' => 'admin/galeri','class' =>'col s12','files' => true]) !!}
-				{{ csrf_field() }}
-					@include('pages.backend.galeri._form')
-				{!! Form::close() !!}
+				<h4 class="header">DATA FOTO</h4>
+				<div class="row">
+					<div class="col s8">
+						{{ $galeri->judul }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s8">
+						{{ $galeri->keterangan }}
+					</div>
+				</div>
+				<div class="row">
+					<center>
+						<a href="{{ url('admin/galeri') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>
+					</center>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 <!--end container-->
 @endsection

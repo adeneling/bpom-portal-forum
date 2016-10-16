@@ -50,34 +50,20 @@ class GaleriController extends Controller
             'judul' => 'required',
         ]);
         /* make directory */
-        Storage::makeDirectory('berita/foto');
-        Storage::makeDirectory('berita/video');
-        Storage::makeDirectory('berita/dokumen');
-        $file_dokumen = '';
+        Storage::makeDirectory('galeri/foto');
         $file_foto = '';
-        $file_video = '';
-        if($request->hasFile('media_dokumen')){
-            $file_dokumen = 'berita/dokumen/'.str_random(10).'.'.$request->file('media_dokumen')->getClientOriginalExtension();
-            Storage::put($file_dokumen, file_get_contents($request->file('media_dokumen')));
-        }
         if($request->hasFile('media_foto')){
-            $file_foto = 'berita/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
+            $file_foto = 'galeri/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
             Storage::put($file_foto, file_get_contents($request->file('media_foto')));
         }
-        if($request->hasFile('media_video')){
-            $file_video = 'berita/video/'.str_random(10).'.'.$request->file('media_video')->getClientOriginalExtension();
-            Storage::put($file_video, file_get_contents($request->file('media_video')));
-        }
-
-        $berita = new Berita;
-        $berita->user_id = Auth::user()->id;
-        $berita->judul = $request->input('judul');
-        $berita->konten = $request->input('konten');
-        $berita->media_dokumen = !is_null($file_dokumen) ? Storage::url($file_dokumen) : '';
-        $berita->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
-        $berita->media_video = !is_null($file_video) ? Storage::url($file_video) : '';
-        $berita->save();
-        return redirect('admin/berita');
+        $galeri = new Galeri;
+        $galeri->user_id = Auth::user()->id;
+        $galeri->judul = $request->input('judul');
+        $galeri->located = $request->input('located');
+        $galeri->keterangan = $request->input('keterangan');
+        $galeri->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
+        $galeri->save();
+        return redirect('admin/galeri');
     }
 
     /**
@@ -88,8 +74,8 @@ class GaleriController extends Controller
      */
     public function show($id)
     {
-        $berita = Berita::findOrFail(decrypt($id));
-        return view('pages.backend.berita.show', compact('berita'))->withTitle('Lihat Berita');
+        $galeri = Galeri::findOrFail(decrypt($id));
+        return view('pages.backend.galeri.show', compact('galeri'))->withTitle('Lihat Foto');
     }
 
     /**
@@ -100,8 +86,8 @@ class GaleriController extends Controller
      */
     public function edit($id)
     {
-        $berita = Berita::findOrFail(decrypt($id));
-        return view('pages.backend.berita.edit', compact('berita'))->withTitle('Edit Berita');
+        $galeri = Galeri::findOrFail(decrypt($id));
+        return view('pages.backend.galeri.edit', compact('galeri'))->withTitle('Edit Foto');
     }
 
     /**
@@ -117,33 +103,20 @@ class GaleriController extends Controller
             'judul' => 'required',
         ]);
         /* make directory */
-        Storage::makeDirectory('berita/foto');
-        Storage::makeDirectory('berita/video');
-        Storage::makeDirectory('berita/dokumen');
-        $file_dokumen = '';
+        Storage::makeDirectory('galeri/foto');
         $file_foto = '';
-        $file_video = '';
-        if($request->hasFile('media_dokumen')){
-            $file_dokumen = 'berita/dokumen/'.str_random(10).'.'.$request->file('media_dokumen')->getClientOriginalExtension();
-            Storage::put($file_dokumen, file_get_contents($request->file('media_dokumen')));
-        }
         if($request->hasFile('media_foto')){
-            $file_foto = 'berita/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
+            $file_foto = 'galeri/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
             Storage::put($file_foto, file_get_contents($request->file('media_foto')));
         }
-        if($request->hasFile('media_video')){
-            $file_video = 'berita/video/'.str_random(10).'.'.$request->file('media_video')->getClientOriginalExtension();
-            Storage::put($file_video, file_get_contents($request->file('media_video')));
-        }
         
-        $berita = Berita::findOrFail($id);
-        $berita->judul = $request->input('judul');
-        $berita->konten = $request->input('konten');
-        $berita->media_dokumen = !is_null($file_dokumen) ? Storage::url($file_dokumen) : '';
-        $berita->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
-        $berita->media_video = !is_null($file_video) ? Storage::url($file_video) : '';
-        $berita->save();
-        return redirect('admin/berita');
+        $galeri = Galeri::findOrFail($id);
+        $galeri->judul = $request->input('judul');
+        $galeri->located = $request->input('located');
+        $galeri->keterangan = $request->input('keterangan');
+        $galeri->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
+        $galeri->save();
+        return redirect('admin/galeri');
     }
 
     /**
@@ -154,8 +127,8 @@ class GaleriController extends Controller
      */
     public function destroy($id)
     {
-        $berita = Berita::find($id);
-        Berita::find($id)->delete();
-        return redirect('admin/berita');
+        $galeri = Galeri::find($id);
+        Galeri::find($id)->delete();
+        return redirect('admin/galeri');
     }
 }
