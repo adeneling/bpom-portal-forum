@@ -29,6 +29,7 @@
 	<link href="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/data-tables/css/jquery.dataTables.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="{{ asset('assets/backend/js/plugins/chartist-js/chartist.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+	<link href="{{ asset('assets/backend/js/plugins/sweetalert/sweetalert.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 	@yield('css')
 
 </head>
@@ -80,6 +81,8 @@
 	<!-- data-tables -->
     <script type="text/javascript" src="{{ asset('assets/backend/js/plugins/data-tables/js/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('assets/backend/js/plugins/data-tables/data-tables-script.js')}}"></script>
+    <!--sweetalert -->
+	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/sweetalert/sweetalert.min.js') }}"></script>
 	@yield('js')
 	
 	<!--plugins.js - Some Specific JS codes for Plugin Settings-->
