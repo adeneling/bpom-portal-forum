@@ -26,31 +26,10 @@
 			<div id="striped-table">
 				<div class="row">
 					<div class="col s12">
-						<table class="striped">
-						<thead>
-							<tr>
-							<th data-field="no">No</th>
-							<th data-field="photo">Photo</th>
-							<th data-field="nama_pasar">Nama Pasar</th>
-							<th data-field="provinsi">Provinsi</th>
-							<th data-field="kota">Kota</th>
-							<th data-field="kabupaten">Kabupaten</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php $no=1;?>
-							@foreach($pasarAman as $pasar)
-								<tr>
-									<td>{{ $no++ }}</td>
-									<td><img src="{{ asset($pasar->photo) }}" width=50 height=50></td>
-									<td>{{ $pasar->nama_pasar }}</td>
-									<td>{{ $pasar->provinsi->provinsi }}</td>
-									<td>{{ $pasar->kota->kota }}</td>
-									<td>{{-- !is_null($pasar->kecamatan->kecamatan) ? $pasar->kecamatan->kecamatan : '' --}}</td>
-								</tr>
-							@endforeach
-						</tbody>
-						</table>
+						<div id="table-container">
+							@include('pages.backend.pasar-aman._table_pasar_aman')
+							{{ $pasarAman->links() }}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -64,4 +43,43 @@
 		<!-- Floating Action Button -->
 	</div>
 <!--end container-->
+@endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$(document).on('click', '#delete-pasaraman', function(e){
+				e.preventDefault();
+				var id = $(this).attr('data-id');
+				swal({
+					title: "Are you sure?",   
+					text: "You will not be able to recover this imaginary file!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false }, 
+					function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+							type: "DELETE",
+							url: "{{ url('admin/pasar-aman') }}"+"/"+id,
+							data: {_token: "{{ csrf_token() }}"},
+							cache: false,
+							success: function(data){
+								swal("Deleted!", "Your imaginary file has been deleted.", "success");
+								$('#table-container').html(data);
+							}
+						});
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");   
+					} 
+				});
+			});
+
+		});
+	</script>
 @endsection

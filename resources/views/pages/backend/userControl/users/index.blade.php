@@ -2,10 +2,6 @@
 
 @section('title', $title)
 
-@section('css')
-	<link href="{{ asset('assets/backend/js/plugins/sweetalert/sweetalert.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
-@endsection
-
 @section('content')
 	<!--breadcrumbs start-->
 	<div id="breadcrumbs-wrapper">
@@ -62,8 +58,6 @@
 @endsection
 
 @section('js')
-	<!--sweetalert -->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/sweetalert/sweetalert.min.js') }}"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
