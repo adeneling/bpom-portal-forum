@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
-    protected $table = 'beritas';
+    protected $table = 'galeris';
 
     protected $fillable = [
         'judul', 
-        'konten',
+        'located',
         'keterangan',
         'media_foto', 
     ];
