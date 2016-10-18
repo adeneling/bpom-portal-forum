@@ -226,9 +226,24 @@ Breadcrumbs::register('admin.bahan-berbahaya', function($breadcrumbs)
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Kelola Bahan Berbahaya', route('admin.bahan-berbahaya.index'));
 });
+
 // Dashboard > Kelola Bahan Berbahaya > Tambah Bahan Berbahaya
 Breadcrumbs::register('admin.bahan-berbahaya.create', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.bahan-berbahaya');
     $breadcrumbs->push('Tambah Bahan Berbahaya', route('admin.bahan-berbahaya.create'));
+});
+
+// Dashboard > Kelola Pengguna Forum
+Breadcrumbs::register('admin.pengguna-forum', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Pengguna Forum', route('admin.pengguna-forum.index'));
+});
+
+// Dashboard > Kelola Pengguna Forum > Tambah Pengguna Forum
+Breadcrumbs::register('admin.pengguna-forum.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.pengguna-forum');
+    $breadcrumbs->push('Tambah Pengguna Forum', route('admin.pengguna-forum.create'));
 });

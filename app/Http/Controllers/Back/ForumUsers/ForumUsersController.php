@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\UserControl\ForumUsers;
+
 class ForumUsersController extends Controller
 {
     /**
@@ -17,7 +19,8 @@ class ForumUsersController extends Controller
     public function index()
     {
         //
-        return view('pages.backend.forum-users.index')->withTitle('Kelola Pengguna Forum')
+        $penggunaForum = ForumUsers::all();
+        return view('pages.backend.forum-users.index', compact('penggunaForum'))->withTitle('Kelola Pengguna Forum');
     }
 
     /**
@@ -28,6 +31,7 @@ class ForumUsersController extends Controller
     public function create()
     {
         //
+        return view('pages.backend.forum-users.create')->withTitle('Tambah Pengguna Forum');
     }
 
     /**
