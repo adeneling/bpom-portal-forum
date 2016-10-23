@@ -33,23 +33,19 @@
 	</div>
 </section>
 <!-- SLIDER -->
-<!-- MAIN FEATURES -->
-<div class="main-features ">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 col-sm-6"><i class="fa fa-cubes "></i>
-				<h3 class="feature-heading">PASAR AMAN</h3></div>
-			<div class="col-md-3 col-sm-6"><i class="fa fa-globe "></i>
-				<h3 class="feature-heading">MAKANAN DAN OBAT-OBATAN</h3></div>
-			<div class="col-md-3 col-sm-6"><i class="fa fa-refresh "></i>
-				<h3 class="feature-heading">MASYARAKAT</h3></div>
-			<div class="col-md-3 col-sm-6"><i class="fa fa-rocket "></i>
-				<h3 class="feature-heading">FORUM DISKUSI</h3></div>
+<!-- BAHAN BERBAHAYA DAN PROGRAM -->
+	<div class="main-features ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6"></div>
+				<div class="col-md-3 col-sm-6"><i class="fa fa-globe "></i>
+					<h3 class="feature-heading">BAHAN BERBAHAYA</h3></div>
+				<div class="col-md-3 col-sm-6"><i class="fa fa-refresh "></i>
+					<h3 class="feature-heading">PROGRAM</h3></div>
+				<div class="col-md-3 col-sm-6"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<!-- END MAIN FEATURES -->
-
 <!-- INTRO -->
 <section>
 	<div class="container">
