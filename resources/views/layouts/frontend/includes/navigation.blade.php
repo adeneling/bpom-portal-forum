@@ -12,9 +12,10 @@
 					<li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
 					<li>&nbsp; | &nbsp;</li>
 				@endif
+				<li><a href="sipaman">SIPAMAN</a></li>
+				<li><a href="{{ route('thread.index') }}">FORUM</a></li>
 				<li><a href="faq">FAQ</a></li>
 				<li><a href="hubungi-kami">HUBUNGI KAMI</a></li>
-				<li><a href="sipaman">SIPAMAN</a></li>
 				<li><a href="peta-situs">PETA SITUS</a></li>
 			</ul>
 			<div class="searchbox">
@@ -44,24 +45,22 @@
 				<li>
 					<a href="{{ route('index') }}">BERANDA </a>
 				</li>
-				<li>
+				{{-- <li>
 					<a href="{{ route('berita.index') }}">BERITA </a>
-				</li>
+				</li> --}}
 				<li>
 					<a href="{{ route('galeri.index') }}">GALERI </a>
 				</li>
-				<li>
+				{{-- <li>
 					<a href="{{ route('program.index') }}">PROGRAM </a>
-				</li>
-				<li>
-					<a href="{{ route('pedoman.index') }}">PEDOMAN </a>
-				</li>
-				<li>
-					<a href="{{ route('media-promosi.index') }}">MEDIA PROMOSI </a>
-				</li>
-				<li>
-					<a href="{{ route('thread.index') }}">FORUM FASILITATOR </a>
-				</li>
+				</li> --}}
+				<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">PUBLIKASI <i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{{ route('pedoman.index') }}">PEDOMAN </a></li>
+							<li><a href="{{ route('media-promosi.index') }}">MEDIA PROMOSI </a></li>
+						</ul>
+					</li>
 				<li>
 					<a href="{{ route('pasar-aman.index') }}">PASAR AMAN </a>
 				</li>
