@@ -12,7 +12,8 @@
         "greggilbert/recaptcha": "dev-master",
         "davejamesmiller/laravel-breadcrumbs": "^3.0",
         "rifkyekayama/rajaongkir-laravel": "^1.0",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -156,59 +156,12 @@
 								<a href="#" class="btn">read more</a>
 							</div>
 							<div class="media-wrapper">
-								<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" />
+								<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" width="180" height="140" />
+								<br><center>{{ $pasar->nama_pasar }}</center>
 							</div>
 						</div>
 					</div>
 				@endforeach
-				{{-- <div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Raining</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work5.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work6.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">read more</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work7.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div> --}}
 			</div>
 		</div>
 	</div>
