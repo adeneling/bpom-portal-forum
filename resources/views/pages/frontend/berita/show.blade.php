@@ -14,29 +14,23 @@
 						{{ $berita->judul }}
 					</h2>
 					<div class="meta-line clearfix">
-						<div class="meta-author-category pull-left">
-							<span class="post-author">by <a href="#">John Doe</a></span>
-							<span class="post-category">In: <a href="#">Business</a>, <a href="#">Creative</a>, <a href="#">Media</a></span>
-						</div>
 						<div class="meta-tag-comment pull-right">
-							<span class="post-tags"><i class="fa fa-tag"></i> <a href="#">story</a>, <a href="#">inspiration</a>, <a href="#">creative</a></span>
-							<span class="post-comment"><i class="fa fa-comments"></i> <a href="#">3 Comments</a></span>
+							<span class="post-comment"><i class="fa fa-calendar"></i> <a href="#">Dibuat: {{ $berita->created_at }}</a></span>
 						</div>
 					</div>
 				</header>
 				<div class="entry-content clearfix">
 					<figure class="featured-image">
-						<div class="post-date-info clearfix"><span class="post-month">DEC</span><span class="post-date">11</span><span class="post-year">2014</span></div>
-						<img src="assets/img/blog/buildings.jpg" class="img-responsive" alt="featured-image" />
+						<center>
+							<img src="{{ isset($berita->foto) ? $berita->foto : '' }}" class="img-responsive" alt="featured-image" />
+							<span><strong>{{ $berita->ket_foto }}</strong></span>
+						</center>						
 					</figure>
 					<div class="excerpt">
 						<p>{!! $berita->konten !!}</p>
 					</div>
 				</div>
 			</article>
-			<!-- end blog post -->
-			<hr>
-			<hr>
 		</div>
 	</div>
 </div>

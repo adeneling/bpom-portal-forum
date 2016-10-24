@@ -52,7 +52,7 @@ class PasarAmanController extends Controller
 	{
 		//
 		$id = str_replace(config('app.salt'), '', base64_decode($id));
-		$pasar = PasarAman::where('id', '=', $id)->orWhere('nama_pasar', 'like', str_replace('-', ' ', $namaPasar))->get();
+		$pasar = PasarAman::where('id', '=', $id)->orWhere('nama_pasar', 'like', str_replace('-', ' ', $namaPasar))->first();
 
 		return view('pages.frontend.pasar-aman.show', compact('pasar'));
 	}
