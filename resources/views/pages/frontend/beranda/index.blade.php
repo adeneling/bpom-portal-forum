@@ -105,7 +105,9 @@
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
 								{{-- <a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="btn">read more</a> --}}
-								<a class="fancybox" rel="group" href="{{ asset($pasar->photo) }}" class="btn" title="{{ $pasar->nama_pasar }}">read more</a>
+								<a class="fancybox" rel="group" href="{{ asset($pasar->photo) }}" title="{{ $pasar->nama_pasar }}">
+									<button class="btn btn-primary">Read More</button>
+								</a>
 							</div>
 							<div class="media-wrapper">
 								<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" width="180" height="140" />
