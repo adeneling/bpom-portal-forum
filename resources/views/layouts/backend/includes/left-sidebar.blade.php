@@ -51,12 +51,6 @@
 		<li class="bold {{ Request::segment(2) == 'pasar-aman' ? 'active' : '' }}">
 			<a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a>
 		</li>
-		<li class="bold {{ Request::segment(2) == 'faq' ? 'active' : '' }}">
-			<a href="{{ route('admin.faq.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-speaker-notes"></i> Kelola FAQ</a>
-		</li>
-		<li class="bold {{ Request::segment(2) == 'hubungi-kami' ? 'active' : '' }}">
-			<a href="{{ route('admin.hubungi-kami.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-settings-phone"></i> Kelola Hubungi Kami</a>
-		</li>
 		<div class="divider"></div>
 		<li class="bold {{ Request::segment(2) == 'pengguna-forum' ? 'active' : '' }}">
 			<a href="{{ route('admin.pengguna-forum.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Forum</a>
