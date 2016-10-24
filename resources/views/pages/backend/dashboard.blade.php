@@ -25,10 +25,9 @@
 	<!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
+			<center>
+				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="Image Intro">
+			</center>			
 		</div>
 	</div>
 	<!--end container-->
