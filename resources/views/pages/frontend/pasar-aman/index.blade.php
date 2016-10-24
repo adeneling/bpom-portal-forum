@@ -26,7 +26,7 @@
 							<h3><a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
 								{{ $pasar->nama_pasar }}</a>
 							</h3>
-							<p>{!! substr($pasar->konten, 0, 400).'...' !!}</p>
+							
 							<div class="news-meta">
 								<span class="news-datetime"><strong>{{ $pasar->created_at }}</strong></span>
 							</div>

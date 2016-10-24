@@ -48,6 +48,7 @@ class PedomanController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
+            'media_dokumen' => 'required|mimes:pdf',
         ]);
         /* make directory */
         Storage::makeDirectory('pedoman/dokumen');
@@ -101,6 +102,7 @@ class PedomanController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
+            'media_dokumen' => 'required|mimes:pdf',
         ]);
         /* make directory */
         Storage::makeDirectory('pedoman/dokumen');

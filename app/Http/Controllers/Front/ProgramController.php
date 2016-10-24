@@ -47,9 +47,11 @@ class ProgramController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $nama)
     {
-        //
+        $id = str_replace(config('app.salt'), '', base64_decode($id));
+        $program = Program::where('id', '=', $id)->orWhere('nama', 'like', str_replace('-', ' ', $nama))->first();
+        return view('pages.frontend.program.show', compact('program'));
     }
 
     /**
