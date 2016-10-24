@@ -33,18 +33,18 @@
 				<div class="row margin-bottom-30px">
 					<div class="col-xs-6">
 						<ul class="list-unstyled footer-nav">
-							<li><a href="#">Galeri</a></li>
-							<li><a href="#">Program</a></li>
-							<li><a href="#">Pedoman</a></li>
-							<li><a href="#">Media Promosi</a></li>
+							<li><a href="{{ route('galeri.index') }}">Galeri</a></li>
+							<li><a href="{{ route('program.index') }}">Program</a></li>
+							<li><a href="{{ route('pedoman.index') }}">Pedoman</a></li>
+							<li><a href="{{ route('media-promosi.index') }}">Media Promosi</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-6">
 						<ul class="list-unstyled footer-nav">
-							<li><a href="#">Forum Fasilitator</a></li>
-							<li><a href="#">Pasar Aman</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Hubungi Kami</a></li>
+							<li><a href="{{ route('thread.index') }}">Forum Fasilitator</a></li>
+							<li><a href="{{ route('pasar-aman.index') }}">Pasar Aman</a></li>
+							<li><a href="{{ route('faq.index') }}">FAQ</a></li>
+							<li><a href="{{ route('hubungi-kami.index') }}">Hubungi Kami</a></li>
 						</ul>
 					</div>
 				</div>
