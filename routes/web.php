@@ -56,6 +56,9 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 	// Dashboard
 	Route::resource('dashboard', 'BackController');
+	// Kelola Banner
+	Route::resource('banner', 'Banner\BannerController');
+	Route::post('banner/enabled/{id}/{isenabled}', 'Banner\BannerController@enabled')->name('banner.enabled');
 	// Kelola Berita
 	Route::resource('berita', 'Berita\BeritaController');
 	Route::resource('gambar-berita', 'Berita\GambarBeritaController');
@@ -80,6 +83,5 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// Kelola Forum users
 	Route::resource('pengguna-forum', 'ForumUsers\ForumUsersController');
 	// User Control
-	Route::resource('groups', 'UserControl\GroupController');
 	Route::resource('users', 'UserControl\UserController');
 });

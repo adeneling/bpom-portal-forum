@@ -25,6 +25,9 @@
 		<li class="bold {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}">
 			<a href="{{ route('admin.dashboard.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
 		</li>
+		<li class="bold {{ Request::segment(2) == 'banner' ? 'active' : '' }}">
+			<a href="{{ route('admin.banner.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Kelola Banner</a>
+		</li>
 		<li class="bold {{ Request::segment(2) == 'berita' ? 'active' : '' }}">
 			<a href="{{ route('admin.berita.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-open-in-new"></i> Kelola Berita</a>
 		</li>
@@ -58,22 +61,11 @@
 		<li class="bold {{ Request::segment(2) == 'pengguna-forum' ? 'active' : '' }}">
 			<a href="{{ route('admin.pengguna-forum.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Forum</a>
 		</li>
-		{{-- END  --}}
-		<br>
-		<li class="no-padding">
-			<ul class="collapsible collapsible-accordion">
-				<li class="bold"><a class="collapsible-header waves-effect waves-cyan {{ Request::segment(2) == 'groups' || Request::segment(2) == 'users' ? 'active' : '' }}"><i class="mdi-action-account-circle"></i> User Control</a>
-					<div class="collapsible-body">
-						<ul>
-							<li class="{{ Request::segment(2) == 'groups' ? 'active' : '' }}"><a href="{{ route('admin.groups.index') }}"> Grup</a>
-							</li>                                   
-							<li class="{{ Request::segment(2) == 'users' ? 'active' : '' }}"><a href="{{ route('admin.users.index') }}"> User</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
+		<li class="bold {{ Request::segment(2) == 'users' ? 'active' : '' }}">
+			<a href="{{ route('admin.users.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Admin</a>
 		</li>
+		{{-- END  --}}
+		<br><br><br><br><br>
 	</ul>
 	<a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
 </aside>

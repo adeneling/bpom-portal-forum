@@ -65,7 +65,7 @@
 				e.preventDefault();
 				$.ajax({
 					type: "GET",
-					url: "{{ route('admin.groups.create') }}",
+					url: "",
 					success: function(data){
 						$('#modal-body').html(data);
 						$('#modal1').openModal();
@@ -76,7 +76,7 @@
 			$('.modal').on('click', '#submit', function(){
 				$.ajax({
 					type: "POST",
-					url: "{{ url('admin/groups') }}",
+					url: "",
 					data: $('#groups-form').serialize(),
 					cache: false,
 					success: function(data){
@@ -90,7 +90,7 @@
 				e.preventDefault();
 				$.ajax({
 					type: "GET",
-					url: "{{ url('admin/groups') }}"+"/"+$(this).attr('data-id')+"/edit",
+					url: "",
 					cache: false,
 					success: function(data){
 						$('#modal-body').html(data);
@@ -102,7 +102,7 @@
 			$('.modal').on('click', '#submitEdit', function(){
 				$.ajax({
 					type: "PUT",
-					url: "{{ url('admin/groups') }}"+"/"+$('#id').val(),
+					url: "",
 					data: $('#groups-form-edit').serialize(),
 					cache: false,
 					success: function(data){
@@ -129,7 +129,7 @@
 					if (isConfirm) {     
 						$.ajax({
 							type: "DELETE",
-							url: "{{ url('admin/groups') }}"+"/"+id,
+							url: "",
 							data: {_token: "{{ csrf_token() }}"},
 							cache: false,
 							success: function(data){

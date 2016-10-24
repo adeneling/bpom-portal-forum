@@ -101,6 +101,13 @@ Breadcrumbs::register('admin.dashboard', function($breadcrumbs)
     $breadcrumbs->push('Dashboard', route('admin.dashboard.index'));
 });
 
+// Dashboard > Kelola Banner
+Breadcrumbs::register('admin.banner', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Kelola Banner', route('admin.banner.index'));
+});
+
 // Dashboard > Kelola Berita
 Breadcrumbs::register('admin.berita', function($breadcrumbs)
 {
