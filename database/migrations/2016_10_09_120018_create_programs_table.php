@@ -19,8 +19,6 @@ class CreateProgramsTable extends Migration
             $table->string('nama');
             $table->text('deskripsi')->nullable();
             $table->text('media_foto')->nullable();
-            $table->text('media_video')->nullable();
-            $table->text('media_dokumen')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

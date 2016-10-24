@@ -20,8 +20,6 @@ class BahanBerbahayaController extends Controller
     {
         $q = $request->get('q');
         $bahans = BahanBerbahaya::where('nama', 'LIKE', '%'.$q.'%')->orderBy('created_at','desc')->paginate(10);
-        $bahdans = BahanBerbahaya::orderBy('created_at','desc')->paginate(10);
-
         return view('pages.frontend.bahan-berbahaya.index', compact('bahans'));
     }
 

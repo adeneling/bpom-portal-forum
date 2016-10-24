@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <div class="page-content page-search-result">
 	<div class="container">
 		<h2>Cari Bahan Berbahaya</h2>
