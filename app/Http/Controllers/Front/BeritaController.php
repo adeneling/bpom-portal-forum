@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
-
+use App\Models\Berita\Berita;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -48,7 +48,9 @@ class BeritaController extends Controller
      */
     public function show($id, $judul)
     {
-        //
+        $berita = Berita::where('id', '=', base64_decode(str_replace(config('app.salt'), '', $id)))->orWhere('judul', 'like', str_replace('-', ' ', $judul))->first();
+        return $berita;
+        return view('pages.frontend.berita.show', compact('berita'));
     }
 
     /**
