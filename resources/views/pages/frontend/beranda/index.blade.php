@@ -69,23 +69,22 @@
 	<div class="container">
 		<h2 class="section-heading">BERITA TERBARU</h2>
 		<div class="row">
-			@for($i=1; $i<count($berita); $i++)
+			@foreach($berita as $val)
 				<div class="col-md-4">
 					<div class="news-item news-featured">
-						<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}">
-							<img src="{{ asset($berita[$i]->foto) }}" class="img-responsive" alt="{{ $berita[$i]->judul }}">
+						<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}">
+							<img src="{{ asset($val->foto) }}" class="Item Thumbnail" alt="{{ $val->judul }}" width="50" height="200" >
 						</a>
-						<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[$i]->judul, '-')]) }}" type="{{ $berita[$i]->judul }}">
-							{{ $berita[$i]->judul }}</a>
+						<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">
+							{{ $val->judul }}</a>
 						</h3>
-						<p>{!! $berita[$i]->konten !!}</p>
+						<p>{!! substr($val->konten, 0, 200).'...' !!}</p>
 						<div class="news-meta">
-							<span class="news-datetime">{{ $berita[$i]->created_at }}</span>
+							<span class="news-datetime">{{ $val->created_at }}</span>
 						</div>
 					</div>
 				</div>
-			@endfor
-
+			@endforeach
 		</div>
 	</div>
 </section>
