@@ -10,6 +10,7 @@
 	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/frontend/css/shop-main.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
 
 	<!-- GOOGLE FONTS -->
@@ -98,6 +99,7 @@
 	<script src="{{ asset('assets/frontend/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}"></script>
 	<script src="{{ asset('assets/frontend/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js') }}"></script>
 	<script src="{{ asset('assets/frontend/js/repute-scripts.js') }}"></script>
+	<script src="{{ asset('assets/frontend/js/repute-shop.js') }}"></script>
 	<script src="https://use.fontawesome.com/fb24f8ac5d.js"></script>
 	@yield('js')
 </html>

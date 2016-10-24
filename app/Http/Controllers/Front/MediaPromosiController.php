@@ -16,7 +16,7 @@ class MediaPromosiController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.frontend.media.index');
     }
 
     /**

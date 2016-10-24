@@ -1,20 +1,23 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Berita')
+@section('title', 'Program')
 
 @section('content')
-<!-- BREADCRUMBS -->
-<div class="page-header">
-	<div class="container">
-		<h1 class="page-title pull-left">@yield('title')</h1>
-		{!! Breadcrumbs::render('berita') !!}
-	</div>
-</div>
 
-<!-- END BREADCRUMBS -->
 <!-- PAGE CONTENT -->
 <div class="page-content page-search-result">
 	<div class="container">
+		<h2>Cari berita</h2>
+		<!-- Search Form -->
+		<form class="form form-horizontal">
+			<div class="input-group input-group-lg">
+				<input class="form-control input-lg" type="search" placeholder="tulis berita yang dicari.."/>
+				<span class="input-group-btn">
+				<button type="submit" class="btn btn-primary btn-lg"><i class="icon ion-android-search"></i> Cari Berita</button>
+			</span>
+			</div>
+		</form>
+		<!-- End Search Form -->
 		<!-- Search Results -->
 		<ul class="list-unstyled list-results">
 			<li class="type-portfolio">
