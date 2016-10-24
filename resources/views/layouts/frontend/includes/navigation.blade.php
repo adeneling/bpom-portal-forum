@@ -4,12 +4,12 @@
 		<!-- TOPBAR -->
 		<div class="topbar">
 			<ul class="list-inline top-nav">
-				<li><a href="sipaman">SIPAMAN</a></li>
+				<li><a href="#">SIPAMAN</a></li>
 				<li><a href="{{ route('thread.index') }}">FORUM FASILITATOR </a></li>
-				<li><a href="faq">FAQ</a></li>
-				<li><a href="hubungi-kami">HUBUNGI KAMI</a></li>
+				<li><a href="{{ route('faq.index') }}">FAQ</a></li>
+				<li><a href="{{ route('hubungi-kami.index') }}">HUBUNGI KAMI</a></li>
 				
-				<li><a href="peta-situs">PETA SITUS</a></li>
+				<li><a href="#">PETA SITUS</a></li>
 				@if(auth('forum')->check())
 					<li><b>Hay <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
 					<li><a href="{{ url('forum-fasilitator/logout') }}">LOGOUT</a></li>

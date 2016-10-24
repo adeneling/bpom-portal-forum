@@ -24,7 +24,6 @@
 	<div class="container">
 		<div class="section">
 			<div id="table-datatables">
-				<h4 class="header">DAFTAR BERITA</h4>
 				<div class="row">
 					<div class="col s12 m12 l12" id="table-container">
 						@include('pages.backend.banner._tableBanner')
