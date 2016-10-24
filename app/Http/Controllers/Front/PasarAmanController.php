@@ -18,7 +18,8 @@ class PasarAmanController extends Controller
 	 */
 	public function index()
 	{
-		return view('pages.frontend.pasar-aman.index');
+		$pasars = PasarAman::orderBy('created_at','desc')->paginate(10);
+        return view('pages.frontend.pasar-aman.index', compact('pasars'));
 	}
 
 	/**
