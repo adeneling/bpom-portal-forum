@@ -98,7 +98,7 @@
 <section class="recent-works">
 	<div class="container">
 		<h2 class="section-heading pull-left">PASAR AMAN</h2>
-		<a href="#" class="btn btn-primary pull-right">Lihat semua</a>
+		<a href="{{ url('pasar-aman') }}" class="btn btn-primary pull-right">Lihat semua</a>
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
