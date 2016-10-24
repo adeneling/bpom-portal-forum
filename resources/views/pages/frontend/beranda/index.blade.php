@@ -107,7 +107,6 @@
 							<div class="overlay"></div>
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-								{{-- <a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="btn">read more</a> --}}
 								<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : '') }}" title="{{ $pasar->nama_pasar }}">
 									<button class="btn btn-primary">Read More</button>
 								</a>

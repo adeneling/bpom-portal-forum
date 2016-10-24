@@ -19,54 +19,22 @@
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
-				<div class="col-md-3">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">Lihat</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work1.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">Lihat</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work2.png') }}" alt="Item Thumbnail" />
+				@foreach($galeris as $galeri)
+					<div class="col-md-3">
+						<div class="portfolio-item">
+							<div class="overlay"></div>
+							<div class="info">
+								<h4 class="title">{{ $galeri->judul }}</h4>
+								<a class="fancybox" rel="group" href="{{ asset(isset($galeri->foto) ? $galeri->foto : '') }}" title="{{ $galeri->judul }}">
+									<button class="btn btn-primary">Lihat</button>
+								</a>
+							</div>
+							<div class="media-wrapper">
+								<img src="{{ asset($galeri->foto) }}" alt="Item Thumbnail" height="200" width="300" />
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">Lihat</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="portfolio-item">
-						<div class="overlay"></div>
-						<div class="info">
-							<h4 class="title">Pasar Aman</h4>
-							<a href="#" class="btn">Lihat</a>
-						</div>
-						<div class="media-wrapper">
-							<img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Item Thumbnail" />
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>

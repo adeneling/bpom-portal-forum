@@ -128,7 +128,8 @@ class GaleriController extends Controller
     public function destroy($id)
     {
         $galeri = Galeri::find($id);
-        Galeri::find($id)->delete();
+        Storage::delete($galeri->foto);
+        $galeri->delete();
         return redirect('admin/galeri');
     }
 }
