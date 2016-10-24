@@ -16,12 +16,10 @@ class CreateGambarBeritasTable extends Migration
         Schema::create('gambar_beritas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('berita_id');
             $table->string('located');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('berita_id')->references('id')->on('beritas')->onDelete('cascade');
         });
     }
 

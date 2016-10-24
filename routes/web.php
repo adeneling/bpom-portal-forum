@@ -60,6 +60,7 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('dashboard', 'BackController');
 	// Kelola Berita
 	Route::resource('berita', 'Berita\BeritaController');
+	Route::resource('gambar-berita', 'Berita\GambarBeritaController');
 	// Kelola Galeri
 	Route::resource('galeri', 'Galeri\GaleriController');
 	// Kelola Program

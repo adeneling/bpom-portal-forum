@@ -15,4 +15,8 @@ class Berita extends Model
         'media_video', 
         'media_dokumen', 
     ];
+
+    public function gambar(){
+    	return $this->hasMany(GambarBerita::class);
+    }
 }

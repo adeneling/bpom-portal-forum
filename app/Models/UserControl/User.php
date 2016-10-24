@@ -5,6 +5,7 @@ namespace App\Models\UserControl;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
+use App\Models\Berita\GambarBerita;
 
 class User extends Authenticatable
 {
@@ -28,4 +29,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function newGambar(){
+        $gambar = new GambarBerita;
+        $gambar->user()->associate($this);
+        
+        return $gambar;
+    }
 }
