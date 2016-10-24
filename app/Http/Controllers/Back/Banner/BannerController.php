@@ -112,7 +112,7 @@ class BannerController extends Controller
 
 		$banner->hero = $request->get('hero');
 		$banner->lead = $request->get('lead');
-		// $banner->isenabled = $request->get('isenabled');
+		$banner->isenabled = $banner->isenabled;
 		$banner->update();
 
 		$banners = Banner::orderBy('id', 'desc')->get();
