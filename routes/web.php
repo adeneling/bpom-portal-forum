@@ -14,10 +14,14 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('galeri','GaleriController');
 	Route::resource('program','ProgramController');
 	Route::resource('pedoman','PedomanController');
-	Route::resource('media-promosi','MediaPromosiController');	
+	Route::resource('media-promosi','MediaPromosiController');
+	/* FRONTEND PASAR AMAN */
 	Route::resource('pasar-aman','PasarAmanController');
-	Route::resource('bahan-berbahaya','BahanBerbahayaController');
 	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');
+	/* FRONTEND BAHAN BERBAHAYA */
+	Route::resource('bahan-berbahaya','BahanBerbahayaController');
+	Route::get('bahan-berbahaya/{id}/{judul}', 'BahanBerbahayaController@show')->name('bahan-berbahaya.lihat');
+	
 });
 
 // Forum
