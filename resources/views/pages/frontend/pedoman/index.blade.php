@@ -22,13 +22,11 @@
 						<a href="#" class="pull-left"><i class="fa fa-file-pdf-o"></i></a>
 						<div class="media-body">
 							<h3>
-								<a href="{{ route('pedoman.lihat', [base64_encode(config('app.salt').$pedoman->id), str_slug($pedoman->judul, '-')]) }}">
-									{{ $pedoman->judul }}
-								</a>
+								{{ $pedoman->judul }}
 							</h3>
 							<p>{!! substr($pedoman->konten, 0, 400).'...' !!}</p>
 							<span class="text-muted">
-								<a href="" class="btn btn-primary"> Preview</a> | <a href="" class="btn btn-success"> Download</a>
+								<a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-primary"> Download</a> | <a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-success" target="_blank"> Preview</a>
 							</span>
 						</div>
 					</div>

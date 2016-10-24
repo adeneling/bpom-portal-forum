@@ -19,7 +19,9 @@
 				<div class="tab-pane fade in active" id="tab-top1">
 					<!-- HERO UNIT -->
 					<center>
-						<img src="{{ asset('assets/frontend/img/news/news1.png') }}">
+						<video width="500" height="300" controls>
+							<source src="{{ asset('assets/testing/video.mp4') }}" type="video/mp4">
+						</video>
 					</center>
 					<!-- END HERO UNIT -->
 					<div class="product-carousel" id="product-carousel1">						
