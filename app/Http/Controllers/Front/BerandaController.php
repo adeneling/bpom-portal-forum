@@ -20,7 +20,7 @@ class BerandaController extends Controller
     public function index()
     {
         $pasarAman = PasarAman::take(6)->get();
-        $berita = Berita::orderBy('id', 'desc')->take(6)->get();
+        $berita = Berita::orderBy('id', 'desc')->take(3)->get();
         return view('pages.frontend.beranda.index', compact(['pasarAman', 'berita']));
     }
 

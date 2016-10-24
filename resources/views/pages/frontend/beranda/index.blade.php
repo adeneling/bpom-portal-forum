@@ -38,10 +38,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-6"></div>
-				<div class="col-md-3 col-sm-6"><i class="fa fa-bullhorn "></i>
-					<h3 class="feature-heading">BAHAN BERBAHAYA</h3></div>
-				<div class="col-md-3 col-sm-6"><i class="fa fa-refresh "></i>
-					<h3 class="feature-heading">PROGRAM</h3></div>
+				<a href="{{ url('bahan-berbahaya') }}" class="col-md-3 col-sm-6">
+					<i class="fa fa-bullhorn "></i>
+					<h3 class="feature-heading">BAHAN BERBAHAYA</h3>
+				</a>
+				<a href="{{ url('program') }}" class="col-md-3 col-sm-6">
+					<i class="fa fa-desktop "></i>
+					<h3 class="feature-heading">PROGRAM</h3>
+				</a>
 				<div class="col-md-3 col-sm-6"></div>
 			</div>
 		</div>
@@ -75,7 +79,7 @@
 						<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}">
 							<img src="{{ asset($val->foto) }}" class="Item Thumbnail" alt="{{ $val->judul }}" width="50" height="200" >
 						</a>
-						<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">
+						<h3><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">
 							{{ $val->judul }}</a>
 						</h3>
 						<p>{!! substr($val->konten, 0, 200).'...' !!}</p>
@@ -105,7 +109,7 @@
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
 								{{-- <a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="btn">read more</a> --}}
-								<a class="fancybox" rel="group" href="{{ asset($pasar->photo) }}" title="{{ $pasar->nama_pasar }}">
+								<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : '') }}" title="{{ $pasar->nama_pasar }}">
 									<button class="btn btn-primary">Read More</button>
 								</a>
 							</div>
