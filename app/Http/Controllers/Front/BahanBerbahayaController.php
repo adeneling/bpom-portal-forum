@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\BahanBerbahaya\BahanBerbahaya;
+
 class BahanBerbahayaController extends Controller
 {
     /**
@@ -16,7 +18,8 @@ class BahanBerbahayaController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.bahan-berbahaya.index');
+        $bahans = BahanBerbahaya::orderBy('created_at','desc')->paginate(10);
+        return view('pages.frontend.bahan-berbahaya.index', compact('bahans'));
     }
 
     /**
