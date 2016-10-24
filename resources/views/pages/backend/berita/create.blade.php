@@ -51,6 +51,11 @@
 								</div>
 							</div>
 						</div>
+						<div class="col s6">
+							<div class="input-field col s8">
+								{!! Form::textarea('ket_foto', null, ['class'=>'materialize-textarea']) !!}
+							</div>
+						</div>
 						{{-- <div class="col s6">
 							<div class="input-field col s8">
 								<button class="btn waves-effect waves-light green" id="uploadFoto">Upload Foto</button>

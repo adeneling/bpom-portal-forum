@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\PasarAman\PasarAman;
+use App\Models\Berita\Berita;
 
 class BerandaController extends Controller
 {
@@ -19,7 +20,8 @@ class BerandaController extends Controller
     public function index()
     {
         $pasarAman = PasarAman::take(6)->get();
-        return view('pages.frontend.beranda.index', compact('pasarAman'));
+        $berita = Berita::orderBy('id', 'desc')->take(6)->get();
+        return view('pages.frontend.beranda.index', compact(['pasarAman', 'berita']));
     }
 
     /**
