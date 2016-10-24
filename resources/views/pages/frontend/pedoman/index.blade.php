@@ -28,7 +28,7 @@
 							</h3>
 							<p>{!! substr($pedoman->konten, 0, 400).'...' !!}</p>
 							<span class="text-muted">
-								<a href="" class="btn btn-primary"> Preview</a> | <a href="" class="btn btn-success"> Preview</a>
+								<a href="" class="btn btn-primary"> Preview</a> | <a href="" class="btn btn-success"> Download</a>
 							</span>
 						</div>
 					</div>
