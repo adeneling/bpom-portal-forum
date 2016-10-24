@@ -12,7 +12,5 @@ class Program extends Model
         'nama', 
         'deskripsi', 
         'media_foto', 
-        'media_video', 
-        'media_dokumen', 
     ];
 }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Models\Program\Program;
 class ProgramController extends Controller
 {
     /**
@@ -16,7 +16,8 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.program.index');
+        $programs = Program::orderBy('created_at','desc')->paginate(10);
+        return view('pages.frontend.program.index',compact('programs'));
     }
 
     /**
