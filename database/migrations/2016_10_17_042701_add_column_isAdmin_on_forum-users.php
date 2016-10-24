@@ -15,7 +15,7 @@ class AddColumnIsAdminOnForumUsers extends Migration
     {
         //
         Schema::table('forum_users', function(Blueprint $table){
-            $table->enum('isAdmin', [1, 0]);
+            $table->enum('isAdmin', [1, 0])->nullable();
         });
     }
 

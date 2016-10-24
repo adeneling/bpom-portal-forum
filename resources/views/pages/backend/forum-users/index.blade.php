@@ -22,7 +22,7 @@
 <!--breadcrumbs end-->
 <!--start container-->
 	<div class="container">
-		<div class="section">
+		<div class="section" id="table-container">
 			@include('pages.backend.forum-users._table_pengguna_forum')
 		</div>
 		<!-- Floating Action Button -->
@@ -34,4 +34,31 @@
 		<!-- Floating Action Button -->
 	</div>
 <!--end container-->
+@endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$(document).on('click', '#isAdmin', function(e){
+				var enabled = '';
+				if (!$(this).is(':checked')) {
+					enabled = 0;
+				}else{
+					enabled = 1;
+				};
+
+				$.ajax({
+					method: "POST",
+					url: "{{ url('admin/pengguna-forum/isadmin') }}"+"/"+this.getAttribute('data-id')+"/"+enabled,
+					data: {_token: this.getAttribute('data-token')},
+					cache: false,
+					success: function(data){
+						$('#table-container').html(data);	
+					}
+				});
+			});
+
+		});
+	</script>
 @endsection
