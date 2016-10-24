@@ -9,16 +9,22 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('peta-situs','PetaSitusController');
 	/**/
 	Route::resource('/','BerandaController');
+	/* BERITA */
 	Route::resource('berita','BeritaController');
 	Route::get('berita/{id}/{judul}', 'BeritaController@show')->name('berita.lihat');
+	/* GALERI */
 	Route::resource('galeri','GaleriController');
+	/* PROGRAM */
 	Route::resource('program','ProgramController');
+	Route::get('program/{id}/{judul}', 'ProgramController@show')->name('program.lihat');
+	/* PEDOMAN */
 	Route::resource('pedoman','PedomanController');
+	/* MEDIA PROMOSI*/
 	Route::resource('media-promosi','MediaPromosiController');
-	/* FRONTEND PASAR AMAN */
+	/* PASAR AMAN */
 	Route::resource('pasar-aman','PasarAmanController');
 	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');
-	/* FRONTEND BAHAN BERBAHAYA */
+	/* BAHAN BERBAHAYA */
 	Route::resource('bahan-berbahaya','BahanBerbahayaController');
 	Route::get('bahan-berbahaya/{id}/{judul}', 'BahanBerbahayaController@show')->name('bahan-berbahaya.lihat');
 	
