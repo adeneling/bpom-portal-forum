@@ -82,6 +82,7 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('bahan-berbahaya', 'BahanBerbahaya\BahanBerbahayaController');
 	// Kelola Forum users
 	Route::resource('pengguna-forum', 'ForumUsers\ForumUsersController');
+	Route::post('pengguna-forum/isadmin/{id}/{isadmin}', 'ForumUsers\ForumUsersController@admin')->name('forum.users.admin');
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });

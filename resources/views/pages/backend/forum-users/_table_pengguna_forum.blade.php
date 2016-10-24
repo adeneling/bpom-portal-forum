@@ -15,7 +15,15 @@
 				<td>{{ $no++ }}</td>
 				<td>{{ $pengguna->name }}</td>
 				<td>{{ $pengguna->email }}</td>
-				<td>{{ $pengguna->isAdmin == 1 ? 'Admin' : 'Pengguna' }}</td>
+				<td>
+					<div class="switch"> 
+						<label>
+							No
+							<input type="checkbox" {{ $pengguna->isAdmin == 1 ? 'checked' : '' }} id="isAdmin" data-id="{{ encrypt($pengguna->id) }}" data-token="{{ csrf_token() }}">
+							<span class="lever"></span> Yes
+						</label>
+					</div>
+				</td>
 				<td>
 					<a class="btn-floating waves-effect waves-light blue" href="{{ route('admin.pengguna-forum.edit', encrypt($pengguna->id)) }}"><i class="mdi-image-edit"></i></a>
 					<a class="btn-floating waves-effect waves-light red" id="delete-pengguna-forum" data-id="{{ encrypt($pengguna->id) }}"><i class="mdi-action-delete"></i></a>

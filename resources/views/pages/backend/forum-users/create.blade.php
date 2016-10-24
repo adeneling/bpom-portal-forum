@@ -42,31 +42,7 @@
 							</button>
 						</div>
 					@endif
-					{!! Form::open(['route' => ['admin.pasar-aman.store'], 'class' => 'col s12', 'files' => true]) !!}
-						<div class="row">
-							<div class="input-field col s12">
-								{!! Form::text('nama_pasar', old('nama_pasar'), ['id' => 'nama_pasar', 'class' => 'validate', 'placeholder' => 'Nama Pasar']) !!}
-								<label for="nama_pasar">Nama Pasar</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								{!! Form::text('kepala_pasar', old('kepala_pasar'), ['id' => 'kepala_pasar', 'class' => 'validate', 'placeholder' => 'Kepala Pasar']) !!}
-								<label for="kepala_pasar">Kepala Pasar</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								{!! Form::text('petugas_pasar', old('petugas_pasar'), ['id' => 'petugas_pasar', 'class' => 'validate', 'placeholder' => 'Petugas Pasar']) !!}
-								<label for="petugas_pasar">Petugas Pasar</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<textarea id="alamat_pasar" name="alamat_pasar" class="materialize-textarea">{{ old('alamat_pasar') }}</textarea>
-								<label for="alamat_pasar">Alamat Pasar</label>
-							</div>
-						</div>
+					{!! Form::open(['route' => ['admin.pengguna-forum.store'], 'class' => 'col s12', 'files' => true]) !!}
 						<div class="row">
 							<div class="file-field input-field col s12">
 								<div class="btn">
@@ -79,12 +55,36 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col s12">
+							<div class="input-field col s12">
+								{!! Form::text('name', null, ['id' => 'name', 'class' => 'validate', 'placeholder' => 'Nama Panjang']) !!}
+								<label for="name">Nama Panjang</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								{!! Form::email('email', null, ['id' => 'email', 'class' => 'validate', 'placeholder' => 'Email']) !!}
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								{!! Form::password('password', ['id' => 'password', 'class' => 'validate', 'placeholder' => 'Password']) !!}
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								{!! Form::password('confirmPassword', ['id' => 'confirmPassword', 'class' => 'validate', 'placeholder' => 'Konfirmasi Password']) !!}
+								<label for="confirmPassword">Konfirmasi Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
 								{!! Recaptcha::render() !!}
 							</div>
 						</div>
 						<div class="row">
-							<div class="col s12">
+							<div class="input-field col s12">
 								<button class="btn waves-effect waves-light blue" type="submit" name="action">Submit</button>
 							</div>
 						</div>

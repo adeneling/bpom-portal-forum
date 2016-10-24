@@ -72,30 +72,6 @@
 												<td>12 Agustus 2016</td>
 												<td><span class="badge">42</span></td>
 											</tr>
-											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b></td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
-											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b></td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
-											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b></td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
-											<tr>
-												<td><b>Judul forum yang dibuat oleh admin</b></td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
 										</tbody>
 									</table>
 									<a href="" class="btn btn-primary pull-right"> Tampilkan Semua </a>

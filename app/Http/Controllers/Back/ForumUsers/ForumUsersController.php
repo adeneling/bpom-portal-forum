@@ -8,85 +8,113 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\UserControl\ForumUsers;
+use Storage;
 
 class ForumUsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-        $penggunaForum = ForumUsers::all();
-        return view('pages.backend.forum-users.index', compact('penggunaForum'))->withTitle('Kelola Pengguna Forum');
-    }
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index()
+	{
+		//
+		$penggunaForum = ForumUsers::all();
+		return view('pages.backend.forum-users.index', compact('penggunaForum'))->withTitle('Kelola Pengguna Forum');
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-        return view('pages.backend.forum-users.create')->withTitle('Tambah Pengguna Forum');
-    }
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function create()
+	{
+		//
+		return view('pages.backend.forum-users.create')->withTitle('Tambah Pengguna Forum');
+	}
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function store(Request $request)
+	{
+		//
+		Storage::makeDirectory('forum_users');
+		$filename = '';
+		if($request->hasFile('photo')){
+			$filename = 'forum_users/'.str_random(10).'.'.$request->file('photo')->getClientOriginalExtension();
+			Storage::put($filename, file_get_contents($request->file('photo')));
+		}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+		$user = new ForumUsers;
+		$user->name = $request->get('name');
+		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$user->email = $request->get('email');
+		$user->password = bcrypt($request->get('password'));
+		$user->isAdmin = 1;
+		$user->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+		$penggunaForum = ForumUsers::all();
+		return view('pages.backend.forum-users.index', compact('penggunaForum'))->withTitle('Kelola Pengguna Forum');
+	}
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function show($id)
+	{
+		//
+	}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function edit($id)
+	{
+		//
+	}
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function update(Request $request, $id)
+	{
+		//
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function destroy($id)
+	{
+		//
+	}
+
+	public function admin($id, $isadmin)
+	{
+		$ForumUsers = ForumUsers::find(decrypt($id));
+		$ForumUsers->isAdmin = $isadmin;
+		$ForumUsers->update();
+
+		$penggunaForum = ForumUsers::all();
+		return view('pages.backend.forum-users._table_pengguna_forum', compact('penggunaForum'));
+	}
 }
