@@ -17,7 +17,8 @@ class BeritaController extends Controller
 	 */
 	public function index()
 	{
-		return view('pages.frontend.berita.index');
+        $beritas = Berita::orderBy('created_at','desc')->paginate(10);
+		return view('pages.frontend.berita.index', compact('beritas'));
 	}
 
 	/**
