@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\BahanBerbahaya\BahanBerbahaya;
+
 class BahanBerbahayaController extends Controller
 {
     /**
@@ -14,9 +16,13 @@ class BahanBerbahayaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.frontend.bahan-berbahaya.index');
+        $q = $request->get('q');
+        $bahans = BahanBerbahaya::where('nama', 'LIKE', '%'.$q.'%')->orderBy('created_at','desc')->paginate(10);
+        $bahdans = BahanBerbahaya::orderBy('created_at','desc')->paginate(10);
+
+        return view('pages.frontend.bahan-berbahaya.index', compact('bahans'));
     }
 
     /**
@@ -46,9 +52,11 @@ class BahanBerbahayaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $q)
     {
-        //
+        $id = str_replace(config('app.salt'), '', base64_decode($id));
+        $bahan = BahanBerbahaya::where('id', '=', $id)->orWhere('nama', 'like', str_replace('-', ' ', $q))->first();
+        return view('pages.frontend.bahan-berbahaya.show', compact('bahan'));
     }
 
     /**
