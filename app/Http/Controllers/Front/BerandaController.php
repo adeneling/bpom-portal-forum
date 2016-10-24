@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\PasarAman\PasarAman;
 use App\Models\Berita\Berita;
+use App\Models\Banner\Banner;
 
 class BerandaController extends Controller
 {
@@ -19,9 +20,10 @@ class BerandaController extends Controller
      */
     public function index()
     {
+        $banner = Banner::where('isenabled', '=', 1)->get();
         $pasarAman = PasarAman::take(6)->get();
         $berita = Berita::orderBy('id', 'desc')->take(3)->get();
-        return view('pages.frontend.beranda.index', compact(['pasarAman', 'berita']));
+        return view('pages.frontend.beranda.index', compact(['banner', 'pasarAman', 'berita']));
     }
 
     /**

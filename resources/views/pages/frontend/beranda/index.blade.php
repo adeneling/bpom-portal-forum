@@ -7,28 +7,15 @@
 <section class="hero-unit-slider slider-responsive no-margin">
 	<div id="carousel-hero" class="slick-carousel">
 		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="{{ asset('assets/frontend/img/sliders/slider3-h500.png') }}" class="img-responsive" alt="Slider Image">
-				<div class="carousel-caption">
-					<h2 class="hero-heading">Badan Pengawas Obat dan Makanan</h2>
-					<p class="lead">Pasar Aman</p>
+			@foreach($banner as $val)
+				<div class="item {{ $loop->first ? 'active' : '' }}">
+					<img src="{{ asset($val->banner) }}" class="img-responsive" alt="{{ $val->hero }}">
+					<div class="carousel-caption">
+						<h2 class="hero-heading">{{ $val->hero }}</h2>
+						<p class="lead">{{ $val->lead }}</p>
+					</div>
 				</div>
-			</div>
-			<div class="item">
-				<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png') }}" class="img-responsive" alt="Slider Image">
-				<div class="carousel-caption">
-					<h2 class="hero-heading">FORUM</h2>
-					<p class="lead">Badan Pengawas Obat dan Makanan</p>
-					<a href="#" class="btn btn-lg hero-button">Ikut Forum</a>
-				</div>
-			</div>
-			<div class="item">
-				<img src="{{ asset('assets/frontend/img/sliders/slider1-h500.png') }}" class="img-responsive" alt="Slider Image">
-				<div class="carousel-caption">
-					<h2 class="hero-heading">Badan Pengawas Obat dan Makanan</h2>
-					<p class="lead">Pasar Aman</p>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
