@@ -22,11 +22,13 @@ Route::group(['namespace' => 'Front'], function(){
 	/**/
 	Route::resource('/','BerandaController');
 	Route::resource('berita','BeritaController');
+	Route::get('berita/{id}/{judul}', 'BeritaController@show')->name('berita.lihat');
 	Route::resource('galeri','GaleriController');
 	Route::resource('program','ProgramController');
 	Route::resource('pedoman','PedomanController');
 	Route::resource('media-promosi','MediaPromosiController');	
 	Route::resource('pasar-aman','PasarAmanController');
+	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');
 });
 
 // Forum
