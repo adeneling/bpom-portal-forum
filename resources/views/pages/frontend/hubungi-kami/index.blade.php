@@ -3,17 +3,7 @@
 @section('title', 'Hubungi Kami')
 
 @section('content')
-<!-- BREADCRUMBS -->
-<div class="page-header">
-	<div class="container">
-		<h1 class="page-title pull-left">@yield('title')</h1>
-		<ol class="breadcrumb">
-			<li><a href="#">Navigasi</a></li>
-			<li class="active">@yield('title')</li>
-		</ol>
-	</div>
-</div>
-<!-- END BREADCRUMBS -->
+
 <!-- PAGE CONTENT -->
 <div class="page-content">
 	<div class="container">
