@@ -5,83 +5,67 @@
 @section('content')
 
 <!-- PAGE CONTENT -->
-<div class="page-content page-search-result">
+<section>
 	<div class="container">
-		<h2>Cari berita</h2>
-		<!-- Search Form -->
-		<form class="form form-horizontal">
-			<div class="input-group input-group-lg">
-				<input class="form-control input-lg" type="search" placeholder="tulis berita yang dicari.."/>
-				<span class="input-group-btn">
-				<button type="submit" class="btn btn-primary btn-lg"><i class="icon ion-android-search"></i> Cari Berita</button>
-			</span>
+		<h2 class="section-heading">PROGRAM</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
+				</div>
 			</div>
-		</form>
-		<!-- End Search Form -->
-		<!-- Search Results -->
-		<ul class="list-unstyled list-results">
-			<li class="type-portfolio">
-				<div class="media clearfix">
-					<a href="#" class="pull-left"><img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Search Result" class="media-object"></a>
-					<div class="media-body">
-						<h3><a href="#">Berita pasar saat ini</a></h3>
-						<p>pasar aman saat ini....</p>
-					</div>
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 				</div>
-			</li>
-			<li class="type-portfolio">
-				<div class="media clearfix">
-					<a href="#" class="pull-left"><img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Search Result" class="media-object"></a>
-					<div class="media-body">
-						<h3><a href="#">Berita pasar saat ini</a></h3>
-						<p>pasar aman saat ini....</p>
-					</div>
+			</div>
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 				</div>
-			</li>
-			<li class="type-portfolio">
-				<div class="media clearfix">
-					<a href="#" class="pull-left"><img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Search Result" class="media-object"></a>
-					<div class="media-body">
-						<h3><a href="#">Berita pasar saat ini</a></h3>
-						<p>pasar aman saat ini....</p>
-					</div>
+			</div>
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 				</div>
-			</li>
-			<li class="type-portfolio">
-				<div class="media clearfix">
-					<a href="#" class="pull-left"><img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Search Result" class="media-object"></a>
-					<div class="media-body">
-						<h3><a href="#">Berita pasar saat ini</a></h3>
-						<p>pasar aman saat ini....</p>
-					</div>
+			</div>
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 				</div>
-			</li>
-			<li class="type-portfolio">
-				<div class="media clearfix">
-					<a href="#" class="pull-left"><img src="{{ asset('assets/frontend/img/portfolio/800x500/work3.png') }}" alt="Search Result" class="media-object"></a>
-					<div class="media-body">
-						<h3><a href="#">Berita pasar saat ini</a></h3>
-						<p>pasar aman saat ini....</p>
-					</div>
+			</div>
+			<div class="col-md-4">
+				<div class="news-item news-featured">
+					<a href="#"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive"></a>
+					<h3 class="news-title">
+						<a href="#">ASDFADS</a>
+					</h3>
+					<p><span class="news-datetime">23-02-2015</span>, Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 				</div>
-			</li>
-		</ul>
-		<!-- End Search Results -->
-		<!-- Pagination -->
-		<div class="text-center">
-			<ul class="pagination">
-				<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-			</ul>
+			</div>
 		</div>
-		<!-- Pagination -->
 	</div>
-</div>
+</section>
 <!-- END PAGE CONTENT -->
 
 @stop

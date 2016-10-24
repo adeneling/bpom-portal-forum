@@ -69,37 +69,23 @@
 	<div class="container">
 		<h2 class="section-heading">BERITA TERBARU</h2>
 		<div class="row">
-			<div class="col-md-4">
-				<div class="news-item news-featured">
-					<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[0]->judul, '-')]) }}"><img src="{{ asset($berita[0]->foto) }}" class="img-responsive" alt="{{ $berita[0]->judul }}"></a>
-					<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[0]->judul, '-')]) }}" type="{{ $berita[0]->judul }}">{{ $berita[0]->judul }}</a></h3>
-					<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
-					<div class="news-meta">
-						<span class="news-datetime">23-02-2015</span>
-						<span class="news-comment-count pull-right"><a href="#">65 Comments</a></span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<div class="row">
-					@for($i=1; $i<count($berita); $i++)
-						<div class="col-md-6 col-sm-6">
-							<div class="news-item margin-bottom-30px clearfix">
-								<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}"><img src="{{ asset($berita[$i]->foto) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
-								<div class="right">
-									<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}">{{ $berita[$i]->judul }}</a></h3>
-									<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-								</div>
-							</div>
-						</div>
-					@endfor
-					<div class="col-md-6 col-sm-6">
-						<div class="see-all-news">
-							<a href="#">See all news <i class="fa fa-long-arrow-right"></i></a>
+			@for($i=1; $i<count($berita); $i++)
+				<div class="col-md-4">
+					<div class="news-item news-featured">
+						<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}">
+							<img src="{{ asset($berita[$i]->foto) }}" class="img-responsive" alt="{{ $berita[$i]->judul }}">
+						</a>
+						<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[$i]->judul, '-')]) }}" type="{{ $berita[$i]->judul }}">
+							{{ $berita[$i]->judul }}</a>
+						</h3>
+						<p>{!! $berita[$i]->konten !!}</p>
+						<div class="news-meta">
+							<span class="news-datetime">{{ $berita[$i]->created_at }}</span>
 						</div>
 					</div>
 				</div>
-			</div>
+			@endfor
+
 		</div>
 	</div>
 </section>

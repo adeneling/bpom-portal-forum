@@ -1,16 +1,4 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
 	/**/
@@ -28,6 +16,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('pedoman','PedomanController');
 	Route::resource('media-promosi','MediaPromosiController');	
 	Route::resource('pasar-aman','PasarAmanController');
+	Route::resource('bahan-berbahaya','BahanBerbahayaController');
 	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');
 });
 
@@ -36,19 +25,15 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 	// Authentication Forum
 	Route::auth();
 	Route::get('logout', 'Auth\LoginController@logout');
-
 	// Thread
 	Route::resource('thread','ForumFasilitatorController');
 	Route::get('thread/{id}/show/{judul}', 'ForumFasilitatorController@show')->name('thread.show.detail');
-
 	// Comment
 	Route::resource('comment', 'CommentController');
 	Route::get('comment/create/{id}', 'CommentController@create')->name('comment.create');
 	Route::get('comment/quote/{id}', 'CommentController@quote')->name('comment.quote');
-
 	// Image on Thread
 	Route::resource('image-thread', 'ImageController');
-
 	// Profile Forum
 	Route::resource('profile', 'ProfileController');
 });

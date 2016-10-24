@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb958ff483ff91a5cf683868d1eb6008",
+    "hash": "559bcc537dd15642f511c367b63dc61d",
     "content-hash": "c6749727cf29b0964a80a1a4eb3b706b",
     "packages": [
         {
@@ -1158,20 +1158,20 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.29",
+            "version": "1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "b732cc946c48cf102ddffd41ffcd54901a28ccdb"
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b732cc946c48cf102ddffd41ffcd54901a28ccdb",
-                "reference": "b732cc946c48cf102ddffd41ffcd54901a28ccdb",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.0"
+                "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
@@ -1237,7 +1237,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-10-17 23:14:19"
+            "time": "2016-10-19 20:38:46"
         },
         {
             "name": "monolog/monolog",
@@ -1800,16 +1800,16 @@
         },
         {
             "name": "santigarcor/laratrust",
-            "version": "3.0.7",
+            "version": "3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "0be6f36f8dcccd92f7d4ab76373d5018b91a74e1"
+                "reference": "bbccc46c9ea51d124cd6fbb86d7091b42590dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/0be6f36f8dcccd92f7d4ab76373d5018b91a74e1",
-                "reference": "0be6f36f8dcccd92f7d4ab76373d5018b91a74e1",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/bbccc46c9ea51d124cd6fbb86d7091b42590dcaf",
+                "reference": "bbccc46c9ea51d124cd6fbb86d7091b42590dcaf",
                 "shasum": ""
             },
             "require": {
@@ -1874,7 +1874,7 @@
                 "rbac",
                 "roles"
             ],
-            "time": "2016-10-12 20:42:22"
+            "time": "2016-10-18 20:18:39"
         },
         {
             "name": "swiftmailer/swiftmailer",
