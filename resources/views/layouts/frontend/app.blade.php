@@ -12,6 +12,9 @@
 	<link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/shop-main.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{ asset('assets/frontend/plugin/fancybox/source/jquery.fancybox.css?v=2.1.5') }}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5') }}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7') }}" type="text/css" media="screen" />
 
 	<!-- GOOGLE FONTS -->
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
@@ -101,5 +104,16 @@
 	<script src="{{ asset('assets/frontend/js/repute-scripts.js') }}"></script>
 	<script src="{{ asset('assets/frontend/js/repute-shop.js') }}"></script>
 	<script src="https://use.fontawesome.com/fb24f8ac5d.js"></script>
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/lib/jquery.mousewheel-3.0.6.pack.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/jquery.fancybox.pack.js?v=2.1.5') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".fancybox").fancybox();
+		});
+	</script>
 	@yield('js')
 </html>
