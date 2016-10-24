@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Pedoman\Pedoman;
+
 class PedomanController extends Controller
 {
     /**
@@ -16,7 +18,8 @@ class PedomanController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.pedoman.index');
+        $pedomans = Pedoman::orderBy('created_at','desc')->paginate(10);
+        return view('pages.frontend.pedoman.index',compact('pedomans'));
     }
 
     /**

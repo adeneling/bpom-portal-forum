@@ -19,6 +19,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::get('program/{id}/{judul}', 'ProgramController@show')->name('program.lihat');
 	/* PEDOMAN */
 	Route::resource('pedoman','PedomanController');
+	Route::get('pedoman/{id}/{judul}', 'PedomanController@show')->name('pedoman.lihat');
 	/* MEDIA PROMOSI*/
 	Route::resource('media-promosi','MediaPromosiController');
 	/* PASAR AMAN */
