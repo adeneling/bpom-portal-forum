@@ -79,8 +79,7 @@
 						<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}">
 							<img src="{{ asset($val->foto) }}" class="Item Thumbnail" alt="{{ $val->judul }}" width="50" height="200" >
 						</a>
-						<h3><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">
-							{{ $val->judul }}</a>
+						<h3><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">{{ $val->judul }}</a>
 						</h3>
 						<p>{!! substr($val->konten, 0, 200).'...' !!}</p>
 						<div class="news-meta">
@@ -108,7 +107,6 @@
 							<div class="overlay"></div>
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-								{{-- <a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="btn">read more</a> --}}
 								<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : '') }}" title="{{ $pasar->nama_pasar }}">
 									<button class="btn btn-primary">Read More</button>
 								</a>

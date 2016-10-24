@@ -52,7 +52,7 @@
 							</div>
 						</div>
 						<div class="col s6">
-							<div class="input-field col s8">
+							<div class="input-field">
 								{!! Form::textarea('ket_foto', null, ['class'=>'materialize-textarea']) !!}
 							</div>
 						</div>

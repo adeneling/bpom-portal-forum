@@ -4,12 +4,10 @@ namespace App\Models\UserControl;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laratrust\Traits\LaratrustUserTrait;
 use App\Models\Berita\GambarBerita;
 
 class User extends Authenticatable
 {
-    use LaratrustUserTrait;
     use Notifiable;
 
     /**
