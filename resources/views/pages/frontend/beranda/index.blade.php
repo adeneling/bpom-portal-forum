@@ -39,11 +39,11 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-6"></div>
 				<a href="{{ url('bahan-berbahaya') }}" class="col-md-3 col-sm-6">
-					<i class="fa fa-bullhorn "></i>
+					<i class="fa fa-warning "></i>
 					<h3 class="feature-heading">BAHAN BERBAHAYA</h3>
 				</a>
 				<a href="{{ url('program') }}" class="col-md-3 col-sm-6">
-					<i class="fa fa-desktop "></i>
+					<i class="fa fa-list-alt "></i>
 					<h3 class="feature-heading">PROGRAM</h3>
 				</a>
 				<div class="col-md-3 col-sm-6"></div>
