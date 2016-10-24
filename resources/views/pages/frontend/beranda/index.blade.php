@@ -71,8 +71,8 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="news-item news-featured">
-					<a href="#"><img src="{{ asset($berita[0]->foto) }}" class="img-responsive" alt="{{ $berita[0]->judul }}"></a>
-					<h3 class="news-title"><a href="#" type="{{ $berita[0]->judul }}">{{ $berita[0]->judul }}</a></h3>
+					<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[0]->judul, '-')]) }}"><img src="{{ asset($berita[0]->foto) }}" class="img-responsive" alt="{{ $berita[0]->judul }}"></a>
+					<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[0]->id), str_slug($berita[0]->judul, '-')]) }}" type="{{ $berita[0]->judul }}">{{ $berita[0]->judul }}</a></h3>
 					<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
 					<div class="news-meta">
 						<span class="news-datetime">23-02-2015</span>
@@ -85,9 +85,9 @@
 					@for($i=1; $i<count($berita); $i++)
 						<div class="col-md-6 col-sm-6">
 							<div class="news-item margin-bottom-30px clearfix">
-								<a href="#"><img src="{{ asset($berita[$i]->foto) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
+								<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}"><img src="{{ asset($berita[$i]->foto) }}" class="img-responsive pull-left" alt="News Thumbnail"></a>
 								<div class="right">
-									<h3 class="news-title"><a href="#">{{ $berita[$i]->judul }}</a></h3>
+									<h3 class="news-title"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$berita[$i]->id), str_slug($berita[$i]->judul, '-')]) }}">{{ $berita[$i]->judul }}</a></h3>
 									<p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
 								</div>
 							</div>
@@ -119,7 +119,7 @@
 							<div class="overlay"></div>
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-								<a href="#" class="btn">read more</a>
+								<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="btn">read more</a>
 							</div>
 							<div class="media-wrapper">
 								<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" width="180" height="140" />
