@@ -168,12 +168,10 @@ return [
         /*
          * Package Service Providers...
          */
-        Laratrust\LaratrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         RifkyEkayama\RajaOngkir\RajaOngkirServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
 
         //
 
@@ -232,13 +230,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Laratrust' => Laratrust\LaratrustFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'RajaOngkir' => RifkyEkayama\RajaOngkir\RajaOngkirFacade::class,
-        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
