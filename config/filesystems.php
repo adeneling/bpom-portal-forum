@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'public',
+    'default' => env('FILESYSTEM_DEFAULT', 'public'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,10 +56,16 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'your-key',
-            'secret' => 'your-secret',
+            'key' => env('FILESYSTEM_KEY', 'forge'),
+            'secret' => env('FILESYSTEM_SECRET', 'forge'),
             'region' => 'your-region',
             'bucket' => 'your-bucket',
+        ],
+
+        'dropbox' => [
+            'driver' => 'dropbox',
+            'key' => env('FILESYSTEM_KEY', 'forge'),
+            'secret' => env('FILESYSTEM_SECRET', 'forge'),
         ],
 
     ],
