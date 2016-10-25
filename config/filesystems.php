@@ -66,6 +66,7 @@ return [
             'driver' => 'dropbox',
             'key' => env('FILESYSTEM_KEY', 'forge'),
             'secret' => env('FILESYSTEM_SECRET', 'forge'),
+            'accessToken' => env('FILESYSTEM_ACCESSTOKEN', 'forge'),
         ],
 
     ],
