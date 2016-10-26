@@ -172,6 +172,7 @@ return [
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         RifkyEkayama\RajaOngkir\RajaOngkirServiceProvider::class,
+        Danhunsaker\Laravel\Flysystem\FlysystemOtherServiceProvider::class,
 
         //
 
@@ -183,7 +184,6 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\DropboxServiceProvider::class,
 
     ],
 
