@@ -185,6 +185,13 @@ Breadcrumbs::register('admin.pasar-aman', function($breadcrumbs)
     $breadcrumbs->push('Kelola Pasar Aman', route('admin.pasar-aman.index'));
 });
 
+// Dashboard > Pengawasan Pasar
+Breadcrumbs::register('admin.pengawasan-pasar', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Pengawasan Pasar', route('admin.pengawasan-pasar.index'));
+});
+
 // Dashboard > Kelola Pasar Aman > Tambah Pasar Aman
 Breadcrumbs::register('admin.pasar-aman.create', function($breadcrumbs)
 {

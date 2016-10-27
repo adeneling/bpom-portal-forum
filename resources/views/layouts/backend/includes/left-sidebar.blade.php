@@ -51,6 +51,11 @@
 		<li class="bold {{ Request::segment(2) == 'pasar-aman' ? 'active' : '' }}">
 			<a href="{{ route('admin.pasar-aman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-wallet-travel"></i> Kelola Pasar Aman</a>
 		</li>
+
+		<li class="bold {{ Request::segment(2) == 'pengawasan-pasar' ? 'active' : '' }}">
+			<a href="{{ route('admin.pengawasan-pasar.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-assessment"></i> Pengawasan Pasar</a>
+		</li>
+
 		<div class="divider"></div>
 		<li class="bold {{ Request::segment(2) == 'pengguna-forum' ? 'active' : '' }}">
 			<a href="{{ route('admin.pengguna-forum.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Forum</a>

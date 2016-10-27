@@ -74,6 +74,8 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('pasar-aman', 'PasarAman\PasarAmanController');
 	Route::get('pasar-aman/get-city/{province_id}', 'PasarAman\PasarAmanController@getCity');
 	Route::get('pasar-aman/get-subdistrict/{province_id}/{city_id}', 'PasarAman\PasarAmanController@getSubdistrict');
+	// pengawasan pasar
+	Route::resource('pengawasan-pasar', 'PasarAman\PengawasanPasarController');
 	// Kelola FAQ
 	Route::resource('faq', 'FAQ\FAQController');
 	// Kelola Hubungi Kami
