@@ -46,7 +46,13 @@
 				<li><a href="{{ route('index') }}">BERANDA </a></li>
 				<li><a href="{{ route('berita.index') }}">BERITA </a></li>
 				<li><a href="{{ route('galeri.index') }}">GALERI </a></li>								
-				<li><a href="{{ route('pasar-aman.index') }}">PASAR AMAN </a></li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">PASAR AMAN  <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="{{ route('pasar-aman.index') }}"> DAFTAR PASAR</a></li>
+						<li><a href=""> PASAR AMAN DAN PASAR DALAM PANTAUAN</a></li>
+					</ul>
+				</li>
 				<li class="dropdown ">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">PUBLIKASI  <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">

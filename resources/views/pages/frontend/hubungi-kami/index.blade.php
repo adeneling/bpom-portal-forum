@@ -3,7 +3,11 @@
 @section('title', 'Hubungi Kami')
 
 @section('content')
-
+<div class="page-header">
+	<div class="container">
+		<h1 class="page-title pull-left">@yield('title')</h1>
+	</div>
+</div>
 <!-- PAGE CONTENT -->
 <div class="page-content">
 	<div class="container">
