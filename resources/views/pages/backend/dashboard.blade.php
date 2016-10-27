@@ -22,7 +22,7 @@
 	<div class="section">
 		<center>
 			<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="Image Intro">
-		</center>			
+		</center>
 	</div>
 </div>
 <!--end container-->
