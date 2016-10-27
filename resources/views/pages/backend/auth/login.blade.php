@@ -30,15 +30,7 @@
 	
 </head>
 
-<body class="cyan">
-	<!-- Start Page Loading -->
-	{{-- <div id="loader-wrapper">
-		<div id="loader"></div>        
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
-	</div> --}}
-	<!-- End Page Loading -->
-
+<body class="blue">
 	<div id="login-page" class="row">
 		<div class="col s12 z-depth-4 card-panel">
 			{!! Form::open(['url' => route('admin.login'), 'class' => 'login-form']) !!}
@@ -71,7 +63,7 @@
 				<hr>
 				<div class="row">
 					<div class="input-field col s12">
-						<button class="btn waves-effect waves-light col s12" type="submit">Login</button>
+						<button class="btn btn-primary col s12 blue" type="submit">Login</button>
 					</div>
 				</div>
 			{!! Form::close() !!}
@@ -82,10 +74,6 @@
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/jquery-1.11.2.min.js') }}"></script>
 	<!--materialize js-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/materialize.min.js') }}"></script>
-	<!--prism-->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/prism/prism.js') }}"></script>
-	<!--scrollbar-->
-	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 	<!--plugins.js - Some Specific JS codes for Plugin Settings-->
 	<script type="text/javascript" src="{{ asset('assets/backend/js/plugins.min.js') }}"></script>
 	<!--custom-script.js - Add your own theme custom JS-->
