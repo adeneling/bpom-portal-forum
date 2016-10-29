@@ -11,7 +11,8 @@
 				<ul class="nav" role="tablist">
 					<li class="active"><a href="#tab-top1" role="tab" data-toggle="tab">Video</a></li>
 					<li><a href="#tab-top2" role="tab" data-toggle="tab">Gambar</a></li>
-					<li><a href="#tab-top3" role="tab" data-toggle="tab">Dokumen</a></li>
+					<li><a href="#tab-top3" role="tab" data-toggle="tab">Audio</a></li>
+					<li><a href="#tab-top4" role="tab" data-toggle="tab">Dokumen</a></li>
 				</ul>
 			</div>
 			<div class="tab-content product-carousel-content">
@@ -67,9 +68,6 @@
 				<!-- end tab pane -->
 				<!-- tab pane -->
 				<div class="tab-pane fade" id="tab-top2">
-					<center>
-						<img src="{{ asset('assets/frontend/img/news/news1.png') }}">
-					</center>
 					<div class="product-carousel" id="product-carousel2">
 						<div class="product-item">
 							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
@@ -106,6 +104,9 @@
 				<!-- end tab pane -->
 				<!-- tab pane -->
 				<div class="tab-pane fade" id="tab-top3">
+
+				</div>
+				<div class="tab-pane fade" id="tab-top4">
 
 				</div>
 				<!-- end tab pane -->
