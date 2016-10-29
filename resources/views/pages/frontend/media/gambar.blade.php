@@ -6,7 +6,7 @@
 <div class="shop-main">
 	<div class="container">
 		<section class="tabbed-content">
-			<h2 class="section-heading">MEDIA PROMOSI</h2>
+			<h2 class="heading">MEDIA PROMOSI</h2>
 			@include('pages.frontend.media._tab')
 			<div class="tab-content product-carousel-content">
 				<div class="tab-pane fade in active">
