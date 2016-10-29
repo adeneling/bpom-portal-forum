@@ -56,7 +56,7 @@ class ForumUsersController extends Controller
 		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
 		$user->email = $request->get('email');
 		$user->password = bcrypt($request->get('password'));
-		$user->isAdmin = 0;
+		$user->admin = 1;
 		$user->save();
 
 		$penggunaForum = ForumUsers::all();
@@ -83,6 +83,9 @@ class ForumUsersController extends Controller
 	public function edit($id)
 	{
 		//
+		$user = ForumUsers::find(decrypt($id));
+
+		return view('pages.backend.forum-users.edit', compact('user'))->withTitle('Ubah Pengguna Forum');
 	}
 
 	/**
@@ -95,6 +98,25 @@ class ForumUsersController extends Controller
 	public function update(Request $request, $id)
 	{
 		//
+		Storage::makeDirectory('forum_users');
+		$filename = '';
+
+		$user = ForumUsers::find(decrypt($id));
+		$user->name = $request->get('name');
+
+		if($request->hasFile('photo')){
+			$filename = 'forum_users/'.str_random(10).'.'.$request->file('photo')->getClientOriginalExtension();
+			Storage::put($filename, file_get_contents($request->file('photo')));
+		}else{
+			$filename = str_replace("/storage/", "", $user->photo);
+		}
+
+		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$user->email = $request->get('email');
+		$user->password = bcrypt($request->get('password'));
+		$user->update();
+
+		return redirect()->route('admin.pengguna-forum.index');
 	}
 
 	/**
@@ -106,12 +128,18 @@ class ForumUsersController extends Controller
 	public function destroy($id)
 	{
 		//
+		$user = ForumUsers::find(decrypt($id));
+		Storage::delete($user->photo);
+		$user->delete();
+
+		$penggunaForum = ForumUsers::all();
+		return view('pages.backend.forum-users._table_pengguna_forum', compact('penggunaForum'));
 	}
 
 	public function admin($id, $isadmin)
 	{
 		$ForumUsers = ForumUsers::find(decrypt($id));
-		$ForumUsers->isAdmin = $isadmin;
+		$ForumUsers->admin = $isadmin;
 		$ForumUsers->update();
 
 		$penggunaForum = ForumUsers::all();

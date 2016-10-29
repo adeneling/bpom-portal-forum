@@ -28,7 +28,7 @@ class FirstRunSeeder extends Seeder
 				'email' => 'super@admin.com',
 				'password' => bcrypt('admin'),
 				'remember_token' => str_random(10),
-				'isAdmin' => 1,
+				'admin' => 2,
 			]);
 
 	}

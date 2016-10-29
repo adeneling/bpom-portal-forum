@@ -261,3 +261,10 @@ Breadcrumbs::register('admin.pengguna-forum.create', function($breadcrumbs)
     $breadcrumbs->parent('admin.pengguna-forum');
     $breadcrumbs->push('Tambah Pengguna Forum', route('admin.pengguna-forum.create'));
 });
+
+// Dashboard > Kelola Pengguna Forum > Ubah Pengguna Forum
+Breadcrumbs::register('admin.pengguna-forum.edit', function($breadcrumbs, $user)
+{
+    $breadcrumbs->parent('admin.pengguna-forum');
+    $breadcrumbs->push($user->name, route('admin.pengguna-forum.edit', encrypt($user->id)));
+});

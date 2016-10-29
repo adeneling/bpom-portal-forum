@@ -19,7 +19,7 @@
 					<div class="switch"> 
 						<label>
 							No
-							<input type="checkbox" {{ $pengguna->isAdmin == 1 ? 'checked' : '' }} id="isAdmin" data-id="{{ encrypt($pengguna->id) }}" data-token="{{ csrf_token() }}">
+							<input type="checkbox" {{ $pengguna->admin == 2 ? 'checked' : '' }} id="isAdmin" data-id="{{ encrypt($pengguna->id) }}" data-token="{{ csrf_token() }}">
 							<span class="lever"></span> Yes
 						</label>
 					</div>

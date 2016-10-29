@@ -19,6 +19,7 @@ class CreateForumUsersTable extends Migration
             $table->string('photo');
             $table->string('email')->unique();
             $table->string('password');
+            $table->tinyInteger('admin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

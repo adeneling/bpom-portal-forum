@@ -43,9 +43,9 @@
 			$(document).on('click', '#isAdmin', function(e){
 				var enabled = '';
 				if (!$(this).is(':checked')) {
-					enabled = 0;
-				}else{
 					enabled = 1;
+				}else{
+					enabled = 2;
 				};
 
 				$.ajax({
@@ -56,6 +56,37 @@
 					success: function(data){
 						$('#table-container').html(data);	
 					}
+				});
+			});
+
+			$(document).on('click', '#delete-pengguna-forum', function(e){
+				e.preventDefault();
+				var id = $(this).attr('data-id');
+				swal({
+					title: "Are you sure?",   
+					text: "You will not be able to recover this imaginary file!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false }, 
+					function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+							type: "DELETE",
+							url: "{{ url('admin/pengguna-forum') }}"+"/"+id,
+							data: {_token: "{{ csrf_token() }}"},
+							cache: false,
+							success: function(data){
+								swal("Deleted!", "Your imaginary file has been deleted.", "success");
+								$('#table-container').html(data);
+							}
+						});
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");   
+					} 
 				});
 			});
 

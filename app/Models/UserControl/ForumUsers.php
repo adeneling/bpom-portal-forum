@@ -20,9 +20,9 @@ class ForumUsers extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    // protected $fillable = [
+    //     'name', 'photo', 'email', 'password', 'isAdmin'
+    // ];
 
     /**
      * The attributes that should be hidden for arrays.
