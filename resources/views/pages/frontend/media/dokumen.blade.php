@@ -22,7 +22,7 @@
 										</h3>
 										<p>asdfasdfasdfasdf</p>
 										<span class="text-muted">
-											<a href="#" class="btn btn-primary"> Download</a> | <a href="#" class="btn btn-success" target="_blank"> Preview</a>
+											<a href="https://view.officeapps.live.com/op/view.aspx?src={{ urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx') ) }}" class="btn btn-primary"> Download</a> | <a href="#" class="btn btn-success" target="_blank"> Preview</a>
 										</span>
 									</div>
 								</div>
@@ -57,8 +57,6 @@
 									</div>
 								</div>
 							</li>
-
-							<iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx') ) }}" frameborder="0" style="width:100%;min-height:640px;"></iframe>
 
 						</div>
 					</ul>
