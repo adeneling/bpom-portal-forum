@@ -91,8 +91,20 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 
 Route::get('youtube', function(){
 	$videoId = Youtube::parseVidFromURL('https://www.youtube.com/watch?v=moSFlvxnbgk');
-	print_r($videoId);
+	// print_r($videoId);
 
-	$channel = Youtube::getChannelByName('Kuper Hero');
-	print_r($channel);
+	$channel = Youtube::getChannelByName('xdadevelopers');
+	echo "<pre>";
+	// print_r($channel);
+
+	$playlists = Youtube::getPlaylistsByChannelId($channel->id);
+	// print_r($playlists);
+
+	$x = 0;
+	foreach($playlists['results'] as $playlist){
+		if($x==0){
+			$playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);
+			print_r($playlistItems);
+		}
+	}
 });
