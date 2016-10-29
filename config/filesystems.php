@@ -122,8 +122,8 @@ return [
 
         'dropbox' => [
             'driver'           => 'dropbox',
-            'accessToken'      => 'your-access-token',
-            'clientIdentifier' => 'your-client-identifier',
+            'accessToken'      => env('FILESYSTEM_ACCESSTOKEN', null),
+            'clientIdentifier' => env('FILESYSTEM_SECRET', null),
         ],
 
         'gridfs' => [

@@ -56,7 +56,7 @@ class ForumUsersController extends Controller
 		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
 		$user->email = $request->get('email');
 		$user->password = bcrypt($request->get('password'));
-		$user->isAdmin = 1;
+		$user->isAdmin = 0;
 		$user->save();
 
 		$penggunaForum = ForumUsers::all();
