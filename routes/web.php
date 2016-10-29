@@ -88,3 +88,11 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });
+
+Route::get('youtube', function(){
+	$videoId = Youtube::parseVidFromURL('https://www.youtube.com/watch?v=moSFlvxnbgk');
+	print_r($videoId);
+
+	$channel = Youtube::getChannelByName('Kuper Hero');
+	print_r($channel);
+});
