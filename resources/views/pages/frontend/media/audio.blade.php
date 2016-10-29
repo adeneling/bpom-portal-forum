@@ -18,6 +18,11 @@
 								<div class="price">
 									<s class="old-price">$150</s> <strong>$75</strong></div>
 							</div>
+
+
+							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}"></paper-audio-player>
+							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}" title="My Podcast #2"></paper-audio-player>
+							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}" title="PANG! - Cry Me A River" color="#F05C38"></paper-audio-player>
 						</div>
 						<div class="product-item">
 							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
