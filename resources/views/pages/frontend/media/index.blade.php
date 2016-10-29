@@ -19,11 +19,19 @@
 				<!-- tab pane -->
 				<div class="tab-pane fade in active" id="tab-top1">
 					<!-- HERO UNIT -->
-					<center>
-						<video width="500" height="300" controls>
-							<source src="{{ asset('assets/testing/video.mp4') }}" type="video/mp4">
-						</video>
-					</center>
+					{{-- <center>
+						<iframe width="620" height="400" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+					</center> --}}
+
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+							</div>	
+						</div>
+						<div class="col-md-2"></div>
+					</div>
 					<!-- END HERO UNIT -->
 					<div class="product-carousel" id="product-carousel1">						
 						<div class="product-item">

@@ -13,7 +13,8 @@
         "rifkyekayama/rajaongkir-laravel": "^1.0",
         "doctrine/dbal": "^2.5",
         "intervention/image": "^2.3",
-        "danhunsaker/laravel-flysystem-others": "^1.3"
+        "danhunsaker/laravel-flysystem-others": "^1.3",
+        "alaouy/youtube": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

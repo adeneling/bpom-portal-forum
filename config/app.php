@@ -173,6 +173,7 @@ return [
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         RifkyEkayama\RajaOngkir\RajaOngkirServiceProvider::class,
         Danhunsaker\Laravel\Flysystem\FlysystemOtherServiceProvider::class,
+        Alaouy\Youtube\YoutubeServiceProvider::class,
 
         //
 
@@ -236,6 +237,7 @@ return [
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'RajaOngkir' => RifkyEkayama\RajaOngkir\RajaOngkirFacade::class,
+        'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
 
     ],
 
