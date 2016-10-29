@@ -88,21 +88,3 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });
-
-Route::get('youtube', function(){
-	$videoId = Youtube::parseVidFromURL('https://www.youtube.com/watch?v=moSFlvxnbgk');
-	// print_r($videoId);
-
-	$channel = Youtube::getChannelByName('xdadevelopers');
-	echo "<pre>";
-	// print_r($channel);
-
-	$playlists = Youtube::getPlaylistsByChannelId($channel->id);
-	// print_r($playlists);
-
-	$playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlists['results'][0]->id);
-	print_r($playlistItems);
-
-	$videoList = Youtube::searchChannelVideos('keyword', 'UCk1SpWNzOs4MYmr0uICEntg', 40);
-	print_r($videoList);
-});

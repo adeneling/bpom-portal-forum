@@ -19,10 +19,6 @@
 				<!-- tab pane -->
 				<div class="tab-pane fade in active" id="tab-top1">
 					<!-- HERO UNIT -->
-					{{-- <center>
-						<iframe width="620" height="400" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
-					</center> --}}
-
 					<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-8">
@@ -48,34 +44,16 @@
 				<!-- tab pane -->
 				<div class="tab-pane fade" id="tab-top2">
 					<div class="product-carousel" id="product-carousel2">
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Casual Bag (Brown)">Casual Bag (Brown)</a></h3>
-								<div class="price">
-									<s class="old-price">$150</s> <strong>$75</strong></div>
-							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Stylish Shoes">Stylish Shoes</a></h3>
-								<div class="price">
-									<s class="old-price">$120</s> <strong>$90</strong></div>
-							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Holiday Season Outfit">Holiday Season Outfit</a></h3>
-								<div class="price"><strong>$139.99</strong></div>
-							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Everyday Apparel">Everyday Apparel</a></h3>
-								<div class="price"><strong>$82.99</strong></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="product-item">
+									<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
+									<div class="info">
+										<h3 class="title"><a href="single-product-page.html" title="Casual Bag (Brown)">Casual Bag (Brown)</a></h3>
+										<div class="price">
+											<s class="old-price">$150</s> <strong>$75</strong></div>
+									</div>
+								</div>	
 							</div>
 						</div>
 					</div>
