@@ -58,6 +58,8 @@
 								</div>
 							</li>
 
+							<iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx') ) }}" frameborder="0" style="width:100%;min-height:640px;"></iframe>
+
 						</div>
 					</ul>
 				</div>
