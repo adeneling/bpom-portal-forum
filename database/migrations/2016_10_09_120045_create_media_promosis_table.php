@@ -13,9 +13,15 @@ class CreateMediaPromosisTable extends Migration
      */
     public function up()
     {
-        Schema::create('media_promosis', function (Blueprint $table) {
+        Schema::create('media-promosi', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
+            $table->string('nama');
+            $table->text('deskripsi')->nullable();
+            $table->text('media_video')->nullable();
+            $table->text('media_audio')->nullable();
+            $table->text('media_gambar')->nullable();
+            $table->text('media_dokumen')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -29,6 +35,6 @@ class CreateMediaPromosisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('media_promosis');
+        Schema::dropIfExists('media-promosi');
     }
 }

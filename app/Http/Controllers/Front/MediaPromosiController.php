@@ -18,18 +18,7 @@ class MediaPromosiController extends Controller
      */
     public function index()
     {
-        //
-        $videos = [];
-
-        $channel = Youtube::getChannelByName('xdadevelopers');
-        $playlists = Youtube::getPlaylistsByChannelId($channel->id);
-        foreach($playlists['results'] as $playlist){
-            $playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);
-            foreach($playlistItems['results'] as $item){
-                array_push($videos, ['id' => $item->contentDetails->videoId, 'title' => $item->snippet->title]);
-            }
-        }
-        return view('pages.frontend.media.video', compact('videos'));
+        return view('pages.frontend.media.index');
     }
 
     public function video()
