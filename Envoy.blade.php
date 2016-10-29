@@ -6,12 +6,6 @@
 @endstory
 
 @task('push', ['on' => 'local'])
-	git add .
-	{{ $commit }}
-	@if($commit)
-		git commit -am "{{ $commit }}"
-		{{ $commit }}
-	@endif
 	git push origin master
 	git push github master
 @endtask
