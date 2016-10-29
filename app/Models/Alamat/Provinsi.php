@@ -10,6 +10,8 @@ class Provinsi extends Model
 {
     //
 	protected $fillable = ['id', 'provinsi'];
+
+	protected $table = 'provinsi';
     
     public static function populate() {
     	$provinsi = RajaOngkir::province();

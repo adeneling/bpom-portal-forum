@@ -13,7 +13,7 @@ class CreateForumUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_users', function (Blueprint $table) {
+        Schema::create('pengguna-forum', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('photo');
@@ -32,6 +32,6 @@ class CreateForumUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forum_users');
+        Schema::dropIfExists('pengguna-forum');
     }
 }

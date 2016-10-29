@@ -9,6 +9,8 @@ use App\Models\UserControl\ForumUsers;
 class Comment extends Model
 {
     //
+    protected $table = 'komentar';
+
     public function thread(){
     	return $this->belongsTo(Thread::class);
     }

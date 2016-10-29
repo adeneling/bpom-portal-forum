@@ -9,6 +9,8 @@ class GambarBerita extends Model
 {
     //
 
+    protected $table = 'gambar-berita';
+
     public function user(){
     	return $this->belongsTo(User::class);
     }

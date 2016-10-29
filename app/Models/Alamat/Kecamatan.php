@@ -11,6 +11,8 @@ class Kecamatan extends Model
     //
     protected $fillable = ['id', 'provinsi_id', 'kota_id', 'tipe', 'kecamatan'];
 
+    protected $table = 'kecamatan';
+
     public static function populate() {
 		$kota = RajaOngkir::city();
 		$kota = json_decode($kota);

@@ -13,7 +13,7 @@ class CreateHubungiKamisTable extends Migration
      */
     public function up()
     {
-        Schema::create('hubungi_kamis', function (Blueprint $table) {
+        Schema::create('hubungi_kami', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateHubungiKamisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hubungi_kamis');
+        Schema::dropIfExists('hubungi_kami');
     }
 }

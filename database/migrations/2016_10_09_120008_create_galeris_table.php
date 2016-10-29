@@ -13,7 +13,7 @@ class CreateGalerisTable extends Migration
      */
     public function up()
     {
-        Schema::create('galeris', function (Blueprint $table) {
+        Schema::create('galeri', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('judul');
@@ -30,6 +30,6 @@ class CreateGalerisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galeris');
+        Schema::dropIfExists('galeri');
     }
 }

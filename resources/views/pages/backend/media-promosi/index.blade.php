@@ -23,10 +23,16 @@
 <!--start container-->
 	<div class="container">
 		<div class="section">
-			<p class="caption">{{ $title }}</p>
-			<div class="divider"></div>
-			<!--Responsive Table-->
-			<div class="divider"></div>
+			<div id="striped-table">
+				<div class="row">
+					<div class="col s12">
+						<div id="table-container">
+							@include('pages.backend.pasar-aman._table_pasar_aman')
+							{{ $pasarAman->links() }}
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">

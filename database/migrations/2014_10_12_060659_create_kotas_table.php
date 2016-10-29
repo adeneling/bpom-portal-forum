@@ -13,7 +13,7 @@ class CreateKotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('kotas', function (Blueprint $table) {
+        Schema::create('kota', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('provinsi_id');
             $table->string('tipe');
@@ -21,7 +21,7 @@ class CreateKotasTable extends Migration
             $table->string('kode_pos', 5);
             $table->timestamps();
 
-            $table->foreign('provinsi_id')->references('id')->on('provinsis')->onDelete('cascade');
+            $table->foreign('provinsi_id')->references('id')->on('provinsi')->onDelete('cascade');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateKotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kotas');
+        Schema::dropIfExists('kota');
     }
 }

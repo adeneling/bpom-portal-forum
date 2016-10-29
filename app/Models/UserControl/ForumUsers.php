@@ -13,7 +13,7 @@ class ForumUsers extends Authenticatable
     //
     use Notifiable;
 
-    protected $table = 'forum_users';
+    protected $table = 'pengguna-forum';
 
     /**
      * The attributes that are mass assignable.

@@ -13,7 +13,7 @@ class CreateKecamatansTable extends Migration
      */
     public function up()
     {
-        Schema::create('kecamatans', function (Blueprint $table) {
+        Schema::create('kecamatan', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('provinsi_id');
             $table->unsignedInteger('kota_id');
@@ -21,8 +21,8 @@ class CreateKecamatansTable extends Migration
             $table->string('kecamatan');
             $table->timestamps();
 
-            $table->foreign('provinsi_id')->references('id')->on('provinsis')->onDelete('cascade');
-            $table->foreign('kota_id')->references('id')->on('kotas')->onDelete('cascade');
+            $table->foreign('provinsi_id')->references('id')->on('provinsi')->onDelete('cascade');
+            $table->foreign('kota_id')->references('id')->on('kota')->onDelete('cascade');
         });
     }
 
@@ -33,6 +33,6 @@ class CreateKecamatansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kecamatans');
+        Schema::dropIfExists('kecamatan');
     }
 }

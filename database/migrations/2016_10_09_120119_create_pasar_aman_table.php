@@ -27,9 +27,9 @@ class CreatePasarAmanTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('provinsi_id')->references('id')->on('provinsis')->onDelete('cascade');
-            $table->foreign('kota_id')->references('id')->on('kotas')->onDelete('cascade');
-            $table->foreign('kecamatan_id')->references('id')->on('kecamatans')->onDelete('cascade');
+            $table->foreign('provinsi_id')->references('id')->on('provinsi')->onDelete('cascade');
+            $table->foreign('kota_id')->references('id')->on('kota')->onDelete('cascade');
+            $table->foreign('kecamatan_id')->references('id')->on('kecamatan')->onDelete('cascade');
         });
     }
 

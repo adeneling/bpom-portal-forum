@@ -17,11 +17,9 @@ class CreateMediaPromosisTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('nama');
+            $table->string('lokasi');
             $table->text('deskripsi')->nullable();
-            $table->text('media_video')->nullable();
-            $table->text('media_audio')->nullable();
-            $table->text('media_gambar')->nullable();
-            $table->text('media_dokumen')->nullable();
+            $table->enum('tipe', ['audio', 'gambar', 'dokumen'])->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

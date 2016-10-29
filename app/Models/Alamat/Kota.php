@@ -11,6 +11,8 @@ class Kota extends Model
     //
     protected $fillable = ['id', 'provinsi_id', 'tipe', 'kota', 'kode_pos'];
 
+    protected $table = 'kota';
+
     public static function populate() {
 		$kota = RajaOngkir::city();
 		$kota = json_decode($kota);

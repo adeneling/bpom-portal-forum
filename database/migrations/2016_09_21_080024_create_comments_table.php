@@ -13,7 +13,7 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('komentar', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('forum_user_id');
             $table->unsignedInteger('thread_id');
@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
             $table->text('comment');
             $table->timestamps();
 
-            $table->foreign('forum_user_id')->references('id')->on('forum_users')->onDelete('cascade');
+            $table->foreign('forum_user_id')->references('id')->on('pengguna-forum')->onDelete('cascade');
             $table->foreign('thread_id')->references('id')->on('threads')->onDelete('cascade');
         });
     }
@@ -33,6 +33,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('komentar');
     }
 }

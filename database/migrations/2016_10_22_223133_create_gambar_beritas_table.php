@@ -13,7 +13,7 @@ class CreateGambarBeritasTable extends Migration
      */
     public function up()
     {
-        Schema::create('gambar_beritas', function (Blueprint $table) {
+        Schema::create('gambar_berita', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('located');
@@ -30,6 +30,6 @@ class CreateGambarBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gambar_beritas');
+        Schema::dropIfExists('gambar_berita');
     }
 }

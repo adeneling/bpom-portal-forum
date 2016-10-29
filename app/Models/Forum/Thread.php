@@ -9,6 +9,8 @@ use App\Models\Forum\Comment;
 class Thread extends Model
 {
     //
+    protected $table = 'threads';
+    
     public function forumUsers(){
     	return $this->belongsTo(ForumUsers::class, 'forum_user_id');
     }

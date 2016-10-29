@@ -13,7 +13,7 @@ class CreateProvinsisTable extends Migration
      */
     public function up()
     {
-        Schema::create('provinsis', function (Blueprint $table) {
+        Schema::create('provinsi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('provinsi');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateProvinsisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('provinsis');
+        Schema::dropIfExists('provinsi');
     }
 }

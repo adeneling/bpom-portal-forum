@@ -8,6 +8,7 @@ use App\Models\UserControl\ForumUsers;
 class ThreadImage extends Model
 {
 	//
+    protected $table = 'thread_images';
 
 	public function forumUsers(){
     	return $this->belongsTo(ForumUsers::class, 'forum_user_id');
