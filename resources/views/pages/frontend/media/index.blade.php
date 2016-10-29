@@ -102,12 +102,14 @@
 				e.preventDefault();
 				var id = this.getAttribute('data-id');
 				$('#video-container').html('<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/'+id+'"></iframe>');
+				window.scrollTo(0,0);
 			});
 
 			$(document).on('click', '#video-title', function(e){
 				e.preventDefault();
 				var id = this.getAttribute('data-id');
 				$('#video-container').html('<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/'+id+'"></iframe>');
+				window.scrollTo(0,0);
 			});
 		});
 	</script>
