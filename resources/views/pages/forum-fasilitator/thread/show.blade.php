@@ -77,10 +77,6 @@
 												<br>
 												<small>{{ $thread->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 												<br>
-												<small class="btn-group btn-group-xs">
-												<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
-												<a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
-												<strong class="btn btn-success">+451</strong>
 												</small>
 											</div>
 										</center>

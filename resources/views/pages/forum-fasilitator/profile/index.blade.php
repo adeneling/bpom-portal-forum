@@ -65,13 +65,9 @@
 											<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($user->email) }}"
 												width="64" alt="Generic placeholder image"><br>
 											<strong><a href="user.html">asdasd</a></strong>
+											<br>
 											<small>{{ $user->admin == 1 ? 'Member' : 'Administrator' }}</small>
 											<br>
-											<small class="btn-group btn-group-xs">
-											<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
-											<a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
-											<strong class="btn btn-success">+451</strong>
-											</small>
 										</div>
 									</center>
 								</div>
