@@ -52,7 +52,7 @@
 										</h3>
 										<p>asdfasdfasdfasdf</p>
 										<span class="text-muted">
-											<a href="#" class="btn btn-primary"> Download</a> | <a href="{{ route('media.dokumen.show', [urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx') )]) }}" class="btn btn-success" target="_blank"> Preview</a>
+											<a href="#" class="btn btn-primary"> Download</a> | <a href="{{ route('media.dokumen.show', [encrypt(urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx'))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
 										</span>
 									</div>
 								</div>

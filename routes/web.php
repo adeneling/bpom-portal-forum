@@ -26,7 +26,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::get('media-informasi/gambar', 'MediaPromosiController@gambar')->name('media.gambar');
 	Route::get('media-informasi/audio', 'MediaPromosiController@audio')->name('media.audio');
 	Route::get('media-informasi/dokumen', 'MediaPromosiController@dokumen')->name('media.dokumen');
-	Route::get('media-informasi/dokumen/show/{lokasi}', 'MediaPromosiController@dokumenShow')->name('media.dokumen.show');
+	Route::get('media-informasi/dokumen/{lokasi}/show', 'MediaPromosiController@dokumenShow')->name('media.dokumen.show');
 	/* PASAR AMAN */
 	Route::resource('pasar-aman','PasarAmanController');
 	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');

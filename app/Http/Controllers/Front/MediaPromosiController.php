@@ -54,7 +54,7 @@ class MediaPromosiController extends Controller
 
     public function dokumenShow($lokasi)
     {
-        return view('pages.frontend.media.dokumen_show', compact($lokasi));
+        return view('pages.frontend.media.dokumen_show', ['lokasi' => $lokasi]);
     }
 
     /**
