@@ -52,6 +52,11 @@ class MediaPromosiController extends Controller
         return view('pages.frontend.media.dokumen');
     }
 
+    public function dokumenShow($lokasi)
+    {
+        return view('pages.frontend.media.dokumen_show', compact($lokasi));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
