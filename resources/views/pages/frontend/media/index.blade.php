@@ -18,7 +18,7 @@
 		<div class="multiple-pricing-table">
 			<div class="row">
 				<div class="col-md-3">
-					<a href="">
+					<a href="{{ route('media.video') }}">
 						<div class="pricing-item">
 							<i class="fa fa-video-camera plan-icon"></i>
 							<strong class="price">VIDEO</strong>
@@ -26,7 +26,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="">
+					<a href="{{ route('media.audio') }}">
 						<div class="pricing-item">
 							<i class="fa fa-file-audio-o plan-icon"></i>
 							<strong class="price">AUDIO</strong>
@@ -34,7 +34,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="">
+					<a href="{{ route('media.gambar') }}">
 						<div class="pricing-item">
 							<i class="fa fa-picture-o plan-icon"></i>
 							<strong class="price">GAMBAR</strong>
@@ -42,7 +42,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="">
+					<a href="{{ route('media.dokumen') }}">
 						<div class="pricing-item">
 							<i class="fa fa-file plan-icon"></i>
 							<strong class="price">DOKUMEN</strong>
