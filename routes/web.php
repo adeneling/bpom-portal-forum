@@ -32,7 +32,6 @@ Route::group(['namespace' => 'Front'], function(){
 	/* BAHAN BERBAHAYA */
 	Route::resource('bahan-berbahaya','BahanBerbahayaController');
 	Route::get('bahan-berbahaya/{id}/{judul}', 'BahanBerbahayaController@show')->name('bahan-berbahaya.lihat');
-	
 });
 
 // Forum
