@@ -58,43 +58,43 @@
 					</div>
 					<div class="panel-content">
 						<div class="row">
-							<div class="row">
-								<div class="col-md-2" style="padding-top: 2em; padding-bottom: 2em;">
-									<center>
-										<div class="user-info" href="#">
-											<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($user->email) }}"
-												width="64" alt="Generic placeholder image"><br>
-											<strong><a href="user.html">asdasd</a></strong>
-											<br>
-											<small>{{ $user->admin == 1 ? 'Member' : 'Administrator' }}</small>
-											<br>
-										</div>
-									</center>
-								</div>
+							<div class="col-md-3" style="padding-top: 2em; padding-bottom: 2em;">
+								<center>
+									<div class="user-info" href="#">
+										<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($user->email) }}"
+											width="64" alt="Generic placeholder image"><br>
+										<strong>{{ Auth::user()->name }}</strong>
+										<br>
+										<small>{{ $user->admin == 1 ? 'Member' : 'Administrator' }}</small>
+										<br>
+										<small>{{ Auth::user()->email }}</small>
+										<br>
+									</div>
+								</center>
+							</div>
 
-								<div class="col-md-10" style="padding: 2em 2em 2em 2em;">
-									<table class="table">
-										<thead>
-											<th>Topik</th>
-											<th>Post</th>
-											<th>Komentar Terakhir</th>
-											<th>Komentar</th>
-										</thead>
-										<tbody>
-											@foreach($user->thread as $thread)
-												<?php
-													$countComment = $thread->comment()->commentThread($thread->id)->count();
-												?>
-												<tr>
-													<td><b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b></td>
-													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
-													<td>12 Agustus 2016</td>
-													<td><span class="badge">{{ $countComment }}</span></td>
-												</tr>
-											@endforeach
-										</tbody>
-									</table>
-								</div>
+							<div class="col-md-9" style="padding: 2em 2em 2em 2em;">
+								<table class="table">
+									<thead>
+										<th>Topik</th>
+										<th>Post</th>
+										<th>Komentar Terakhir</th>
+										<th>Komentar</th>
+									</thead>
+									<tbody>
+										@foreach($user->thread as $thread)
+											<?php
+												$countComment = $thread->comment()->commentThread($thread->id)->count();
+											?>
+											<tr>
+												<td><b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b></td>
+												<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
+												<td>12 Agustus 2016</td>
+												<td><span class="badge">{{ $countComment }}</span></td>
+											</tr>
+										@endforeach
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

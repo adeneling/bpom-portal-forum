@@ -108,7 +108,7 @@
 												<tr>
 													<td>
 														<b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b><br>
-														<a href=""><small>By {{ $thread->forumUsers->name }}</small></a>
+														<small>By {{ $thread->forumUsers->name }}</small>
 													</td>
 													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
 													<td>{{ $countComment != 0 ? date("d F Y", strtotime($thread->comment()->lastComment($thread->id)->first()['created_at'])) : '-' }}</td>

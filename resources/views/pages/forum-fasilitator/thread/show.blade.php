@@ -73,7 +73,7 @@
 											<div class="user-info" href="#">
 												<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($thread->forumUsers->email) }}"
 													width="64" alt="Generic placeholder image"><br>
-												<strong><a href="user.html">{{ $thread->forumUsers->name }}</a></strong>
+												<strong>{{ $thread->forumUsers->name }}</strong>
 												<br>
 												<small>{{ $thread->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 												<br>
@@ -120,14 +120,9 @@
 													<div class="user-info" href="#">
 														<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($comment->forumUsers->email) }}"
 															width="64" alt="Generic placeholder image"><br>
-														<strong><a href="user.html">{{ $comment->forumUsers->name }}</a></strong>
+														<strong>{{ $comment->forumUsers->name }}</strong>
 														<small>{{ $comment->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 														<br>
-														<small class="btn-group btn-group-xs">
-														<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
-														<a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
-														<strong class="btn btn-success">+451</strong>
-														</small>
 													</div>
 												</center>
 											</div>
