@@ -1,4 +1,4 @@
-<table class="striped" id="tablePasarAman">
+<table class="striped" id="tableMediaPromosi">
 	<thead>
 		<tr>
 		<th data-field="no">No</th>
@@ -10,15 +10,15 @@
 	</thead>
 	<tbody>
 		<?php $no=1;?>
-		@foreach($pasarAman as $pasar)
+		@foreach($media as $val)
 			<tr>
 				<td>{{ $no++ }}</td>
-				<td>{{  }}</td>
-				<td>{{ $pasar->nama_pasar }}</td>
-				<td>{{ $pasar->provinsi->provinsi }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td>
-					<a class="btn-floating waves-effect waves-light blue" href="{{ route('admin.pasar-aman.edit', encrypt($pasar->id)) }}"><i class="mdi-image-edit"></i></a>
-					<a class="btn-floating waves-effect waves-light red" id="delete-pasaraman" data-id="{{ encrypt($pasar->id) }}"><i class="mdi-action-delete"></i></a>
+					<a class="btn-floating waves-effect waves-light blue" href="{{ route('admin.media-promosi.edit', encrypt($val->id)) }}"><i class="mdi-image-edit"></i></a>
+					<a class="btn-floating waves-effect waves-light red" id="delete-pasaraman" data-id="{{ encrypt($val->id) }}"><i class="mdi-action-delete"></i></a>
 				</td>
 			</tr>
 		@endforeach

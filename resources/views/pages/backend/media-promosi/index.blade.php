@@ -27,8 +27,8 @@
 				<div class="row">
 					<div class="col s12">
 						<div id="table-container">
-							@include('pages.backend.pasar-aman._table_pasar_aman')
-							{{ $pasarAman->links() }}
+							@include('pages.backend.media-promosi._tableMediaPromosi')
+							{{-- {{ $media->links() }} --}}
 						</div>
 					</div>
 				</div>

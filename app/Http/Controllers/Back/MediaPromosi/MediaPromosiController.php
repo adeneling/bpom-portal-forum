@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\MediaPromosi\MediaPromosi;
+
+use Storage;
+
 class MediaPromosiController extends Controller
 {
     public function __construct()
@@ -22,7 +26,8 @@ class MediaPromosiController extends Controller
     public function index()
     {
         //
-        return view('pages.backend.media-promosi.index')->withTitle('Kelola Media Promosi');
+        $media = MediaPromosi::all();
+        return view('pages.backend.media-promosi.index', compact('media'))->withTitle('Kelola Media Promosi');
     }
 
     /**
