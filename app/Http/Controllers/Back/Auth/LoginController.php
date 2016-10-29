@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Back\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -27,6 +28,8 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/admin/dashboard';
 
+    protected $guard = 'web';
+
     /**
      * Create a new controller instance.
      *
@@ -49,5 +52,15 @@ class LoginController extends Controller
         }
 
         return view('auth.login');
+    }
+
+    /**
+     * Get the guard to be used during authentication.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        return Auth::guard($this->guard);
     }
 }

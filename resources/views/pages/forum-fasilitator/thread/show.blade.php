@@ -71,10 +71,10 @@
 									<div class="col-md-2" style="padding-top: 2em; padding-bottom: 2em;">
 										<center>
 											<div class="user-info" href="#">
-												<img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
+												<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($thread->forumUsers->email) }}"
 													width="64" alt="Generic placeholder image"><br>
 												<strong><a href="user.html">{{ $thread->forumUsers->name }}</a></strong>
-												<small>Member</small>
+												<small>{{ $thread->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 												<br>
 												<small class="btn-group btn-group-xs">
 												<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
@@ -121,10 +121,10 @@
 											<div class="col-md-2" style="padding-top: 2em; padding-bottom: 2em;">
 												<center>
 													<div class="user-info" href="#">
-														<img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
+														<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($comment->forumUsers->email) }}"
 															width="64" alt="Generic placeholder image"><br>
 														<strong><a href="user.html">{{ $comment->forumUsers->name }}</a></strong>
-														<small>Member</small>
+														<small>{{ $comment->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 														<br>
 														<small class="btn-group btn-group-xs">
 														<a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>

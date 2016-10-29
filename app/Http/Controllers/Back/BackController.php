@@ -15,9 +15,9 @@ class BackController extends Controller
 	 * @return void
 	 */
 	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+    {
+        $this->middleware('auth:web');
+    }
 
 	/**
 	 * Display a listing of the resource.
