@@ -37,7 +37,7 @@
 										</h3>
 										<p>asdfasdfasdfasdf</p>
 										<span class="text-muted">
-											<a href="#" class="btn btn-primary"> Download</a> | <a href="#" class="btn btn-success" target="_blank"> Preview</a>
+											<a href="http://docs.google.com/viewer?url={{ urlencode( asset('PERMANENTLY ACTIVATED INTERNET DOWNLOAD MANAGER.docx') ) }}&embedded=true" class="btn btn-primary"> Download</a> | <a href="#" class="btn btn-success" target="_blank"> Preview</a>
 										</span>
 									</div>
 								</div>
