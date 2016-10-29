@@ -100,11 +100,9 @@ Route::get('youtube', function(){
 	$playlists = Youtube::getPlaylistsByChannelId($channel->id);
 	// print_r($playlists);
 
-	$x = 0;
-	foreach($playlists['results'] as $playlist){
-		if($x==0){
-			$playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);
-			print_r($playlistItems);
-		}
-	}
+	$playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlists['results'][0]->id);
+	print_r($playlistItems);
+
+	$videoList = Youtube::searchChannelVideos('keyword', 'UCk1SpWNzOs4MYmr0uICEntg', 40);
+	print_r($videoList);
 });

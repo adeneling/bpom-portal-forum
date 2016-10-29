@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Youtube;
+
 class MediaPromosiController extends Controller
 {
     /**
@@ -16,7 +18,18 @@ class MediaPromosiController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.media.index');
+        //
+        $videos = [];
+
+        $channel = Youtube::getChannelByName('xdadevelopers');
+        $playlists = Youtube::getPlaylistsByChannelId($channel->id);
+        foreach($playlists['results'] as $playlist){
+            $playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);
+            foreach($playlistItems['results'] as $item){
+                array_push($videos, ['id' => $item->contentDetails->videoId, 'title' => $item->snippet->title]);
+            }
+        }
+        return view('pages.frontend.media.index', compact('videos'));
     }
 
     /**

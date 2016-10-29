@@ -26,43 +26,22 @@
 					<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-8">
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+							<div class="embed-responsive embed-responsive-16by9" id="video-container">
+								<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $videos[0]['id'] }}"></iframe>
 							</div>	
 						</div>
 						<div class="col-md-2"></div>
 					</div>
 					<!-- END HERO UNIT -->
-					<div class="product-carousel" id="product-carousel1">						
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Colorful Abstract Cushion">Colorful Abstract Cushion</a></h3>
-								<div class="price"><strong>$22.99</strong></div>
+					<div class="product-carousel" id="product-carousel1">
+						@foreach($videos as $video)				
+							<div class="product-item">
+								<a id="video-image" data-id="{{ $video['id'] }}"><img src="https://i.ytimg.com/vi/{{ $video['id'] }}/sddefault.jpg" class="img-responsive center-block" alt="Product Item"></a>
+								<div class="info">
+									<h3 class="title"><a id="video-title" title="{{ $video['title'] }}" data-id="{{ $video['id'] }}">{{ $video['title'] }}</a></h3>
+								</div>
 							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Reading Table Sets">Reading Table Sets</a></h3>
-								<div class="price">
-									<s class="old-price">$35</s> <strong>$70</strong></div>
-							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Wooden Working Desk">Wooden Working Desk</a></h3>
-								<div class="price"><strong>$322</strong></div>
-							</div>
-						</div>
-						<div class="product-item">
-							<a href="single-product-page.html"><img src="{{ asset('assets/frontend/img/news/news1.png') }}" class="img-responsive center-block" alt="Product Item"></a>
-							<div class="info">
-								<h3 class="title"><a href="single-product-page.html" title="Elegant Sofa (White)">Elegant Sofa (White)</a></h3>
-								<div class="price"><strong>$437</strong></div>
-							</div>
-						</div>
+						@endforeach
 					</div>
 				</div>
 				<!-- end tab pane -->
@@ -115,3 +94,14 @@
 	</div>
 </div>
 @stop
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click', '#video-image', function(){
+				var id = this.getAttribute('data-id');
+				$('#video-container').html('<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/'+id+'"></iframe>');
+			});
+		});
+	</script>
+@endsection
