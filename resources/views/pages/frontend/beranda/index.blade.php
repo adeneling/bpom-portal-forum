@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<h2 class="section-heading">TENTANG KAMI</h2>
+				<h2 class="heading">TENTANG KAMI</h2>
 				<p class="lead"><b>Badan Pengawas Obat dan Makanan</b></p>
 				<p align="justify">Badan Pengawas Obat dan Makanan. Badan Pengawas Obat dan Makanan atau disingkat Badan POM adalah sebuah lembaga di Indonesia yang bertugas mengawasi peredaran obat-obatan dan makanan di Indonesia. Fungsi dan tugas badan ini yaitu mengatur makanan, suplemen makanan, obat-obatan, produk biofarmasi, transfusi darah, piranti medis, piranti untuk terapi dengan radiasi, produk kedokteran hewan, dan kosmetik.</p>
 				<p align="justify">Berdirinya Badan Pengawas Obat dan Makanan di Indonesia yang pada masa penjajahan Belanda dikenal dengan apoteker yang berperan dalam pelayanan kesehatan di bidang kefarmasian yang membantu pemerintah dalam melindungi masyarakat dalam pengawasan obat yang beredar di masyarakat.</p>
@@ -58,7 +58,7 @@
 <!-- LATEST NEWS -->
 <section>
 	<div class="container">
-		<h2 class="section-heading">BERITA TERBARU</h2>
+		<h2 class="heading">BERITA TERBARU</h2>
 		<div class="row">
 			@foreach($berita as $val)
 				<div class="col-md-4">
@@ -83,7 +83,7 @@
 <!-- PASAR AMAN -->
 <section class="recent-works">
 	<div class="container">
-		<h2 class="section-heading pull-left">PASAR AMAN</h2>
+		<h2 class="heading pull-left">PASAR AMAN</h2>
 		<a href="{{ url('pasar-aman') }}" class="btn btn-primary pull-right">Lihat semua</a>
 		<div class="clearfix"></div>
 		<div class="portfolio-static">

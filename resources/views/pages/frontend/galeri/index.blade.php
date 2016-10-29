@@ -15,8 +15,6 @@
 <!-- PASAR AMAN -->
 <section class="recent-works">
 	<div class="container">
-		<h2 class="section-heading pull-left">Galeri</h2>
-		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
 				@foreach($galeris as $galeri)

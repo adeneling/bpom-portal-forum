@@ -3,9 +3,14 @@
 @section('title', 'Program')
 
 @section('content')
+<div class="page-header">
+	<div class="container">
+		<h1 class="page-title pull-left">@yield('title')</h1>
+		{!! Breadcrumbs::render('program') !!}
+	</div>
+</div>
 
 <div class="container">
-	<h2 class="section-heading">PROGRAM</h2>
 	<div class="multiple-pricing-table">		
 		<div class="row">
 			@foreach($programs as $program)
