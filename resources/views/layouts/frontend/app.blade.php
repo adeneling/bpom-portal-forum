@@ -28,6 +28,10 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/frontend/ico/repute72x72.png') }}">
 	<link rel="apple-touch-icon-precomposed" href="{{ asset('assets/frontend/ico/repute57x57.png') }}">
 	<link rel="shortcut icon" href="{{ asset('assets/frontend/ico/favicon.png') }}">
+
+	{{-- PAPER AUDIO --}}
+	<script src="{{ asset('assets/frontend/bower_resources/webcomponentsjs/webcomponents-lite.js') }}"></script>
+	<link rel="import" href="{{ asset('assets/frontend/bower_resources/paper-audio-player/paper-audio-player.html') }}">
 </head>
 
 <body>
