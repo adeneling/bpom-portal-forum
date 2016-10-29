@@ -1,10 +1,5 @@
 @servers(['web' => 'root@vdi-studio.com'])
 
-@story('deploy')
-    git
-    composer
-@endstory
-
 @task('git')
 	cd /var/www/bpom.vdi-studio.com/
     git pull origin master
