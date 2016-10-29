@@ -29,7 +29,38 @@ class MediaPromosiController extends Controller
                 array_push($videos, ['id' => $item->contentDetails->videoId, 'title' => $item->snippet->title]);
             }
         }
-        return view('pages.frontend.media.index', compact('videos'));
+        return view('pages.frontend.media.video', compact('videos'));
+    }
+
+    public function video()
+    {
+        //
+        $videos = [];
+
+        $channel = Youtube::getChannelByName('xdadevelopers');
+        $playlists = Youtube::getPlaylistsByChannelId($channel->id);
+        foreach($playlists['results'] as $playlist){
+            $playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);
+            foreach($playlistItems['results'] as $item){
+                array_push($videos, ['id' => $item->contentDetails->videoId, 'title' => $item->snippet->title]);
+            }
+        }
+        return view('pages.frontend.media.video', compact('videos'));
+    }
+
+    public function gambar()
+    {
+        return view('pages.frontend.media.gambar');
+    }
+
+    public function audio()
+    {
+        return view('pages.frontend.media.audio');
+    }
+
+    public function dokumen()
+    {
+        return view('pages.frontend.media.dokumen');
     }
 
     /**

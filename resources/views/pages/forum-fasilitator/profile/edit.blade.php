@@ -30,14 +30,10 @@
 <div class="page-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-8">
+			<div class="col-md-12">
 				<div class="row">
-					<div class="col-sm-8">
-						<a href="{{ route('thread.create') }}" class="btn btn-primary pull-right"> Buat Thread </a>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" class="form-control" placeholder="Cari di forum">
+					<div class="col-sm-12">
+						<a href="{{ route('profile.index') }}" class="btn btn-primary"> Back </a>
 					</div>
 				</div>
 			</div>
@@ -48,53 +44,54 @@
 <!-- PAGE CONTENT -->
 <div class="page-content">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="section-heading">Ubah Profile</h2>
-				{!! Form::model($user, ['route' => ['profile.update', encrypt($user->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formEditUser', 'name' => 'formEditUser' ,'role' => 'form', 'files' => true]) !!}
-					<div class="form-group">
-						<label for="judul-thread" class="col-sm-2 control-label">Photo Profile</label>
-						<div class="col-sm-10">
-							<image src="{{ App\Helpers\AppHelpers::photoProfile(auth('forum')->user()->email) }}">
+		<div class="col-md-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h2 class="panel-title section-heading no-margin">Ubah Profile</h2>
+				</div>
+				<div class="panel-body">
+					<div class="form-horizontal">
+						<div class="col-md-12">
+							{!! Form::model($user, ['route' => ['profile.update', encrypt($user->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formEditUser', 'name' => 'formEditUser' ,'role' => 'form', 'files' => true]) !!}
+								<div class="form-group">
+									<label for="judul-thread" class="col-sm-2 control-label">Photo Profile</label>
+									<div class="col-sm-10">
+										<image src="{{ App\Helpers\AppHelpers::photoProfile(auth('forum')->user()->email) }}">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="konten" class="col-sm-2 control-label">Nama Lengkap</label>
+									<div class="col-sm-6">
+										{!! Form::text('namaLengkap', $user->name, ['class' => 'form-control', 'id' => 'namaLengkap']) !!}
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="konten" class="col-sm-2 control-label">Password</label>
+									<div class="col-sm-5">
+										{!! Form::password('password', ['class' => 'form-control', 'id' => 'password']) !!}
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputFile" class="col-md-2 control-label">Upload Profile Picture</label>
+									<div class="col-md-3">
+										{!! Form::file('image', ['id' => 'image']) !!}
+										<p class="help-block">
+											<em>Upload your profile picture</em>
+										</p>
+									</div>
+								</div>
+								<hr>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<center>
+											<button type="submit" class="btn btn-primary">Ubah Profile</button>
+										</center>										
+									</div>
+								</div>
+							{!! Form::close() !!}
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="konten" class="col-sm-2 control-label">Nama Lengkap</label>
-						<div class="col-sm-10">
-							{!! Form::text('namaLengkap', $user->name, ['class' => 'form-control', 'id' => 'namaLengkap']) !!}
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputFile" class="col-md-2 control-label">File input</label>
-						<div class="col-md-3">
-							{!! Form::file('image', ['id' => 'image']) !!}
-							<p class="help-block">
-								<em>Example block-level help text here.</em>
-							</p>
-						</div>
-						<div class="col-md-7">
-							<button class="btn btn-primary btn-xs" id="btnUploadImage" >Upload Image</button>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10">
-							<button class="btn btn-primary" id="btnLihatGallery" >Lihat Gallery</button>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10">
-							{!! Recaptcha::render() !!}
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10">
-							<button type="submit" class="btn btn-primary">Buat Thread</button>
-						</div>
-					</div>
-				{!! Form::close() !!}
+				</div>
 			</div>
 		</div>
 	</div>
