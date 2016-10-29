@@ -36,9 +36,9 @@
 					<div class="product-carousel" id="product-carousel1">
 						@foreach($videos as $video)				
 							<div class="product-item">
-								<a id="video-image" data-id="{{ $video['id'] }}"><img src="https://i.ytimg.com/vi/{{ $video['id'] }}/sddefault.jpg" class="img-responsive center-block" alt="Product Item"></a>
+								<a href="#" id="video-image" data-id="{{ $video['id'] }}"><img src="https://i.ytimg.com/vi/{{ $video['id'] }}/sddefault.jpg" class="img-responsive center-block" alt="Product Item"></a>
 								<div class="info">
-									<h3 class="title"><a id="video-title" title="{{ $video['title'] }}" data-id="{{ $video['id'] }}">{{ $video['title'] }}</a></h3>
+									<h3 class="title"><a href="#" id="video-title" title="{{ $video['title'] }}" data-id="{{ $video['id'] }}">{{ $video['title'] }}</a></h3>
 								</div>
 							</div>
 						@endforeach
@@ -98,7 +98,14 @@
 @section('js')
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$(document).on('click', '#video-image', function(){
+			$(document).on('click', '#video-image', function(e){
+				e.preventDefault();
+				var id = this.getAttribute('data-id');
+				$('#video-container').html('<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/'+id+'"></iframe>');
+			});
+
+			$(document).on('click', '#video-title', function(e){
+				e.preventDefault();
 				var id = this.getAttribute('data-id');
 				$('#video-container').html('<iframe width="620" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/'+id+'"></iframe>');
 			});
