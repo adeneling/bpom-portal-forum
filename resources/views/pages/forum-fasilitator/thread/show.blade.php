@@ -74,6 +74,7 @@
 												<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($thread->forumUsers->email) }}"
 													width="64" alt="Generic placeholder image"><br>
 												<strong><a href="user.html">{{ $thread->forumUsers->name }}</a></strong>
+												<br>
 												<small>{{ $thread->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 												<br>
 												<small class="btn-group btn-group-xs">
