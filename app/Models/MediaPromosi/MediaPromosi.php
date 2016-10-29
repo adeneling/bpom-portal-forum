@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class MediaPromosi extends Model
 {
-    //
+    protected $table = 'media-promosi';
 }

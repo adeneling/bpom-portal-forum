@@ -13,7 +13,7 @@ class CreateMediaPromosisTable extends Migration
      */
     public function up()
     {
-        Schema::create('media_promosis', function (Blueprint $table) {
+        Schema::create('media-promosi', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('nama');
@@ -35,6 +35,6 @@ class CreateMediaPromosisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('media_promosis');
+        Schema::dropIfExists('media-promosi');
     }
 }
