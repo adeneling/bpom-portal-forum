@@ -15,6 +15,7 @@
 	chown www-data:www-data -R *
 	git stash
     git pull origin master
+    composer dump-autoload
 @endtask
 
 @task('composer', ['on' => 'web'])
