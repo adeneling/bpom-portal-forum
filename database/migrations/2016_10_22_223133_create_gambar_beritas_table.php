@@ -30,6 +30,6 @@ class CreateGambarBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gambar_beritax');
+        Schema::dropIfExists('gambar_berita');
     }
 }
