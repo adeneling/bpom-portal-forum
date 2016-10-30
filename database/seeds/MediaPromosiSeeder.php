@@ -2,8 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\MediaPromosi\MediaPromosi;
-
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class MediaPromosiSeeder extends Seeder
 {
