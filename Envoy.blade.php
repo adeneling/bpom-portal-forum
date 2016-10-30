@@ -12,6 +12,7 @@
 
 @task('pull-server', ['on' => 'web'])
 	cd /var/www/bpom.vdi-studio.com/
+	chown www-data:www-data -R *
 	git stash
     git pull origin master
 @endtask
