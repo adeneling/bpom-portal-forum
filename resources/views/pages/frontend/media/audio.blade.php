@@ -10,32 +10,18 @@
 			@include('pages.frontend.media._tab')
 			<div class="tab-content product-carousel-content">
 				<div class="tab-pane fade in active">
-					<div class="row">
-						<div class="col-md-10">
-							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}"></paper-audio-player>
+					<?php $idx = 0;?>
+					@foreach($audios as $audio)
+						<div class="row">
+							<div class="col-md-10">
+								<paper-audio-player src="{{ asset($audio->lokasi) }}" title="{{ $audio->nama }}" color="{{ $idx++ % 2 == 0 ? '#F05C38' : '' }}"></paper-audio-player>
+							</div>
+							<div class="col-md-1">
+								<button class="btn btn-lg btn-primary">Download</button>
+							</div>
 						</div>
-						<div class="col-md-1">
-							<button class="btn btn-lg btn-primary">Download</button>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-md-10">
-							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}" title="My Podcast #2"></paper-audio-player>
-						</div>
-						<div class="col-md-1">
-							<button class="btn btn-lg btn-primary">Download</button>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-md-10">
-							<paper-audio-player src="{{ asset('01 Born This Way.mp3') }}" title="PANG! - Cry Me A River" color="#F05C38"></paper-audio-player>
-						</div>
-						<div class="col-md-1">
-							<button class="btn btn-lg btn-primary">Download</button>
-						</div>
-					</div>
+						<br>
+					@endforeach
 				</div>
 			</div>
 		</section>

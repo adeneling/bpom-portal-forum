@@ -44,3 +44,42 @@
 	</div>
 <!--end container-->
 @endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$(document).on('click', '#delete-media-promosi', function(e){
+				e.preventDefault();
+				var id = $(this).attr('data-id');
+				swal({
+					title: "Are you sure?",   
+					text: "You will not be able to recover this imaginary file!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false }, 
+					function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+							type: "DELETE",
+							url: "{{ url('admin/media-promosi') }}"+"/"+id,
+							data: {_token: "{{ csrf_token() }}"},
+							cache: false,
+							success: function(data){
+								swal("Deleted!", "Your imaginary file has been deleted.", "success");
+								$('#table-container').html(data);
+							}
+						});
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");   
+					} 
+				});
+			});
+
+		});
+	</script>
+@endsection

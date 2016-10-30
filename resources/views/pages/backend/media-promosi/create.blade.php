@@ -28,8 +28,8 @@
 		<div class="row">
 			<div class="col s12">
 				{!! Form::open(['url' => 'admin/media-promosi','class' =>'col s12','files' => true]) !!}
-				{{ csrf_field() }}
-				@include('pages.backend.media-promosi._form')
+					{{ csrf_field() }}
+					@include('pages.backend.media-promosi._form')
 				{!! Form::close() !!}
 			</div>
 		</div>

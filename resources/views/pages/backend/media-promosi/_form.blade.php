@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="input-field col s9">
-		{!! Form::text('Nama', null, ['class'=>'validate']) !!}
+		{!! Form::text('nama', null, ['class'=>'validate']) !!}
 		<label for="nama">Nama</label>
 	</div>
 </div>
@@ -13,7 +13,7 @@
 <div class="row">
 	<div class="input-field col s2">
 		<div class="input-field col s12">
-			<select>
+			<select name="tipe" id="tipe">
 				<option value="" disabled selected>Pilih Tipe</option>
 				<option value="audio">Audio</option>
 				<option value="gambar">Gambar</option>
@@ -27,7 +27,7 @@
 		<div class="file-field input-field">
 			<div class="btn">
 				<span>File</span>
-				{!! Form::file('lokasi', null) !!}
+				{!! Form::file('file', null) !!}
 			</div>
 			<div class="file-path-wrapper">
 				<input class="file-path validate" type="text">
