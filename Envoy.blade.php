@@ -7,7 +7,6 @@
 
 @task('push', ['on' => 'local'])
 	git push origin master
-	git push github master
 @endtask
 
 @task('pull-server', ['on' => 'web'])
