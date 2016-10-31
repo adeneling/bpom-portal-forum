@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Back\Program;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Program\ProgramRequest;
 use App\Http\Requests;
+use App\Http\Requests\Program\ProgramRequest;
 use App\Http\Controllers\Controller;
 
 use App\Models\Program\Program;

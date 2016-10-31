@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Back\Galeri;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Galeri\GaleriRequest;
 use Auth;
 use Storage;
 use App\Http\Requests;
+use App\Http\Requests\Galeri\GaleriRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Galeri\Galeri;
 

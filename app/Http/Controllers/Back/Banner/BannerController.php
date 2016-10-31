@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Back\Banner;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Banner\BannerRequest;
-
 use App\Http\Requests;
+use App\Http\Requests\Banner\BannerRequest;
 use App\Http\Controllers\Controller;
 
 use App\Models\Banner\Banner;

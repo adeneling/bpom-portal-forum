@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Back\BahanBerbahaya;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\BahanBerbahaya\BahanBerbahayaRequest;
 use App\Http\Requests;
+use App\Http\Requests\BahanBerbahaya\BahanBerbahayaRequest;
 use App\Http\Controllers\Controller;
 
 use App\Models\BahanBerbahaya\BahanBerbahaya;

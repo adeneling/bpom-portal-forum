@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Back\Pedoman;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Pedoman\PedomanRequest;
 use Auth;
 use Storage;
 use App\Http\Requests;
+use App\Http\Requests\Pedoman\PedomanRequest;
 use App\Http\Controllers\Controller;
-use App\Models\Pedoman\Pedoman;
+use App\Models\Requests\Pedoman\Pedoman;
 
 class PedomanController extends Controller
 {
