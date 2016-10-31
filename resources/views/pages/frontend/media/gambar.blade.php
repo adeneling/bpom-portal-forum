@@ -10,16 +10,22 @@
 			@include('pages.frontend.media._tab')
 			<div class="tab-content product-carousel-content">
 				<div class="tab-pane fade in active">
-					<div class="product-carousel" id="product-carousel2">
-						@foreach($pictures as $picture)
-							<div class="product-item">
-								<a href="{{ asset(isset($picture->lokasi) ? $picture->lokasi : '') }}" class="fancybox" rel="group"><img src="{{ asset(isset($picture->lokasi) ? $picture->lokasi : '') }}" class="img-responsive center-block" alt="{{ $picture->nama }}"></a>
+					@foreach($pictures as $picture)
+						<div class="col-md-3">
+							<div class="portfolio-item">
+								<div class="overlay"></div>
 								<div class="info">
-									<h3 class="title"><a href="{{ asset(isset($picture->lokasi) ? $picture->lokasi : '') }}" title="{{ $picture->nama }}" class="fancybox" rel="group">{{ $picture->nama }}</a></h3>
+									<h4 class="title">{{ $picture->nama }}</h4>
+									<a class="fancybox" rel="group" href="{{ asset(isset($picture->lokasi) ? $picture->lokasi : '') }}">
+										<button class="btn btn-primary">Lihat</button>
+									</a>
+								</div>
+								<div class="media-wrapper">
+									<img src="{{ asset(isset($picture->lokasi) ? $picture->lokasi : '') }}" alt="{{ $picture->nama }}" height="200" width="300" />
 								</div>
 							</div>
-						@endforeach
-					</div>
+						</div>
+					@endforeach
 				</div>
 			</div>
 		</section>
