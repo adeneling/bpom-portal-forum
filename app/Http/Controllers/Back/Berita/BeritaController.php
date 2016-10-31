@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back\Berita;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Berita\BeritaRequest;
 use Auth;
 use Storage;
 use App\Http\Requests;
@@ -44,11 +45,8 @@ class BeritaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BeritaRequest $request)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-        ]);
         Storage::makeDirectory('berita/foto');
         $filename = '';
         if($request->hasFile('photo')){
@@ -97,12 +95,8 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BeritaRequest $request, $id)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-        ]);
-        
         $berita = Berita::findOrFail($id);
         $berita->judul = $request->input('judul');
         $berita->konten = $request->input('konten');

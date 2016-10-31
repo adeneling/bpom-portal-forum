@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back\BahanBerbahaya;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\BahanBerbahaya\BahanBerbahayaRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -43,11 +44,8 @@ class BahanBerbahayaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BahanBerbahayaRequest $request)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('bahan-berbahaya/foto');
         $file_foto = '';
@@ -95,11 +93,8 @@ class BahanBerbahayaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BahanBerbahayaRequest $request, $id)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('bahan-berbahaya/foto');
         $file_foto = '';

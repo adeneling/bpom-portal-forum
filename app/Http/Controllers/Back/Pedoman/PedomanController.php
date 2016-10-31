@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back\Pedoman;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Pedoman\PedomanRequest;
 use Auth;
 use Storage;
 use App\Http\Requests;
@@ -44,12 +45,8 @@ class PedomanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PedomanRequest $request)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-            'media_dokumen' => 'required|mimes:pdf',
-        ]);
         /* make directory */
         Storage::makeDirectory('pedoman/dokumen');
         $file_dokumen = '';
@@ -98,12 +95,8 @@ class PedomanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PedomanRequest $request, $id)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-            'media_dokumen' => 'required|mimes:pdf',
-        ]);
         /* make directory */
         Storage::makeDirectory('pedoman/dokumen');
         $file_dokumen = '';
