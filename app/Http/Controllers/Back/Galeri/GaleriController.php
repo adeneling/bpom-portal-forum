@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Storage;
 use App\Http\Requests;
+use App\Http\Requests\Galeri\GaleriRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Galeri\Galeri;
 
@@ -44,11 +45,8 @@ class GaleriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GaleriRequest $request)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('galeri/foto');
         $file_foto = '';
@@ -97,11 +95,8 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GaleriRequest $request, $id)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('galeri/foto');
         $file_foto = '';

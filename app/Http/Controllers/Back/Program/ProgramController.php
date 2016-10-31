@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Back\Program;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Requests\Program\ProgramRequest;
 use App\Http\Controllers\Controller;
 
 use App\Models\Program\Program;
@@ -45,11 +46,8 @@ class ProgramController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProgramRequest $request)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('program/foto');
         $file_foto = '';
@@ -98,11 +96,8 @@ class ProgramController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProgramRequest $request, $id)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-        ]);
         /* make directory */
         Storage::makeDirectory('program/foto');
         $file_foto = '';
