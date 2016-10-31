@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Back\Berita;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Requests\Berita\BeritaRequest;
 use Auth;
 use Storage;
 use App\Http\Requests;
