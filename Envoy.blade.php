@@ -5,6 +5,10 @@
     pull-server
 @endstory
 
+@task('tes', ['on' => 'web'])
+	ll
+@endtask
+
 @task('push', ['on' => 'local'])
 	git push origin master
 	git push origin master
@@ -16,6 +20,7 @@
 	git stash
     git pull origin master
     composer dump-autoload
+    ls
 @endtask
 
 @task('composer', ['on' => 'web'])
