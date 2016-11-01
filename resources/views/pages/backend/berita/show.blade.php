@@ -36,16 +36,6 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($berita->video) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($berita->media_dokumen) }}">
-					</div>
-				</div>
-				<div class="row">
 					<center>
 						<a href="{{ url('admin/berita') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>
 					</center>
