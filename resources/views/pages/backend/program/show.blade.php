@@ -19,32 +19,21 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA BAHAN BERBAHAYA</h4>
+				<h4 class="header">{{ $program->nama }}</h4>
+				<hr>
 				<div class="row">
-					<div class="col s8">
-						{{ $program->nama }}
+					<div class="col s12">
+						<center>
+							<img src="{{ asset($program->media_foto) }}" width="400">
+						</center>						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s8">
+					<div class="col s12">
 						{{ $program->deskripsi }}
 					</div>
 				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($program->media_foto) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($program->media_video) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($program->media_dokumen) }}">
-					</div>
-				</div>
+				
 				<div class="row">
 					<center>
 						<a href="{{ url('admin/program') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>

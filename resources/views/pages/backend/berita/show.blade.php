@@ -19,32 +19,20 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA BERITA</h4>
+				<h4 class="header">{{ $berita->judul }}</h4>
+				<hr>
 				<div class="row">
-					<div class="col s8">
-						{{ $berita->judul }}
+					<div class="col s12">
+						<center>
+							<img src="{{ asset($berita->foto) }}">
+						</center>						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s8">
-						{{ $berita->konten }}
+					<div class="col s12">
+						<p align="justify">{!! $berita->konten !!}</p>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($berita->foto) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($berita->video) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($berita->media_dokumen) }}">
-					</div>
-				</div>
+				</div>				
 				<div class="row">
 					<center>
 						<a href="{{ url('admin/berita') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>

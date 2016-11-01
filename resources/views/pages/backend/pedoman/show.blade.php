@@ -19,20 +19,16 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA PEDOMAN</h4>
+				<h4 class="header">{{ $pedoman->judul }}</h4>
+				<hr>
 				<div class="row">
-					<div class="col s8">
-						{{ $pedoman->judul }}
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s8">
+					<div class="col s12">
 						{{ $pedoman->konten }}
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($pedoman->media_dokumen) }}">
+					<div class="col s12">
+						<a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-success" target="_blank"> Lihat Dokumen</a>
 					</div>
 				</div>
 				<div class="row">
