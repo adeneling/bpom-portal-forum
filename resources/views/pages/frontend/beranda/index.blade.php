@@ -95,7 +95,7 @@
 							<div class="info">
 								<h4 class="title">{{ $pasar->nama_pasar }}</h4>
 								<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : '') }}" title="{{ $pasar->nama_pasar }}">
-									<button class="btn btn-primary">Read More</button>
+									<button class="btn btn-primary">Lihat</button>
 								</a>
 							</div>
 							<div class="media-wrapper">
