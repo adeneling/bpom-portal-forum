@@ -19,14 +19,17 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA FOTO</h4>
+				<h4>Judul Foto: {{ $galeri->judul }}</h4>
+				<hr>
 				<div class="row">
-					<div class="col s8">
-						{{ $galeri->judul }}
+					<div class="col s12">
+						<center>
+							<img src="{{ asset($galeri->foto) }}">
+						</center>						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s8">
+					<div class="col s12">
 						{{ $galeri->keterangan }}
 					</div>
 				</div>
