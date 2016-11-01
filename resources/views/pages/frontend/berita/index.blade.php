@@ -27,7 +27,7 @@
 							</h3>
 							<p>{!! substr($berita->konten, 0, 400).'...' !!}</p>
 							<div class="news-meta">
-								<span class="news-datetime"><strong>{{ date('d F y', strtotime($berita->created_at)) }}</strong></span>
+								<span class="news-datetime"><span class="label label-primary label-main-nav">{{ date('d F y', strtotime($berita->created_at)) }}</span></span>
 							</div>
 						</div>
 					</div>
