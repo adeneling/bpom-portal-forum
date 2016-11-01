@@ -19,32 +19,21 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">DATA BAHAN BERBAHAYA</h4>
+				<h4 class="header">{{ $bahanBerbahaya->nama }}</h4>
+				<hr>
 				<div class="row">
-					<div class="col s8">
-						{{ $bahanBerbahaya->nama }}
+					<div class="col s12">
+						<center>
+							<img src="{{ asset($bahanBerbahaya->media_foto) }}">
+						</center>						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s8">
-						{{ $bahanBerbahaya->deskripsi }}
+					<div class="col s12">
+						<p align="justify">{{ $bahanBerbahaya->deskripsi }}</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_foto) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_video) }}">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<img src="{{ asset($bahanBerbahaya->media_dokumen) }}">
-					</div>
-				</div>
+				
 				<div class="row">
 					<center>
 						<a href="{{ url('admin/bahan-berbahaya') }}" class="btn waves-effect waves-light indigo"> KEMBALI </a>
