@@ -141,5 +141,40 @@ class MediaPromosiSeeder extends Seeder
 		$media->deskripsi = '';
 		$media->tipe = 'dokumen';
 		$media->save();
+
+		// -------------------------------------------------------------------------------------
+
+		$path = public_path('seeder/media_informasi/audio/SPOT BPOM BAHAN BERBAHAYA - versi pewarna tekstil.mp3');
+		$filename = 'banner/audio/'.str_random(10).'.'.explode('.', $path)[1];
+		Storage::put($filename, file_get_contents($path));
+		$media = new MediaPromosi;
+		$media->user_id = 1;
+		$media->nama = 'SPOT BPOM BAHAN BERBAHAYA - versi pewarna tekstil';
+		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
+		$media->deskripsi = '';
+		$media->tipe = 'audio';
+		$media->save();
+
+		$path = public_path('seeder/media_informasi/audio/Spot BPOM - Versi Formalin&Boraks OKE.mp3');
+		$filename = 'banner/audio/'.str_random(10).'.'.explode('.', $path)[1];
+		Storage::put($filename, file_get_contents($path));
+		$media = new MediaPromosi;
+		$media->user_id = 1;
+		$media->nama = 'Spot BPOM - Versi Formalin dan Boraks';
+		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
+		$media->deskripsi = '';
+		$media->tipe = 'audio';
+		$media->save();
+
+		$path = public_path('seeder/media_informasi/audio/Spot BPOM - Versi Kresek Hitam OKE.mp3');
+		$filename = 'banner/audio/'.str_random(10).'.'.explode('.', $path)[1];
+		Storage::put($filename, file_get_contents($path));
+		$media = new MediaPromosi;
+		$media->user_id = 1;
+		$media->nama = 'Spot BPOM - Versi Kresek Hitam';
+		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
+		$media->deskripsi = '';
+		$media->tipe = 'audio';
+		$media->save();
     }
 }
