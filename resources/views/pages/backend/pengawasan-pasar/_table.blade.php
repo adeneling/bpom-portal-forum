@@ -6,8 +6,7 @@
 		<th data-field="nama_pasar">Nama Pasar</th>
 		<th data-field="provinsi">Provinsi</th>
 		<th data-field="kota" width="5%">Kota</th>
-		<th data-field="nilai_bb" width="6%">Nilai BB</th>
-		<th data-field="hasil_bb" width="10%">Hasil Nilai BB</th>
+		<th data-field="nilai_bb" width="10%">Nilai BB</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -20,12 +19,9 @@
 				<td>{{ $pasar->provinsi->provinsi }}</td>
 				<td>{{ $pasar->kota->kota }}</td>
 				<td>
-					{!! Form::number('nilai_bb', null, ['class'=>'validate']) !!}
-				</td>
-				<td>
 					<div id="card-alert" class="card light-blue lighten-5">
 						<div class="card-content light-blue-text">
-							<center>0</center>
+							{!! Form::number('nilai_bb', null, ['class'=>'validate']) !!}
 						</div>
 					</div>
 				</td>
