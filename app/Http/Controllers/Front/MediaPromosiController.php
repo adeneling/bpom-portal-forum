@@ -28,7 +28,7 @@ class MediaPromosiController extends Controller
 		//
 		$videos = [];
 
-		$channel = Youtube::getChannelByName('xdadevelopers');
+		$channel = Youtube::getChannelById('UCdz07EAMX4sD7rbmZm6CvdQ');
 		$playlists = Youtube::getPlaylistsByChannelId($channel->id);
 		foreach($playlists['results'] as $playlist){
 			$playlistItems = Youtube::getPlaylistItemsByPlaylistId($playlist->id);

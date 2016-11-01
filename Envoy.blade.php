@@ -20,7 +20,6 @@
 	git stash
     git pull origin master
     composer dump-autoload
-    ls
 @endtask
 
 @task('composer', ['on' => 'web'])
