@@ -8,7 +8,7 @@ use Storage;
 use App\Http\Requests;
 use App\Http\Requests\Pedoman\PedomanRequest;
 use App\Http\Controllers\Controller;
-use App\Models\Requests\Pedoman\Pedoman;
+use App\Models\Pedoman\Pedoman;
 
 class PedomanController extends Controller
 {
