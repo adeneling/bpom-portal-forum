@@ -11,6 +11,11 @@ use App\Models\PasarAman\PasarAman;
 
 class PasarAmanController extends Controller
 {
+	public function pasarPengawasan()
+	{
+		$pasars = PasarAman::orderBy('created_at','desc')->paginate(10);
+        return view('pages.frontend.pasar-aman.pasar-pengawasan', compact('pasars'));
+	}
 	/**
 	 * Display a listing of the resource.
 	 *

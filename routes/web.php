@@ -29,6 +29,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::get('media-informasi/dokumen/{lokasi}/show', 'MediaPromosiController@dokumenShow')->name('media.dokumen.show');
 	/* PASAR AMAN */
 	Route::resource('pasar-aman','PasarAmanController');
+	Route::get('pasar-pengawasan', 'PasarAmanController@pasarPengawasan')->name('pasar.pengawasan');
 	Route::get('pasar-aman/{id}/{judul}', 'PasarAmanController@show')->name('pasar-aman.lihat');
 	/* BAHAN BERBAHAYA */
 	Route::resource('bahan-berbahaya','BahanBerbahayaController');

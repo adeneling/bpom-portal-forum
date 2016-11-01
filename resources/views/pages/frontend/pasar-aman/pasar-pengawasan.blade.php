@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Pasar Aman')
+@section('title', 'Pasar Dalam Pengawasan')
 
 @section('content')
 <!-- BREADCRUMBS -->
