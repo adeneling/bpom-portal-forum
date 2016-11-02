@@ -34,8 +34,9 @@ class ForumFasilitatorController extends Controller
 	public function index()
 	{
 		//
-		$threads = Thread::all();
-		return view('pages.forum-fasilitator.thread.index', ['threads' => $threads]);
+		$threads = Thread::where('tipe', '=', 'umum')->get();
+		$guide = Thread::where('tipe', '=', 'guide')->get();
+		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guide'));
 	}
 
 	/**
@@ -62,7 +63,11 @@ class ForumFasilitatorController extends Controller
 		$thread = new Thread;
 		$thread->forum_user_id = auth('forum')->user()->id;
 		$thread->judulThread = $request->get('judul-thread');
-		$thread->tipe = "umum";
+		if(auth('forum')->user()->admin == 2){
+			$thread->tipe = $request->get('tipe');
+		}else{
+			$thread->tipe = 'umum';
+		}
 		$thread->konten = $request->get('konten');
 		$thread->save();
 		return redirect()->route('thread.index');
@@ -111,7 +116,11 @@ class ForumFasilitatorController extends Controller
 		$thread = Thread::find(decrypt($id));
 		$thread->forum_user_id = auth('forum')->user()->id;
 		$thread->judulThread = $request->get('judul-thread');
-		$thread->tipe = "umum";
+		if(auth('forum')->user()->admin == 2){
+			$thread->tipe = $request->get('tipe');
+		}else{
+			$thread->tipe = 'umum';
+		}
 		$thread->konten = $request->get('konten');
 		$thread->update();
 		return redirect()->route('thread.index');

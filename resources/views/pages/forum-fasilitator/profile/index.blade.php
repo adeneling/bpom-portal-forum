@@ -94,6 +94,7 @@
 										<th>Post</th>
 										<th>Komentar Terakhir</th>
 										<th>Komentar</th>
+										<th>Aksi</th>
 									</thead>
 									<tbody>
 										@foreach($user->thread as $thread)
@@ -105,6 +106,10 @@
 												<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
 												<td>12 Agustus 2016</td>
 												<td><span class="badge">{{ $countComment }}</span></td>
+												<td>
+													<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-warning btn-xs">Edit</a>
+													<a href="#" class="btn btn-danger btn-xs" id="btnDelete" data-id="{{ encrypt($thread->id) }}">Delete</a>
+												</td>
 											</tr>
 										@endforeach
 									</tbody>
@@ -117,4 +122,36 @@
 		</div>
 	</div>
 </div>
+@stop
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click', '#btnDelete', function(e){
+				e.preventDefault();
+
+				swal({
+						title: "Are you sure?",
+						text: "You will not be able to recover this imaginary file!",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonClass: "btn-danger",
+						confirmButtonText: "Yes, delete it!",
+						cancelButtonText: "No, cancel plx!",
+						closeOnConfirm: false,
+						closeOnCancel: false
+					},
+					function(isConfirm) {
+						if (isConfirm) {
+							$.ajax({
+								
+							});
+							swal("Deleted!", "Your imaginary file has been deleted.", "success");
+						} else {
+							swal("Cancelled", "Your imaginary file is safe :)", "error");
+						}
+				});
+			});
+		});
+	</script>
 @stop

@@ -93,6 +93,16 @@
 							<button class="btn btn-primary" id="btnLihatGallery" >Lihat Gallery</button>
 						</div>
 					</div>
+					@if(auth('forum')->user()->admin == 2)
+						<div class="form-group">
+							<label for="tipe" class="col-sm-2 control-label">Jadikan Thread Guide</label>
+							<div class="col-sm-10">
+								{!! Form::radio('tipe', 'guide', false); !!} Guide
+								<br>
+								{!! Form::radio('tipe', 'umum', true); !!} Umum
+							</div>
+						</div>
+					@endif
 					<div class="form-group">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10">
