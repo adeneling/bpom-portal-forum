@@ -2,7 +2,7 @@
 <section class="call-to-action">
 	<div class="container">
 		<div class="pull-left">
-			<h2 class="section-heading">GET IN TOUCH</h2>
+			<h2 class="section-heading"></h2>
 		</div>
 		<div class="pull-right">
 			<span>Hubungi Kami - 1500533</span>&nbsp;&nbsp;<a href="{{ url('hubungi-kami') }}" class="btn btn-lg btn-primary">Halo BPOM</a>
