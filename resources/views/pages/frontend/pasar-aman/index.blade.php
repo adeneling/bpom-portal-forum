@@ -22,8 +22,10 @@
 							<img src="{{ asset($pasar->photo) }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
 						</a>
 						<div class="media-body">
-							<h3><a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
-								{{ $pasar->nama_pasar }}</a>
+							<h3>
+								<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
+									{{ $pasar->nama_pasar }}
+								</a>
 							</h3>
 							
 							<div class="news-meta">

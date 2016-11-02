@@ -79,6 +79,20 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'mssql' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_MSSQL_HOST', 'localhost'),
+            'port' => env('DB_MSSQL_PORT', '1433'),
+            'database' => env('DB_MSSQL_DATABASE', 'sipamanDb'),
+            'username' => env('DB_MSSQL_USERNAME', 'forge'),
+            'password' => env('DB_MSSQL_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
     ],
 
     /*
