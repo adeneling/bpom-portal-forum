@@ -4,7 +4,7 @@
 		<!-- TOPBAR -->
 		<div class="topbar">
 			<ul class="list-inline top-nav">
-				<li><a href="#">SIPAMAN</a></li>
+				<li><a href="http://sipaman.pom.go.id/" target="_blank">SIPAMAN</a></li>
 				<li><a href="{{ route('thread.index') }}">FORUM FASILITATOR </a></li>
 				<li><a href="{{ route('faq.index') }}">FAQ</a></li>
 				<li><a href="{{ route('hubungi-kami.index') }}">HUBUNGI KAMI</a></li>
@@ -36,8 +36,8 @@
 				<span class="sr-only">Toggle Navigation</span>
 				<i class="fa fa-bars"></i>
 			</button>
-			<a href="{{ route('index') }}" class="navbar-brand navbar-logo navbar-logo-bigger">
-				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}" alt="Repute - Responsive Multipurpose Bootstrap Theme">
+			<a href="http://www.pom.go.id" target="_blank" class="navbar-brand navbar-logo navbar-logo-bigger">
+				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}">
 			</a>
 		</div>
 		<!-- MAIN NAVIGATION -->
@@ -50,7 +50,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">DAFTAR PASAR  <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="{{ route('pasar-aman.index') }}"> PASAR AMAN</a></li>
-						<li><a href=""> PASAR DALAM PANTAUAN</a></li>
+						<li><a href="{{ route('pasar.pengawasan') }}"> PASAR DALAM PANTAUAN</a></li>
 					</ul>
 				</li>
 				<li class="dropdown ">

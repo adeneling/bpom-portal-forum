@@ -27,7 +27,13 @@
 						</center>						
 					</figure>
 					<div class="excerpt">
-						<p>{!! $berita->konten !!}</p>
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-10">
+							<p>{!! $berita->konten !!}</p>
+						</div>						
+						<div class="col-md-1">
+						</div>
 					</div>
 				</div>
 			</article>

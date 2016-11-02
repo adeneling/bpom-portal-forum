@@ -27,7 +27,13 @@
 						</center>						
 					</figure>
 					<div class="excerpt">
-						<p>{!! $program->deskripsi !!}</p>
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-10">
+							<p>{!! $program->deskripsi !!}</p>
+						</div>						
+						<div class="col-md-1">
+						</div>						
 					</div>
 				</div>
 			</article>
