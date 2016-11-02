@@ -110,4 +110,80 @@
 	</div>
 </section>		
 <!-- END PASAR AMAN -->
+
+<section>
+	<div class="container">
+		<h2 class="heading">POLLING</h2>
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website BPOM?</h2>
+				</div>
+				<div class="panel-body">
+					<div class="form-horizontal">
+						<div class="form-group">
+							<label class="col-md-1 control-label">Rate </label>
+							<div class="col-md-11">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-1 control-label">Hasil </label>
+							<div class="col-md-2">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<br>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<br>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<br>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<br>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>
+							<div class="col-md-2">
+								0%
+								<br>
+								0%
+								<br>
+								0%
+								<br>
+								0%
+								<br>
+								0%
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-1 control-label">Masukkan</label>
+							<div class="col-md-11">
+								<textarea class="form-control" placeholder="textarea" rows="4"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<center>
+									<button class="btn btn-primary">SUBMIT</button>
+								</center>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 @stop
