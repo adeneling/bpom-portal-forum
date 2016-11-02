@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMediaPromosisTable extends Migration
+class CreateTableMonitoringPasar extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,16 @@ class CreateMediaPromosisTable extends Migration
      */
     public function up()
     {
-        Schema::create('media-promosi', function (Blueprint $table) {
+        //
+        Schema::create('monitoring-pasar', function(Blueprint $table){
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('nama');
-            $table->string('lokasi')->unique();
-            $table->text('deskripsi')->nullable();
-            $table->enum('tipe', ['audio', 'gambar', 'dokumen'])->nullable();
+            $table->unsignedInteger('pasar_aman_id');
+            $table->string('tahun_survey', 4);
+            $table->float('tahap1');
+            $table->float('tahap2');
+            $table->float('presentase_jawaban');
+            $table->string('hasil_survey');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -33,6 +36,7 @@ class CreateMediaPromosisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('media-promosi');
+        //
+        Schema::dropIfExists('monitoring-pasar');
     }
 }

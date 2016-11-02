@@ -17,7 +17,7 @@
 								<paper-audio-player src="{{ asset($audio->lokasi) }}" title="{{ $audio->nama }}" color="{{ $idx++ % 2 == 0 ? '#F05C38' : '' }}"></paper-audio-player>
 							</div>
 							<div class="col-md-1">
-								<a class="btn btn-lg btn-primary" href="{{ route('download', asset($audio->lokasi)) }}">Download</a>
+								<a class="btn btn-lg btn-primary" href="{{ Response::download(asset($audio->lokasi)) }}">Download</a>
 							</div>
 						</div>
 						<br>

@@ -53,7 +53,7 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ImageThreadRequest $request)
+    public function store(Request $request)
     {
         //
         Storage::makeDirectory('threadImage');

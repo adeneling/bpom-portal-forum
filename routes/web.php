@@ -35,7 +35,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::get('bahan-berbahaya/{id}/{judul}', 'BahanBerbahayaController@show')->name('bahan-berbahaya.lihat');
 
 	// Download
-	Route::get('download/{filename}', 'DownloadController@download')->where('filename', '[A-Za-z0-9\-\_\.]+')->name('download');
+	Route::get('download/{filename}', 'DownloadController@download')->name('download');
 });
 
 // Forum

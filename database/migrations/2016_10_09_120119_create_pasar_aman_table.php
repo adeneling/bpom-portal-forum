@@ -16,12 +16,18 @@ class CreatePasarAmanTable extends Migration
         Schema::create('pasar_aman', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
+            $table->string('balai_pom')->nullable();
             $table->string('nama_pasar');
             $table->string('kepala_pasar')->nullable();
             $table->string('petugas_pasar')->nullable();
+            $table->string('sumber_data_intervensi')->nullable();
+            $table->string('tahun_mulai_intervensi')->nullable();
+            $table->string('tahun_survey')->nullable();
+            $table->string('contact_person')->nullable();
+            $table->string('los/kios')->nullable();
             $table->text('alamat_pasar')->nullable();
-            $table->unsignedInteger('provinsi_id');
-            $table->unsignedInteger('kota_id');
+            $table->unsignedInteger('provinsi_id')->nullable();
+            $table->unsignedInteger('kota_id')->nullable();
             $table->unsignedInteger('kecamatan_id')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();
