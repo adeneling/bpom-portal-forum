@@ -19,7 +19,7 @@
 				<li class="type-portfolio">
 					<div class="media clearfix">
 						<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="pull-left">
-							<img src="{{ asset($pasar->photo) }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
+							<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
 						</a>
 						<div class="media-body">
 							<h3><a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
