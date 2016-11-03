@@ -16,7 +16,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/kampanye pasar aman di pasar kutowinangun3.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -26,7 +26,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar agus salim pekan baru.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -36,7 +36,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar alai padang.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -46,7 +46,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/Pasar bawah Bukittinggi.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -56,7 +56,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/Pasar bawah Bukittinggi2.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -66,7 +66,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar keutapang.png');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -76,7 +76,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar lambaro.JPG');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -86,7 +86,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar pangururan.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -96,7 +96,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar peunayong.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -106,7 +106,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar sei sikambing medan.gif');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -116,7 +116,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar tanah kongsi.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -126,7 +126,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar tanah kongsi2 putri indonesia.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -136,7 +136,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar tanah kongsi2.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;
@@ -146,7 +146,7 @@ class GaleriSeeder extends Seeder
 
 		$path = public_path('seeder/galeri/pasar ulak karang padang.jpg');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'galeri/foto/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'galeri/foto/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$galeri = new Galeri;
 		$galeri->user_id = 1;

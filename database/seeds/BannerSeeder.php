@@ -18,7 +18,7 @@ class BannerSeeder extends Seeder
 
 		$path = public_path('seeder/banner/1.png');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'banner/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
@@ -31,7 +31,7 @@ class BannerSeeder extends Seeder
 
 		$path = public_path('seeder/banner/2.png');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'banner/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
@@ -43,7 +43,7 @@ class BannerSeeder extends Seeder
 
 		$path = public_path('seeder/banner/3.png');
 		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'banner/'.end($name).'.'.explode('.', $path)[1];
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
