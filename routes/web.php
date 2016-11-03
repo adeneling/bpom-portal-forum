@@ -96,3 +96,16 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });
+
+Route::get('test', function(){
+	$path = public_path('seeder/media_informasi/gambar/Banner Kemasan Pangan Final Cetak.jpg');
+	$filename = 'media/gambar/'.explode('.', $path)[0].'.'.explode('.', $path)[1];
+
+	echo "path = ".$path;
+	echo "<br>";
+	$name = explode('/', explode('.', $path)[0]);
+	echo "filename = ".end($name);
+	echo "<br>";
+	echo "extension = ".explode('.', $path)[0];
+	echo "<br>";
+});

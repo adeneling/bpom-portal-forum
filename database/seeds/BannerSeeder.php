@@ -17,7 +17,8 @@ class BannerSeeder extends Seeder
 		Storage::makeDirectory('banner');
 
 		$path = public_path('seeder/banner/1.png');
-		$filename = 'banner/'.str_random(10).'.'.explode('.', $path)[1];
+		$name = explode('/', explode('.', $path)[0]);
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
@@ -29,7 +30,8 @@ class BannerSeeder extends Seeder
 
 
 		$path = public_path('seeder/banner/2.png');
-		$filename = 'banner/'.str_random(10).'.'.explode('.', $path)[1];
+		$name = explode('/', explode('.', $path)[0]);
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
@@ -40,7 +42,8 @@ class BannerSeeder extends Seeder
 		$banner->save();
 
 		$path = public_path('seeder/banner/3.png');
-		$filename = 'banner/'.str_random(10).'.'.explode('.', $path)[1];
+		$name = explode('/', explode('.', $path)[0]);
+		$filename = 'banner/'.str_random(3).'-'.end($name).'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$banner = new Banner;
 		$banner->user_id = 1;
