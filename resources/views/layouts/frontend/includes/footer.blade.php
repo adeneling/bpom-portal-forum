@@ -59,10 +59,8 @@
 				<div class="social-connect">
 					<h3 class="footer-heading">SOSIAL MEDIA</h3>
 					<ul class="list-inline social-icons">
-						<li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" class="googleplus-bg"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
+						<li><a href="https://id-id.facebook.com/BadanPOM/" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/bpom_ri" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
 				<!-- END COLUMN 3 -->
