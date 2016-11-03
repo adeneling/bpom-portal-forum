@@ -7,6 +7,7 @@
 <div class="page-header">
 	<div class="container">
 		<h1 class="page-title pull-left">@yield('title')</h1>
+		{!! Breadcrumbs::render('pasar-pengawasan') !!}
 	</div>
 </div>
 <!-- END BREADCRUMBS -->
