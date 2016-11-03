@@ -15,7 +15,7 @@
 		@foreach($pasarAman as $pasar)
 			<tr>
 				<td>{{ $no++ }}</td>
-				<td><img src="{{ asset($pasar->photo) }}" width=50 height=50></td>
+				<td><img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/default/logo-bpom.png') }}" width=50 height=50></td>
 				<td>{{ $pasar->nama_pasar }}</td>
 				<td>{{ $pasar->provinsi['provinsi'] }}</td>
 				<td>{{ $pasar->kota['kota'] }}</td>
