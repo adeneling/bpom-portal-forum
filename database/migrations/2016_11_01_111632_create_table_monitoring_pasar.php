@@ -18,9 +18,9 @@ class CreateTableMonitoringPasar extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('pasar_aman_id');
-            $table->string('tahun_survey', 4);
-            $table->float('tahap1');
-            $table->float('tahap2');
+            $table->string('tahun_survey', 4)->nullable();
+            $table->float('tahap1')->nullable();
+            $table->float('tahap2')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
