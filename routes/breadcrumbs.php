@@ -15,6 +15,13 @@ Breadcrumbs::register('berita', function($breadcrumbs)
     $breadcrumbs->push('Berita', route('berita.index'));
 });
 
+// Beranda > Peta Situs
+Breadcrumbs::register('peta-situs', function($breadcrumbs)
+{
+    $breadcrumbs->parent('beranda');
+    $breadcrumbs->push('Peta Situs', route('peta-situs.index'));
+});
+
 // Beranda > Galeri
 Breadcrumbs::register('galeri', function($breadcrumbs)
 {

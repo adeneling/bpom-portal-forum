@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Berita')
+@section('title', 'Program')
 
 @section('content')
 <div class="page-content">
