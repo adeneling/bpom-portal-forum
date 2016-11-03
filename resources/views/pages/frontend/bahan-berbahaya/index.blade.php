@@ -79,13 +79,13 @@
 						<p align="justify">
 							<ol type="a">
 								<li>Contoh pangan yang banyak ditemukan mengandung formalin: tahu, mie basah, ayam potong, ikan segar, ikan asin. <br>
-									Ciri – cirinya : Tekstur makanan lebih kenyal, tidak mudah hancur, lebih tahan lama, ada aroma yang cukup menyengat.</li>
+									<strong>Ciri – cirinya:</strong> Tekstur makanan lebih kenyal, tidak mudah hancur, lebih tahan lama, ada aroma yang cukup menyengat.</li>
 								<li>Contoh pangan yang banyak ditemukan mengandung borak/bleng/pijer : mie basah, bakso, lontong, kerupuk gendar. <br>
-									Ciri –cirinya : tekstur makanan lebih kenyal, untuk mie basah : lebih mengkilap, tidak mudah putus, tidak lengket, kerupuk : lebih renyah.</li>
+									<strong>Ciri – cirinya:</strong> tekstur makanan lebih kenyal, untuk mie basah : lebih mengkilap, tidak mudah putus, tidak lengket, kerupuk : lebih renyah.</li>
 								<li>Contoh pangan yang diduga mengandung rhodamin B : kerupuk merah, terasi, sirup dan arumanis berwarna merah. <br>
-									Ciri – ciri nya : Warna merah mencolok, rasa pahit, jika dipegang warna merah akan menempel di kulit.</li>
+									<strong>Ciri – cirinya:</strong> Warna merah mencolok, rasa pahit, jika dipegang warna merah akan menempel di kulit.</li>
 								<li>Contoh pangan yang banyak ditemukan mengandung kuning metanil : kerupuk berwarna kuning, mie basah, tahu kuning. <br>
-									Ciri – cirinya : warna kuning mencolok, rasa pahit, jika dipegang warna kuning akan menempel di kulit.</li>
+									<strong>Ciri – cirinya:</strong> warna kuning mencolok, rasa pahit, jika dipegang warna kuning akan menempel di kulit.</li>
 
 							</ol>
 						</p>
