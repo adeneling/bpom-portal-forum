@@ -62,9 +62,9 @@
 				<div id="3" class="panel">
 					<div class="panel-body">
 						<p align="justify">
-							Boraks merupakan senyawa dengan nama kimia natrium tetraborat yang berbentuk kristal lunak. Boraks digunakan untuk campuran pembuatan gelas, pengawet kayu, salep kulit, campuran pupuk tanaman, dll.<br>
-							Formalin termasuk kelompok aldehid dengan rumus kimia HCHO, biasanya berbentuk larutan yang tidak berwarna dan berbau sangat menyengat. Di dalam larutan formalin terkandung sekitar 37% formaldehid dalam air dan. Formalin dipakai untuk mengawetkan mayat, membunuh kuman, pengawet kosmetika dan pengeras kuku, serta perekat kayu lapis.<br>
-							Rhodamin B dan Kuning metanil dipakai untuk pewarna tekstil, kertas serta cat. 
+							<h4>Boraks</h4> Boraks merupakan senyawa dengan nama kimia natrium tetraborat yang berbentuk kristal lunak. Boraks digunakan untuk campuran pembuatan gelas, pengawet kayu, salep kulit, campuran pupuk tanaman, dll.<br>
+							<h4>Formalin</h4> Formalin termasuk kelompok aldehid dengan rumus kimia HCHO, biasanya berbentuk larutan yang tidak berwarna dan berbau sangat menyengat. Di dalam larutan formalin terkandung sekitar 37% formaldehid dalam air dan. Formalin dipakai untuk mengawetkan mayat, membunuh kuman, pengawet kosmetika dan pengeras kuku, serta perekat kayu lapis.<br>
+							<h4>Rhodamin B dan Kuning Metanil</h4> Rhodamin B dan Kuning Metanil dipakai untuk pewarna tekstil, kertas serta cat. 
 						</p>
 					</div>
 				</div>
