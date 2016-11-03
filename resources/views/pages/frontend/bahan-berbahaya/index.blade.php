@@ -8,6 +8,7 @@
 <div class="page-header">
 	<div class="container">
 		<h1 class="page-title pull-left">@yield('title')</h1>
+		{!! Breadcrumbs::render('bahan-berbahaya') !!}
 	</div>
 </div>
 

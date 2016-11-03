@@ -22,6 +22,27 @@ Breadcrumbs::register('galeri', function($breadcrumbs)
     $breadcrumbs->push('Galeri', route('galeri.index'));
 });
 
+// Beranda > Bahan Berbahaya
+Breadcrumbs::register('bahan-berbahaya', function($breadcrumbs)
+{
+    $breadcrumbs->parent('beranda');
+    $breadcrumbs->push('Bahan Berbahaya', route('bahan-berbahaya.index'));
+});
+
+// Beranda > Pasar Aman
+Breadcrumbs::register('pasar-aman', function($breadcrumbs)
+{
+    $breadcrumbs->parent('beranda');
+    $breadcrumbs->push('Pasar Aman', route('pasar-aman.index'));
+});
+
+// Beranda > Pasar Aman
+Breadcrumbs::register('pasar-pengawasan', function($breadcrumbs)
+{
+    $breadcrumbs->parent('beranda');
+    $breadcrumbs->push('Pasar Dalam Pengawasan', route('pasar.pengawasan'));
+});
+
 // Beranda > Program
 Breadcrumbs::register('program', function($breadcrumbs)
 {
@@ -82,12 +103,6 @@ Breadcrumbs::register('edit-tanggapan-thread', function($breadcrumbs, $comment) 
     $breadcrumbs->push('Edit Tanggapan Thread', route('comment.edit', encrypt($comment->id)));
 });
 
-// Beranda > Pasar Aman
-Breadcrumbs::register('pasar-aman', function($breadcrumbs)
-{
-    $breadcrumbs->parent('beranda');
-    $breadcrumbs->push('Pasar Aman', route('pasar-aman.index'));
-});
 
 // END FRONT END BREADCRUMBS
 
