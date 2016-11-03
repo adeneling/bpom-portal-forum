@@ -23,7 +23,7 @@
 											</h3>
 											<p>{{ $doc->deskripsi }}</p>
 											<span class="text-muted">
-												<a href="#" class="btn btn-primary"> Download</a> | <a href="{{ route('media.dokumen.show', [encrypt(urlencode( asset($doc->lokasi))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
+												<a href="{{ asset($doc->lokasi) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('media.dokumen.show', [encrypt(urlencode( asset($doc->lokasi))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
 											</span>
 										</div>
 									</div>
