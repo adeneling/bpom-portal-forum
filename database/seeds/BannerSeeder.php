@@ -14,7 +14,6 @@ class BannerSeeder extends Seeder
 	 */
 	public function run()
 	{
-		//
 		Storage::makeDirectory('banner');
 
 		$path = public_path('seeder/banner/1.png');
