@@ -20,6 +20,7 @@ Route::group(['namespace' => 'Front'], function(){
 	/* PEDOMAN */
 	Route::resource('pedoman','PedomanController');
 	Route::get('pedoman/{id}/{judul}', 'PedomanController@show')->name('pedoman.lihat');
+	Route::get('pedoman/dokumen/{lokasi}/show', 'PedomanController@dokumenShow')->name('pedoman.dokumen.show');
 	/* MEDIA PROMOSI*/
 	Route::resource('media-promosi','MediaPromosiController');
 	Route::get('media-informasi/video', 'MediaPromosiController@video')->name('media.video');
@@ -95,17 +96,4 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::post('pengguna-forum/isadmin/{id}/{isadmin}', 'ForumUsers\ForumUsersController@admin')->name('forum.users.admin');
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
-});
-
-Route::get('test', function(){
-	$path = public_path('seeder/media_informasi/gambar/Banner Kemasan Pangan Final Cetak.jpg');
-	$filename = 'media/gambar/'.explode('.', $path)[0].'.'.explode('.', $path)[1];
-
-	echo "path = ".$path;
-	echo "<br>";
-	$name = explode('/', explode('.', $path)[0]);
-	echo "filename = ".end($name);
-	echo "<br>";
-	echo "extension = ".explode('.', $path)[0];
-	echo "<br>";
 });
