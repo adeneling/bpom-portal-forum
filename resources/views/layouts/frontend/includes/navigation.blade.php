@@ -11,7 +11,7 @@
 				
 				<li><a href="{{ route('peta-situs.index') }}">PETA SITUS</a></li>
 				@if(auth('forum')->check())
-					<li><b>Hay <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
+					<li><b>Hello <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
 					<li><a href="{{ url('forum-fasilitator/logout') }}">LOGOUT</a></li>
 					<li>&nbsp; &nbsp;</li>
 				@else
