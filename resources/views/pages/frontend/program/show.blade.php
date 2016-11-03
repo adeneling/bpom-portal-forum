@@ -36,6 +36,10 @@
 						</div>						
 					</div>
 				</div>
+				<hr>
+				<center>
+					<a href="{{ url('program') }}" class="btn btn-primary">KEMBALI</a>
+				</center>				
 			</article>
 		</div>
 	</div>
