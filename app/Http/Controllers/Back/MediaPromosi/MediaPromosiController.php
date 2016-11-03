@@ -27,7 +27,7 @@ class MediaPromosiController extends Controller
 	public function index()
 	{
 		//
-		$media = MediaPromosi::all();
+		$media = MediaPromosi::orderBy('tipe', 'asc')->get();
 		return view('pages.backend.media-promosi.index', compact('media'))->withTitle('Kelola Media Promosi');
 	}
 
@@ -116,6 +116,8 @@ class MediaPromosiController extends Controller
 	public function edit($id)
 	{
 		//
+		$media = MediaPromosi::find(decrypt($id));
+		return view('pages.backend.media-promosi.edit', compact('media'))->withTitle('Ubah Media Promosi');
 	}
 
 	/**
@@ -128,6 +130,12 @@ class MediaPromosiController extends Controller
 	public function update(Request $request, $id)
 	{
 		//
+		$media = MediaPromosi::find(decrypt($id));
+		$media->nama = $request->get('nama');
+		$media->deskripsi = $request->get('deskripsi');
+		$media->update();
+
+		return redirect()->route('admin.media-promosi.index');
 	}
 
 	/**

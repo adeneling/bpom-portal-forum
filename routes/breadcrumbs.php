@@ -178,6 +178,13 @@ Breadcrumbs::register('admin.media-promosi.create', function($breadcrumbs)
     $breadcrumbs->push('Tambah Media Promosi', route('admin.media-promosi.create'));
 });
 
+// Dashboard > Kelola Pasar Aman > Ubah Pasar Aman
+Breadcrumbs::register('admin.media-promosi.edit', function($breadcrumbs, $mediaPromosi)
+{
+    $breadcrumbs->parent('admin.media-promosi');
+    $breadcrumbs->push($mediaPromosi->nama, route('admin.media-promosi.edit', encrypt($mediaPromosi->id)));
+});
+
 // Dashboard > Kelola Pasar Aman
 Breadcrumbs::register('admin.pasar-aman', function($breadcrumbs)
 {
