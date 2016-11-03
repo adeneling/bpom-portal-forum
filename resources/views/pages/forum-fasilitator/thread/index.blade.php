@@ -66,12 +66,20 @@
 											<th>Komentar</th>
 										</thead>
 										<tbody>
-											<tr>
-												<td><b><a href="">Judul forum</a></b></td>
-												<td>12 Agustus 2016</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">42</span></td>
-											</tr>
+											@foreach($guides as $guide)
+												<?php
+													$countComment = $guide->comment()->commentThread($guide->id)->count();
+												?>
+												<tr>
+													<td>
+														<b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($guide->id, $guide->judulThread) }}">{{ $guide->judulThread }}</a></b><br>
+														<small>By {{ $guide->forumUsers->name }}</small>
+													</td>
+													<td>{{ date("d F Y", strtotime($guide->created_at)) }}</td>
+													<td>{{ $countComment != 0 ? date("d F Y", strtotime($guide->comment()->lastComment($guide->id)->first()['created_at'])) : '-' }}</td>
+													<td><span class="badge">{{ $countComment }}</span></td>
+												</tr>
+											@endforeach
 										</tbody>
 									</table>
 									<a href="" class="btn btn-primary pull-right"> Tampilkan Semua </a>

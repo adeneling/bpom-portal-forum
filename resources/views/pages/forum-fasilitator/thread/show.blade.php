@@ -35,7 +35,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="{{ route('comment.create', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
+					@if($thread->tipe == 'umum')
+						<a href="{{ route('comment.create', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-primary pull-left">Tanggapi Thread</a>
+					@endif
 				</div>
 				<div class="col-md-8">
 					<div class="row">

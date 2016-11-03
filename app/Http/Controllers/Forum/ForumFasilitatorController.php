@@ -35,8 +35,8 @@ class ForumFasilitatorController extends Controller
 	{
 		//
 		$threads = Thread::where('tipe', '=', 'umum')->get();
-		$guide = Thread::where('tipe', '=', 'guide')->get();
-		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guide'));
+		$guides = Thread::where('tipe', '=', 'guide')->get();
+		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guides'));
 	}
 
 	/**
