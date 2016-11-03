@@ -57,7 +57,7 @@
 							<div class="col-md-3" style="padding-top: 2em; padding-bottom: 2em;">
 								<center>
 									<div class="user-info" href="#">
-										<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($user->email) }}"
+										<img class="avatar img-circle img-thumbnail" src="{{ $user->photo }}"
 											width="64" alt="Generic placeholder image"><br>
 										<strong>{{ Auth::user()->name }}</strong>
 										<br>
