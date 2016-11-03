@@ -137,6 +137,13 @@ Breadcrumbs::register('admin.berita.create', function($breadcrumbs)
     $breadcrumbs->push('Tambah Berita', route('admin.berita.create'));
 });
 
+// Dashboard > Kelola Berita > Ubah Berita
+Breadcrumbs::register('admin.berita.edit', function($breadcrumbs, $berita)
+{
+    $breadcrumbs->parent('admin.berita');
+    $breadcrumbs->push($berita->judul, route('admin.berita.edit', encrypt($berita->id)));
+});
+
 // Dashboard > Kelola Galeri
 Breadcrumbs::register('admin.galeri', function($breadcrumbs)
 {
@@ -149,6 +156,13 @@ Breadcrumbs::register('admin.galeri.create', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.galeri');
     $breadcrumbs->push('Tambah Galeri', route('admin.galeri.create'));
+});
+
+// Dashboard > Kelola Galeri > Ubah Galeri
+Breadcrumbs::register('admin.galeri.edit', function($breadcrumbs, $galeri)
+{
+    $breadcrumbs->parent('admin.galeri');
+    $breadcrumbs->push($galeri->judul, route('admin.galeri.edit', encrypt($galeri->id)));
 });
 
 // Dashboard > Kelola Program
@@ -177,6 +191,13 @@ Breadcrumbs::register('admin.pedoman.create', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.pedoman');
     $breadcrumbs->push('Tambah Pedoman', route('admin.pedoman.create'));
+});
+
+// Dashboard > Kelola Pedoman > Ubah Pedoman
+Breadcrumbs::register('admin.pedoman.edit', function($breadcrumbs, $pedoman)
+{
+    $breadcrumbs->parent('admin.pedoman');
+    $breadcrumbs->push($pedoman->judul, route('admin.pedoman.edit', encrypt($pedoman->id)));
 });
 
 // Dashboard > Kelola Media Promosi
@@ -268,6 +289,13 @@ Breadcrumbs::register('admin.bahan-berbahaya.create', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin.bahan-berbahaya');
     $breadcrumbs->push('Tambah Bahan Berbahaya', route('admin.bahan-berbahaya.create'));
+});
+
+// Dashboard > Kelola Bahan Berbahaya > Ubah Bahan Berbahaya
+Breadcrumbs::register('admin.bahan-berbahaya.edit', function($breadcrumbs, $bahanBerbahaya)
+{
+    $breadcrumbs->parent('admin.bahan-berbahaya');
+    $breadcrumbs->push($bahanBerbahaya->nama, route('admin.bahan-berbahaya.edit', encrypt($bahanBerbahaya->id)));
 });
 
 // Dashboard > Kelola Pengguna Forum
