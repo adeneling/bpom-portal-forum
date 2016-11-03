@@ -144,37 +144,31 @@
 						<div class="form-group">
 							<label class="col-md-1 control-label">Hasil </label>
 							<div class="col-md-2">
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-							</div>
-							<div class="col-md-2">
-								0%
 								<br>
-								0%
-								<br>
-								0%
-								<br>
-								0%
-								<br>
-								0%
-							</div>
+								<span class="label label-success">0%</span>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>						
 						</div>
 						<div class="form-group">
 							<label class="col-md-1 control-label">Masukkan</label>
