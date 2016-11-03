@@ -111,6 +111,9 @@
 </section>		
 <!-- END PASAR AMAN -->
 
+{{-- override css --}}
+@include('pages.frontend.beranda._css')
+
 <section>
 	<div class="container">
 		<h2 class="heading">POLLING</h2>
@@ -124,47 +127,48 @@
 						<div class="form-group">
 							<label class="col-md-1 control-label">Rate </label>
 							<div class="col-md-11">
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
+								<span class="rating">
+									<input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1"/>
+									<label for="rating-input-1-5" class="rating-star"></label>
+									<input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1"/>
+									<label for="rating-input-1-4" class="rating-star"></label>
+									<input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1"/>
+									<label for="rating-input-1-3" class="rating-star"></label>
+									<input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1"/>
+									<label for="rating-input-1-2" class="rating-star"></label>
+									<input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1"/>
+									<label for="rating-input-1-1" class="rating-star"></label>
+								</span>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-md-1 control-label">Hasil </label>
 							<div class="col-md-2">
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
-								<i class="fa fa-star" aria-hidden="true"></i>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<br>
+								<span class="label label-success">0%</span>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-							</div>
-							<div class="col-md-2">
-								0%
 								<br>
-								0%
-								<br>
-								0%
-								<br>
-								0%
-								<br>
-								0%
-							</div>
+								<span class="label label-success">0%</span>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>						
 						</div>
 						<div class="form-group">
 							<label class="col-md-1 control-label">Masukkan</label>
