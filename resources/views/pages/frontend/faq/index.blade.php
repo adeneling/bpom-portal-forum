@@ -25,7 +25,7 @@
 				</div>
 				<div id="top-faq1" class="panel-collapse collapse" style="height: 0px;">
 					<div class="panel-body">
-						<p align="justify">Pasar aman dari bahan berbahaya adalah pasar yang mempunyai komitmen dan dukungan penuh dari komunitas pasar (pedagang, pemasok, masyarakat) dan pemerintah setempat untuk mengendalikan peredaran bahan berbahaya yang disalahgunkana dalam pangan dan pangan yang berpotensi mengandung bahan berbahaya.</p>
+						<p align="justify">Pasar aman dari bahan berbahaya adalah pasar yang mempunyai komitmen dan dukungan penuh dari komunitas pasar (pedagang, pemasok, masyarakat) dan pemerintah setempat untuk mengendalikan peredaran bahan berbahaya yang disalahgunakan dalam pangan dan pangan yang berpotensi mengandung bahan berbahaya.</p>
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 				</div>
 				<div id="top-faq2" class="panel-collapse collapse" style="height: 0px;">
 					<div class="panel-body">
-						<p align="justify">Karena dari hasil pengawasan terhadap sampel pangan yang beredar di pasaran masih ditemukan pangan yang mengandung bahan berbahaya seperti : Boraks/ pijer/ bleng, formalin, Rhodamin B, Kuning metanil.</p>
+						<p align="justify">Karena dari hasil pengawasan terhadap sampel pangan yang beredar di pasaran masih ditemukan pangan yang mengandung bahan berbahaya seperti : Boraks/pijer/bleng, formalin, Rhodamin B, Kuning metanil.</p>
 					</div>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 			<div class="panel panel-minimal">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#top-faq4" class="collapsed"><span class="number pull-left">4</span> Kapan dimulainya program Pasar Aman dari Bahan berbahaya?</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#top-faq4" class="collapsed"><span class="number pull-left">4</span> Kapan dimulainya program Pasar Aman dari Bahan Berbahaya?</a>
 					</h4>
 				</div>
 				<div id="top-faq4" class="panel-collapse collapse" style="height: 0px;">
@@ -77,7 +77,7 @@
 				</div>
 				<div id="top-faq5" class="panel-collapse collapse" style="height: 0px;">
 					<div class="panel-body">
-						<p align="justify">Sampai tahun 2015 sudah 77 pasar percontohan di 31 provinsi dan pada tahun 2016 direncanakan akan meningkat menjadi 108 pasar di seluruh Indonesia. Jumlah ini akan terus bertambah, hingga pada tahun 2019 diharapkan ada 201 pasar percontohan pasar aman dari bahan berbahaya. Selain pasar tersenut, pada tahun 2017 direncanakan pula akan diitervensi 10 pasar di daerah wisata yang meliputi:
+						<p align="justify">Sampai tahun 2015 sudah 77 pasar percontohan di 31 provinsi dan pada tahun 2016 direncanakan akan meningkat menjadi 108 pasar di seluruh Indonesia. Jumlah ini akan terus bertambah, hingga pada tahun 2019 diharapkan ada 201 pasar percontohan pasar aman dari bahan berbahaya. Selain pasar tersenut, pada tahun 2017 direncanakan pula akan diintervensi 10 pasar di daerah wisata yang meliputi:
 							<ul>
 								<li>Mandalika, Nusa Tenggara Barat</li>
 								<li>Labuan Bajo, Nusa Tenggara Timur</li>
@@ -116,7 +116,7 @@
 				</div>
 				<div id="top-faq7" class="panel-collapse collapse" style="height: 0px;">
 					<div class="panel-body">
-						<p align="justify">Pada dasarnya ada banyak bahan berbahaya yang tidak boleh ditambahkan kedalam makanan, namun dari hasil pengawasan, ada 4 bahan berbahaya yang sering ditemukan disalahgunakan dalam makanan yaitu Boraks (sering disebut pijer/bleng), formalin. Rhodamin B, dan Kuning metanil.</p>
+						<p align="justify">Pada dasarnya ada banyak bahan berbahaya yang tidak boleh ditambahkan ke dalam makanan, namun dari hasil pengawasan, ada 4 bahan berbahaya yang sering ditemukan disalahgunakan dalam makanan yaitu Boraks (sering disebut pijer/bleng), formalin. Rhodamin B, dan Kuning metanil.</p>
 					</div>
 				</div>
 			</div>
@@ -212,7 +212,7 @@
 						<p align="justify">
 							<ul>
 								<li>Boraks dapat menyebabkan gangguan otak, hati, dan ginjal</li>
-								<li>Formalin dapat menyebabkan mulut, tenggrokkan dan perut terasa terbakar ( jangka pendek), kerusakan jantung, hati, otak, system saraf pusat.</li>
+								<li>Formalin dapat menyebabkan mulut, tenggorokkan dan perut terasa terbakar ( jangka pendek), kerusakan jantung, hati, otak, sistem saraf pusat.</li>
 								<li>Kuning metanil  dan rhodamin B jika terakumulasi dapat menyebabkan kanker.</li>
 							</ul>
 						</p>
