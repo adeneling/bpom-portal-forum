@@ -111,6 +111,7 @@
 														<img class="avatar img-circle img-thumbnail" src="{{ App\Helpers\AppHelpers::photoProfile($comment->forumUsers->email) }}"
 															width="64" alt="Generic placeholder image"><br>
 														<strong>{{ $comment->forumUsers->name }}</strong>
+														<br>
 														<small>{{ $comment->forumUsers->admin == 1 ? 'Member' : 'Administrator' }}</small>
 														<br>
 													</div>
