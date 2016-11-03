@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Models\PasarAman\PasarAman;
 use App\Models\Berita\Berita;
 use App\Models\Banner\Banner;
+use App\Models\Polling\Polling;
 
 class BerandaController extends Controller
 {
@@ -20,10 +21,22 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        $banner = Banner::where('isenabled', '=', 1)->get();
-        $pasarAman = PasarAman::take(6)->get();
-        $berita = Berita::orderBy('id', 'desc')->take(3)->get();
-        return view('pages.frontend.beranda.index', compact(['banner', 'pasarAman', 'berita']));
+        // $banner = Banner::where('isenabled', '=', 1)->get();
+        // $pasarAman = PasarAman::take(6)->get();
+        // $berita = Berita::orderBy('id', 'desc')->take(3)->get();
+
+        $data = [
+            'star1' => (Polling::where('polling', '=', 1)->count()/Polling::count())*100,
+            'star2' => (Polling::where('polling', '=', 2)->count()/Polling::count())*100,
+            'star3' => (Polling::where('polling', '=', 3)->count()/Polling::count())*100,
+            'star4' => (Polling::where('polling', '=', 4)->count()/Polling::count())*100,
+            'star5' => (Polling::where('polling', '=', 5)->count()/Polling::count())*100,
+
+            'banner' => Banner::where('isenabled', '=', 1)->get(),
+            'pasarAman' => PasarAman::take(6)->get(),
+            'berita' => Berita::orderBy('id', 'desc')->take(3)->get(),
+        ];
+        return view('pages.frontend.beranda.index', $data);
     }
 
     /**

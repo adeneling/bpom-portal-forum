@@ -11,7 +11,7 @@
 
 @task('push', ['on' => 'local'])
 	git push origin master
-	git push origin master
+	git push github master
 	composer dump-autoload
 @endtask
 
@@ -29,6 +29,8 @@
 @endtask
 
 @task('migrate:refresh', ['on' => 'web'])
+	cd /var/www/bpom.vdi-studio.com/storage/app/public/
+	rm -rf *
 	cd /var/www/bpom.vdi-studio.com/
 	php artisan migrate:refresh --seed
 @endtask
