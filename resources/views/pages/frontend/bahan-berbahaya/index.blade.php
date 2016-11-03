@@ -53,7 +53,7 @@
 			<div class="panel panel-minimal">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#top-faq12" class="collapsed"><span class="number pull-left">2</span> Apa akibatnya jika kita mengkonsumsi bahan berbahaya?</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#top-faq12" class="collapsed"><span class="number pull-left">3</span> Apa akibatnya jika kita mengkonsumsi bahan berbahaya?</a>
 					</h4>
 				</div>
 				<div id="top-faq12" class="panel-collapse collapse" style="height: 0px;">
