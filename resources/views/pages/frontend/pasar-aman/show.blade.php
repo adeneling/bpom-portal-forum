@@ -46,6 +46,10 @@
 						</div>
 					</div>
 				</div>
+				<hr>
+				<center>
+					<a href="{{ url('pasar-aman') }}" class="btn btn-primary">KEMBALI</a>
+				</center>				
 			</article>
 		</div>
 	</div>
