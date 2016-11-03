@@ -26,11 +26,11 @@
 			<div id="striped-table">
 				<div class="row">
 					<div class="input-field col s2">
-						{!! Form::text('awal_periode', null, ['class'=>'materialize']) !!}
+						{!! Form::text('awal_periode', null, ['class'=>'materialize datepicker']) !!}
 						<label>Awal Periode</label>
 					</div>
 					<div class="input-field col s2">
-						{!! Form::text('akhir_periode', null, ['class'=>'materialize']) !!}
+						{!! Form::text('akhir_periode', null, ['class'=>'materialize datepicker']) !!}
 						<label>Akhir Periode</label>
 					</div>
 					<div class="input-field col s8">
