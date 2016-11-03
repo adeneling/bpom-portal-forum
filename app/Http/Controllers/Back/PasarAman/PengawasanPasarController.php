@@ -42,6 +42,8 @@ class PengawasanPasarController extends Controller
     public function store(Request $request)
     {
         //
+        echo "<pre>";
+        echo print_r($request->all());
     }
 
     /**

@@ -20,7 +20,7 @@
 		</div>
 	</div>
 <!--breadcrumbs end-->
-{!! Form::open(['url' => 'admin.pengawasan-pasar.store']) !!}
+{!! Form::open(['route' => 'admin.pengawasan-pasar.store']) !!}
 	<div class="container">
 		<div class="section">
 			<div id="striped-table">

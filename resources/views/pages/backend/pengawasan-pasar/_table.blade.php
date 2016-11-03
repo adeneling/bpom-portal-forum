@@ -21,7 +21,8 @@
 				<td>
 					<div id="card-alert" class="card light-blue lighten-5">
 						<div class="card-content light-blue-text">
-							{!! Form::number('nilai_bb[]', null, ['class'=>'validate']) !!}
+							{!! Form::hidden('id[]', encrypt($pasar->id)) !!}
+							{!! Form::number('nilai_bb[]', 0, ['class'=>'validate']) !!}
 						</div>
 					</div>
 				</td>
