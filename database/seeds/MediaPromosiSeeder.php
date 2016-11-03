@@ -22,7 +22,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Banner Kemasan Pangan Final Cetak.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -35,7 +35,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Banner Pewarna Pangan copy.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -48,7 +48,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/LogoPasar Aman dari BB.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -61,7 +61,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Poster Boraks.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -74,7 +74,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Poster Formalin.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -87,7 +87,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/POSTER GABUNGAN OK CONVERT.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -100,7 +100,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Poster Kuning Methanil.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -113,7 +113,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/gambar/Poster Rhodamin B.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/gambar/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -128,7 +128,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/dokumen/Boraks Formalin cetak PDF.pdf');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -141,7 +141,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/dokumen/Melamin Cetak EDIT MELAMIN 2016 PDF.pdf');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -154,7 +154,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/dokumen/Pewarna Pangan Cetak PDF.pdf');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -169,7 +169,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/audio/SPOT BPOM BAHAN BERBAHAYA - versi pewarna tekstil.mp3');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -182,7 +182,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/audio/Spot BPOM - Versi Formalin&Boraks OKE.mp3');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
@@ -195,7 +195,7 @@ class MediaPromosiSeeder extends Seeder
 		$path = public_path('seeder/media_informasi/audio/Spot BPOM - Versi Kresek Hitam OKE.mp3');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
+		$filename = 'media/audio/'.str_random(3).'-'.$name.'.'.explode('.', $lastpath)[1];
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
