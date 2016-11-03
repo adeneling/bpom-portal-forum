@@ -97,16 +97,3 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });
-
-Route::get('test', function(){
-	$path = public_path('seeder/pedoman/KAK_BIMTEK PETUGAS PENGELOLA PASAR 2016-revisi 10022016.doc');
-	$lastpath = explode('/', $path);
-	$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-	$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', $path)[1];
-
-	echo "<pre>";
-	echo $path;
-	echo "<br>";
-	echo print_r($name);
-	echo "<br>";
-});
