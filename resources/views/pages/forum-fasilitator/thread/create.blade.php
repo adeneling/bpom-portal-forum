@@ -3,21 +3,8 @@
 @section('title', 'Forum Fasilitator')
 
 @section('content')
-<!-- SLIDER -->
-<section class="hero-unit-slider slider-responsive no-margin">
-	<div id="carousel-hero" class="slick-carousel">
-		<div class="carousel-inner" role="listbox">
-			<div class="item">
-				<img src="{{ asset('assets/frontend/img/sliders/slider2-h500.png') }}" class="img-responsive" alt="Slider Image">
-				<div class="carousel-caption">
-					<h2 class="hero-heading">FORUM</h2>
-					<p class="lead">Badan Pengawasan Obat dan Makanan</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- SLIDER -->
+
+@include('pages.forum-fasilitator.thread._slider')
 
 <!-- BREADCRUMBS -->
 <div class="page-header">
