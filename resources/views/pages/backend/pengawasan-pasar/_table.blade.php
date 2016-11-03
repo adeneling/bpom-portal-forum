@@ -15,13 +15,13 @@
 			<tr>
 				<td>{{ $no++ }}</td>
 				<td><img src="{{ asset($pasar->photo) }}" width=250 height=150></td>
-				<td>{{-- $pasar->nama_pasar --}}</td>
-				<td>{{-- $pasar->provinsi->provinsi --}}</td>
-				<td>{{-- $pasar->kota->kota --}}</td>
+				<td>{{ $pasar->nama_pasar }}</td>
+				<td>{{ $pasar->provinsi['provinsi'] }}</td>
+				<td>{{ $pasar->kota['tipe'].' '.$pasar->kota['kota'] }}</td>
 				<td>
 					<div id="card-alert" class="card light-blue lighten-5">
 						<div class="card-content light-blue-text">
-							{!! Form::number('nilai_bb', null, ['class'=>'validate']) !!}
+							{!! Form::number('nilai_bb[]', null, ['class'=>'validate']) !!}
 						</div>
 					</div>
 				</td>
