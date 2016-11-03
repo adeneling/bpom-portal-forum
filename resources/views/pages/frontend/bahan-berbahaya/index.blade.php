@@ -123,10 +123,10 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#5" class="collapsed">Kenapa bahan berbahaya tersebut disalahgunakan dalam pangan?<i class="fa fa-angle-down pull-right icon-collapsed"></i><i class="fa fa-angle-up pull-right icon-expanded"></i></a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#6" class="collapsed">Kenapa bahan berbahaya tersebut disalahgunakan dalam pangan?<i class="fa fa-angle-down pull-right icon-collapsed"></i><i class="fa fa-angle-up pull-right icon-expanded"></i></a>
 					</h4>
 				</div>
-				<div id="5" class="panel">
+				<div id="6" class="panel">
 					<div class="panel-body">
 						<p align="justify">
 							Terdapat berbagai faktor yang mendorong banyak pihak untuk melakukan praktek penggunaan yang salah bahan kimia terlarang untuk pangan. Pertama, bahan kimia tersebut mudah diperoleh di pasaran. Kedua, harganya relatif murah. Ketiga, pangan yang mengandung bahan tersebut menampakkan tampilan fisik yang memikat. Keempat, tidak menimbulkan efek negatif seketika. Kelima, informasi bahan berbahaya tersebut relatif terbatas, dan pola penggunaannya telah dipraktekkan secara turun-temurun.
