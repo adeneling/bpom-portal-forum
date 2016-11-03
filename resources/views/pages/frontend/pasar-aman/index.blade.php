@@ -38,7 +38,7 @@
 								Alamat Pasar: {{ isset($pasar->alamat_pasar) ? $pasar->alamat_pasar : '-' }}
 							</p>
 							<div class="news-meta">
-								<span class="news-datetime"><strong>{{ $pasar->created_at }}</strong></span>
+								<span class="news-datetime"><strong>{{ date("d F Y", strtotime($pasar->created_at)) }}</strong></span>
 							</div>
 						</div>
 					</div>
