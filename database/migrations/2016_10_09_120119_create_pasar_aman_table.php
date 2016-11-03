@@ -25,6 +25,8 @@ class CreatePasarAmanTable extends Migration
             $table->string('tahun_survey')->nullable();
             $table->string('contact_person')->nullable();
             $table->string('los/kios')->nullable();
+            $table->float('presentase_jawaban');
+            $table->string('hasil_survey');
             $table->text('alamat_pasar')->nullable();
             $table->unsignedInteger('provinsi_id')->nullable();
             $table->unsignedInteger('kota_id')->nullable();
