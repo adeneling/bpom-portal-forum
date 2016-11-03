@@ -26,7 +26,7 @@
 						</h3>
 						<p>{!! substr($pedoman->konten, 0, 400).'...' !!}</p>
 						<span class="text-muted">
-							<a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('pedoman.dokumen.show', encrypt($pedoman->media_dokumen)) }}" class="btn btn-success" target="_blank"> Preview</a>
+							<a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('pedoman.dokumen.show', [encrypt(urlencode( asset($pedoman->media_dokumen))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
 						</span>
 					</div>
 				</div>
