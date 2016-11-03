@@ -22,6 +22,11 @@ class PedomanController extends Controller
         return view('pages.frontend.pedoman.index',compact('pedomans'));
     }
 
+    public function dokumenShow($lokasi)
+    {
+        return view('pages.frontend.pedoman.dokumen_show', ['lokasi' => $lokasi]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -12,6 +12,7 @@
 @task('push', ['on' => 'local'])
 	git push origin master
 	git push origin master
+	composer dump-autoload
 @endtask
 
 @task('pull-server', ['on' => 'web'])
