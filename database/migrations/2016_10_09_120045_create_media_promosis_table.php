@@ -17,7 +17,7 @@ class CreateMediaPromosisTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('nama');
-            $table->string('lokasi')->unique();
+            $table->string('lokasi');
             $table->text('deskripsi')->nullable();
             $table->enum('tipe', ['audio', 'gambar', 'dokumen'])->nullable();
             $table->timestamps();
