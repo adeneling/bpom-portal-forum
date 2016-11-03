@@ -15,8 +15,9 @@ class PedomanSeeder extends Seeder
         Storage::makeDirectory('pedoman/dokumen');
 
 		$path = public_path('seeder/pedoman/KAK_BIMTEK PETUGAS PENGELOLA PASAR 2016-revisi 10022016.doc');
-		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.str_replace(' ', '_', end($name)).'.'.explode('.', $path)[1];
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'$name'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pedoman = new Pedoman;
 		$pedoman->user_id = 1;
@@ -27,8 +28,9 @@ class PedomanSeeder extends Seeder
 		$pedoman->save();
 
 		$path = public_path('seeder/pedoman/KAK_FORUM ADVOKASI KOMITMKEN PEMDA & LINTAS SEKTOR 2016-revisi 10022016.doc');
-		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.str_replace(' ', '_', end($name)).'.'.explode('.', $path)[1];
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'$name'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pedoman = new Pedoman;
 		$pedoman->user_id = 1;
@@ -39,8 +41,9 @@ class PedomanSeeder extends Seeder
 		$pedoman->save();
 
 		$path = public_path('seeder/pedoman/KAK_KAMPANYE PASAR AMAN DARI BAHAN BERBAHAYA 2016 - revisi 10022016.doc');
-		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.str_replace(' ', '_', end($name)).'.'.explode('.', $path)[1];
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'$name'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pedoman = new Pedoman;
 		$pedoman->user_id = 1;
@@ -51,8 +54,9 @@ class PedomanSeeder extends Seeder
 		$pedoman->save();
 
 		$path = public_path('seeder/pedoman/KAK_PENYULUHAN PADA KOMUNITAS PASAR 2016-revisi 10022016.doc');
-		$name = explode('/', explode('.', $path)[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.str_replace(' ', '_', end($name)).'.'.explode('.', $path)[1];
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'$name'.'.explode('.', $path)[1];
 		Storage::put($filename, file_get_contents($path));
 		$pedoman = new Pedoman;
 		$pedoman->user_id = 1;
