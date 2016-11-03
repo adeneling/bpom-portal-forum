@@ -60,6 +60,12 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<label for="konten" class="col-sm-2 control-label">Gravatar</label>
+									<div class="col-sm-6">
+										{{ Form::checkbox('name', 'value', true, ['class' => 'form-control', 'id' => 'gravatar']) }} Gunakan Gravatar
+									</div>
+								</div>
+								<div class="form-group">
 									<label for="konten" class="col-sm-2 control-label">Nama Lengkap</label>
 									<div class="col-sm-6">
 										{!! Form::text('namaLengkap', $user->name, ['class' => 'form-control', 'id' => 'namaLengkap']) !!}

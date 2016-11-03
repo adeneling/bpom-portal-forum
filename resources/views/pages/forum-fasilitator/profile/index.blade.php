@@ -88,32 +88,9 @@
 								<hr>
 
 								<strong>FORUM ACTIVITY</strong>
-								<table class="table">
-									<thead>
-										<th>Topik</th>
-										<th>Post</th>
-										<th>Komentar Terakhir</th>
-										<th>Komentar</th>
-										<th>Aksi</th>
-									</thead>
-									<tbody>
-										@foreach($user->thread as $thread)
-											<?php
-												$countComment = $thread->comment()->commentThread($thread->id)->count();
-											?>
-											<tr>
-												<td><b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b></td>
-												<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
-												<td>12 Agustus 2016</td>
-												<td><span class="badge">{{ $countComment }}</span></td>
-												<td>
-													<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}" class="btn btn-warning btn-xs">Edit</a>
-													<a href="#" class="btn btn-danger btn-xs" id="btnDelete" data-id="{{ encrypt($thread->id) }}">Delete</a>
-												</td>
-											</tr>
-										@endforeach
-									</tbody>
-								</table>
+								<div id="tableContainer">
+									@include('pages.forum-fasilitator.profile._table')
+								</div>
 							</div>
 						</div>
 					</div>
@@ -130,6 +107,8 @@
 			$(document).on('click', '#btnDelete', function(e){
 				e.preventDefault();
 
+				var id = this.getAttribute('data-id');
+
 				swal({
 						title: "Are you sure?",
 						text: "You will not be able to recover this imaginary file!",
@@ -137,14 +116,20 @@
 						showCancelButton: true,
 						confirmButtonClass: "btn-danger",
 						confirmButtonText: "Yes, delete it!",
-						cancelButtonText: "No, cancel plx!",
+						cancelButtonText: "No, cancel it!",
 						closeOnConfirm: false,
 						closeOnCancel: false
 					},
 					function(isConfirm) {
 						if (isConfirm) {
 							$.ajax({
-								
+								type: "DELETE",
+								url: "{{ url('forum-fasilitator/profile') }}"+"/"+id,
+								cache: false,
+								data: {_token: "{{ csrf_token() }}"},
+								success: function(data){
+									$('#tableContainer').html(data);
+								}
 							});
 							swal("Deleted!", "Your imaginary file has been deleted.", "success");
 						} else {

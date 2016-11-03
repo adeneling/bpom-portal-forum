@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\UserControl\ForumUsers;
+use App\Models\Forum\Thread;
 
 class ProfileController extends Controller
 {
@@ -100,5 +101,10 @@ class ProfileController extends Controller
     public function destroy($id)
     {
         //
+        $thread = Thread::find(decrypt($id));
+        $thread->delete();
+
+        $user = ForumUsers::find(auth('forum')->user()->id);
+        return view('pages.forum-fasilitator.profile._table', compact('user'));
     }
 }
