@@ -59,33 +59,41 @@ class MediaPromosiController extends Controller
 
 		Storage::makeDirectory('media');
 		$filename = '';
+		$type = '';
+		$mime = File::mimeType($request->file('file'));
 
-		if($request->get('tipe') == 'audio'){
+		if(in_array($mime, $imageMime)){
+			$type = 'gambar';
+		}else if(in_array($mime, $audioMime)){
+			$type = 'audio';
+		}else{
+			$type = 'dokumen';
+		}
+
+		if($type == 'audio'){
 			Storage::makeDirectory('media/audio');
-			$filename = 'media/audio/'.str_random(10).'.'.$request->file('file')->getClientOriginalExtension();
+			$filename = 'media/audio/'.$request->file('file')->getClientOriginalName().'.'.$request->file('file')->getClientOriginalExtension();
 			Storage::put($filename, file_get_contents($request->file('file')));
-		}else if($request->get('tipe') == 'gambar'){
+		}else if($type == 'gambar'){
 			Storage::makeDirectory('media/gambar');
-			$filename = 'media/gambar/'.str_random(10).'.'.$request->file('file')->getClientOriginalExtension();
+			$filename = 'media/gambar/'.$request->file('file')->getClientOriginalName().'.'.$request->file('file')->getClientOriginalExtension();
 			Storage::put($filename, file_get_contents($request->file('file')));
-		}else if($request->get('tipe') == 'dokumen'){
+		}else if($type == 'dokumen'){
 			Storage::makeDirectory('media/dokumen');
-			$filename = 'media/dokumen/'.str_random(10).'.'.$request->file('file')->getClientOriginalExtension();
+			$filename = 'media/dokumen/'.$request->file('file')->getClientOriginalName().'.'.$request->file('file')->getClientOriginalExtension();
 			Storage::put($filename, file_get_contents($request->file('file')));
 
 		}
 
-		// $media = new MediaPromosi;
-		// $media->user_id = auth('web')->user()->id;
-		// $media->nama = $request->get('nama');
-		// $media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
-		// $media->deskripsi = $request->get('deskripsi');
-		// $media->tipe = $request->get('tipe');
-		// $media->save();
+		$media = new MediaPromosi;
+		$media->user_id = auth('web')->user()->id;
+		$media->nama = $request->get('nama');
+		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
+		$media->deskripsi = $request->get('deskripsi');
+		$media->tipe = $type;
+		$media->save();
 
-		// return redirect()->route('admin.media-promosi.index');
-
-		echo File::mimeType($request->file('file'));
+		return redirect()->route('admin.media-promosi.index');
 	}
 
 	/**
