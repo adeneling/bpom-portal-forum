@@ -30,7 +30,17 @@
 						<div class="col-md-1">
 						</div>
 						<div class="col-md-10">
-							<p>{!! $pasar->konten !!}</p>
+							<p>
+								Kota: {{ isset($pasar->kota['kota']) ? $pasar->kota['kota'] : '-' }}
+								<br>
+								Provinsi: {{ isset($pasar->provinsi['provinsi']) ? $pasar->provinsi['provinsi'] : '-' }}
+								<br>
+								Kecamatan: {{ isset($pasar->kecamatan['kecamatan']) ? $pasar->kecamatan['kecamatan'] : '-' }}
+								<br>
+								Alamat Pasar: {{ isset($pasar->alamat_pasar) ? $pasar->alamat_pasar : '-' }}
+								<br>
+								{!! $pasar->konten !!}
+							</p>
 						</div>						
 						<div class="col-md-1">
 						</div>

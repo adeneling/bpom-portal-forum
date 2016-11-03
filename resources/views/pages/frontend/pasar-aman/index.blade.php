@@ -28,7 +28,15 @@
 									{{ $pasar->nama_pasar }}
 								</a>
 							</h3>
-							
+							<p>
+								Kota: {{ isset($pasar->kota['kota']) ? $pasar->kota['kota'] : '-' }}
+								<br>
+								Provinsi: {{ isset($pasar->provinsi['provinsi']) ? $pasar->provinsi['provinsi'] : '-' }}
+								<br>
+								Kecamatan: {{ isset($pasar->kecamatan['kecamatan']) ? $pasar->kecamatan['kecamatan'] : '-' }}
+								<br>
+								Alamat Pasar: {{ isset($pasar->alamat_pasar) ? $pasar->alamat_pasar : '-' }}
+							</p>
 							<div class="news-meta">
 								<span class="news-datetime"><strong>{{ $pasar->created_at }}</strong></span>
 							</div>
