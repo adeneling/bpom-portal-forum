@@ -50,7 +50,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">DAFTAR PASAR  <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="{{ route('pasar-aman.index') }}"> PASAR AMAN</a></li>
-						<li><a href="{{ route('pasar.pengawasan') }}"> PASAR DALAM PANTAUAN</a></li>
+						<li><a href="{{ route('pasar.pengawasan') }}"> PASAR DALAM PENGAWASAN</a></li>
 					</ul>
 				</li>
 				<li class="dropdown ">
