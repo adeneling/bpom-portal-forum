@@ -33,6 +33,8 @@
 	rm -rf *
 	cd /var/www/bpom.vdi-studio.com/
 	php artisan migrate:refresh --seed
+	chown www-data:www-data -R *
+	chmod 777 -R storage/
 @endtask
 
 @task('laravel:log', ['on' => 'web'])
