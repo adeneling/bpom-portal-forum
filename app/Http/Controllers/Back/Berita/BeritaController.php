@@ -108,7 +108,7 @@ class BeritaController extends Controller
 			$filename = 'berita/foto/'.str_random(10).'.'.$request->file('photo')->getClientOriginalExtension();
 			Storage::put($filename, file_get_contents($request->file('photo')));
 		}else{
-			$filename = str_replace("/storage/", "", $berita->photo);
+			$filename = str_replace("/storage/", "", $berita->foto);
 		}
 
 		$berita->foto = !is_null($filename) ? Storage::url($filename) : '';
