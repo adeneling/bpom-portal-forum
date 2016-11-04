@@ -25,7 +25,6 @@ class BannerRequest extends FormRequest
     {
         return [
             'banner' => 'required',
-            'isenabled' => 'required',
         ];
     }
 }

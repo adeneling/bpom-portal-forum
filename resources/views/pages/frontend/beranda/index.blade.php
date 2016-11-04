@@ -138,15 +138,20 @@
 			$(document).on('submit', '#formPolling', function(e){
 				e.preventDefault();
 
-				$.ajax({
-					method: "POST",
-					url: "{{ route('polling.store') }}",
-					data: $('#formPolling').serialize(),
-					cache: false,
-					success: function(data){
-						$('#formPollingContainer').html(data);
-					}
-				});
+				if($('#masukan').val() == '' && $('rating-input-1-5').val() == '' && $('rating-input-1-4').val() == '' && $('rating-input-1-3').val() == '' && $('rating-input-1-2').val() == '' && $('rating-input-1-1').val() == ''){
+					swal("Oops!", "Silahkan isi semua form.", "danger");
+				}else{
+					$.ajax({
+						method: "POST",
+						url: "{{ route('polling.store') }}",
+						data: $('#formPolling').serialize(),
+						cache: false,
+						success: function(data){
+							$('#formPollingContainer').html(data);
+							swal("Terima Kasih", "Atas Polling yang sudah diberikan", "success");
+						}
+					});
+				}
 			});
 		});
 	</script>

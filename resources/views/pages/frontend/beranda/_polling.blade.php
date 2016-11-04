@@ -49,7 +49,7 @@
 	<div class="form-group">
 		<label class="col-md-1 control-label">Masukkan</label>
 		<div class="col-md-11">
-			<textarea name="masukan" class="form-control" placeholder="Saran dan masukan" rows="4"></textarea>
+			<textarea name="masukan" id="masukan" class="form-control" placeholder="Saran dan masukan" rows="4"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
