@@ -30,7 +30,7 @@
 				{!! Form::model($berita, ['route' => ['admin.berita.update', $berita],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 					<div class="row">
 						<div class="input-field col s8">
-							{!! Form::text('judul', $berita->judul, ['class'=>'validate']) !!}
+							{!! Form::text('judul', $berita->judul, ['class'=>'validate active']) !!}
 							<label for="first_name">Judul Berita</label>
 						</div>
 					</div>
@@ -92,6 +92,7 @@
 	<script src="//cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			Materialize.updateTextFields();
 			CKEDITOR.replace('konten');
 
 			$(document).on('click', '#uploadFoto', function(e){

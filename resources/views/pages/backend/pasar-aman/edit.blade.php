@@ -46,19 +46,19 @@
 					{!! Form::model($pasarAman, ['route' => ['admin.pasar-aman.update', encrypt($pasarAman->id)], 'method' => 'PUT', 'class' => 'col s12', 'files' => true]) !!}
 						<div class="row">
 							<div class="input-field col s12">
-								{!! Form::text('nama_pasar', $pasarAman->nama_pasar, ['id' => 'nama_pasar', 'class' => 'validate', 'placeholder' => 'Nama Pasar']) !!}
+								{!! Form::text('nama_pasar', $pasarAman->nama_pasar, ['id' => 'nama_pasar', 'class' => 'validate active', 'placeholder' => 'Nama Pasar']) !!}
 								<label for="nama_pasar">Nama Pasar</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								{!! Form::text('kepala_pasar', $pasarAman->kepala_pasar, ['id' => 'kepala_pasar', 'class' => 'validate', 'placeholder' => 'Kepala Pasar']) !!}
+								{!! Form::text('kepala_pasar', $pasarAman->kepala_pasar, ['id' => 'kepala_pasar', 'class' => 'validate active', 'placeholder' => 'Kepala Pasar']) !!}
 								<label for="kepala_pasar">Kepala Pasar</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								{!! Form::text('petugas_pasar', $pasarAman->petugas_pasar, ['id' => 'petugas_pasar', 'class' => 'validate', 'placeholder' => 'Petugas Pasar']) !!}
+								{!! Form::text('petugas_pasar', $pasarAman->petugas_pasar, ['id' => 'petugas_pasar', 'class' => 'validate active', 'placeholder' => 'Petugas Pasar']) !!}
 								<label for="petugas_pasar">Petugas Pasar</label>
 							</div>
 						</div>
@@ -139,6 +139,8 @@
 @section('js')
 	<script type="text/javascript">
 		$(document).ready(function(){
+			Materialize.updateTextFields();
+
 			$(document).on('change', '#province', function(){
 				$.ajax({
 					method: "GET",

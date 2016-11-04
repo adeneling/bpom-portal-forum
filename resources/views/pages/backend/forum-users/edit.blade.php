@@ -56,13 +56,13 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								{!! Form::text('name', $user->name, ['id' => 'name', 'class' => 'validate', 'placeholder' => 'Nama Panjang']) !!}
+								{!! Form::text('name', $user->name, ['id' => 'name', 'class' => 'validate active', 'placeholder' => 'Nama Panjang']) !!}
 								<label for="name">Nama Panjang</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								{!! Form::email('email', null, ['id' => 'email', 'class' => 'validate', 'placeholder' => 'Email']) !!}
+								{!! Form::email('email', null, ['id' => 'email', 'class' => 'validate active', 'placeholder' => 'Email']) !!}
 								<label for="email">Email</label>
 							</div>
 						</div>
@@ -94,4 +94,12 @@
 		</div>
 	</div>
 <!--end container-->
+@endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Materialize.updateTextFields();
+		});
+	</script>
 @endsection

@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="input-field col s8">
-		{!! Form::text('judul', null, ['class'=>'validate']) !!}
+		{!! Form::text('judul', null, ['class'=>'validate active']) !!}
 		<label for="first_name">Judul Foto</label>
 	</div>
 </div>

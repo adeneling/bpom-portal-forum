@@ -37,3 +37,11 @@
 </div>
 <!--end container-->
 @endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Materialize.updateTextFields();
+		});
+	</script>
+@endsection

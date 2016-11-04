@@ -31,7 +31,7 @@
 					{{ csrf_field() }}
 					<div class="row">
 						<div class="input-field col s9">
-							{!! Form::text('nama', $media->nama, ['class'=>'validate']) !!}
+							{!! Form::text('nama', $media->nama, ['class'=>'validate active']) !!}
 							<label for="nama">Nama</label>
 						</div>
 					</div>
@@ -54,4 +54,12 @@
 	</div>
 </div>
 <!--end container-->
+@endsection
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			Materialize.updateTextFields();
+		});
+	</script>
 @endsection
