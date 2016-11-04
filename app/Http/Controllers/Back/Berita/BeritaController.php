@@ -97,6 +97,13 @@ class BeritaController extends Controller
      */
     public function update(BeritaRequest $request, $id)
     {
+        Storage::makeDirectory('berita/foto');
+        $filename = '';
+        if($request->hasFile('photo')){
+            $filename = 'berita/foto/'.str_random(10).'.'.$request->file('photo')->getClientOriginalExtension();
+            Storage::put($filename, file_get_contents($request->file('photo')));
+        }
+        
         $berita = Berita::findOrFail($id);
         $berita->judul = $request->input('judul');
         $berita->konten = $request->input('konten');
