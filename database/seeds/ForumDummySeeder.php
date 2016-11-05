@@ -86,7 +86,7 @@ class ForumDummySeeder extends Seeder
 
 		$komentar = '<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
 
-		for($i=1;$i<=500;$i++){
+		for($i=1;$i<=220;$i++){
 			$email = 'user'.$i.'@puspaman.com';
 
 			$user = new ForumUsers;
@@ -99,7 +99,7 @@ class ForumDummySeeder extends Seeder
 			$user->save();
 		}
 
-		for($i=1;$i<=500;$i++){
+		for($i=1;$i<=220;$i++){
 			Storage::makeDirectory('threadImage');
 			for($j=1;$j<=150;$j++){
 				for($k=1;$k<5;$k++){
@@ -117,24 +117,26 @@ class ForumDummySeeder extends Seeder
 			}
 		}
 
-		for($i=1;$i<=500;$i++){
+		for($i=1;$i<=220;$i++){
 			for($l=1;$l<=100;$l++){
 				$thread = new Thread;
-				$thread->forum_user_id = $user->id;
+				$thread->forum_user_id = $i;
 				$thread->judulThread = '[Pasar Aman Dummy] Thread Dummy ke-'.$l;
 				$thread->tipe = 'umum';
 				$thread->konten = $konten;
 				$thread->save();
+			}
+		}
 
-				for($m=1;$m<=500;$m++){
-					for($n=1;$n<=2;$n++){
-						$comment = Thread::find($thread->id)
-								   ->newComment()
-								   ->withUserDummy($m)
-								   ->withComment($komentar)
-								   ->withCounter($thread->comment()->commentThread($thread->id)->count())
-								   ->saveComment();
-					}
+		for($m=1;$m<=220;$m++){
+			for($n=1;$n<=100;$n++){
+				for($o=0;$o<2;$o++){
+					$comment = Thread::find($n)
+							   ->newComment()
+							   ->withUserDummy($m)
+							   ->withComment($komentar)
+							   ->withCounter($thread->comment()->commentThread($thread->id)->count())
+							   ->saveComment();
 				}
 			}
 		}
