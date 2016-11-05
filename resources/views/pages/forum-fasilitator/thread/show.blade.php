@@ -78,11 +78,13 @@
 							</div>
 							<div class="panel-footer">
 								&nbsp;
-								@if($thread->forum_user_id == auth('forum')->user()->id)
-									<div class="pull-right">
-										<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}">Edit</a>
-										&nbsp;&nbsp;&nbsp;
-									</div>
+								@if(auth('forum')->check())
+									@if($thread->forum_user_id == auth('forum')->user()->id)
+										<div class="pull-right">
+											<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}">Edit</a>
+											&nbsp;&nbsp;&nbsp;
+										</div>
+									@endif
 								@endif
 							</div>
 						</div>
@@ -125,11 +127,13 @@
 									<div class="panel-footer">
 										&nbsp;
 										<div class="pull-right">
-											@if($comment->forum_user_id == auth('forum')->user()->id)
-												<a href="{{ route('comment.edit', encrypt($comment->id)) }}">Edit</a>
+											@if(auth('forum')->check())
+												@if($comment->forum_user_id == auth('forum')->user()->id)
+													<a href="{{ route('comment.edit', encrypt($comment->id)) }}">Edit</a>
+												@endif
+												&nbsp;&nbsp;&nbsp;
+												<a href="{{ route('comment.quote', encrypt($comment->id)) }}">Reply</a>
 											@endif
-											&nbsp;&nbsp;&nbsp;
-											<a href="{{ route('comment.quote', encrypt($comment->id)) }}">Reply</a>
 										</div>
 									</div>
 								</div>

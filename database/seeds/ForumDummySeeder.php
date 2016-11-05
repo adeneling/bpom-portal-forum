@@ -135,7 +135,7 @@ class ForumDummySeeder extends Seeder
 							   ->newComment()
 							   ->withUserDummy($m)
 							   ->withComment($komentar)
-							   ->withCounter($thread->comment()->commentThread($thread->id)->count())
+							   ->withCounter($thread->comment()->commentThread($n)->count())
 							   ->saveComment();
 				}
 			}
