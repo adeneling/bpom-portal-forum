@@ -109,7 +109,7 @@ class ForumDummySeeder extends Seeder
 					$filename = 'threadImage/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
 					Storage::put($filename, file_get_contents($path));
 
-					$image = ForumUsers::find($user->id)
+					$image = ForumUsers::find($i)
 							 ->newThreadImage()
 							 ->withLocated(Storage::url($filename))
 							 ->saveImage();
