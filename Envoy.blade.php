@@ -42,3 +42,13 @@
 	cd storage/logs/
 	cat laravel.log
 @endtask
+
+@task('up', ['on' => 'web'])
+	cd /var/www/bpom.vdi-studio.com/
+	php artisan up
+@endtask
+
+@task('down', ['on' => 'web'])
+	cd /var/www/bpom.vdi-studio.com/
+	php artisan down
+@endtask

@@ -40,9 +40,9 @@
 		<li class="bold {{ Request::segment(2) == 'pedoman' ? 'active' : '' }}">
 			<a href="{{ route('admin.pedoman.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-turned-in-not"></i> Kelola Pedoman</a>
 		</li>
-		<li class="bold {{ Request::segment(2) == 'bahan-berbahaya' ? 'active' : '' }}">
+		{{-- <li class="bold {{ Request::segment(2) == 'bahan-berbahaya' ? 'active' : '' }}">
 			<a href="{{ route('admin.bahan-berbahaya.index') }}" class="waves-effect waves-cyan"><i class="mdi-image-center-focus-strong"></i> Kelola Bahan Berbahaya</a>
-		</li>
+		</li> --}}
 
 		{{-- PENDING --}}
 		<li class="bold {{ Request::segment(2) == 'media-promosi' ? 'active' : '' }}">

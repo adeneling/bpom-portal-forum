@@ -46,4 +46,11 @@ class Comment extends Model
         $this->save();
         return $this;
     }
+
+
+
+    public function withUserDummy($id){
+        $this->forum_user_id = $id;
+        return $this;
+    }
 }
