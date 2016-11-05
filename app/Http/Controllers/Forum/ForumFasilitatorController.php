@@ -34,8 +34,8 @@ class ForumFasilitatorController extends Controller
 	public function index()
 	{
 		//
-		$threads = Thread::where('tipe', '=', 'umum')->get();
-		$guides = Thread::where('tipe', '=', 'guide')->get();
+		$threads = Thread::where('tipe', '=', 'umum')->orderBy('id', 'desc')->take(5)->get();
+		$guides = Thread::where('tipe', '=', 'guide')->orderBy('id', 'desc')->take(5)->get();
 		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guides'));
 	}
 
