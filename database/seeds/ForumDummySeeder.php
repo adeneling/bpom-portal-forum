@@ -97,7 +97,9 @@ class ForumDummySeeder extends Seeder
 			$user->remember_token = str_random(10);
 			$user->admin = 1;
 			$user->save();
+		}
 
+		for($i=1;$i<=500;$i++){
 			Storage::makeDirectory('threadImage');
 			for($j=1;$j<=150;$j++){
 				for($k=1;$k<5;$k++){
@@ -115,7 +117,7 @@ class ForumDummySeeder extends Seeder
 			}
 		}
 
-		for($i=1;$i<=200;$i++){
+		for($i=1;$i<=500;$i++){
 			for($l=1;$l<=100;$l++){
 				$thread = new Thread;
 				$thread->forum_user_id = $user->id;
