@@ -25,7 +25,7 @@ class ForumUsersController extends Controller
 	public function index()
 	{
 		//
-		$penggunaForum = ForumUsers::all();
+		$penggunaForum = ForumUsers::paginate(20);
 		return view('pages.backend.forum-users.index', compact('penggunaForum'))->withTitle('Kelola Pengguna Forum');
 	}
 
