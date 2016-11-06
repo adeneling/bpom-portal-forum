@@ -103,12 +103,12 @@
 								<div class="overlay"></div>
 								<div class="info">
 									<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-									<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : '') }}" title="{{ $pasar->nama_pasar }}">
+									<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasar->nama_pasar }}">
 										<button class="btn btn-primary">Lihat</button>
 									</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset($pasar->photo) }}" alt="Item Thumbnail" width="180" height="140" />
+									<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
 									<br><center>{{ $pasar->nama_pasar }}</center>
 								</div>
 							</div>
