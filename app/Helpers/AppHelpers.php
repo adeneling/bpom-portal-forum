@@ -4,9 +4,11 @@ namespace App\Helpers;
 
 class AppHelpers{
 
-	public static function urlThreadForum($id, $judul){
+	public static function urlGuideForum($id, $judul){
+		return route('guide.show.detail', [base64_encode(config('app.salt').$id), str_slug($judul, '-')]);
+	}
 
-		//
+	public static function urlThreadForum($id, $judul){
 		return route('thread.show.detail', [base64_encode(config('app.salt').$id), str_slug($judul, '-')]);
 	}
 

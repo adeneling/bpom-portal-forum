@@ -39,45 +39,6 @@
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h2 class="panel-title section-heading no-margin">Guide</h2>
-					</div>
-					<div class="panel-body">
-						<div class="form-horizontal">
-							<div class="form-group">
-								<div class="col-md-12">
-									<table class="table">
-										<thead>
-											<th>Topik</th>
-											<th>Post</th>
-										</thead>
-										<tbody>
-											@foreach($guides as $guide)
-												<?php
-													$countComment = $guide->comment()->commentThread($guide->id)->count();
-												?>
-												<tr>
-													<td>
-														<b><a href="{{ App\Helpers\AppHelpers::urlGuideForum($guide->id, $guide->judulThread) }}">{{ $guide->judulThread }}</a></b><br>
-														<small>By {{ $guide->forumUsers->name }}</small>
-													</td>
-													<td>{{ date("d F Y", strtotime($guide->created_at)) }}</td>
-												</tr>
-											@endforeach
-										</tbody>
-									</table>
-									<a href="{{ route('guides.all') }}" class="btn btn-primary pull-right"> Tampilkan Semua </a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		{{-- UMUM --}}
-		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
 						<h2 class="panel-title section-heading no-margin">Umum</h2>
 					</div>
 					<div class="panel-body">
@@ -108,7 +69,7 @@
 											@endforeach
 										</tbody>
 									</table>
-									<a href="{{ route('threads.all') }}" class="btn btn-primary pull-right"> Tampilkan Semua </a>
+									{{ $threads->links() }}
 								</div>
 							</div>
 						</div>

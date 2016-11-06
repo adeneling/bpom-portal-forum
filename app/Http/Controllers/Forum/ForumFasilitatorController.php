@@ -12,6 +12,8 @@ use App\Models\Forum\ThreadImage;
 
 use App\Http\Requests\Forum\ForumRequests;
 
+use DB;
+
 class ForumFasilitatorController extends Controller
 {
 
@@ -34,7 +36,14 @@ class ForumFasilitatorController extends Controller
 	public function index()
 	{
 		//
-		$threads = Thread::where('tipe', '=', 'umum')->orderBy('id', 'desc')->take(5)->get();
+		// $threads = Thread::where('tipe', '=', 'umum')->orderBy('id', 'desc')->take(5)->get();
+		$threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
+					  ->where('tipe', '=', 'umum')
+					  ->join('komentar', 'threads.id', '=', 'komentar.thread_id')
+					  ->groupBy('thread_id')
+					  ->orderBy('aggregate', 'desc')
+					  ->take(5)
+					  ->get();
 		$guides = Thread::where('tipe', '=', 'guide')->orderBy('id', 'desc')->take(5)->get();
 		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guides'));
 	}
@@ -135,5 +144,26 @@ class ForumFasilitatorController extends Controller
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function threads()
+	{
+		//
+		$threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
+					  ->where('tipe', '=', 'umum')
+					  ->join('komentar', 'threads.id', '=', 'komentar.thread_id')
+					  ->groupBy('thread_id')
+					  ->orderBy('aggregate', 'desc')
+					  ->paginate(20);
+
+		return view('pages.forum-fasilitator.thread.threads', compact('threads'));
+	}
+
+	public function guides()
+	{
+		//
+		$guides = Thread::where('tipe', '=', 'guide')->paginate(20);
+
+		return view('pages.forum-fasilitator.thread.guides', compact('guides'));
 	}
 }

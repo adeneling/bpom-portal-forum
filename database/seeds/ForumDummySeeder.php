@@ -86,7 +86,12 @@ class ForumDummySeeder extends Seeder
 
 		$komentar = '<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
 
-		for($i=1;$i<=220;$i++){
+		$jumlah_user = 20;
+		$jumlah_gambar_per_user = 10;
+		$jumlah_thread = 10;
+		$jumlah_komentar = $jumlah_user*$jumlah_thread;
+
+		for($i=1;$i<=$jumlah_user;$i++){
 			$email = 'user'.$i.'@puspaman.com';
 
 			$user = new ForumUsers;
@@ -99,9 +104,9 @@ class ForumDummySeeder extends Seeder
 			$user->save();
 		}
 
-		for($i=1;$i<=220;$i++){
+		for($i=1;$i<=$jumlah_user;$i++){
 			Storage::makeDirectory('threadImage');
-			for($j=1;$j<=150;$j++){
+			for($j=1;$j<=$jumlah_gambar_per_user;$j++){
 				for($k=1;$k<5;$k++){
 					$path = public_path('seeder/berita/'.$k.'.jpg');
 					$lastpath = explode('/', $path);
@@ -117,8 +122,8 @@ class ForumDummySeeder extends Seeder
 			}
 		}
 
-		for($i=1;$i<=220;$i++){
-			for($l=1;$l<=100;$l++){
+		for($i=1;$i<=$jumlah_user;$i++){
+			for($l=1;$l<=$jumlah_thread;$l++){
 				$thread = new Thread;
 				$thread->forum_user_id = $i;
 				$thread->judulThread = '[Pasar Aman Dummy] Thread Dummy ke-'.$l;
@@ -128,8 +133,8 @@ class ForumDummySeeder extends Seeder
 			}
 		}
 
-		for($m=1;$m<=220;$m++){
-			for($n=1;$n<=(220*100);$n++){
+		for($m=1;$m<=$jumlah_user;$m++){
+			for($n=1;$n<=$jumlah_komentar;$n++){
 				for($o=0;$o<2;$o++){
 					$thread = Thread::find($n);
 					$comment = Thread::find($n)
@@ -142,7 +147,7 @@ class ForumDummySeeder extends Seeder
 			}
 		}
 
-		for($i=1;$i<=200;$i++){
+		for($i=1;$i<=$jumlah_thread;$i++){
 			$thread = new Thread;
 			$thread->forum_user_id = 1;
 			$thread->judulThread = '[Pasar Aman Dummy] Guide Dummy ke-'.$i;

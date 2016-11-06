@@ -65,50 +65,7 @@
 											@endforeach
 										</tbody>
 									</table>
-									<a href="{{ route('guides.all') }}" class="btn btn-primary pull-right"> Tampilkan Semua </a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		{{-- UMUM --}}
-		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h2 class="panel-title section-heading no-margin">Umum</h2>
-					</div>
-					<div class="panel-body">
-						<div class="form-horizontal">
-							<div class="form-group">
-								<div class="col-md-12">
-									<table class="table">
-										<thead>
-											<th>Topik</th>
-											<th>Post</th>
-											<th>Komentar Terakhir</th>
-											<th>Komentar</th>
-										</thead>
-										<tbody>
-											@foreach($threads as $thread)
-												<?php
-													$countComment = $thread->comment()->commentThread($thread->id)->count();
-												?>
-												<tr>
-													<td>
-														<b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b><br>
-														<small>By {{ $thread->forumUsers->name }}</small>
-													</td>
-													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
-													<td>{{ $countComment != 0 ? date("d F Y", strtotime($thread->comment()->lastComment($thread->id)->first()['created_at'])) : '-' }}</td>
-													<td><span class="badge">{{ $countComment }}</span></td>
-												</tr>
-											@endforeach
-										</tbody>
-									</table>
-									<a href="{{ route('threads.all') }}" class="btn btn-primary pull-right"> Tampilkan Semua </a>
+									{{ $guides->links() }}
 								</div>
 							</div>
 						</div>
