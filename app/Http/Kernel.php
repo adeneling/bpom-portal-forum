@@ -55,5 +55,7 @@ class Kernel extends HttpKernel
 		'role' => \Laratrust\Middleware\LaratrustRole::class,
 		'permission' => \Laratrust\Middleware\LaratrustPermission::class,
 		'ability' => \Laratrust\Middleware\LaratrustAbility::class,
+		'validate_forum' => \App\Http\Middleware\ValidateLoginForum::class,
+		'validate_admin' => \App\Http\Middleware\ValidateLoginAdmin::class,
 	];
 }

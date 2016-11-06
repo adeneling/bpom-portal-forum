@@ -43,7 +43,6 @@ Route::group(['namespace' => 'Front'], function(){
 Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function(){
 	// Authentication Forum
 	Route::auth();
-	Route::get('logout', 'Auth\LoginController@logout');
 	// Thread
 	Route::resource('thread','ForumFasilitatorController');
 	Route::get('guide/{id}/show/{judul}', 'ForumFasilitatorController@show')->name('guide.show.detail');
@@ -66,7 +65,6 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], function(){
 	// Auth 
 	Route::auth();
-	Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 	// Dashboard
 	Route::resource('dashboard', 'BackController');
 	// Kelola Banner

@@ -11,8 +11,10 @@
 							<i class="mdi-action-face-unlock"></i> Profile</a>
 						</li>
 						<li class="divider"></li>
-						<li><a href="{{ route('admin.logout') }}">
-							<i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+						<li>
+						{!! Form::open(['route' => ['admin.logout'], 'method' => 'post', 'id' => 'logout']) !!}
+							<a href="#" onclick="document.getElementById('logout').submit()"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+						{!! Form::close() !!}
 						</li>
 					</ul>
 					<a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">Option<i class="mdi-navigation-arrow-drop-down right"></i></a>

@@ -12,7 +12,11 @@
 				<li><a href="{{ route('peta-situs.index') }}">PETA SITUS</a></li>
 				@if(auth('forum')->check())
 					<li><b>Hello <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
-					<li><a href="{{ url('forum-fasilitator/logout') }}">LOGOUT</a></li>
+					<li>
+						{!! Form::open(['route' => ['logout'], 'method' => 'post', 'id' => 'logout']) !!}
+							<a href="#" onclick="document.getElementById('logout').submit()">Logout</a>
+						{!! Form::close() !!}
+					</li>
 					<li>&nbsp; &nbsp;</li>
 				@else
 					<li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
