@@ -37,14 +37,14 @@ class ForumFasilitatorController extends Controller
 	public function index()
 	{
 		//
-		// $threads = Thread::where('tipe', '=', 'umum')->orderBy('id', 'desc')->take(5)->get();
-		$threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
+		$threads = Thread::where('tipe', '=', 'umum')->orderBy('created_at', 'desc')->take(5)->get();
+		/*$threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
 					  ->where('tipe', '=', 'umum')
 					  ->join('komentar', 'threads.id', '=', 'komentar.thread_id')
 					  ->groupBy('thread_id')
 					  ->orderBy('aggregate', 'desc')
 					  ->take(5)
-					  ->get();
+					  ->get();*/
 		$guides = Thread::where('tipe', '=', 'guide')->orderBy('id', 'desc')->take(5)->get();
 		return view('pages.forum-fasilitator.thread.index', compact('threads', 'guides'));
 	}
