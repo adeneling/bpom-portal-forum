@@ -1,30 +1,76 @@
 <style>
-.rating {
-	overflow: hidden;
-	display: inline-block;
-	font-size: 0;
-	position: relative;
+
+form .stars {
+  background: url("{{ asset('css/stars.png') }}") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
 }
-.rating-input {
-	float: right;
-	width: 16px;
-	height: 16px;
-	padding: 0;
-	margin: 0 0 0 -16px;
-	opacity: 0;
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
-.rating:hover .rating-star:hover,
-.rating:hover .rating-star:hover ~ .rating-star,
-.rating-input:checked ~ .rating-star {
-	background-position: 0 0;
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
 }
-.rating-star,
-.rating:hover .rating-star {
-	position: relative;
-	float: right;
-	display: block;
-	width: 16px;
-	height: 16px;
-	background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
 }
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("{{ asset('css/stars.png') }}") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
 </style>
