@@ -33,8 +33,8 @@ class BerandaController extends Controller
             'star5' => Polling::count() != 0 ? (Polling::where('polling', '=', 5)->count()/Polling::count())*100 : 0,
 
             'banner' => Banner::where('isenabled', '=', 1)->get(),
-            'pasarAman' => PasarAman::take(6)->get(),
-            'berita' => Berita::orderBy('id', 'desc')->take(3)->get(),
+            'pasarAman' => PasarAman::take(12)->get(),
+            'berita' => Berita::orderBy('id', 'desc')->take(4)->get(),
         ];
         return view('pages.frontend.beranda.index', $data);
     }
