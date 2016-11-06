@@ -7,7 +7,7 @@
 				<div class="carousel-caption">
 					<h2 class="hero-heading">FORUM
 						<br><br><br><br>
-						Badan Pengawasan Obat dan Makanan
+						Badan Pengawas Obat dan Makanan
 					</h2>
 				</div>
 			</div>
