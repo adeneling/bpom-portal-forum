@@ -129,7 +129,7 @@ class ForumDummySeeder extends Seeder
 		}
 
 		for($m=1;$m<=220;$m++){
-			for($n=1;$n<=100;$n++){
+			for($n=1;$n<=(220*100);$n++){
 				for($o=0;$o<2;$o++){
 					$thread = Thread::find($n);
 					$comment = Thread::find($n)
