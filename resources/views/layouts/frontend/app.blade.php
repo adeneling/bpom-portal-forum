@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Pusat Informasi Pasar Aman dan Bahan Berbahaya">
 	<meta name="author" content="Badan Pengawas Obat dan Makanan">
+	<meta name="keywords" content="puspaman, pasar, aman, pasar aman, bahan, berbahaya, bahan berbahaya, bpom, badan pom, badan, badan pengawas obat dan makanan, obat, makanan, obat dan makanan,">
 	<!-- CSS -->
 	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
