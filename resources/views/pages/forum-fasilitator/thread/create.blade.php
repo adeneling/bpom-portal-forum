@@ -48,7 +48,7 @@
 				{{-- END ALERT ERROR --}}
 
 				<!-- THREAD BARU -->
-				<h2 class="section-heading">Thread Baru</h2>
+				<h2>Thread Baru</h2>
 				{!! Form::open(['url' => 'forum-fasilitator/thread', 'class' => 'form-horizontal left-aligned', 'id' => 'formThread', 'name' => 'formThread' ,'role' => 'form', 'files' => true]) !!}
 					<div class="form-group">
 						<label for="judul-thread" class="col-sm-2 control-label">Judul Thread</label>
@@ -116,7 +116,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Login</h4>
+					<h4 class="modal-title">Image</h4>
 				</div>
 				<div class="modal-body">
 					<div id="table-image-container">

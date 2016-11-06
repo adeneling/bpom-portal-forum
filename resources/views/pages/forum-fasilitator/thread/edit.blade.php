@@ -46,7 +46,7 @@
 				{{-- END ALERT ERROR --}}
 
 				<!-- THREAD BARU -->
-				<h2 class="section-heading">Thread Baru</h2>
+				<h2>Edit Thread</h2>
 				{!! Form::model($thread, ['route' => ['thread.update', encrypt($thread->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formThread', 'name' => 'formThread' ,'role' => 'form', 'files' => true, 'method' => 'PUT']) !!}
 					<div class="form-group">
 						<label for="judul-thread" class="col-sm-2 control-label">Judul Thread</label>
@@ -114,7 +114,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Login</h4>
+					<h4 class="modal-title">Image</h4>
 				</div>
 				<div class="modal-body">
 					<div id="table-image-container">
