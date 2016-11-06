@@ -44,31 +44,8 @@
 					<div class="panel-body">
 						<div class="form-horizontal">
 							<div class="form-group">
-								<div class="col-md-12">
-									<table class="table">
-										<thead>
-											<th>Topik</th>
-											<th>Post</th>
-											<th>Komentar Terakhir</th>
-											<th>Komentar</th>
-										</thead>
-										<tbody>
-											@foreach($threads as $thread)
-												<?php
-													$countComment = $thread->comment()->commentThread($thread->id)->count();
-												?>
-												<tr>
-													<td>
-														<b><a href="{{ App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread) }}">{{ $thread->judulThread }}</a></b><br>
-														<small>By {{ $thread->forumUsers->name }}</small>
-													</td>
-													<td>{{ date("d F Y", strtotime($thread->created_at)) }}</td>
-													<td>{{ $countComment != 0 ? date("d F Y", strtotime($thread->comment()->lastComment($thread->id)->first()['created_at'])) : '-' }}</td>
-													<td><span class="badge">{{ $countComment }}</span></td>
-												</tr>
-											@endforeach
-										</tbody>
-									</table>
+								<div class="col-md-12" id="tableContainer">
+									@include('pages.forum-fasilitator.thread._tableThreads')
 									{{ $threads->links() }}
 								</div>
 							</div>
@@ -80,4 +57,44 @@
 	</div>
 </div>
 <!-- END PAGE CONTENT -->
+@stop
+
+@section('js')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click', '#btnDeleteThread', function(e){
+				e.preventDefault();
+
+				var id = this.getAttribute('data-id');
+
+				swal({
+						title: "Are you sure?",
+						text: "You will not be able to recover this imaginary file!",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonClass: "btn-danger",
+						confirmButtonText: "Yes, delete it!",
+						cancelButtonText: "No, cancel it!",
+						closeOnConfirm: false,
+						closeOnCancel: false
+					},
+					function(isConfirm) {
+						if (isConfirm) {
+							$.ajax({
+								type: "DELETE",
+								url: "{{ url('forum-fasilitator/threads') }}"+"/"+id,
+								cache: false,
+								data: {_token: "{{ csrf_token() }}"},
+								success: function(data){
+									$('#tableContainer').html(data);
+								}
+							});
+							swal("Deleted!", "Your imaginary file has been deleted.", "success");
+						} else {
+							swal("Cancelled", "Your imaginary file is safe :)", "error");
+						}
+				});
+			});
+		});
+	</script>
 @stop

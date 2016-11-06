@@ -26,7 +26,7 @@ class ForumFasilitatorController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth:forum', ['except' => ['index', 'show']]);
+		$this->middleware('auth:forum', ['except' => ['index', 'show', 'threads', 'guides']]);
 	}
 
 	/**
@@ -160,6 +160,20 @@ class ForumFasilitatorController extends Controller
 
 		$guides = Thread::where('tipe', '=', 'guide')->paginate(20);
 		return view('pages.forum-fasilitator.thread._tableGuides', compact('guides'));
+	}
+
+	public function deleteThreads($id)
+	{
+		$thread = Thread::find(decrypt($id));
+		$thread->delete();
+
+		$threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
+					  ->where('tipe', '=', 'umum')
+					  ->join('komentar', 'threads.id', '=', 'komentar.thread_id')
+					  ->groupBy('thread_id')
+					  ->orderBy('aggregate', 'desc')
+					  ->paginate(20);
+		return view('pages.forum-fasilitator.thread._tableThreads', compact('threads'));
 	}
 
 	public function threads()

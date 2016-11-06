@@ -51,6 +51,7 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 	Route::get('guides', 'ForumFasilitatorController@guides')->name('guides.all');
 	Route::delete('guides/{id}', 'ForumFasilitatorController@deleteGuides')->name('guides.delete');
 	Route::get('threads', 'ForumFasilitatorController@threads')->name('threads.all');
+	Route::delete('threads/{id}', 'ForumFasilitatorController@deleteThreads')->name('threads.delete');
 	// Comment
 	Route::resource('comment', 'CommentController');
 	Route::get('comment/create/{id}', 'CommentController@create')->name('comment.create');

@@ -79,7 +79,7 @@
 							<div class="panel-footer">
 								&nbsp;
 								@if(auth('forum')->check())
-									@if($thread->forum_user_id == auth('forum')->user()->id)
+									@if($thread->forum_user_id == auth('forum')->user()->id || auth('forum')->user()->admin == 2)
 										<div class="pull-right">
 											<a href="{{ route('thread.edit', base64_encode(config('app.salt').$thread->id)) }}">Edit</a>
 											&nbsp;&nbsp;&nbsp;
@@ -128,7 +128,7 @@
 										&nbsp;
 										<div class="pull-right">
 											@if(auth('forum')->check())
-												@if($comment->forum_user_id == auth('forum')->user()->id)
+												@if($comment->forum_user_id == auth('forum')->user()->id  || auth('forum')->user()->admin == 2)
 													<a href="{{ route('comment.edit', encrypt($comment->id)) }}">Edit</a>
 												@endif
 												&nbsp;&nbsp;&nbsp;
