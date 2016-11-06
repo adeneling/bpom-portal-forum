@@ -11,7 +11,7 @@
 			<div class="tab-content product-carousel-content">
 				<div class="tab-pane fade in active">
 					@foreach($pictures as $picture)
-						<div class="col-md-3">
+						<div class="col-md-3" style="padding-top: 1em; padding-bottom: 1em;">
 							<div class="portfolio-item">
 								<div class="overlay"></div>
 								<div class="info">
