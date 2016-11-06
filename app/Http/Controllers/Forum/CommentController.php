@@ -63,6 +63,7 @@ class CommentController extends Controller
         $thread = Thread::find($id);
         $comment = Thread::find($id)
                    ->newComment()
+                   ->withUser()
                    ->withComment($request->get('komentar'))
                    ->withCounter($thread->comment()->commentThread($thread->id)->count())
                    ->saveComment();

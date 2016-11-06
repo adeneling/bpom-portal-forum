@@ -26,7 +26,6 @@ class Thread extends Model
     public function newComment(){
     	$comment = new Comment;
     	$comment->thread()->associate($this);
-    	$comment->withUser();
 
     	return $comment;
     }

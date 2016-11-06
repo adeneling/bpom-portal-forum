@@ -49,6 +49,11 @@
 										<thead>
 											<th>Topik</th>
 											<th>Post</th>
+											@if(auth('forum')->check())
+												@if(auth('forum')->user()->admin == 2)
+													<th>Aksi</th>
+												@endif
+											@endif
 										</thead>
 										<tbody>
 											@foreach($guides as $guide)
@@ -61,6 +66,11 @@
 														<small>By {{ $guide->forumUsers->name }}</small>
 													</td>
 													<td>{{ date("d F Y", strtotime($guide->created_at)) }}</td>
+													@if(auth('forum')->check())
+														@if(auth('forum')->user()->admin == 2)
+															<td></td>
+														@endif
+													@endif
 												</tr>
 											@endforeach
 										</tbody>
