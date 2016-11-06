@@ -174,6 +174,7 @@ return [
         RifkyEkayama\RajaOngkir\RajaOngkirServiceProvider::class,
         Danhunsaker\Laravel\Flysystem\FlysystemOtherServiceProvider::class,
         Alaouy\Youtube\YoutubeServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
         //
 
@@ -238,6 +239,7 @@ return [
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'RajaOngkir' => RifkyEkayama\RajaOngkir\RajaOngkirFacade::class,
         'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 

@@ -32,9 +32,7 @@
 	{{-- PAPER AUDIO --}}
 	<script src="{{ asset('assets/frontend/bower_resources/webcomponentsjs/webcomponents-lite.js') }}"></script>
 	<link rel="import" href="{{ asset('assets/frontend/bower_resources/paper-audio-player/paper-audio-player.html') }}">
-
 	{{-- SWEET ALERT --}}
-	<script src="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.js') }}"></script>
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.css') }}">
 </head>
 
@@ -115,6 +113,9 @@
 	<script src="{{ asset('assets/frontend/js/repute-shop.js') }}"></script>
 	<script src="https://use.fontawesome.com/fb24f8ac5d.js"></script>
 	<!-- Add mousewheel plugin (this is optional) -->
+	{{-- SWEET ALERT --}}
+	<script src="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.js') }}"></script>
+	@include('sweet::alert')
 	{{-- fancy box --}}
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/lib/jquery.mousewheel-3.0.6.pack.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/jquery.fancybox.pack.js?v=2.1.5') }}"></script>

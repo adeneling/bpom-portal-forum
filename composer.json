@@ -14,7 +14,8 @@
         "doctrine/dbal": "^2.5",
         "intervention/image": "^2.3",
         "danhunsaker/laravel-flysystem-others": "^1.3",
-        "alaouy/youtube": "dev-master"
+        "alaouy/youtube": "dev-master",
+        "uxweb/sweet-alert": "~1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
