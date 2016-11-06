@@ -50,7 +50,7 @@
 					<div class="col-md-12">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								{{ date('d F Y', strtotime($thread->created_at)) }} &nbsp;&nbsp;&nbsp;&nbsp; 18:30:19
+								{{ date('d F Y', strtotime($thread->created_at)) }} &nbsp;&nbsp;&nbsp;&nbsp; {{ date('H:i:s', strtotime($thread->created_at)) }}
 								<div class="pull-right">
 									#1
 								</div>
@@ -100,7 +100,7 @@
 							<div class="col-md-12">
 								<div class="panel panel-primary">
 									<div class="panel-heading">
-										{{ date('d F Y', strtotime($comment->created_at)) }} &nbsp;&nbsp;&nbsp;&nbsp; 18:30:19
+										{{ date('d F Y', strtotime($comment->created_at)) }} &nbsp;&nbsp;&nbsp;&nbsp; {{ date('H:i:s', strtotime($comment->created_at)) }}
 										<div class="pull-right">
 											#{{ $comment->counter+1 }}
 										</div>

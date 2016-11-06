@@ -78,6 +78,20 @@ Breadcrumbs::register('forum-fasilitator', function($breadcrumbs)
     $breadcrumbs->push('Forum Fasilitator', route('thread.index'));
 });
 
+// Beranda > Forum Fasilitator > Semua Threads
+Breadcrumbs::register('forum-fasilitator.threads', function($breadcrumbs)
+{
+    $breadcrumbs->parent('forum-fasilitator');
+    $breadcrumbs->push('Semua Thread', route('threads.all'));
+});
+
+// Beranda > Forum Fasilitator > Semua Guide
+Breadcrumbs::register('forum-fasilitator.guides', function($breadcrumbs)
+{
+    $breadcrumbs->parent('forum-fasilitator');
+    $breadcrumbs->push('Semua Guide', route('guides.all'));
+});
+
 // Beranda > Forum Fasilitator > Profile
 Breadcrumbs::register('profile', function($breadcrumbs)
 {
