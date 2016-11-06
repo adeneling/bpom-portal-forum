@@ -4,8 +4,8 @@
 	<title>@yield('title') | {{ config('app.name') }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
-	<meta name="author" content="The Develovers">
+	<meta name="description" content="Pusat Informasi Pasar Aman dan Bahan Berbahaya">
+	<meta name="author" content="Badan Pengawas Obat dan Makanan">
 	<!-- CSS -->
 	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
