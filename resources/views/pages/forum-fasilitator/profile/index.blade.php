@@ -90,8 +90,8 @@
 								<strong>FORUM ACTIVITY</strong>
 								<div id="tableContainer">
 									@include('pages.forum-fasilitator.profile._table')
-									{{ $threads->links() }}
 								</div>
+								{{ $threads->links() }}
 							</div>
 						</div>
 					</div>
@@ -125,7 +125,7 @@
 						if (isConfirm) {
 							$.ajax({
 								type: "DELETE",
-								url: "{{ url('forum-fasilitator/profile') }}"+"/"+id,
+								url: "{{ url('forum-fasilitator/thread') }}"+"/"+id,
 								cache: false,
 								data: {_token: "{{ csrf_token() }}"},
 								success: function(data){

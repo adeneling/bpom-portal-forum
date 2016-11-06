@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Forum\Thread;
 use App\Models\Forum\ThreadImage;
+use App\Models\UserControl\ForumUsers;
 
 use App\Http\Requests\Forum\ForumRequests;
 
@@ -144,6 +145,21 @@ class ForumFasilitatorController extends Controller
 	public function destroy($id)
 	{
 		//
+		$thread = Thread::find(decrypt($id));
+		$thread->delete();
+
+		$user = ForumUsers::find(auth('forum')->user()->id);
+		$threads = $user->thread()->onlyThread()->paginate(10);
+		return view('pages.forum-fasilitator.profile._table', compact('user', 'threads'));
+	}
+
+	public function deleteGuides($id)
+	{
+		$thread = Thread::find(decrypt($id));
+		$thread->delete();
+
+		$guides = Thread::where('tipe', '=', 'guide')->paginate(20);
+		return view('pages.forum-fasilitator.thread._tableGuides', compact('guides'));
 	}
 
 	public function threads()

@@ -125,10 +125,5 @@ class ProfileController extends Controller
 	public function destroy($id)
 	{
 		//
-		$thread = Thread::find(decrypt($id));
-		$thread->delete();
-
-		$user = ForumUsers::find(auth('forum')->user()->id);
-		return view('pages.forum-fasilitator.profile._table', compact('user'));
 	}
 }

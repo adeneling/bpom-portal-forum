@@ -97,7 +97,7 @@
 					<div class="form-group">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10">
-							<button type="submit" class="btn btn-primary">Buat Thread</button>
+							<button type="submit" class="btn btn-primary">Ubah Thread</button>
 						</div>
 					</div>
 				{!! Form::close() !!}
