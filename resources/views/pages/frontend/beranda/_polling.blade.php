@@ -19,7 +19,7 @@
 	</div>
 	<div class="form-group">
 		<label class="col-md-1 control-label">Hasil </label>
-		<div class="col-md-2">
+		<div class="col-md-11">
 			<span class="label label-success">{{ round($star1, 1) }}%</span>
 			<i class="fa fa-star" aria-hidden="true"></i>
 			<br>

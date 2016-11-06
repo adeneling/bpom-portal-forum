@@ -19,41 +19,24 @@
 		</div>
 	</div>
 </section>
-<!-- SLIDER -->
+
 <!-- BAHAN BERBAHAYA DAN PROGRAM -->
-	<div class="main-features ">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6"></div>
-				<a href="{{ url('bahan-berbahaya') }}" class="col-md-3 col-sm-6">
-					<i class="fa fa-warning "></i>
-					<h3 class="feature-heading">BAHAN BERBAHAYA</h3>
-				</a>
-				<a href="{{ url('program') }}" class="col-md-3 col-sm-6">
-					<i class="fa fa-list-alt "></i>
-					<h3 class="feature-heading">PROGRAM</h3>
-				</a>
-				<div class="col-md-3 col-sm-6"></div>
-			</div>
-		</div>
-	</div>
-<!-- INTRO -->
-<section>
+<div class="main-features ">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<h2 class="heading">TENTANG KAMI</h2>
-				<p class="lead"><b>Badan Pengawas Obat dan Makanan</b></p>
-				<p align="justify">Badan Pengawas Obat dan Makanan. Badan Pengawas Obat dan Makanan atau disingkat Badan POM adalah sebuah lembaga di Indonesia yang bertugas mengawasi peredaran obat-obatan dan makanan di Indonesia. Fungsi dan tugas badan ini yaitu mengatur makanan, suplemen makanan, obat-obatan, produk biofarmasi, transfusi darah, piranti medis, piranti untuk terapi dengan radiasi, produk kedokteran hewan, dan kosmetik.</p>
-				<p align="justify">Berdirinya Badan Pengawas Obat dan Makanan di Indonesia yang pada masa penjajahan Belanda dikenal dengan apoteker yang berperan dalam pelayanan kesehatan di bidang kefarmasian yang membantu pemerintah dalam melindungi masyarakat dalam pengawasan obat yang beredar di masyarakat.</p>
-			</div>
-			<div class="col-md-6">
-				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="Image Intro">
-			</div>
+			<div class="col-md-3 col-sm-6"></div>
+			<a href="{{ url('bahan-berbahaya') }}" class="col-md-3 col-sm-6">
+				<i class="fa fa-warning "></i>
+				<h3 class="feature-heading">BAHAN BERBAHAYA</h3>
+			</a>
+			<a href="{{ url('program') }}" class="col-md-3 col-sm-6">
+				<i class="fa fa-list-alt "></i>
+				<h3 class="feature-heading">PROGRAM</h3>
+			</a>
+			<div class="col-md-3 col-sm-6"></div>
 		</div>
 	</div>
-</section>
-<!-- END INTRO -->
+</div>
 
 <!-- LATEST NEWS -->
 <section>
@@ -105,31 +88,22 @@
 						</div>
 					</div>
 				@endforeach
+				@include('pages.frontend.beranda._css')
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website BPOM?</h2>
+						</div>
+						<div class="panel-body" id="formPollingContainer">
+							@include('pages.frontend.beranda._polling')
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>		
 <!-- END PASAR AMAN -->
-
-{{-- override css --}}
-@include('pages.frontend.beranda._css')
-
-<section>
-	<div class="container">
-		<h2 class="heading">POLLING</h2>
-		<div class="row">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website BPOM?</h2>
-				</div>
-				<div class="panel-body" id="formPollingContainer">
-					@include('pages.frontend.beranda._polling')
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 @stop
 
 @section('js')
