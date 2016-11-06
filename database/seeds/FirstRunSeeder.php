@@ -24,7 +24,7 @@ class FirstRunSeeder extends Seeder
 
 		ForumUsers::create([
 				'name' => 'Super Admin',
-				'photo' => 'null',
+				'photo' => 'http://www.gravatar.com/avatar/'.md5(strtolower(trim('super@admin.com'))).'?s=85&d=identicon',
 				'email' => 'super@admin.com',
 				'password' => bcrypt('admin'),
 				'remember_token' => str_random(10),

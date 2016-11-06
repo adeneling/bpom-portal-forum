@@ -90,6 +90,7 @@
 								<strong>FORUM ACTIVITY</strong>
 								<div id="tableContainer">
 									@include('pages.forum-fasilitator.profile._table')
+									{{ $threads->links() }}
 								</div>
 							</div>
 						</div>

@@ -36,7 +36,8 @@ class ProfileController extends Controller
 	{
 		//
 		$user = ForumUsers::find(auth('forum')->user()->id);
-		return view('pages.forum-fasilitator.profile.index', ['user' => $user]);
+		$threads = $user->thread()->onlyThread()->paginate(10);
+		return view('pages.forum-fasilitator.profile.index', compact('user', 'threads'));
 	}
 
 	/**
@@ -111,7 +112,8 @@ class ProfileController extends Controller
 		$user->update();
 
 		$user = ForumUsers::find(auth('forum')->user()->id);
-		return view('pages.forum-fasilitator.profile.index', ['user' => $user]);
+		$threads = $user->thread()->onlyThread()->paginate(10);
+		return view('pages.forum-fasilitator.profile.index', compact('user', 'threads'));
 	}
 
 	/**

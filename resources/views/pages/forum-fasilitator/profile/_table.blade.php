@@ -8,7 +8,7 @@
 		<th>Aksi</th>
 	</thead>
 	<tbody>
-		@foreach($user->thread as $thread)
+		@foreach($threads as $thread)
 			<?php
 				$countComment = $thread->comment()->commentThread($thread->id)->count();
 			?>

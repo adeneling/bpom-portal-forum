@@ -19,6 +19,10 @@ class Thread extends Model
     	return $this->hasMany(Comment::class);
     }
 
+    public function scopeOnlyThread($query){
+        return $query->where('tipe', '=', 'umum');
+    }
+
     public function newComment(){
     	$comment = new Comment;
     	$comment->thread()->associate($this);
