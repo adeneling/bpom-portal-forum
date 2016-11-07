@@ -160,7 +160,13 @@
 						cache: false,
 						success: function(data){
 							$('#formPollingContainer').html(data);
-							swal("Terima Kasih", "Atas Polling yang sudah diberikan", "success");
+							swal({
+								title: "Terima Kasih",
+								text: "Atas Polling yang sudah diberikan",
+								type: "success"
+							}, function(){
+								window.location.href = '{{ url('/') }}';
+							});
 						}
 					});
 				}
