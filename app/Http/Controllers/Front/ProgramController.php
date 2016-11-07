@@ -17,7 +17,7 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = Program::orderBy('created_at','desc')->take(1)->get();
+        $programs = Program::where('isenabled', '=', '1')->get();
         $dokumens = ProgramDokumen::orderBy('created_at','desc')->get();
         return view('pages.frontend.program.index',compact('programs','dokumens'));
     }
