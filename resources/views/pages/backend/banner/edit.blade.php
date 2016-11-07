@@ -27,7 +27,7 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::model($banner, ['route' => ['admin.banner.update', $banner],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
+				{!! Form::model($banner, ['route' => ['admin.banner.update', encrypt($banner->id)],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 				{{ csrf_field() }}
 				<div class="row">
 					<div class="col s6">

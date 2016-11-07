@@ -114,6 +114,9 @@ class BannerController extends Controller
 		$banner->lead = $request->input('lead');
 		$banner->save();
 		return redirect('admin/banner');
+
+		// echo "<pre>";
+		// echo print_r($request->all());
 	}
 
 	/**
