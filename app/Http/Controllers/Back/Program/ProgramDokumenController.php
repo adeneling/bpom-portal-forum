@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Back\Program;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Program\Program;
+use App\Models\Program\ProgramDokumen;
 use Auth;
 use Storage;
 
