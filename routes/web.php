@@ -1,14 +1,14 @@
 <?php
 /* FRONT */
 Route::group(['namespace' => 'Front'], function(){
-	/**/
+	/* FRONT */
+	Route::resource('/','BerandaController');
 	Route::resource('profile','ProfileController');
 	Route::resource('faq','FAQController');
 	Route::resource('hubungi-kami','HubungiKamiController');
 	Route::resource('sipaman','SipamanController');
 	Route::resource('peta-situs','PetaSitusController');
-	/**/
-	Route::resource('/','BerandaController');
+	
 	/* BERITA */
 	Route::resource('berita','BeritaController');
 	Route::get('berita/{id}/{judul}', 'BeritaController@show')->name('berita.lihat');
@@ -77,6 +77,7 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('galeri', 'Galeri\GaleriController');
 	// Kelola Program
 	Route::resource('program', 'Program\ProgramController');
+	Route::resource('program-dokumen', 'Program\ProgramDokumenController');
 	// Kelola Pedoman
 	Route::resource('pedoman', 'Pedoman\PedomanController');
 	// Kelola Media Promosi

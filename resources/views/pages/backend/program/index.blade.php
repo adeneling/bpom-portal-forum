@@ -76,7 +76,7 @@
 	<div class="section">
 		<div id="striped-table">
 			<h4 class="header">DAFTAR DOKUMEN PROGRAM</h4>
-			<a class="btn btn-primary" style="float:right;" href="{{ route('admin.program.create') }}">Tambah Dokumen Program</a>
+			<a class="btn btn-primary" style="float:right;" href="{{ route('admin.program-dokumen.create') }}">Tambah Dokumen Program</a>
 			<div class="row">
 				<div class="col s12">
 					<div id="table-container">
