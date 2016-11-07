@@ -50,7 +50,7 @@
 						<div class="row">
 					@endif
 
-					<div class="col-md-6">
+					<div class="col-md-6" style="padding-top: 1em; padding-bottom: 1em;">
 						<div class="news-item news-featured">
 							<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}">
 								<img src="{{ asset($val->foto) }}" class="Item Thumbnail" alt="{{ $val->judul }}" width="50" height="200" >
