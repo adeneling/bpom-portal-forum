@@ -8,6 +8,7 @@ use App\Http\Requests\Program\ProgramRequest;
 use App\Http\Controllers\Controller;
 
 use App\Models\Program\Program;
+use App\Models\Program\ProgramDokumen;
 use Auth;
 use Storage;
 
@@ -26,7 +27,8 @@ class ProgramController extends Controller
 	public function index()
 	{
 		$programs = Program::orderBy('created_at','desc')->get();
-		return view('pages.backend.program.index', compact('programs'))->withTitle('Kelola Program');
+		$dokumens = ProgramDokumen::orderBy('created_at','desc')->get();
+		return view('pages.backend.program.index', compact('programs','dokumens'))->withTitle('Kelola Program');
 	}
 
 	/**
