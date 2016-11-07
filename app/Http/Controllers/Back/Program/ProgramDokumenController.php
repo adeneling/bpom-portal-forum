@@ -69,7 +69,7 @@ class ProgramDokumenController extends Controller
     public function show($id)
     {
         $dokumen = ProgramDokumen::findOrFail(decrypt($id));
-        return view('pages.backend.program.dokumen.show', compact('program'))->withTitle('Lihat Dokumen');
+        return view('pages.backend.program.dokumen.show', compact('dokumen'))->withTitle('Lihat Dokumen');
     }
 
     /**
@@ -81,7 +81,7 @@ class ProgramDokumenController extends Controller
     public function edit($id)
     {
         $dokumen = ProgramDokumen::findOrFail(decrypt($id));
-        return view('pages.backend.program.edit', compact('program'))->withTitle('Edit Dokumen Program');
+        return view('pages.backend.program.dokumen.edit', compact('dokumen'))->withTitle('Edit Dokumen Program');
     }
 
     /**

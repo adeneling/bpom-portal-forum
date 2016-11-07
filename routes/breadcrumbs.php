@@ -200,6 +200,12 @@ Breadcrumbs::register('admin.program.create', function($breadcrumbs)
     $breadcrumbs->push('Tambah Program', route('admin.program.create'));
 });
 
+Breadcrumbs::register('admin.program-dokumen.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.program');
+    $breadcrumbs->push('Tambah Dokumen Program', route('admin.program-dokumen.create'));
+});
+
 // Dashboard > Kelola Pedoman
 Breadcrumbs::register('admin.pedoman', function($breadcrumbs)
 {

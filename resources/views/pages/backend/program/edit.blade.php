@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.program.edit', $program) !!}
+					
 				</div>
 			</div>
 		</div>

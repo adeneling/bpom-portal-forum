@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
 					<h5 class="breadcrumbs-title">{{ $title }}</h5>
-					{!! Breadcrumbs::render('admin.program.create') !!}
+					{!! Breadcrumbs::render('admin.program-dokumen.create') !!}
 				</div>
 			</div>
 		</div>
@@ -27,9 +27,9 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				{!! Form::open(['url' => 'admin/program','class' =>'col s12','files' => true]) !!}
+				{!! Form::open(['url' => 'admin/program-dokumen','class' =>'col s12','files' => true]) !!}
 				{{ csrf_field() }}
-					@include('pages.backend.program._form')
+					@include('pages.backend.program.dokumen._form')
 				{!! Form::close() !!}
 			</div>
 		</div>
