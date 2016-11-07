@@ -85,8 +85,8 @@
 <!-- PASAR AMAN -->
 <section class="recent-works">
 	<div class="container">
-		<h2 class="heading pull-left">PASAR AMAN</h2>
-		<a href="{{ url('pasar-aman') }}" class="btn btn-primary pull-right">Lihat semua</a>
+		<h2 class="heading">PASAR AMAN DARI BAHAN BERBAHAYA</h2>
+		<h4>Periode pengawasan: Juni-September 2016</h4>
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
@@ -129,7 +129,7 @@
 				<div class="col-md-4">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website BPOM?</h2>
+							<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website Pusat Informasi Pasar Aman dari Bahan Berbahaya?</h2>
 						</div>
 						<div class="panel-body" id="formPollingContainer">
 							@include('pages.frontend.beranda._css')
