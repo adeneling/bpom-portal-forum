@@ -132,7 +132,7 @@ class MediaPromosiSeeder extends Seeder
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
-		$media->nama = 'Boraks & Formalin';
+		$media->nama = 'Leaflet Boraks dan Formalin';
 		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
 		$media->deskripsi = '';
 		$media->tipe = 'dokumen';
@@ -145,7 +145,7 @@ class MediaPromosiSeeder extends Seeder
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
-		$media->nama = 'MELAMIN';
+		$media->nama = 'Leaflet Melamin';
 		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
 		$media->deskripsi = '';
 		$media->tipe = 'dokumen';
@@ -158,7 +158,7 @@ class MediaPromosiSeeder extends Seeder
 		Storage::put($filename, file_get_contents($path));
 		$media = new MediaPromosi;
 		$media->user_id = 1;
-		$media->nama = 'Pewarna Pangan';
+		$media->nama = 'Leaflet Pewarna Pangan ';
 		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
 		$media->deskripsi = '';
 		$media->tipe = 'dokumen';

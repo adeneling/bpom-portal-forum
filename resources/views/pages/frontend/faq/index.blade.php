@@ -197,6 +197,9 @@
 								<li>Contoh pangan yang diduga mengandung kuning metanil : kerupuk berwarna kuning, mie basah, tahu kuning. Ciri – cirinya : warna kuning mencolok, rasa pahit, jika dipegang warna kuning akan menempel di kulit.</li>
 							</ul>
 						</p>
+						<center>
+							<img src="{{ asset('assets/frontend/faq/borak.jpg') }}" class="img-responsive">
+						</center>
 					</div>
 				</div>
 			</div>

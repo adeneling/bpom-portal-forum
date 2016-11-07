@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(GaleriSeeder::class);
 		$this->call(ProgramSeeder::class);
 		$this->call(ProgramDokumenSeeder::class);
-		$this->call(ForumDummySeeder::class);
+		//$this->call(ForumDummySeeder::class);
 	}
 }
