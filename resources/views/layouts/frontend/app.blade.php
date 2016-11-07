@@ -114,15 +114,16 @@
 	<script src="{{ asset('assets/frontend/js/repute-shop.js') }}"></script>
 	<script src="https://use.fontawesome.com/fb24f8ac5d.js"></script>
 	<!-- Add mousewheel plugin (this is optional) -->
-	{{-- SWEET ALERT --}}
-	<script src="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.js') }}"></script>
-	@include('sweet::alert')
 	{{-- fancy box --}}
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/lib/jquery.mousewheel-3.0.6.pack.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/jquery.fancybox.pack.js?v=2.1.5') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7') }}"></script>
+	{{-- SWEET ALERT --}}
+	<script src="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.js') }}"></script>
+	@include('sweet::alert')
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".fancybox").fancybox();
