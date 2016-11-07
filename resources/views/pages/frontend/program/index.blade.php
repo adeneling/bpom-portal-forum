@@ -40,7 +40,8 @@
 								<div class="media-body">
 									<h5>{{ $dokumen->nama }}</h5>
 									<span class="text-muted">
-										<a href="{{ asset($dokumen->file) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('program.dokumen.show', [encrypt(urlencode( asset($dokumen->file))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
+										<a href="{{ asset($dokumen->file) }}" class="btn btn-primary"> Download</a> | 
+										<a href="{{ route('program.dokumen.show', [encrypt(urlencode( asset($dokumen->file))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
 									</span>
 								</div>
 							</div>
