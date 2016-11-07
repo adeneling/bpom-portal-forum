@@ -103,25 +103,31 @@ class BannerController extends Controller
 	public function update(BannerRequest $request, $id)
 	{
 		//
-		Storage::makeDirectory('banner');
+		// Storage::makeDirectory('banner');
 
-		$banner = Banner::find(decrypt($id));
-		$banner->user_id = auth()->user()->id;
+		// $banner = Banner::find(decrypt($id));
+		// $banner->user_id = auth()->user()->id;
 
 		// $filename = '';
 		// if($request->hasFile('banner')){
 		// 	$filename = 'banner/'.str_random(10).'.'.$request->file('banner')->getClientOriginalExtension();
 		// 	Storage::put($filename, file_get_contents($request->file('banner')));
 		// 	$banner->banner = Storage::url($filename);
+		// }else{
+		// 	$banner->banner = $banner->banner;
 		// }
 
-		$banner->hero = $request->get('hero');
-		$banner->lead = $request->get('lead');
-		$banner->isenabled = $banner->isenabled;
-		$banner->update();
+		// $banner->hero = $request->get('hero');
+		// $banner->lead = $request->get('lead');
+		// $banner->isenabled = $banner->isenabled;
+		// $banner->update();
 
-		$banners = Banner::orderBy('id', 'desc')->get();
-		return view('pages.backend.banner._tableBanner', compact('banners'));
+		// $banners = Banner::orderBy('id', 'desc')->get();
+		// return view('pages.backend.banner._tableBanner', compact('banners'));
+
+
+		echo "<pre>";
+		echo print_r($request->all());
 	}
 
 	/**

@@ -164,11 +164,22 @@
 			$(document).on('click', '#update', function(e){
 				e.preventDefault();
 
+				var form = document.forms.namedItem("formBannerEdit");
+				var formdata = new FormData(form);
 				$.ajax({
-					method: "PUT",
+					async: true,
 					url: "{{ url('admin/banner') }}"+"/"+$('#idBannerUpdate').val(),
-					data: $('#formBannerEdit').serialize(),
-					success: function(data){
+					type: 'PUT',
+					processData: false,
+					contentType: false,
+					data: formdata,
+					cache: false,
+					error: function(data){
+						var errors = data.responseJSON;
+						console.log(errors['image']);
+						// Render the errors with js ...
+					},
+					success: function(data) {
 						$('#table-container').html(data);
 						$('#modal1').closeModal();
 						$('#formBannerEdit')[0].reset();

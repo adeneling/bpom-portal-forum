@@ -44,7 +44,7 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
-        $this->middleware('validate_forum')->only('login');
+        $this->middleware('validate_forum')->only(['login', 'showLoginForm']);
     }
 
     /**

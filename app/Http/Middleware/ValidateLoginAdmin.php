@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class ValidateLoginAdmin
 {
@@ -16,9 +17,15 @@ class ValidateLoginAdmin
 	public function handle($request, Closure $next)
 	{
 		if(auth('forum')->check()){
-			auth('forum')->logout();
+			// return $next($request);
+			return redirect()->route('index');
 		}
-		
-		return $next($request);
+
+		// if(auth('forum')->check()){
+		// 	auth('forum')->logout();
+		// 	Auth::logout();
+		// }
+
+		// return $next($request);
 	}
 }
