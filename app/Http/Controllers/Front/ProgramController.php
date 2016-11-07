@@ -24,7 +24,7 @@ class ProgramController extends Controller
 
     public function dokumenShow($lokasi)
     {
-        return view('pages.frontend.pedoman.dokumen_show', ['lokasi' => $lokasi]);
+        return view('pages.frontend.program.dokumen_show', ['lokasi' => $lokasi]);
     }
     /**
      * Show the form for creating a new resource.
