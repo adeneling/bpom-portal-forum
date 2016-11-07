@@ -1,19 +1,19 @@
 <div class="row">
 	<div class="input-field col s9">
-		{!! Form::text('nama', null, ['class'=>'validate']) !!}
+		{!! Form::text('nama', null, ['class'=>'validate', 'required']) !!}
 		<label for="nama">Nama</label>
 	</div>
 </div>
 <div class="row">
 	<div class="input-field col s9">
-		{!! Form::textarea('deskripsi', null, ['class'=>'materialize-textarea']) !!}
+		{!! Form::textarea('deskripsi', null, ['class'=>'materialize-textarea', 'required']) !!}
 		<label for="textarea1">Deskripsi</label>
 	</div>
 </div>
 <div class="row">
 	<div class="input-field col s2">
 		<div class="input-field col s12">
-			<select name="tipe" id="tipe">
+			<select name="tipe" id="tipe" required>
 				<option value="" disabled selected>Pilih Tipe</option>
 				<option value="audio">Audio</option>
 				<option value="gambar">Gambar</option>

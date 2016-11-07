@@ -27,7 +27,7 @@ class MediaPromosiController extends Controller
 	public function index()
 	{
 		//
-		$media = MediaPromosi::orderBy('tipe', 'asc')->get();
+		$media = MediaPromosi::orderBy('created_at', 'desc')->get();
 		return view('pages.backend.media-promosi.index', compact('media'))->withTitle('Kelola Media Promosi');
 	}
 

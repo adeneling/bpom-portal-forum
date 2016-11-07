@@ -24,7 +24,8 @@ class MediaPromosiRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nama' => 'required',
+            'deskripsi' => 'required',
         ];
     }
 }
