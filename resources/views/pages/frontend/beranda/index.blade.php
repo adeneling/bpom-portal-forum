@@ -55,7 +55,7 @@
 							<a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}">
 								<img src="{{ asset($val->foto) }}" class="Item Thumbnail" alt="{{ $val->judul }}" width="50" height="200" >
 							</a>
-							<h3><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}">{{ $val->judul }}</a>
+							<h3 align="justify"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}" >{{ $val->judul }}</a>
 							</h3>
 							<p>{!! substr($val->konten, 0, 200).'...' !!}</p>
 							<div class="news-meta">
