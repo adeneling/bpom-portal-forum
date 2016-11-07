@@ -183,17 +183,11 @@ class BeritaSeeder extends Seeder
 		$berita->user_id = 1;
 		$berita->judul = 'Razia di Pasar Pagi Jakbar, BPOM Sita 225 Ribu Kosmetik Ilegal';
 		$berita->konten = '<p align="justify"><strong>Jakarta</strong>&nbsp;- Satgas Pemberantasan obat dan Makanan Ilegal Badan Pengawas Obat dan Makanan (BPOM) melakukan penggerebekan di lantai 3 Pasar Asemka, Tambora, Jakarta Barat. 225 ribu dari 144 merek kosmetik ilegal disita petugas dalam razia ini.<br />
-		<br />
 		&quot;Barang bukti 225 ribu item dari 144 merek,&quot; ujar kepala Balai Besar POM Jakarta Dewi Prawitasari kepada wartawan di lokasi penggerebekan, Selasa (20/9/2016).<br />
-		<br />
 		Razia sendiri dilakukan sejak pukul 10.00 WIB, bersama Reskrimsus Polda Metro Jaya, Bareskrim Mabes Polri, Dinas Kesehatan Provinsi DKI dan Direktorat Barang Beredar dan Jasa Kementerian Perdagangan.<br />
-		<br />
 		Dewi mengatakan tahun 2016 ini penindakan seperti ini telah dilakukan 2 kali sejak bulan April. Dari penindakan, total produk yang dirazia mencapai Rp 7 miliar, dengan distributor terbanyak berasal dari Jakarta Barat dan Jakarta Selatan.<br />
-		<br />
 		&quot;Ini merupakan operasi gabungan besar di seluruh Indonesia, di semua balai besar POM. Ada 7 gudang dan satu pemilik berinisial HH yang diamankan,&quot; jelas Dewi.<br />
-		<br />
 		Pasar Asemka memang dikenal sebagai sentra aksesoris dan kosmetik murah. Namun sayang banyak sekali kosmetik ilegal dan tanpa izin edar.<br />
-		<br />
 		&quot;Di sini kosmetik ilegal banyak. Kosmetik di Jakarta ini distribusikan bukan hanya Jakarta. Jadi yang banyak ini (barang bukti) belum tentu di konsumsi masyarakat Jakarta,&quot; kata Dewi.&nbsp;</p>
 		';
 		$berita->foto = Storage::url($filename);
