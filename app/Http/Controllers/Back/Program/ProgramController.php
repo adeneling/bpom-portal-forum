@@ -11,6 +11,7 @@ use App\Models\Program\Program;
 use App\Models\Program\ProgramDokumen;
 use Auth;
 use Storage;
+use DB;
 
 class ProgramController extends Controller
 {
@@ -26,8 +27,8 @@ class ProgramController extends Controller
 	 */
 	public function index()
 	{
-		$programs = Program::orderBy('created_at','desc')->get();
-		$dokumens = ProgramDokumen::orderBy('created_at','desc')->get();
+		$programs = Program::orderBy('created_at','desc')->paginate(10);
+		$dokumens = ProgramDokumen::orderBy('created_at','desc')->paginate(10);
 		return view('pages.backend.program.index', compact('programs','dokumens'))->withTitle('Kelola Program');
 	}
 
@@ -132,5 +133,18 @@ class ProgramController extends Controller
 		$program = Program::find($id);
 		Program::find($id)->delete();
 		return redirect('admin/program');
+	}
+
+	public function enabled($id, $isenabled)
+	{
+		//
+		$disabled_all = DB::table('program')->update(array('isenabled' => 0));
+
+		$program = Program::find(decrypt($id));
+		$program->isenabled = 1;
+		$program->update();
+
+		$programs = Program::orderBy('created_at','desc')->paginate(10);
+		return view('pages.backend.program._tableProgram', compact('programs'));
 	}
 }

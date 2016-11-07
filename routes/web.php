@@ -77,6 +77,7 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('galeri', 'Galeri\GaleriController');
 	// Kelola Program
 	Route::resource('program', 'Program\ProgramController');
+	Route::post('program/enabled/{id}/{isenabled}', 'Program\ProgramController@enabled')->name('program.enabled');
 	Route::resource('program-dokumen', 'Program\ProgramDokumenController');
 	// Kelola Pedoman
 	Route::resource('pedoman', 'Pedoman\PedomanController');
