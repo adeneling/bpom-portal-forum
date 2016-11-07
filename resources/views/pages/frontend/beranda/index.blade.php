@@ -60,9 +60,6 @@
 							<h3 align="justify"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}" >{{ $val->judul }}</a>
 							</h3>
 							<p align="justify">{!! substr(strip_tags($val->konten), 0, 200).'...' !!}</p>
-							<div class="news-meta">
-								<span class="news-datetime">{{ $val->created_at }}</span>
-							</div>
 						</div>
 					</div>
 
