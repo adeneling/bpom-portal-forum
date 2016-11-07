@@ -147,7 +147,7 @@
 				});
 			});
 
-			$(document).on('click', '#edit-banner', function(e){
+			/*$(document).on('click', '#edit-banner', function(e){
 				e.preventDefault();
 
 				$.ajax({
@@ -185,7 +185,7 @@
 						$('#formBannerEdit')[0].reset();
 					}
 				});
-			});
+			});*/
 		});
 	</script>
 @endsection

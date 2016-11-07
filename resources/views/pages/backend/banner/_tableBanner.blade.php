@@ -27,7 +27,7 @@
 					</div>
 				</td>
 				<td>
-					<a class="btn-floating waves-effect waves-light blue" id="edit-banner" data-id="{{ encrypt($banner->id) }}"><i class="mdi-image-edit"></i></a>
+					<a href="{{ route('admin.banner.edit', encrypt($banner->id))}}" class="btn-floating waves-effect waves-light blue"><i class="mdi-image-edit"></i></a>
 					<a class="btn-floating waves-effect waves-light red" id="delete-banner" data-id="{{ encrypt($banner->id) }}"><i class="mdi-action-delete"></i></a>
 				</td>
 			</tr>

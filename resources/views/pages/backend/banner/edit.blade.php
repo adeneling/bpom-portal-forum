@@ -1,38 +1,81 @@
-<div class="modal-content">
-	{!! Form::model($banner, ['class' =>'col s12','files' => true, 'name' => 'formBannerEdit', 'id' => 'formBannerEdit']) !!}
-	{{ csrf_field() }}
-		{!! Form::hidden('id', encrypt($banner->id), ['id' => 'idBannerUpdate']) !!}
+@extends('layouts/backend/backend')
+
+@section('title', $title)
+
+@section('content')
+<!--breadcrumbs start-->
+<div id="breadcrumbs-wrapper">
+	<!-- Search for small screen -->
+	<div class="header-search-wrapper grey hide-on-large-only">
+		<i class="mdi-action-search active"></i>
+		<input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
+	</div>
+	<div class="container">
 		<div class="row">
-			<div class="col s6">
-				<div class="file-field input-field">
-					<div class="btn">
-						<span>Banner</span>
-						{!! Form::file('banner', null, ['id' => 'banner']) !!}
+			<div class="col s12 m12 l12">
+				<h5 class="breadcrumbs-title">{{ $title }}</h5>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--breadcrumbs end-->
+<!--start container-->
+<div class="container">
+	<div class="section">
+	</div>
+	<div id="input-fields">
+		<div class="row">
+			<div class="col s12">
+				{!! Form::model($banner, ['route' => ['admin.banner.update', $banner],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
+				{{ csrf_field() }}
+				<div class="row">
+					<div class="col s6">
+						<div class="file-field input-field">
+							<div class="btn">
+								<span>Banner</span>
+								{!! Form::file('banner',null) !!}
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text" value="{{ $banner->banner }}">
+							</div>
+						</div>
 					</div>
-					<div class="file-path-wrapper">
-						<input class="file-path validate" type="text" value="{{ $banner->banner }}">
+					<div class="col s6">
+						<a href="{{ asset($banner->banner) }}" target="_blank"><img src="{{ asset($banner->banner) }}" width="150" height="60"></a>
 					</div>
 				</div>
-			</div>
-			<div class="col s6">
-				<a href="{{ asset($banner->banner) }}" target="_blank"><img src="{{ asset($banner->banner) }}" width="150" height="60"></a>
+				<div class="row">
+					<div class="input-field col s12">
+						{!! Form::text('hero', null, ['class'=>'validate']) !!}
+						<label for="hero">Hero</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						{!! Form::text('lead', null, ['class'=>'validate']) !!}
+						<label for="lead">Lead</label>
+					</div>
+				</div>
+				<div class="row">
+					<center>
+						<button class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+							<i class="mdi-content-send right"></i>
+						</button>
+					</center>
+				</div>
+				{!! Form::close() !!}
 			</div>
 		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				{!! Form::text('hero', $banner->hero, ['class'=>'validate']) !!}
-				<label for="hero">Hero</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				{!! Form::text('lead', $banner->lead, ['class'=>'validate']) !!}
-				<label for="lead">Lead</label>
-			</div>
-		</div>
-	{!! Form::close() !!}
+	</div>
 </div>
-<div class="modal-footer">
-	<button class="waves-effect waves-blue btn-flat" id="update">Update</button>
-	<button class="waves-effect waves-red btn-flat" id="closeModal">Close</button>
-</div>
+<!--end container-->
+@endsection
+
+@section('js')
+<script type="text/javascript">
+$(document).ready(function(){
+	Materialize.updateTextFields();
+});
+</script>
+@endsection
