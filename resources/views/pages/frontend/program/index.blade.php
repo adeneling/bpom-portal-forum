@@ -33,16 +33,16 @@
 			<div class="col-md-4">
 				<div class="page-content page-search-result">
 					<ul class="list-unstyled list-results">
-						@foreach($pedomans as $pedoman)
+						@foreach($dokumens as $dokumen)
 						<li class="type-document">
 							<div class="media">
 								<a href="#" class="pull-left"><i class="fa fa-file-pdf-o"></i></a>
 								<div class="media-body">
-									<h3>
-										{{ $pedoman->judul }}
-									</h3>
+									<h5>
+										{{ $dokumen->nama }}
+									</h5>
 									<span class="text-muted">
-										<a href="{{ asset($pedoman->media_dokumen) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('pedoman.dokumen.show', [encrypt(urlencode( asset($pedoman->media_dokumen))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
+										<a href="{{ asset($dokumen->file) }}" class="btn btn-primary"> Download</a> | <a href="{{ route('program.dokumen.show', [encrypt(urlencode( asset($dokumen->file))) ]) }}" class="btn btn-success" target="_blank"> Preview</a>
 									</span>
 								</div>
 							</div>

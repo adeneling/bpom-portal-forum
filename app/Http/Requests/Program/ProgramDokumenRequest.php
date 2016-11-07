@@ -26,7 +26,7 @@ class ProgramDokumenRequest extends FormRequest
         return [
             'nama' => 'required',
             'deskripsi' => 'required',
-            'file' => 'required',
+            'file' => 'required|mimes:pdf,doc,docx',
         ];
     }
 }

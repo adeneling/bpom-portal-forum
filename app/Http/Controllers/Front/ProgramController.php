@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Program\Program;
-use App\Models\Pedoman\Pedoman;
+use App\Models\Program\ProgramDokumen;
 class ProgramController extends Controller
 {
     /**
@@ -18,10 +18,14 @@ class ProgramController extends Controller
     public function index()
     {
         $programs = Program::orderBy('created_at','desc')->take(1)->get();
-        $pedomans = Pedoman::orderBy('created_at','desc')->get();
-        return view('pages.frontend.program.index',compact('programs','pedomans'));
+        $dokumens = ProgramDokumen::orderBy('created_at','desc')->get();
+        return view('pages.frontend.program.index',compact('programs','dokumens'));
     }
 
+    public function dokumenShow($lokasi)
+    {
+        return view('pages.frontend.pedoman.dokumen_show', ['lokasi' => $lokasi]);
+    }
     /**
      * Show the form for creating a new resource.
      *
