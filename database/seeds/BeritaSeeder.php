@@ -23,29 +23,29 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = '2020, Pasar 23 Maret Bebas Bahan Berbahaya';
-		$berita->konten = '<p align="justify"><strong>TRIBUNMANADO.CO.ID, KOTAMOBAGU</strong>&nbsp;- Dinas Perindustrian Perdagangan Koperasi dan Penanaman Modal (Disperindagkop-PM)&nbsp;<a href="http://manado.tribunnews.com/tag/kotamobagu/" title="Kotamobagu">Kotamobagu</a>&nbsp;menargetkan pada tahun 2020&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>bebas bahan berbahaya.</p>
+		$berita->konten = '<p style="text-align: justify;"><strong>TRIBUNMANADO.CO.ID, KOTAMOBAGU</strong>&nbsp;- Dinas Perindustrian Perdagangan Koperasi dan Penanaman Modal (Disperindagkop-PM)&nbsp;<a href="http://manado.tribunnews.com/tag/kotamobagu/" title="Kotamobagu">Kotamobagu</a>&nbsp;menargetkan pada tahun 2020&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>bebas bahan berbahaya.</p>
 
-		<p align="justify">Untuk itu, Disperindagkop-PM akan melakukan pemeriksaan intensif di pasar tersebut mulai September ini dan terus dilakukan setiap bulan selanjutnya.</p>
+		<p style="text-align: justify;">Untuk itu, Disperindagkop-PM akan melakukan pemeriksaan intensif di pasar tersebut mulai September ini dan terus dilakukan setiap bulan selanjutnya.</p>
 
-		<p align="justify">&quot;Dan apabila pada 2019 sudah tidak terdeteksi lagi bahan berbahaya maka akan dicanangkan oleh BPOM pasar 23 Maret sebagai pasar bebas bahan berbahaya,&quot; ujar Kepala Seksi Pasar Disperindagkop PM Syahrul Syafii, Sabtu (17/9/2016).</p>
+		<p style="text-align: justify;">&quot;Dan apabila pada 2019 sudah tidak terdeteksi lagi bahan berbahaya maka akan dicanangkan oleh BPOM pasar 23 Maret sebagai pasar bebas bahan berbahaya,&quot; ujar Kepala Seksi Pasar Disperindagkop PM Syahrul Syafii, Sabtu (17/9/2016).</p>
 
-		<p align="justify">Sebanyak tiga aparatur sipil negara (ASN) dipersiapkan Disperindagkop-PM Kotamogu sebagai petugas pemeriksa di<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>. Mereka akan mendapat pelatihan dari Balai Besar Pengawasa Obat dan Makanan (BBPOM) Manado.</p>
+		<p style="text-align: justify;">Sebanyak tiga aparatur sipil negara (ASN) dipersiapkan Disperindagkop-PM Kotamogu sebagai petugas pemeriksa di<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>. Mereka akan mendapat pelatihan dari Balai Besar Pengawasa Obat dan Makanan (BBPOM) Manado.</p>
 
-		<p align="justify">&quot;Ada tiga orang saya satu di antaranya telah mendapat pelatihan pada 11 dan 12 Agustus lalu. Pelatihan tersebut langsung dilaksanakan di&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>&nbsp;dan kini sudah mendapat surat rekomendasi untuk pemeriksaan,&quot; ujar Syahrul.</p>
+		<p style="text-align: justify;">&quot;Ada tiga orang saya satu di antaranya telah mendapat pelatihan pada 11 dan 12 Agustus lalu. Pelatihan tersebut langsung dilaksanakan di&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret/" title="Pasar 23 Maret">Pasar 23 Maret</a>&nbsp;dan kini sudah mendapat surat rekomendasi untuk pemeriksaan,&quot; ujar Syahrul.</p>
 
-		<p align="justify">Selain surat rekomendasi, tiga orang tersebut dilengkapi dengan berbagai alat pemeriksaan bahan berbahaya dalam makanan.</p>
+		<p style="text-align: justify;">Selain surat rekomendasi, tiga orang tersebut dilengkapi dengan berbagai alat pemeriksaan bahan berbahaya dalam makanan.</p>
 
-		<p align="justify">&quot;Ada wadah tempat mengkur, dan beberapa bahan kimia untuk menimbulkan reaksi apabila makanan mengandung bahan berbahaya seperti borak dan formalin. Kita gunakan sampel,&quot; ujar dia.</p>
+		<p style="text-align: justify;">&quot;Ada wadah tempat mengkur, dan beberapa bahan kimia untuk menimbulkan reaksi apabila makanan mengandung bahan berbahaya seperti borak dan formalin. Kita gunakan sampel,&quot; ujar dia.</p>
 
-		<p align="justify">September ini, Disperindagkop-PM sudah melaksanakan pemeriksaan dan hasilnya belum ditemukan bahan berbahaya terkandung dalam makanan di&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret" title="Pasar 23 Maret">Pasar 23 Maret</a>.</p>
+		<p style="text-align: justify;">September ini, Disperindagkop-PM sudah melaksanakan pemeriksaan dan hasilnya belum ditemukan bahan berbahaya terkandung dalam makanan di&nbsp;<a href="http://manado.tribunnews.com/tag/pasar-23-maret" title="Pasar 23 Maret">Pasar 23 Maret</a>.</p>
 
-		<p align="justify">&quot;Kami mengambil sampel makanan tahu, ikan putih, ikan asin, kue berwarna, gorengan, gula merah, ikan fufu, bakso, dan mie. Hasilnya semuanya aman dan tidak mengandung bahan berbahaya,&quot; ujarnya.</p>
+		<p style="text-align: justify;">&quot;Kami mengambil sampel makanan tahu, ikan putih, ikan asin, kue berwarna, gorengan, gula merah, ikan fufu, bakso, dan mie. Hasilnya semuanya aman dan tidak mengandung bahan berbahaya,&quot; ujarnya.</p>
 
-		<p align="justify">Selanjutnya pemeriksaan akan dilaksanakan lagi pada awal Oktober. &quot;Kita akan turun lagi pada awal Oktober, masih dengan didampingi petugas dari BPOM ada sekitar tujuh orang. Jika ditemukan bahan berbahaya akan kita laporkan ke pimpinan,&quot; kata Syharul.</p>
+		<p style="text-align: justify;">Selanjutnya pemeriksaan akan dilaksanakan lagi pada awal Oktober. &quot;Kita akan turun lagi pada awal Oktober, masih dengan didampingi petugas dari BPOM ada sekitar tujuh orang. Jika ditemukan bahan berbahaya akan kita laporkan ke pimpinan,&quot; kata Syharul.</p>
 
-		<p align="justify">Kepala Disperindagkop-PM&nbsp;<a href="http://manado.tribunnews.com/tag/kotamobagu" title="Kotamobagu">Kotamobagu</a>&nbsp;Herman Aray mengatakan untuk pemilik makanan yang ditemukan mengandung bahan berbahaya akan diberikan teguran dan secara bertahap sampai sanksi penutupan tempat usaha.</p>
+		<p style="text-align: justify;">Kepala Disperindagkop-PM&nbsp;<a href="http://manado.tribunnews.com/tag/kotamobagu" title="Kotamobagu">Kotamobagu</a>&nbsp;Herman Aray mengatakan untuk pemilik makanan yang ditemukan mengandung bahan berbahaya akan diberikan teguran dan secara bertahap sampai sanksi penutupan tempat usaha.</p>
 
-		<p align="justify">&quot;Kalau baru pertama kali kita berikan teguran. Jika sudah tiga kali akan diberikan sanksi tegas seperti penutupan tempat usaha. Namun kita akan berkoordinasi dengan dinas terkait perizinan,&quot; ujarnya.&nbsp;<strong>(handhika dawangi)</strong></p>
+		<p style="text-align: justify;">&quot;Kalau baru pertama kali kita berikan teguran. Jika sudah tiga kali akan diberikan sanksi tegas seperti penutupan tempat usaha. Namun kita akan berkoordinasi dengan dinas terkait perizinan,&quot; ujarnya.&nbsp;<strong>(handhika dawangi)</strong></p>
 		';
 		$berita->foto = Storage::url($filename);
 		$berita->ket_foto = 'Inde-inde atau perempuan pedagang di Pasar 23 Maret lebih berdagang di luar gedung pasar. ';
@@ -58,13 +58,13 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'Komunitas Pasar Bulili Petobo di Palu Antusias Hadiri BIMTEK Pasar Aman Dari Bahan Berbahaya';
-		$berita->konten = '<p align="justify">Program Pasar Aman dari Bahan Berbahaya Oleh Badan POM RI sejak tahun 2013 &ndash; 2015 telah secara nyata menurunkan tingkat penemuan penggunaan bahan berbahaya di Pasar Tradisional di Indonesia termasuk di Pasar-Pasar Tradisional di Sulawesi Tengah dan diharapkan setiap petugas pasar yang telah diBIMTEK dan peserta&nbsp; penyuluhan/komunitas pasar dapat menjadi duta-duta dalam pengawasan bahan berbahaya di pasar-pasar Tradisional yang ada di daerah. Demikian antara lain isi sambutan Kepala Balai POM di Palu (Drs. Safriansyah, Apt., M.Kes) pada saat pembukaan kegiatan.</p>
+		$berita->konten = '<p style="text-align: justify;">Program Pasar Aman dari Bahan Berbahaya Oleh Badan POM RI sejak tahun 2013 &ndash; 2015 telah secara nyata menurunkan tingkat penemuan penggunaan bahan berbahaya di Pasar Tradisional di Indonesia termasuk di Pasar-Pasar Tradisional di Sulawesi Tengah dan diharapkan setiap petugas pasar yang telah diBIMTEK dan peserta&nbsp; penyuluhan/komunitas pasar dapat menjadi duta-duta dalam pengawasan bahan berbahaya di pasar-pasar Tradisional yang ada di daerah. Demikian antara lain isi sambutan Kepala Balai POM di Palu (Drs. Safriansyah, Apt., M.Kes) pada saat pembukaan kegiatan.</p>
 
-		<p align="justify">Kegiatan BIMTEK Pasar Aman dari Bahan Berbahaya kepada Petugas Pasar pada tanggal 20 Juli 2016, dengan melatih petugas pasar menggunakan&nbsp;<em>Rapid Tes Kit&nbsp;</em>untuk uji Formalin, Boraks, Rhodamin B dan Methanil Yellow. Kegiatan Penyuluhan Kepada Komunitas Pasar yang dihadiri oleh 50 orang peserta dilaksanakan pada tanggal 21 Juli 2016 di Ruang &lsquo;Posintomu&rsquo; Balai POM di Palu. Materi penyuluhan disampaikan oleh &nbsp;Yudhi Riani Firman, S.Sos., M.Si (Kabid.Pasar Dinas Perindagkop); Suanda, SKM., M.Kes (Kasie. Penyehatan Lingkungan Dinas Kesehatan); Dalam kegiatan ini juga dilaksanakan penyerahan Rompi Pengawas Bahan Berbahaya dan Paket&nbsp;<em>Rapid Test Kit</em>&nbsp;Bahan Berbahaya kepada Petugas Pasar Bulili Petobo.</p>
+		<p style="text-align: justify;">Kegiatan BIMTEK Pasar Aman dari Bahan Berbahaya kepada Petugas Pasar pada tanggal 20 Juli 2016, dengan melatih petugas pasar menggunakan&nbsp;<em>Rapid Tes Kit&nbsp;</em>untuk uji Formalin, Boraks, Rhodamin B dan Methanil Yellow. Kegiatan Penyuluhan Kepada Komunitas Pasar yang dihadiri oleh 50 orang peserta dilaksanakan pada tanggal 21 Juli 2016 di Ruang &lsquo;Posintomu&rsquo; Balai POM di Palu. Materi penyuluhan disampaikan oleh &nbsp;Yudhi Riani Firman, S.Sos., M.Si (Kabid.Pasar Dinas Perindagkop); Suanda, SKM., M.Kes (Kasie. Penyehatan Lingkungan Dinas Kesehatan); Dalam kegiatan ini juga dilaksanakan penyerahan Rompi Pengawas Bahan Berbahaya dan Paket&nbsp;<em>Rapid Test Kit</em>&nbsp;Bahan Berbahaya kepada Petugas Pasar Bulili Petobo.</p>
 
-		<p align="justify">Peserta penyuluhan dengan antusias menyampaikan pertanyaan, saran dan harapan-harapan mereka agar pengawasan Bahan Berbahaya benar-benar bisa dilakukan bersama-sama oleh masyarakat dan pemerintah (lintas sektor terkait) pada akhirnya dapat menghentikan suplai bahan berbahaya dari sales kanvas dengan cara melaporkan ke Balai POM di Palu apabila menemukan penggunaan bahan berbahaya ke dalam produk pangan maupun suplai bahan berbahaya oleh sales kanvas ke Kios-Kios di Pasar-Pasar Tradisional.</p>
+		<p style="text-align: justify;">Peserta penyuluhan dengan antusias menyampaikan pertanyaan, saran dan harapan-harapan mereka agar pengawasan Bahan Berbahaya benar-benar bisa dilakukan bersama-sama oleh masyarakat dan pemerintah (lintas sektor terkait) pada akhirnya dapat menghentikan suplai bahan berbahaya dari sales kanvas dengan cara melaporkan ke Balai POM di Palu apabila menemukan penggunaan bahan berbahaya ke dalam produk pangan maupun suplai bahan berbahaya oleh sales kanvas ke Kios-Kios di Pasar-Pasar Tradisional.</p>
 
-		<p align="justify">Peningkatan&nbsp;<em>Awareness</em>&nbsp;oleh Balai POM di Palu dan Lintas Sektor terkait Program Pasar Aman dari Bahan Berbahaya dan pemberdayaan komunitas/petugas pasar tradisional diharapkan dapat menghentikan peredaran, suplai bahan berbahaya di pasar-pasar tardisional dan penggunaan bahan berbahaya yang ditambahkan ke dalam makanan.</p>
+		<p style="text-align: justify;">Peningkatan&nbsp;<em>Awareness</em>&nbsp;oleh Balai POM di Palu dan Lintas Sektor terkait Program Pasar Aman dari Bahan Berbahaya dan pemberdayaan komunitas/petugas pasar tradisional diharapkan dapat menghentikan peredaran, suplai bahan berbahaya di pasar-pasar tardisional dan penggunaan bahan berbahaya yang ditambahkan ke dalam makanan.</p>
 		';
 		$berita->foto = Storage::url($filename);
 		$berita->ket_foto = '';
@@ -77,7 +77,7 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'BPOM Gandeng 108 Pasar Tradisional Cegah Bahan Berbahaya';
-		$berita->konten = '<p align="justify"><strong>TEMPO.CO</strong>,&nbsp;<strong>Jakarta</strong>&nbsp;- Badan Pengawas Obat dan Makanan (BPOM) mencatat telah mengembangkan kerja sama pengawasan dan penyediaan sarana mini laboratorium dengan 108 pasar tradisional hingga saat ini.<br />
+		$berita->konten = '<p style="text-align: justify;"><strong>TEMPO.CO</strong>,&nbsp;<strong>Jakarta</strong>&nbsp;- Badan Pengawas Obat dan Makanan (BPOM) mencatat telah mengembangkan kerja sama pengawasan dan penyediaan sarana mini laboratorium dengan 108 pasar tradisional hingga saat ini.<br />
 		<br />
 		Kerja sama pengawasan dan penyediaan sarana mini laboratorium tersebut diharapkan dapat menjadi langkah awal untuk mencegah masuknya bahan-bahan berbahaya di pasar tradisional.<br />
 		<br />
@@ -85,7 +85,7 @@ class BeritaSeeder extends Seeder
 		<br />
 		Tak terbatas pada pasar tradisional saja, kali ini BPOM menggandeng pengelola pasar modern BSD City, Sinar Mas Land, untuk membina pedagang pasar sekaligus menyediakan mini laboratorium.</p>
 
-		<p align="justify">Nantinya, laboratorium ini dapat dimanfaatkan untuk mengetes kandungan zat yang dilarang pada bahan pangan tertentu sehingga pemerintah terkait bisa langsung memberikan aksi lebih lanjut.<br />
+		<p style="text-align: justify;">Nantinya, laboratorium ini dapat dimanfaatkan untuk mengetes kandungan zat yang dilarang pada bahan pangan tertentu sehingga pemerintah terkait bisa langsung memberikan aksi lebih lanjut.<br />
 		<br />
 		Roy mengungkapkan, pemerintah daerah bisa mereplikasi kerja sama BPOM dengan pasar tradisional dan modern agar upaya pencegahan dan penindakan terhadap bahan-bahan berbahaya yang beredar di pasar bisa segera diatasi.<br />
 		<br />
@@ -101,9 +101,9 @@ class BeritaSeeder extends Seeder
 		<br />
 		Sepanjang Januari-September 2015, BPOM menyatakan aduan konsumen terhadap produk pangan menempati urutan teratas dengan proporsi 44,9% atau sebanyak 9.437 laporan.</p>
 
-		<p align="justify">Pada periode yang sama, laporan sektor pangan berkontribusi sebesar 47,93% atau sebanyak 6.803 laporan, diikuti oleh kosmetika (15,01%), obat tradisional (10,28%), dan lainnya.</p>
+		<p style="text-align: justify;">Pada periode yang sama, laporan sektor pangan berkontribusi sebesar 47,93% atau sebanyak 6.803 laporan, diikuti oleh kosmetika (15,01%), obat tradisional (10,28%), dan lainnya.</p>
 
-		<p align="justify">Sementara itu, terkait penemuan produk ilegal Januari-November 2015, BPOM melakukan pemusnahan atas produk ilegal dengan nilai mencapai Rp47,8 miliar dari total temuan produk yang telah diamankan senilai Rp140 miliar.</p>
+		<p style="text-align: justify;">Sementara itu, terkait penemuan produk ilegal Januari-November 2015, BPOM melakukan pemusnahan atas produk ilegal dengan nilai mencapai Rp47,8 miliar dari total temuan produk yang telah diamankan senilai Rp140 miliar.</p>
 		';
 		$berita->foto = Storage::url($filename);
 		$berita->ket_foto = 'Makanan yang diperiksa oleh petugas BPOM karena berpotensi mengandung bahan berbahaya dalam makanan dalam acara peluncuran Mobil Pangan dan Gizi Hero (MOGI Hero) di SDN Cipinang Muara 05 Pagi, Jakarta, 17 Maret 2016. TEMPO/Wisnu Agung Prasetyo';
@@ -116,7 +116,7 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'BPOM Temukan Makanan Kandung Bahan Berbahaya di Pasar Wadai Pulpis';
-		$berita->konten = '<p align="justify">Pulang Pisau (Antara Kalteng) - Kepala Balai Pengawasan Obat dan Makanan (BPOM) Palangka Raya Kalimantan Tengah, Trikoranti Mustikawati menyebutkan dari sebanyak 29 sampel makanan dan minuman yang dijual di Pasar Wadai Ramadan Pulang Pisau (Pulpis), dua diantaranya mengandung bahan formalin dan rodhamin B yang berbahaya bagi kesehatan.&nbsp;<br />
+		$berita->konten = '<p style="text-align: justify;">Pulang Pisau (Antara Kalteng) - Kepala Balai Pengawasan Obat dan Makanan (BPOM) Palangka Raya Kalimantan Tengah, Trikoranti Mustikawati menyebutkan dari sebanyak 29 sampel makanan dan minuman yang dijual di Pasar Wadai Ramadan Pulang Pisau (Pulpis), dua diantaranya mengandung bahan formalin dan rodhamin B yang berbahaya bagi kesehatan.&nbsp;<br />
 		<br />
 		&quot;Ada dua sampel pangan yang mengandung mengandung formalin dan rodhamin B setelah kita lakukan uji laboratorium,&acirc;&euro; kata Trikoranti di Pulang Pisau, Selasa sore.<br />
 		<br />
@@ -143,7 +143,7 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'Cegah Masuknya Bahan Berbahaya, BPOM Gandeng 108 Pasar Tradisional';
-		$berita->konten = '<p align="justify"><strong>Bisnis.com</strong>, TANGERANG - Badan Pengawas Obat dan Makanan (BPOM) mencatat telah mengembangkan kerja sama pengawasan dan penyediaan sarana mini laboratorium dengan 108 pasar tradisional hingga saat ini.<br />
+		$berita->konten = '<p style="text-align: justify;"><strong>Bisnis.com</strong>, TANGERANG - Badan Pengawas Obat dan Makanan (BPOM) mencatat telah mengembangkan kerja sama pengawasan dan penyediaan sarana mini laboratorium dengan 108 pasar tradisional hingga saat ini.<br />
 		<br />
 		Kerja sama pengawasan dan penyediaan sarana mini laboratorium tersebut diharapkan dapat menjadi langkah awal untuk mencegah masuknya bahan-bahan berbahaya di pasar tradisional.<br />
 		<br />
@@ -151,7 +151,7 @@ class BeritaSeeder extends Seeder
 		<br />
 		Tak terbatas pada pasar tradisional saja, kali ini BPOM menggandeng pengelola pasar modern BSD City, Sinar Mas Land, untuk membina pedagang pasar sekaligus menyediakan mini laboratorium.</p>
 
-		<p align="justify">Nantinya, laboratorium ini dapat dimanfaatkan untuk mengetes kandungan zat yang dilarang pada bahan pangan tertentu sehingga pemerintah terkait bisa langsung memberikan aksi lebih lanjut.<br />
+		<p style="text-align: justify;">Nantinya, laboratorium ini dapat dimanfaatkan untuk mengetes kandungan zat yang dilarang pada bahan pangan tertentu sehingga pemerintah terkait bisa langsung memberikan aksi lebih lanjut.<br />
 		<br />
 		Roy mengungkapkan, pemerintah daerah bisa mereplikasi kerja sama BPOM dengan pasar tradisional dan modern agar upaya pencegahan dan penindakan terhadap bahan-bahan berbahaya yang beredar di pasar bisa segera diatasi.<br />
 		<br />
@@ -167,9 +167,9 @@ class BeritaSeeder extends Seeder
 		<br />
 		Sepanjang Januari-September 2015, BPOM menyatakan aduan konsumen terhadap produk pangan menempati urutan teratas dengan proporsi 44,9% atau sebanyak 9.437 laporan.</p>
 
-		<p align="justify">Pada periode yang sama, laporan sektor pangan berkontribusi sebesar 47,93% atau sebanyak 6.803 laporan, diikuti oleh kosmetika (15,01%), obat tradisional (10,28%), dan lainnya.</p>
+		<p style="text-align: justify;">Pada periode yang sama, laporan sektor pangan berkontribusi sebesar 47,93% atau sebanyak 6.803 laporan, diikuti oleh kosmetika (15,01%), obat tradisional (10,28%), dan lainnya.</p>
 
-		<p align="justify">Sementara itu, terkait penemuan produk ilegal Januari-November 2015, BPOM melakukan pemusnahan atas produk ilegal dengan nilai mencapai Rp47,8 miliar dari total temuan produk yang telah diamankan senilai Rp140 miliar.</p>
+		<p style="text-align: justify;">Sementara itu, terkait penemuan produk ilegal Januari-November 2015, BPOM melakukan pemusnahan atas produk ilegal dengan nilai mencapai Rp47,8 miliar dari total temuan produk yang telah diamankan senilai Rp140 miliar.</p>
 		';
 		$berita->foto = Storage::url($filename);
 		$berita->ket_foto = 'Ilustrasi: Petugas Balai POM menguji contoh makanan';
@@ -182,7 +182,7 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'Razia di Pasar Pagi Jakbar, BPOM Sita 225 Ribu Kosmetik Ilegal';
-		$berita->konten = '<p align="justify"><strong>Jakarta</strong>&nbsp;- Satgas Pemberantasan obat dan Makanan Ilegal Badan Pengawas Obat dan Makanan (BPOM) melakukan penggerebekan di lantai 3 Pasar Asemka, Tambora, Jakarta Barat. 225 ribu dari 144 merek kosmetik ilegal disita petugas dalam razia ini.<br />
+		$berita->konten = '<p style="text-align: justify;"><strong>Jakarta</strong>&nbsp;- Satgas Pemberantasan obat dan Makanan Ilegal Badan Pengawas Obat dan Makanan (BPOM) melakukan penggerebekan di lantai 3 Pasar Asemka, Tambora, Jakarta Barat. 225 ribu dari 144 merek kosmetik ilegal disita petugas dalam razia ini.<br />
 		&quot;Barang bukti 225 ribu item dari 144 merek,&quot; ujar kepala Balai Besar POM Jakarta Dewi Prawitasari kepada wartawan di lokasi penggerebekan, Selasa (20/9/2016).<br />
 		Razia sendiri dilakukan sejak pukul 10.00 WIB, bersama Reskrimsus Polda Metro Jaya, Bareskrim Mabes Polri, Dinas Kesehatan Provinsi DKI dan Direktorat Barang Beredar dan Jasa Kementerian Perdagangan.<br />
 		Dewi mengatakan tahun 2016 ini penindakan seperti ini telah dilakukan 2 kali sejak bulan April. Dari penindakan, total produk yang dirazia mencapai Rp 7 miliar, dengan distributor terbanyak berasal dari Jakarta Barat dan Jakarta Selatan.<br />
@@ -201,7 +201,7 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'Razia Pasar, BPOM Banten Temukan Bahan Takjil Berbahaya';
-		$berita->konten = '<p align="justify"><strong>Liputan6.com, Tangerang -</strong>&nbsp;Badan Pengawas Obat dan Makanan (<a href="http://ramadan.liputan6.com/read/2531685/sidak-makanan-berbuka-puasa-bpom-pekanbaru-temukan-zat-berbahaya" title="BPOM">BPOM</a>) Provinsi Banten bersama Bupati Tangerang Ahmed Zaki Iskandar sidak ke Pasar Modern Citra Raya dan Giant Citra Raya Kecamatan Cikupa hari ini. Hasilnya, beberapa bahan makanan mengandung berformalin dan kedaluwarsa.Sejumlah makanan dari dua tempat tersebut diuji sampel oleh petugas BPOM. Hasilnya, ditemukan kandungan formalin pada mi dan pewarna Rodamin B pada pacar cina yang dijual di City Market.Sementara makanan dari Giant tidak mengandung zat berbahaya, hanya saja untuk makanan kiloan seperti nugget tidak dilengkapi tanggal kedaluwarsa.<br />
+		$berita->konten = '<p style="text-align: justify;"><strong>Liputan6.com, Tangerang -</strong>&nbsp;Badan Pengawas Obat dan Makanan (<a href="http://ramadan.liputan6.com/read/2531685/sidak-makanan-berbuka-puasa-bpom-pekanbaru-temukan-zat-berbahaya" title="BPOM">BPOM</a>) Provinsi Banten bersama Bupati Tangerang Ahmed Zaki Iskandar sidak ke Pasar Modern Citra Raya dan Giant Citra Raya Kecamatan Cikupa hari ini. Hasilnya, beberapa bahan makanan mengandung berformalin dan kedaluwarsa.Sejumlah makanan dari dua tempat tersebut diuji sampel oleh petugas BPOM. Hasilnya, ditemukan kandungan formalin pada mi dan pewarna Rodamin B pada pacar cina yang dijual di City Market.Sementara makanan dari Giant tidak mengandung zat berbahaya, hanya saja untuk makanan kiloan seperti nugget tidak dilengkapi tanggal kedaluwarsa.<br />
 		
 		&quot;Ada sejumlah makanan yang ditemukan mengandung pewarna tekstil, bahan makanan yang biasa digunakan untuk membuat takjil. Bahkan, kita temukan juga makanan berformalin yang terdapat pada mi kuning,&quot; kata Bupati Tangerang Ahmed Zaki Iskandar usai mengikuti razia, Rabu (15/6/2016).<br />
 		
@@ -229,15 +229,15 @@ class BeritaSeeder extends Seeder
 		$berita = new Berita;
 		$berita->user_id = 1;
 		$berita->judul = 'Strategi Pengendalian Bahan Berbahaya Melalui Program Pasar Aman';
-		$berita->konten = '<p align="justify">Program Pasar Aman dari Bahan Berbahaya dilaksanakan oleh Badan POM melalui Direktorat Pengawasan Produk dan Bahan Berbahaya karena hasil pengawasan yang dilakukan khususnya dipasar tradisional menunjukkan masih ditemukannya penyalahgunaan bahan berbahaya pada pangan. Bahan berbahaya yang masih sering disalahgunakan antara lain formalin, boraks, dan pewarna non pangan (misalnya kuning metanil, rodamin b) masih mudah diperoleh dan diperjualbelikan secara bebas dengan harga relatif murah. Hal tersebut merupakan cerminan dari pengendalian peredaran bahan berbahaya yang belum optimal dan menyebabkan potensi praktek penyalahgunaan bahan berbahaya meningkat. Berdasarkan fakta tersebut, pengendalian peredaran bahan berbahaya di pasar merupakan hal penting yang harus dilakukan dalam upaya penurunan potensi penyalahgunaan bahan berbahaya pada pangan.</p>
+		$berita->konten = '<p style="text-align: justify;">Program Pasar Aman dari Bahan Berbahaya dilaksanakan oleh Badan POM melalui Direktorat Pengawasan Produk dan Bahan Berbahaya karena hasil pengawasan yang dilakukan khususnya dipasar tradisional menunjukkan masih ditemukannya penyalahgunaan bahan berbahaya pada pangan. Bahan berbahaya yang masih sering disalahgunakan antara lain formalin, boraks, dan pewarna non pangan (misalnya kuning metanil, rodamin b) masih mudah diperoleh dan diperjualbelikan secara bebas dengan harga relatif murah. Hal tersebut merupakan cerminan dari pengendalian peredaran bahan berbahaya yang belum optimal dan menyebabkan potensi praktek penyalahgunaan bahan berbahaya meningkat. Berdasarkan fakta tersebut, pengendalian peredaran bahan berbahaya di pasar merupakan hal penting yang harus dilakukan dalam upaya penurunan potensi penyalahgunaan bahan berbahaya pada pangan.</p>
 
-		<p align="justify">Dalam rangka mendukung program Pasar Sehat dari Kementerian Kesehatan, Badan POM telah memprakarsai Program Pasar Aman dari Bahan Berbahaya yang Disalahgunakan dalam Pangan dengan tujuan agar goal dari program pasar sehat bisa tercapai yaitu pasar yang nyaman, aman, bersih dan sehat. Pada pelaksanaan program ini, telah dilakukan intervensi terhadap pasar contoh yang melibatkan lintas sektor terkait. Hal tersebut tertuang dalam kebijakan Badan POM tahun 2013&ndash;2015 dalam rangka mencapai sasaran &ldquo;Menurunnya Makanan yang Mengandung Bahan Berbahaya&rdquo; melalui salah satu indikator kinerja yaitu &ldquo;Jumlah Pasar yang Diintervensi Menjadi Pasar Aman dari Bahan Berbahaya&rdquo;.</p>
+		<p style="text-align: justify;">Dalam rangka mendukung program Pasar Sehat dari Kementerian Kesehatan, Badan POM telah memprakarsai Program Pasar Aman dari Bahan Berbahaya yang Disalahgunakan dalam Pangan dengan tujuan agar goal dari program pasar sehat bisa tercapai yaitu pasar yang nyaman, aman, bersih dan sehat. Pada pelaksanaan program ini, telah dilakukan intervensi terhadap pasar contoh yang melibatkan lintas sektor terkait. Hal tersebut tertuang dalam kebijakan Badan POM tahun 2013&ndash;2015 dalam rangka mencapai sasaran &ldquo;Menurunnya Makanan yang Mengandung Bahan Berbahaya&rdquo; melalui salah satu indikator kinerja yaitu &ldquo;Jumlah Pasar yang Diintervensi Menjadi Pasar Aman dari Bahan Berbahaya&rdquo;.</p>
 
-		<p align="justify"><strong>TUJUAN</strong></p>
-		<p align="justify">Tujuan dari program ini adalah terwujudnya Pasar Aman dari Bahan Berbahaya yang Disalahgunakan dalam Pangan dengan komitmen dan dukungan penuh dari unsur yaitu PEMDA/lintas sektor; pemangku kepentingan (<em>Stakeholder)</em>&nbsp;yang terdiri dari pihak swasta/lembaga swadaya masyarakat dan komunitas pasar (pedagang, pekerja, pengelola, asosiasi, pemasok, masyarakat). Tujuan tersebut akan dicapai dengan pengendalian peredaran bahan berbahaya yang disalahgunakan dalam pangan atau pengendalian pangan yang berpotensi mengandung bahan berbahaya. Hasil akhir yang ingin dicapai adalah: pasar yang bersih, aman, nyaman dan sehat. Sasaran yang ingin dicapai dalam kurun waktu selama 3 (tiga) tahun, (2013-2015) di 108 (seratus delapan) pasar contoh yang tersebar pada 31 (tiga puluh satu) propinsi adalah membangun kemandirian komunitas pasar untuk membebaskan pasar dari peredaran bahan berbahaya yang disalahgunakan pada pangan.</p>
+		<p style="text-align: justify;"><strong>TUJUAN</strong></p>
+		<p style="text-align: justify;">Tujuan dari program ini adalah terwujudnya Pasar Aman dari Bahan Berbahaya yang Disalahgunakan dalam Pangan dengan komitmen dan dukungan penuh dari unsur yaitu PEMDA/lintas sektor; pemangku kepentingan (<em>Stakeholder)</em>&nbsp;yang terdiri dari pihak swasta/lembaga swadaya masyarakat dan komunitas pasar (pedagang, pekerja, pengelola, asosiasi, pemasok, masyarakat). Tujuan tersebut akan dicapai dengan pengendalian peredaran bahan berbahaya yang disalahgunakan dalam pangan atau pengendalian pangan yang berpotensi mengandung bahan berbahaya. Hasil akhir yang ingin dicapai adalah: pasar yang bersih, aman, nyaman dan sehat. Sasaran yang ingin dicapai dalam kurun waktu selama 3 (tiga) tahun, (2013-2015) di 108 (seratus delapan) pasar contoh yang tersebar pada 31 (tiga puluh satu) propinsi adalah membangun kemandirian komunitas pasar untuk membebaskan pasar dari peredaran bahan berbahaya yang disalahgunakan pada pangan.</p>
 
-		<p align="justify">&nbsp;</p>
-		<p align="justify"><strong>STRATEGI PENGENDALIAN BAHAN BERBAHAYA</strong></p>
+		<p style="text-align: justify;">&nbsp;</p>
+		<p style="text-align: justify;"><strong>STRATEGI PENGENDALIAN BAHAN BERBAHAYA</strong></p>
 		<ol>
 		<li>Peningkatan komitmen PEMDA/lintas sektor,&nbsp;<em>stakeholder&nbsp;</em>dan komunitas pasar terkait lainnya, dengan melakukan advokasi pada PEMDA/lintas sektor di daerah dan inisiasi penyediaan peralatan pendukung dalam rangka pengawasan bahan berbahaya di pasar contoh. Diharapkan kegiatan serupa di pasar lain dapat dilanjutkan dan dikembangkan oleh PEMDA setempat.</li>
 		<li>Peningkatan pengetahuan komunitas pasar dengan melakukan penyuluhan kepada pedagang pangan dan pedagang bahan pangan; serta melakukan peyebaran informasi kepada masyarakat. Penyebaran informasi kepada masyarakat dilakukan antara lain dengan pemutaran film layanan masyarakat dan pemutaran spot iklan di radio. Penyuluhan dan penyebaran informasi ini diharapkan dapat memberikan pemahaman dan merubah perilaku para pedagang supaya tidak lagi menjual bahan berbahaya yang disalahgunakan dalam pangan. Namun tetap disadari bahwa penyuluhan ini membutuhkan waktu dan harus terus menerus dilakukan. Dengan demikian diharapkan masyarakat dapat mengenali ciri&ndash;ciri pangan yang mengandung bahan berbahaya serta timbulnya kesadaran akan bahaya penyalahgunaan bahan berbahaya pada pangan dan akibatnya pada kesehatan. Dengan demikian, konsumen akan lebih teliti dalam memilih pangan yang aman dan sehat yang pada akhirnya rantai peredaran bahan berbahya di pasar dapat terputus dan menghilang.</li>
@@ -246,10 +246,10 @@ class BeritaSeeder extends Seeder
 		<li>Pengembangan monitoring dan evaluasi terhadap implementasi pasar aman. Program ini dilakukan melalui pelaksanaan monitoring dan evaluasi yang berkesinambungan oleh gugus tugas yang dibentuk di pusat dan daerah. Pelaksanaan tugasnya mengacu pada Pedoman Monitoring dan Evaluasi yang diperbaharui secara terus menerus agar intervensi yang dilakukan dapat lebih optimal.</li>
 		</ol>
 
-		<p align="justify"><strong>HASIL PELAKSANAAN</strong></p>
-		<p align="justify">Realisasi program yang sudah dilaksanakan pada tahun 2013 telah diintervensi 62 (enam puluh dua) pasar contoh di 16 (enam belas) propinsi di Indonesia dan tahun 2014 ditetapkan lagi 15 (lima belas) pasar yang akan diintervensi di 15 (lima belas) propinsi yang belum diintervensi pada tahun 2013.</p>
+		<p style="text-align: justify;"><strong>HASIL PELAKSANAAN</strong></p>
+		<p style="text-align: justify;">Realisasi program yang sudah dilaksanakan pada tahun 2013 telah diintervensi 62 (enam puluh dua) pasar contoh di 16 (enam belas) propinsi di Indonesia dan tahun 2014 ditetapkan lagi 15 (lima belas) pasar yang akan diintervensi di 15 (lima belas) propinsi yang belum diintervensi pada tahun 2013.</p>
 
-		<p align="justify">Berikut hasil yang sudah dilakukan dan dicapai pada tahun 2013 :</p>
+		<p style="text-align: justify;">Berikut hasil yang sudah dilakukan dan dicapai pada tahun 2013 :</p>
 		<ol>
 		<li>Telah dilakukan Advokasi Komitmen PEMDA dan Lintas Sektor pada 16 (enam belas) propinsi.</li>
 		<li>Telah disusun Modul Juknis cara identifikasi bahan berbahaya dan pangan yang diduga mengandung bahan berbahaya.</li>
@@ -258,30 +258,30 @@ class BeritaSeeder extends Seeder
 		<li>Telah dilakukan Kampanye Pasar Aman dari Bahan Berbahaya di 47 (empat puluh tujuh) Pasar dari 62 (enam puluh dua) pasar target.</li>
 		</ol>
 
-		<p align="justify">Dari rangkaian kegiatan Pasar Aman dari Bahan Berbahaya telah dilakukan Monitoring dan Evaluasi terhadap kegiatan sampling dan pengujian, dilakukan dalam 2 (dua) tahap dengan rencana target sampel 200 (dua ratus) dari tiap pasar. Hasil akhir sampling yang dilakukan oleh petugas pasar di 62 (enam puluh dua) pasar contoh hanya bisa dilaksanakan pengambilan sebanyak 8705 (delapan ribu tujuh ratus lima) sampel.&nbsp;<strong>&nbsp;</strong></p>
+		<p style="text-align: justify;">Dari rangkaian kegiatan Pasar Aman dari Bahan Berbahaya telah dilakukan Monitoring dan Evaluasi terhadap kegiatan sampling dan pengujian, dilakukan dalam 2 (dua) tahap dengan rencana target sampel 200 (dua ratus) dari tiap pasar. Hasil akhir sampling yang dilakukan oleh petugas pasar di 62 (enam puluh dua) pasar contoh hanya bisa dilaksanakan pengambilan sebanyak 8705 (delapan ribu tujuh ratus lima) sampel.&nbsp;<strong>&nbsp;</strong></p>
 
-		<p align="justify"><strong>&nbsp;</strong><strong>HASIL PELAKSANAAN</strong></p>
-		<p align="justify"><strong>&nbsp;</strong>Pemilihan pasar contoh Pasar Aman dari Bahan Berbahaya antara lain berdasarkan adanya antusiasme/dukungan dari PEMDA dan pimpinan pasar setempat; pasar tersebut ditemukan adanya potensi peredaran bahan berbahaya yang disalahgunakan dalam pangan berdasarkan hasil survei/observasi Balai Besar/Balai POM baik yang menggunakan Mobil Laboratorium Keliling (Mobling) atau berdasarkan hasil sampling dan uji laboratorium; pasar yang menjadi pilot pasar sehat Kementerian Kesehatan menjadi prioritas sebagai Pasar Contoh untuk Pasar Aman dari Bahan Berbahaya</p>
+		<p style="text-align: justify;"><strong>&nbsp;</strong><strong>HASIL PELAKSANAAN</strong></p>
+		<p style="text-align: justify;"><strong>&nbsp;</strong>Pemilihan pasar contoh Pasar Aman dari Bahan Berbahaya antara lain berdasarkan adanya antusiasme/dukungan dari PEMDA dan pimpinan pasar setempat; pasar tersebut ditemukan adanya potensi peredaran bahan berbahaya yang disalahgunakan dalam pangan berdasarkan hasil survei/observasi Balai Besar/Balai POM baik yang menggunakan Mobil Laboratorium Keliling (Mobling) atau berdasarkan hasil sampling dan uji laboratorium; pasar yang menjadi pilot pasar sehat Kementerian Kesehatan menjadi prioritas sebagai Pasar Contoh untuk Pasar Aman dari Bahan Berbahaya</p>
 
-		<p align="justify"><strong>PERMASALAHAN</strong></p>
+		<p style="text-align: justify;"><strong>PERMASALAHAN</strong></p>
 		<ol>
 		<li>Koordinasi dengan lintas sektor terkait masih belum optimal karena terkendala oleh permasalahan kewenangan penanganan bahan berbahaya. Belum semua PEMDA/Lintas Sektor terkait merealisasikan rekomendasi tindak lanjut yang telah disepekati sewaktu dilakukan advokasi, ini terlihat dari program yang dilakukan belum menganggarkan secara khusus terhadap kesinambungan program pasar aman dari bahan berbahaya.</li>
 		<li>Pada saat perencanaan program tersebut belum diketahui lokasi pasar-pasar yang akan menjadi target sehingga lokasi pasar terutama yang jauh di Kabupaten masih ada yang belum terjamah untuk kegiatan.</li>
 		<li>Parameter uji yang digunakan untuk jenis sampel yang sama tidak konsisten, misalnya sampel mie ada yang diuji hanya boraks, ada yang diuji boraks dan formalin, ada yang diuji hanya formalin dan kuning metanil. Ada juga sampel yang diuji dengan parameter uji yang tidak sesuai misalnya tempe diuji dengan parameter uji formaldehid.</li>
 		</ol>
 
-		<p align="justify"><strong>SARAN</strong></p>
+		<p style="text-align: justify;"><strong>SARAN</strong></p>
 		<ol>
 		<li>Koordinasi lintas sektor dan pendekatan terhadap pemangku kepentingan di daerah perlu ditingkatkan</li>
 		<li>Perlu perencanaan pasar dan penganggaran yang matang untuk menunjang pelaksanaan kegiatan di tahun yang akan datang khususnya pasar-pasar yang lokasinya jauh di Kabupaten</li>
 		<li>Perlu dilakukan bimbingan dan pelatihan kepada petugas pasar oleh Balai besar /Balai POM sehingga parameter uji yang digunakan sesuai dengan sampel yang akan di uji dan diperoleh hasil sampling yang lebih baik</li>
 		</ol>
 
-		<p align="justify"><strong>PENUTUP</strong></p>
-		<p align="justify">Kunci keberhasilan Implementasi pasar aman dari bahan berbahaya adalah adanya komitmen yang solid dari komunitas pasar serta dukungan kebijakan dari pemerintah sehingga tingkat kepercayaan masyarakat terhadap pasar sebagai sumber utama suplai pangan yang aman dari bahan berbahaya meningkat.</p>
-		<p align="justify">&nbsp;</p>
-		<p align="justify"><u>Penulis :&nbsp;</u><u>Dra.&nbsp;</u><u>Yohana Sente Limbu</u><u>, Apt</u></p>
-		<p align="justify">Direktorat Pengawasan Produk dan Berbahaya.</p>
+		<p style="text-align: justify;"><strong>PENUTUP</strong></p>
+		<p style="text-align: justify;">Kunci keberhasilan Implementasi pasar aman dari bahan berbahaya adalah adanya komitmen yang solid dari komunitas pasar serta dukungan kebijakan dari pemerintah sehingga tingkat kepercayaan masyarakat terhadap pasar sebagai sumber utama suplai pangan yang aman dari bahan berbahaya meningkat.</p>
+		<p style="text-align: justify;">&nbsp;</p>
+		<p style="text-align: justify;"><u>Penulis :&nbsp;</u><u>Dra.&nbsp;</u><u>Yohana Sente Limbu</u><u>, Apt</u></p>
+		<p style="text-align: justify;">Direktorat Pengawasan Produk dan Berbahaya.</p>
 		';
 		$berita->foto = Storage::url($filename);
 		$berita->ket_foto = '';

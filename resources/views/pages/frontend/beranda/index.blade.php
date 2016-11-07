@@ -44,8 +44,10 @@
 		<h2 class="heading">BERITA TERBARU</h2>
 		<div class="row">
 			<div class="col-md-8">
+
 				<?php $idx = 0; $i = 1; ?>
 				@foreach($berita as $val)
+					
 					@if($idx == 0 || $idx % 2 == 0)
 						<div class="row">
 					@endif
@@ -57,7 +59,7 @@
 							</a>
 							<h3 align="justify"><a href="{{ route('berita.lihat', [base64_encode(config('app.salt').$val->id), str_slug($val->judul, '-')]) }}" type="{{ $val->judul }}" >{{ $val->judul }}</a>
 							</h3>
-							<p>{!! substr($val->konten, 0, 200).'...' !!}</p>
+							<p align="justify">{!! substr(strip_tags($val->konten), 0, 200).'...' !!}</p>
 							<div class="news-meta">
 								<span class="news-datetime">{{ $val->created_at }}</span>
 							</div>
@@ -73,9 +75,12 @@
 
 					<?php $idx++; ?>
 				@endforeach
+
 			</div>
 			<div class="col-md-4">
-				tes
+				@for($i=0;$i<100;$i++)
+					tes
+				@endfor
 			</div>
 		</div>
 	</div>
