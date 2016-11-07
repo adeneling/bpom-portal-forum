@@ -27,6 +27,24 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
+				@if(sizeof($errors) > 0)
+					<div id="card-alert" class="card red">
+						<div class="card-content white-text">
+							<p><i class="mdi-alert-error"></i> PERHARTIAN, Terjadi Kesalahan Input Data!</p>
+							<p>
+								<ol>
+									@foreach($errors->all() as $error)
+										<li>{{ $error }}</li>
+									@endforeach
+								</ol>
+							</p>
+						</div>
+						<button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+				@endif
+				
 				{!! Form::model($berita, ['route' => ['admin.berita.update', $berita],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 					<div class="row">
 						<div class="input-field col s8">

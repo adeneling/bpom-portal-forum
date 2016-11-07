@@ -27,6 +27,23 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
+				@if(sizeof($errors) > 0)
+					<div id="card-alert" class="card red">
+						<div class="card-content white-text">
+							<p><i class="mdi-alert-error"></i> PERHARTIAN, Terjadi Kesalahan Input Data!</p>
+							<p>
+								<ol>
+									@foreach($errors->all() as $error)
+										<li>{{ $error }}</li>
+									@endforeach
+								</ol>
+							</p>
+						</div>
+						<button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+				@endif
 				{!! Form::model($galeri, ['route' => ['admin.galeri.update', $galeri],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 				{{ csrf_field() }}
 					@include('pages.backend.galeri._form')
