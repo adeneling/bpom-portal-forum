@@ -19,18 +19,13 @@
 	<div id="input-fields">
 		<div class="row">
 			<div class="col s12">
-				<h4 class="header">{{ $program->nama }}</h4>
+				<h4 class="header">{{ $dokumen->nama }}</h4>
 				<hr>
 				<div class="row">
 					<div class="col s12">
-						<center>
-							<img src="{{ asset($program->media_foto) }}" width="400">
-						</center>						
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s12">
-						{{ $program->deskripsi }}
+						<p align="justify">
+							{{ $dokumen->deskripsi }}
+						</p>
 					</div>
 				</div>
 				

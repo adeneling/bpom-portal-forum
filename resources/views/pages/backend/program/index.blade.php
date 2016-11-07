@@ -86,7 +86,7 @@
 									<th>No</th>
 									<th>Nama Dokumen</th>
 									<th>Tanggal dibuat</th>
-									<th>Aksi</th>
+									<th width="35%">Aksi</th>
 								</tr>
 							</thead>
 							<tbody>
