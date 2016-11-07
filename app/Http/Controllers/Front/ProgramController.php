@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Program\Program;
+use App\Models\Pedoman\Pedoman;
 class ProgramController extends Controller
 {
     /**
@@ -16,8 +17,9 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = Program::orderBy('created_at','desc')->paginate(10);
-        return view('pages.frontend.program.index',compact('programs'));
+        $programs = Program::orderBy('created_at','desc')->take(1)->get();
+        $pedomans = Pedoman::orderBy('created_at','desc')->get();
+        return view('pages.frontend.program.index',compact('programs','pedomans'));
     }
 
     /**
