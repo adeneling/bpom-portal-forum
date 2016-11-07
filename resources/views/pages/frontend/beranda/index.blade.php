@@ -129,7 +129,7 @@
 				<div class="col-md-4">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							<h2 class="panel-title section-heading no-margin">Bagaimana pendapat Anda tentang tampilan dan konten website Pusat Informasi Pasar Aman dari Bahan Berbahaya?</h2>
+							<h2 class="panel-title section-heading no-margin" align="justify">Bagaimana pendapat Anda tentang tampilan dan konten website Pusat Informasi Pasar Aman dari Bahan Berbahaya?</h2>
 						</div>
 						<div class="panel-body" id="formPollingContainer">
 							@include('pages.frontend.beranda._css')
