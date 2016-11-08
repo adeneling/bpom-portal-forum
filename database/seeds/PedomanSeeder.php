@@ -65,5 +65,29 @@ class PedomanSeeder extends Seeder
 			';
 		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
 		$pedoman->save();
+
+		$path = public_path('seeder/pedoman/Cover Pedoman 2014 Pasar Aman.pdf');
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
+		Storage::put($filename, file_get_contents($path));
+		$pedoman = new Pedoman;
+		$pedoman->user_id = 1;
+		$pedoman->judul = 'Cover Pedoman 2014 Pasar Aman';
+		$pedoman->konten = 'Cover Pedoman 2014 Pasar Aman';
+		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
+		$pedoman->save();
+
+		$path = public_path('seeder/pedoman/Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya.pdf');
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
+		Storage::put($filename, file_get_contents($path));
+		$pedoman = new Pedoman;
+		$pedoman->user_id = 1;
+		$pedoman->judul = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
+		$pedoman->konten = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
+		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
+		$pedoman->save();
     }
 }
