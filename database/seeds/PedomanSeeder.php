@@ -14,7 +14,31 @@ class PedomanSeeder extends Seeder
     {
         Storage::makeDirectory('pedoman/dokumen');
 
-		$path = public_path('seeder/pedoman/KAK_BIMTEK PETUGAS PENGELOLA PASAR 2016.pdf');
+        $path = public_path('seeder/pedoman/Cover Pedoman 2014 Pasar Aman.pdf');
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
+		Storage::put($filename, file_get_contents($path));
+		$pedoman = new Pedoman;
+		$pedoman->user_id = 1;
+		$pedoman->judul = 'Cover Pedoman 2014 Pasar Aman';
+		$pedoman->konten = 'Cover Pedoman 2014 Pasar Aman';
+		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
+		$pedoman->save();
+
+		$path = public_path('seeder/pedoman/Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya.pdf');
+		$lastpath = explode('/', $path);
+		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
+		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
+		Storage::put($filename, file_get_contents($path));
+		$pedoman = new Pedoman;
+		$pedoman->user_id = 1;
+		$pedoman->judul = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
+		$pedoman->konten = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
+		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
+		$pedoman->save();
+
+		/*$path = public_path('seeder/pedoman/KAK_BIMTEK PETUGAS PENGELOLA PASAR 2016.pdf');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
 		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
@@ -64,30 +88,8 @@ class PedomanSeeder extends Seeder
 		$pedoman->konten = 'Kegiatan penyuluhan dilaksanakan dalambentuk pertemuan setengah hari ( halfday) di hotel atau restoran atau tempat pertemuan yang menyediakan paket pertemuan. Peserta pertemuan berjumlah 50 (limapuluh) orang yang terdiri dari komunitas pasar seperti  pengelola pasar, pedagang, pekerja, asosiasi, dan konsumen.
 			';
 		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
-		$pedoman->save();
+		$pedoman->save();*/
 
-		$path = public_path('seeder/pedoman/Cover Pedoman 2014 Pasar Aman.pdf');
-		$lastpath = explode('/', $path);
-		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
-		Storage::put($filename, file_get_contents($path));
-		$pedoman = new Pedoman;
-		$pedoman->user_id = 1;
-		$pedoman->judul = 'Cover Pedoman 2014 Pasar Aman';
-		$pedoman->konten = 'Cover Pedoman 2014 Pasar Aman';
-		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
-		$pedoman->save();
 
-		$path = public_path('seeder/pedoman/Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya.pdf');
-		$lastpath = explode('/', $path);
-		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
-		$filename = 'pedoman/dokumen/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
-		Storage::put($filename, file_get_contents($path));
-		$pedoman = new Pedoman;
-		$pedoman->user_id = 1;
-		$pedoman->judul = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
-		$pedoman->konten = 'Pedoman Implementasi Program Pasar Aman dari Bahan Berbahaya';
-		$pedoman->media_dokumen = !is_null($filename) ? Storage::url($filename) : '';
-		$pedoman->save();
     }
 }
