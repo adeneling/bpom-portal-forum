@@ -66,6 +66,8 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], function(){
 	// Auth 
 	Route::auth();
+	// Profile
+	Route::resource('profile', 'Profile\ProfileController');
 	// Dashboard
 	Route::resource('dashboard', 'BackController');
 	// Kelola Banner
