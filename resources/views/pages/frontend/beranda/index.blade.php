@@ -75,9 +75,24 @@
 
 			</div>
 			<div class="col-md-4">
-				@for($i=0;$i<100;$i++)
-					tes
-				@endfor
+				<a href="http://www.depkes.go.id/article/print/1657/pasar-sehat-upaya-cegah-penularan-penyakit.html" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/bakti-husada.png') }}" class="img-responsive">
+				</a>
+				<a href="http://sisni.bsn.go.id/index.php/sni_main/sni/detail_sni/22560" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/bsni.png') }}" class="img-responsive">
+				</a>
+				<a href="http://www.kemendagri.go.id/" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/kementerian-dalam-negeri.png') }}" class="img-responsive">
+				</a>
+				<a href="http://ews.kemendag.go.id/revitalisasi/index.aspx" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/ministry-of-trade.png') }}" class="img-responsive">
+				</a>
+				<a href="http://pasarjaya.co.id/" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/pasar-jaya.png') }}" class="img-responsive">
+				</a>
+				<a href="http://www.searo.who.int/indonesia/areas/promoting_health/Healthy-Market-for-Our-SafeFood/en/" target="_blank">
+					<img src="{{ asset('assets/frontend/img/sidebar/world-health.png') }}" class="img-responsive">
+				</a>
 			</div>
 		</div>
 	</div>
