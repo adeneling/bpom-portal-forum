@@ -59,7 +59,7 @@ class BannerController extends Controller
 
 		$banner = new Banner;
 		$banner->user_id = auth()->user()->id;
-		$banner->banner = !is_null($filename) ? Storage::url($filename) : '';
+		$banner->banner = $filename != '' ? Storage::url($filename) : '';
 		$banner->hero = $request->get('hero');
 		$banner->lead = $request->get('lead');
 		$banner->isenabled = 1;
@@ -112,7 +112,7 @@ class BannerController extends Controller
 		}
 		$banner->hero = $request->input('hero');
 		$banner->lead = $request->input('lead');
-		$banner->save();
+		$banner->update();
 		
 		return redirect('admin/banner');
 	}

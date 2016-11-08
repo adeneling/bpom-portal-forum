@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use Auth;
 use Storage;
 use App\Http\Requests;
-use App\Http\Requests\Berita\BeritaRequest;
+use App\Http\Requests\Berita\BeritaStore;
+use App\Http\Requests\Berita\BeritaUpdate;
 use App\Http\Controllers\Controller;
 use App\Models\Berita\Berita;
 
@@ -24,7 +25,7 @@ class BeritaController extends Controller
 	 */
 	public function index()
 	{
-		$beritas = Berita::orderBy('created_at','desc')->get();
+		$beritas = Berita::orderBy('created_at','desc')->paginate(10);
 		return view('pages.backend.berita.index', compact('beritas'))->withTitle('Kelola Berita');
 	}
 
@@ -45,7 +46,7 @@ class BeritaController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(BeritaRequest $request)
+	public function store(BeritaStore $request)
 	{
 		Storage::makeDirectory('berita/foto');
 		$filename = '';
@@ -58,8 +59,8 @@ class BeritaController extends Controller
 		$berita->user_id = Auth::user()->id;
 		$berita->judul = $request->input('judul');
 		$berita->konten = $request->input('konten');
-		$berita->foto = !is_null($filename) ? Storage::url($filename) : '';
-		$berita->ket_foto = !is_null($filename) ? Storage::url($filename) : '';
+		$berita->foto = $filename != '' ? Storage::url($filename) : '/assets/frontend/img/logo-bpom.png';
+		$berita->ket_foto = $filename != '' ? Storage::url($filename) : '';
 		$berita->save();
 		return redirect('admin/berita');
 	}
@@ -95,7 +96,7 @@ class BeritaController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(BeritaRequest $request, $id)
+	public function update(BeritaUpdate $request, $id)
 	{
 		Storage::makeDirectory('berita/foto');
 		$filename = '';
@@ -111,9 +112,9 @@ class BeritaController extends Controller
 			$filename = str_replace("/storage/", "", $berita->foto);
 		}
 
-		$berita->foto = !is_null($filename) ? Storage::url($filename) : '';
-		$berita->ket_foto = !is_null($filename) ? Storage::url($filename) : '';
-		$berita->save();
+		$berita->foto = $filename != '' ? Storage::url($filename) : '';
+		$berita->ket_foto = $filename != '' ? Storage::url($filename) : '';
+		$berita->update();
 		return redirect('admin/berita');
 	}
 
@@ -125,8 +126,10 @@ class BeritaController extends Controller
 	 */
 	public function destroy($id)
 	{
-		$berita = Berita::find($id);
-		Berita::find($id)->delete();
-		return redirect('admin/berita');
+		$berita = Berita::find(decrypt($id));
+		$berita->delete();
+
+		$beritas = Berita::orderBy('created_at','desc')->paginate(10);
+		return view('pages.backend.berita._tableBerita', compact('beritas'));
 	}
 }

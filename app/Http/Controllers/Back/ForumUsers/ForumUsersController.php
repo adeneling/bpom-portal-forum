@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Back\ForumUsers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ForumUsers\ForumUsersStore;
+use App\Http\Requests\ForumUsers\ForumUsersUpdate;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -46,7 +48,7 @@ class ForumUsersController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request)
+	public function store(ForumUsersStore $request)
 	{
 		//
 		Storage::makeDirectory('forum_users');
@@ -58,7 +60,7 @@ class ForumUsersController extends Controller
 
 		$user = new ForumUsers;
 		$user->name = $request->get('name');
-		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$user->photo = $filename != '' ? Storage::url($filename) : 'http://www.gravatar.com/avatar/'.md5(strtolower(trim($request->get('email')))).'?s=85&d=identicon';
 		$user->email = $request->get('email');
 		$user->password = bcrypt($request->get('password'));
 		$user->admin = 1;
@@ -100,7 +102,7 @@ class ForumUsersController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id)
+	public function update(ForumUsersUpdate $request, $id)
 	{
 		//
 		Storage::makeDirectory('forum_users');
@@ -116,7 +118,7 @@ class ForumUsersController extends Controller
 			$filename = str_replace("/storage/", "", $user->photo);
 		}
 
-		$user->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$user->photo = $filename != '' ? Storage::url($filename) : '';
 		$user->email = $request->get('email');
 		$user->password = bcrypt($request->get('password'));
 		$user->update();

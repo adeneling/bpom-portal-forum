@@ -44,9 +44,37 @@
 						</button>
 					</div>
 				@endif
-				{!! Form::model($galeri, ['route' => ['admin.galeri.update', $galeri],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
-				{{ csrf_field() }}
-					@include('pages.backend.galeri._form')
+				{!! Form::model($galeri, ['route' => ['admin.galeri.update', encrypt($galeri->id)],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
+					{{ csrf_field() }}
+					<div class="row">
+						<div class="input-field col s8">
+							{!! Form::text('judul', $galeri->judul, ['class'=>'validate active']) !!}
+							<label for="first_name">Judul Foto</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class="file-field input-field">
+								<div class="btn">
+									<span>Foto</span>
+									{!! Form::file('foto', null) !!}
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text" value="{{ $galeri->foto }}">
+								</div>
+							</div>
+						</div>
+						<div class="col s6">
+							<a href="{{ asset($galeri->foto) }}" target="_blank"><img src="{{ asset($galeri->foto) }}" width="150" height="60"></a>
+						</div>
+					</div>
+					<div class="row">
+						<center>
+							<button class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+								<i class="mdi-content-send right"></i>
+							</button>
+						</center>
+					</div>
 				{!! Form::close() !!}
 			</div>
 		</div>

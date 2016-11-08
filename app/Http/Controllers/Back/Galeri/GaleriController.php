@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Auth;
 use Storage;
 use App\Http\Requests;
-use App\Http\Requests\Galeri\GaleriRequest;
+use App\Http\Requests\Galeri\GaleriStore;
+use App\Http\Requests\Galeri\GaleriUpdate;
+
 use App\Http\Controllers\Controller;
 use App\Models\Galeri\Galeri;
 
@@ -24,7 +26,7 @@ class GaleriController extends Controller
 	 */
 	public function index()
 	{
-		$galeris = Galeri::orderBy('created_at','desc')->get();
+		$galeris = Galeri::orderBy('created_at','desc')->paginate(10);
 		return view('pages.backend.galeri.index', compact('galeris'))->withTitle('Kelola Galeri');
 	}
 
@@ -45,7 +47,7 @@ class GaleriController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(GaleriRequest $request)
+	public function store(GaleriStore $request)
 	{
 		/* make directory */
 		Storage::makeDirectory('galeri/foto');
@@ -57,11 +59,10 @@ class GaleriController extends Controller
 		$galeri = new Galeri;
 		$galeri->user_id = Auth::user()->id;
 		$galeri->judul = $request->input('judul');
-		$galeri->foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
+		$galeri->foto = $file_foto != '' ? Storage::url($file_foto) : '';
 		$galeri->save();
 
-		$galeris = Galeri::orderBy('created_at','desc')->get();
-		return view('pages.backend.galeri._tableGaleri', compact('galeris'));
+		return redirect('admin/galeri');
 	}
 
 	/**
@@ -95,27 +96,27 @@ class GaleriController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(GaleriRequest $request, $id)
+	public function update(GaleriUpdate $request, $id)
 	{
 		/* make directory */
 		Storage::makeDirectory('galeri/foto');
 		$file_foto = '';
 		
-		$galeri = Galeri::findOrFail($id);
+		$galeri = Galeri::findOrFail(decrypt($id));
+		$galeri->user_id = Auth::user()->id;
 		$galeri->judul = $request->input('judul');
-		$galeri->located = $request->input('located');
-		$galeri->keterangan = $request->input('keterangan');
 
-		if($request->hasFile('media_foto')){
-			$file_foto = 'galeri/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
-			Storage::put($file_foto, file_get_contents($request->file('media_foto')));
+		if($request->hasFile('foto')){
+			$file_foto = 'galeri/foto/'.str_random(10).'.'.$request->file('foto')->getClientOriginalExtension();
+			Storage::put($file_foto, file_get_contents($request->file('foto')));
 		}else{
-			$file_foto = str_replace("/storage/", "", $galeri->media_foto);
+			$file_foto = str_replace("/storage/", "", $galeri->foto);
 		}
 
-		$galeri->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
-		$galeri->save();
-		return redirect('admin/galeri');
+		$galeri->foto = $file_foto != '' ? Storage::url($file_foto) : '';
+		$galeri->update();
+
+		return redirect()->route('admin.galeri.index');
 	}
 
 	/**
@@ -126,9 +127,11 @@ class GaleriController extends Controller
 	 */
 	public function destroy($id)
 	{
-		$galeri = Galeri::find($id);
+		$galeri = Galeri::find(decrypt($id));
 		Storage::delete($galeri->foto);
 		$galeri->delete();
-		return redirect('admin/galeri');
+		
+		$galeris = Galeri::orderBy('created_at','desc')->paginate(10);
+		return view('pages.backend.galeri._tableGaleri', compact('galeris'));
 	}
 }

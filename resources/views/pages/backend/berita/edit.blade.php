@@ -48,7 +48,7 @@
 				{!! Form::model($berita, ['route' => ['admin.berita.update', $berita],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
 					<div class="row">
 						<div class="input-field col s8">
-							{!! Form::text('judul', $berita->judul, ['class'=>'validate active']) !!}
+							{!! Form::text('judul', $berita->judul, ['class'=>'validate']) !!}
 							<label for="first_name">Judul Berita</label>
 						</div>
 					</div>
@@ -65,19 +65,18 @@
 									{!! Form::file('photo', null, ['id' => 'photo']) !!}
 								</div>
 								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text">
+									<input class="file-path validate" type="text" value="{{ $berita->foto }}">
 								</div>
 							</div>
 						</div>
 						<div class="col s6">
-							<div class="input-field col s8">
-								<button class="btn waves-effect waves-light green" id="uploadFoto">Upload Foto</button>
-							</div>
+							<a href="{{ asset($berita->foto) }}" target="_blank"><img src="{{ asset($berita->foto) }}" width="150" height="60"></a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s8">
-							<button class="btn waves-effect waves-light green" id="lihatFoto">Lihat Foto</button>
+							{!! Form::textarea('ket_foto', $berita->ket_foto, ['class'=>'materialize-textarea']) !!}
+							<label for="first_name">Keterangan Foto</label>
 						</div>
 					</div>
 					<div class="row">

@@ -88,7 +88,7 @@ class MediaPromosiController extends Controller
 		$media = new MediaPromosi;
 		$media->user_id = auth('web')->user()->id;
 		$media->nama = $request->get('nama');
-		$media->lokasi = !is_null($filename) ? Storage::url($filename) : '';
+		$media->lokasi = $filename != '' ? Storage::url($filename) : '';
 		$media->deskripsi = $request->get('deskripsi');
 		$media->tipe = $type;
 		$media->save();

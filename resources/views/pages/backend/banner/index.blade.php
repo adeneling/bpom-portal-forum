@@ -86,7 +86,13 @@
 							data: {_token: "{{ csrf_token() }}"},
 							cache: false,
 							success: function(data){
-								swal("Deleted!", "Your imaginary file has been deleted.", "success");
+								swal({
+									title: "Deleted!",
+									text: "Your imaginary file has been deleted.",
+									type: "success"
+								}, function(){
+									window.location.href = '{{ url()->current() }}';
+								});
 								$('#table-container').html(data);
 							}
 						});

@@ -65,7 +65,7 @@ class PasarAmanController extends Controller
 
 		$pasarAman = new PasarAman;
 		$pasarAman->user_id = auth()->user()->id;
-		$pasarAman->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$pasarAman->photo = $filename != '' ? Storage::url($filename) : '';
 		$pasarAman->nama_pasar = $request->get('nama_pasar');
 		$pasarAman->kepala_pasar = $request->get('kepala_pasar');
 		$pasarAman->petugas_pasar = $request->get('petugas_pasar');
@@ -129,7 +129,7 @@ class PasarAmanController extends Controller
 			$filename = str_replace("/storage/", "", $pasarAman->photo);
 		}
 
-		$pasarAman->photo = !is_null($filename) ? Storage::url($filename) : '';
+		$pasarAman->photo = $filename != '' ? Storage::url($filename) : '';
 		$pasarAman->nama_pasar = $request->get('nama_pasar');
 		$pasarAman->kepala_pasar = $request->get('kepala_pasar');
 		$pasarAman->petugas_pasar = $request->get('petugas_pasar');

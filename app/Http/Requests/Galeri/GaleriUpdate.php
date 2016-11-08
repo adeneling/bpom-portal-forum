@@ -25,6 +25,8 @@ class GaleriUpdate extends FormRequest
     {
         return [
             //
+            'judul' => 'required',
+            'foto' => 'image|max:3072'
         ];
     }
 
@@ -36,7 +38,9 @@ class GaleriUpdate extends FormRequest
     public function messages()
     {
         return [
-            
+            'judul.required' => 'Judul tidak boleh kosong!',
+            'foto.image' => 'File gambar harus dengan format (jpeg, png, bmp, gif, atau svg)!',
+            'foto.max' => 'Ukuran gambar harus lebih kecil dari 3 MB!'
         ];
     }
 }
