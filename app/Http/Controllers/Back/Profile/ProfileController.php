@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Back\Profile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Auth;
+use App\Models\UserControl\User;
 class ProfileController extends Controller
 {
     /**
@@ -57,8 +58,10 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail(decrypt($id));
+        return view('pages.backend.profile.ubah-profile', compact('user'))->withTitle('Ubah Profile');
     }
+
 
     /**
      * Update the specified resource in storage.
