@@ -40,14 +40,15 @@
 			<a href="http://www.pom.go.id" target="_blank">
 				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="75" width="75">
 			</a>
+			<a href="{{ url('/') }}" >
+				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="70" width="150">
+			</a>
+
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
 				<span class="sr-only">Toggle Navigation</span>
 				<i class="fa fa-bars"></i>
-			</button>
+			</button>			
 			
-			<a href="{{ url('/') }}" target="_blank" class="navbar-brand navbar-logo navbar-logo-bigger">
-				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}">
-			</a>
 		</div>
 		<!-- MAIN NAVIGATION -->
 		<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
