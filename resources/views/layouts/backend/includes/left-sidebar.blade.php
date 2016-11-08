@@ -3,12 +3,14 @@
 		<li class="user-details blue darken-2">
 			<div class="row">
 				<div class="col col s4 m4 l4">
-						<img src="{{ asset('assets/backend/images//avatar.jpg') }}" alt="" class="circle responsive-img valign profile-image">
+						<img src="{{ asset('assets/backend/images/avatar.png') }}" alt="" class="circle responsive-img valign profile-image">
 				</div>
 				<div class="col col s8 m8 l8">
 					<ul id="profile-dropdown" class="dropdown-content">
-						<li><a href="#">
-							<i class="mdi-action-face-unlock"></i> Profile</a>
+						<li>
+							<a href="{{ url('admin/profile') }}">
+								<i class="mdi-action-face-unlock"></i> Profile
+							</a>
 						</li>
 						<li class="divider"></li>
 						<li>
