@@ -51,7 +51,7 @@
 			
 		</div>
 		<!-- MAIN NAVIGATION -->
-		<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
+		<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu" style="padding-top: 1em;">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="{{ route('index') }}">BERANDA </a></li>
 				<li><a href="{{ route('berita.index') }}">BERITA </a></li>
