@@ -43,7 +43,7 @@
 	<div class="container">
 		<h2 class="heading">BERITA TERBARU</h2>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 
 				<?php $idx = 0; $i = 1; ?>
 				@foreach($berita as $val)
@@ -74,7 +74,7 @@
 				@endforeach
 
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<a href="http://www.depkes.go.id/article/print/1657/pasar-sehat-upaya-cegah-penularan-penyakit.html" target="_blank">
 					<img src="{{ asset('assets/frontend/img/sidebar/bakti-husada.png') }}" class="img-responsive">
 				</a>
