@@ -4,7 +4,7 @@
 
 @section('content')
 
-@include('pages.forum-fasilitator.thread._slider')
+
 
 <!-- BREADCRUMBS -->
 <div class="page-header">
