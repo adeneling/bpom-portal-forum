@@ -33,69 +33,18 @@
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-			<button class="btn-floating btn-large" id="addBanner">
+			<a href="{{ route('admin.banner.create') }}" class="btn-floating btn-large" id="addBanner">
 				<i class="mdi-content-add-circle"></i>
-			</button>
+			</a>
 		</div>
 		<!-- Floating Action Button -->
 	</div>
 <!--end container-->
-
-<div id="modal1" class="modal">
-	<div id="modal-body">
-		
-	</div>
-</div>
 @endsection
 
 @section('js')
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$(document).on('click', '#addBanner', function(e){
-				$.ajax({
-					method: "GET",
-					url: "{{ route('admin.banner.create') }}",
-					cache: false,
-					success: function(data){
-						$('#modal-body').html(data);
-						$('#modal1').openModal();
-					}
-				});
-			});
-
-			$(document).on('click', '#closeModal', function(e){
-				$('#modal1').closeModal();
-			});
-
-			$(document).on('click', '#submit', function(e){
-				e.preventDefault();
-
-				if($('#foto').val() == ""){
-					alert('image kosong.');
-				}else{
-					var form = document.forms.namedItem("formBanner");
-					var formdata = new FormData(form);
-					$.ajax({
-						async: true,
-						url: "{{ route('admin.banner.store') }}",
-						type: 'POST',
-						processData: false,
-						contentType: false,
-						data: formdata,
-						cache: false,
-						error: function(data){
-							var errors = data.responseJSON;
-							console.log(errors['image']);
-							// Render the errors with js ...
-						},
-						success: function(data) {
-							$('#table-container').html(data);
-							$('#modal1').closeModal();
-							$('#formBanner')[0].reset();
-						}
-					});
-				}
-			});
 
 			$(document).on('click', '#enabledBanner', function(e){
 				var enabled = '';
@@ -147,45 +96,6 @@
 				});
 			});
 
-			/*$(document).on('click', '#edit-banner', function(e){
-				e.preventDefault();
-
-				$.ajax({
-					method: "GET",
-					url: "{{ url('admin/banner') }}"+"/"+this.getAttribute('data-id')+"/edit",
-					cache: false,
-					success: function(data){
-						$('#modal-body').html(data);
-						$('#modal1').openModal();
-					}
-				});
-			});
-
-			$(document).on('click', '#update', function(e){
-				e.preventDefault();
-
-				var form = document.forms.namedItem("formBannerEdit");
-				var formdata = new FormData(form);
-				$.ajax({
-					async: true,
-					url: "{{ url('admin/banner') }}"+"/"+$('#idBannerUpdate').val(),
-					type: 'PUT',
-					processData: false,
-					contentType: false,
-					data: formdata,
-					cache: false,
-					error: function(data){
-						var errors = data.responseJSON;
-						console.log(errors['image']);
-						// Render the errors with js ...
-					},
-					success: function(data) {
-						$('#table-container').html(data);
-						$('#modal1').closeModal();
-						$('#formBannerEdit')[0].reset();
-					}
-				});
-			});*/
 		});
 	</script>
 @endsection

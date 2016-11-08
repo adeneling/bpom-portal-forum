@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Pedoman;
+namespace App\Http\Requests\Banner;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PedomanRequest extends FormRequest
+class BannerUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,8 @@ class PedomanRequest extends FormRequest
     public function rules()
     {
         return [
-            'judul' => 'required',
-            'media_dokumen' => 'required|mimes:pdf,doc,docx',
+            //
+            'banner' => 'image'
         ];
     }
 
@@ -37,7 +37,7 @@ class PedomanRequest extends FormRequest
     public function messages()
     {
         return [
-            
+            'banner.image' => 'File gambar harus dengan format (jpeg, png, bmp, gif, atau svg)',
         ];
     }
 }

@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Back\Banner;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\Banner\BannerRequest;
+use App\Http\Requests\Banner\BannerStore;
+use App\Http\Requests\Banner\BannerUpdate;
 use App\Http\Controllers\Controller;
 
 use App\Models\Banner\Banner;
@@ -37,7 +38,7 @@ class BannerController extends Controller
 	public function create()
 	{
 		//
-		return view('pages.backend.banner.create');
+		return view('pages.backend.banner.create')->withTitle('Tambah Banner');
 	}
 
 	/**
@@ -46,7 +47,7 @@ class BannerController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(BannerRequest $request)
+	public function store(BannerStore $request)
 	{
 		//
 		Storage::makeDirectory('banner');
@@ -64,8 +65,7 @@ class BannerController extends Controller
 		$banner->isenabled = 1;
 		$banner->save();
 
-		$banners = Banner::orderBy('id', 'desc')->get();
-		return view('pages.backend.banner._tableBanner', compact('banners'));
+		return redirect('admin/banner');
 	}
 
 	/**
@@ -98,7 +98,7 @@ class BannerController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(BannerRequest $request, $id)
+	public function update(BannerUpdate $request, $id)
 	{
 		Storage::makeDirectory('banner');
 		$banner = Banner::find(decrypt($id));
@@ -113,10 +113,8 @@ class BannerController extends Controller
 		$banner->hero = $request->input('hero');
 		$banner->lead = $request->input('lead');
 		$banner->save();
+		
 		return redirect('admin/banner');
-
-		// echo "<pre>";
-		// echo print_r($request->all());
 	}
 
 	/**

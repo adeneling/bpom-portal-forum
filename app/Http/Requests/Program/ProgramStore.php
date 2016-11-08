@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Pedoman;
+namespace App\Http\Requests\Program;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PedomanRequest extends FormRequest
+class ProgramStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class PedomanRequest extends FormRequest
     public function rules()
     {
         return [
-            'judul' => 'required',
-            'media_dokumen' => 'required|mimes:pdf,doc,docx',
+            //
         ];
     }
 

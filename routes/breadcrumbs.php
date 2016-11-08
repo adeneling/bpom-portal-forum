@@ -144,6 +144,21 @@ Breadcrumbs::register('admin.banner', function($breadcrumbs)
     $breadcrumbs->push('Kelola Banner', route('admin.banner.index'));
 });
 
+// Dashboard > Kelola Banner > Tambah Banner
+Breadcrumbs::register('admin.banner.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.banner');
+    $breadcrumbs->push('Tambah Banner', route('admin.banner.create'));
+});
+
+// Dashboard > Kelola Banner > Ubah Banner
+Breadcrumbs::register('admin.banner.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.banner');
+    $breadcrumbs->push('Ubah Banner', route('admin.banner.create'));
+});
+
+
 // Dashboard > Kelola Berita
 Breadcrumbs::register('admin.berita', function($breadcrumbs)
 {

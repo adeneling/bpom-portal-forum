@@ -29,4 +29,16 @@ class ProgramDokumenRequest extends FormRequest
             'file' => 'required|mimes:pdf,doc,docx',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            
+        ];
+    }
 }

@@ -69,22 +69,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="col s6">
-							<div class="input-field">
-								{!! Form::textarea('ket_foto', null, ['class'=>'materialize-textarea']) !!}
-							</div>
-						</div>
-						{{-- <div class="col s6">
-							<div class="input-field col s8">
-								<button class="btn waves-effect waves-light green" id="uploadFoto">Upload Foto</button>
-							</div>
-						</div> --}}
 					</div>
-					{{-- <div class="row">
+					<div class="row">
 						<div class="input-field col s8">
-							<button class="btn waves-effect waves-light green" id="lihatFoto">Lihat Foto</button>
+							{!! Form::textarea('ket_foto', null, ['class'=>'materialize-textarea']) !!}
+							<label for="first_name">Keterangan Foto</label>
 						</div>
-					</div> --}}
+					</div>
 					<div class="row">
 						<center>
 							<button class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
