@@ -41,7 +41,10 @@
 				<i class="fa fa-bars"></i>
 			</button>
 			<a href="http://www.pom.go.id" target="_blank" class="navbar-brand navbar-logo navbar-logo-bigger">
-				<img src="{{ asset('assets/frontend/img/logo/repute-logo-nav.png') }}">
+				<img src="{{ asset('assets/frontend/img/logo/logo-bpom.png') }}">
+			</a>
+			<a href="{{ url('/') }}" target="_blank" class="navbar-brand navbar-logo navbar-logo-bigger">
+				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}">
 			</a>
 		</div>
 		<!-- MAIN NAVIGATION -->
