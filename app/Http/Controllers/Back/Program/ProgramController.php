@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Back\Program;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\Program\ProgramRequest;
+use App\Http\Requests\Program\ProgramStore;
+use App\Http\Requests\Program\ProgramUpdate;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\Program\Program;
@@ -49,13 +51,13 @@ class ProgramController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(ProgramRequest $request)
+	public function store(ProgramStore $request)
 	{
 		/* make directory */
 		Storage::makeDirectory('program/foto');
 		$file_foto = '';
 		if($request->hasFile('media_foto')){
-			$file_foto = 'program/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
+			$file_foto = 'program/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalName();
 			Storage::put($file_foto, file_get_contents($request->file('media_foto')));
 		}
 
@@ -63,7 +65,7 @@ class ProgramController extends Controller
 		$program->user_id = Auth::user()->id;
 		$program->nama = $request->input('nama');
 		$program->deskripsi = $request->input('deskripsi');
-		$program->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
+		$program->media_foto = $file_foto != '' ? Storage::url($file_foto) : '';
 		$program->save();
 		return redirect('admin/program');
 	}
@@ -99,26 +101,27 @@ class ProgramController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(ProgramRequest $request, $id)
+	public function update(ProgramUpdate $request, $id)
 	{
 		/* make directory */
 		Storage::makeDirectory('program/foto');
 		$file_foto = '';
 		
 		
-		$program = Program::findOrFail($id);
+		$program = Program::findOrFail(decrypt($id));
 		$program->nama = $request->input('nama');
 		$program->deskripsi = $request->input('deskripsi');
 
 		if($request->hasFile('media_foto')){
-            $file_foto = 'program/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalExtension();
+            $file_foto = 'program/foto/'.str_random(10).'.'.$request->file('media_foto')->getClientOriginalName();
             Storage::put($file_foto, file_get_contents($request->file('media_foto')));
         }else{
         	$file_foto = str_replace("/storage/", "", $program->media_foto);
         }
 
-		$program->media_foto = !is_null($file_foto) ? Storage::url($file_foto) : '';
-		$program->save();
+		$program->media_foto = $file_foto != '' ? Storage::url($file_foto) : '';
+		$program->update();
+
 		return redirect('admin/program');
 	}
 
@@ -130,9 +133,12 @@ class ProgramController extends Controller
 	 */
 	public function destroy($id)
 	{
-		$program = Program::find($id);
-		Program::find($id)->delete();
-		return redirect('admin/program');
+		$program = Program::find(decrypt($id));
+		Storage::delete($program->media_foto);
+		$program->delete();
+
+		$programs = Program::orderBy('created_at','desc')->paginate(10);
+		return view('pages.backend.program._tableProgram', compact('programs'));
 	}
 
 	public function enabled($id, $isenabled)

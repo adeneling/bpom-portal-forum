@@ -25,6 +25,8 @@ class PedomanUpdate extends FormRequest
     {
         return [
             //
+            'judul' => 'required',
+            'media_dokumen' => 'mimes:pdf,doc,docx',
         ];
     }
 
@@ -36,7 +38,8 @@ class PedomanUpdate extends FormRequest
     public function messages()
     {
         return [
-            
+            'judul.required' => 'Judul tidak boleh kosong!',
+            'media_dokumen.mimes' => 'Dokumen yang diperbolehkan hanya yang berformat (pdf, doc, docx)',
         ];
     }
 }

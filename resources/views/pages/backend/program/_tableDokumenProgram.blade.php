@@ -13,13 +13,11 @@
 		<tr>
 			<td>{{ $idx++ }}</td>
 			<td>{{ $dokumen->nama}}</td>
-			<td>{{ $dokumen->created_at }}</td>
+			<td>{{ date('d F Y', strtotime($dokumen->created_at)) }}</td>
 			<td>
-				{!! Form::model($dokumen, ['route' => ['admin.program-dokumen.destroy', $dokumen], 'method' => 'delete'] ) !!}
-				<a href="{{ route('admin.program-dokumen.show', encrypt($dokumen->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
-				<a href="{{ route('admin.program-dokumen.edit', encrypt($dokumen->id))}}" class="btn waves-effect waves-light blue">Edit</a>
-				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
-				{!! Form::close()!!}
+				<a href="{{ route('admin.program-dokumen.show', encrypt($dokumen->id))}}" class="btn-floating waves-effect waves-light green"><i class="mdi-action-search"></i></a>
+ 				<a href="{{ route('admin.program-dokumen.edit', encrypt($dokumen->id))}}" class="btn-floating waves-effect waves-light blue"><i class="mdi-image-edit"></i></a>
+				<a class="btn-floating waves-effect waves-light red" id="delete-program-dokumen" data-id="{{ encrypt($dokumen->id) }}"><i class="mdi-action-delete"></i></a>
 			</td>
 		</tr>
 		@endforeach

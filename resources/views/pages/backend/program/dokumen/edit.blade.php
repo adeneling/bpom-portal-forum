@@ -44,9 +44,40 @@
 						</button>
 					</div>
 				@endif
-				{!! Form::model($dokumen, ['route' => ['admin.program-dokumen.update', $dokumen],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
-				{{ csrf_field() }}
-					@include('pages.backend.program.dokumen._form')
+				{!! Form::model($dokumen, ['route' => ['admin.program-dokumen.update', encrypt($dokumen->id)],'method' =>'put','role'=>'form','class'=>'col s12','files' => true])!!}
+					{{ csrf_field() }}
+					<div class="row">
+						<div class="input-field col s8">
+							{!! Form::text('nama', $dokumen->nama, ['class'=>'validate']) !!}
+							<label for="first_name">Nama Dokumen</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s8">
+							{!! Form::textarea('deskripsi', $dokumen->deskripsi, ['class'=>'materialize-textarea']) !!}
+							<label for="textarea1">Deskripsi</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class="file-field input-field">
+								<div class="btn">
+									<span>File</span>
+									{!! Form::file('file', null) !!}
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text" value="{{ $dokumen->file }}">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<center>
+							<button class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+					        	<i class="mdi-content-send right"></i>
+					      	</button>
+						</center>
+					</div>
 				{!! Form::close() !!}
 			</div>
 		</div>

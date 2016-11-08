@@ -28,7 +28,7 @@
 			<a class="btn btn-primary" style="float:right;" href="{{ route('admin.program.create') }}">Tambah Program</a>
 			<div class="row">
 				<div class="col s12 m12 l12" id="tableProgram_container">
-					@include('pages.backend.program._tableProgram');
+					@include('pages.backend.program._tableProgram')
 					{{ $programs->links() }}
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 			<a class="btn btn-primary" style="float:right;" href="{{ route('admin.program-dokumen.create') }}">Tambah Dokumen Program</a>
 			<div class="row">
 				<div class="col s12" id="tableDokumenProgram_container">
-					@include('pages.backend.program._tableDokumenProgram');
+					@include('pages.backend.program._tableDokumenProgram')
 					{{ $dokumens->links() }}
 				</div>
 			</div>
@@ -74,6 +74,80 @@
 					success: function(data){
 						$('#tableProgram_container').html(data);	
 					}
+				});
+			});
+
+			$(document).on('click', '#delete-program', function(e){
+				e.preventDefault();
+				var id = $(this).attr('data-id');
+				swal({
+					title: "Are you sure?",   
+					text: "You will not be able to recover this imaginary file!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false }, 
+					function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+							type: "DELETE",
+							url: "{{ url('admin/program') }}"+"/"+id,
+							data: {_token: "{{ csrf_token() }}"},
+							cache: false,
+							success: function(data){
+								swal({
+									title: "Deleted!",
+									text: "Your imaginary file has been deleted.",
+									type: "success"
+								}, function(){
+									window.location.href = '{{ url()->current() }}';
+								});
+								$('#tableProgram_container').html(data);
+							}
+						});
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");   
+					} 
+				});
+			});
+
+			$(document).on('click', '#delete-program-dokumen', function(e){
+				e.preventDefault();
+				var id = $(this).attr('data-id');
+				swal({
+					title: "Are you sure?",   
+					text: "You will not be able to recover this imaginary file!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false }, 
+					function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+							type: "DELETE",
+							url: "{{ url('admin/program-dokumen') }}"+"/"+id,
+							data: {_token: "{{ csrf_token() }}"},
+							cache: false,
+							success: function(data){
+								swal({
+									title: "Deleted!",
+									text: "Your imaginary file has been deleted.",
+									type: "success"
+								}, function(){
+									window.location.href = '{{ url()->current() }}';
+								});
+								$('#tableDokumenProgram_container').html(data);
+							}
+						});
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");   
+					} 
 				});
 			});
 		});

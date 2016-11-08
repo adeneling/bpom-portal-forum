@@ -53,7 +53,7 @@ class BannerController extends Controller
 		Storage::makeDirectory('banner');
 		$filename = '';
 		if($request->hasFile('banner')){
-			$filename = 'banner/'.str_random(10).'.'.$request->file('banner')->getClientOriginalExtension();
+			$filename = 'banner/'.str_random(10).'.'.$request->file('banner')->getClientOriginalName();
 			Storage::put($filename, file_get_contents($request->file('banner')));
 		}
 
@@ -104,7 +104,7 @@ class BannerController extends Controller
 		$banner = Banner::find(decrypt($id));
 		$filename = '';
 		if($request->hasFile('banner')){
-			$filename = 'banner/'.str_random(10).'.'.$request->file('banner')->getClientOriginalExtension();
+			$filename = 'banner/'.str_random(10).'.'.$request->file('banner')->getClientOriginalName();
 			Storage::put($filename, file_get_contents($request->file('banner')));
 			$banner->banner = Storage::url($filename);
 		}else{

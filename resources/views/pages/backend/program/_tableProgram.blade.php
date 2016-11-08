@@ -7,14 +7,6 @@
 			<th width="35%">Aksi</th>
 		</tr>
 	</thead>
-	<tfoot>
-		<tr>
-			<th>No</th>
-			<th>Nama Program</th>
-			<th>Nyalakan</th>
-			<th>Aksi</th>
-		</tr>
-	</tfoot>
 
 	<tbody>
 		<?php $no=1 ?>
@@ -32,11 +24,9 @@
 				</div>
 			</td>
 			<td>
-				{!! Form::model($program, ['route' => ['admin.program.destroy', $program], 'method' => 'delete'] ) !!}
-				<a href="{{ route('admin.program.show', encrypt($program->id))}}" class="btn waves-effect waves-light teal">Lihat</a>
-				<a href="{{ route('admin.program.edit', encrypt($program->id))}}" class="btn waves-effect waves-light blue">Edit</a>
-				<button type="submit" class="btn waves-effect waves-light red">Hapus</button>
-				{!! Form::close()!!}
+				<a href="{{ route('admin.program.show', encrypt($program->id))}}" class="btn-floating waves-effect waves-light green"><i class="mdi-action-search"></i></a>
+ 				<a href="{{ route('admin.program.edit', encrypt($program->id))}}" class="btn-floating waves-effect waves-light blue"><i class="mdi-image-edit"></i></a>
+				<a class="btn-floating waves-effect waves-light red" id="delete-program" data-id="{{ encrypt($program->id) }}"><i class="mdi-action-delete"></i></a>
 			</td>
 		</tr>
 		@endforeach

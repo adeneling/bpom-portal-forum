@@ -48,25 +48,20 @@
 					{{ csrf_field() }}
 					<div class="row">
 						<div class="input-field col s9">
-							{!! Form::text('nama', null, ['class'=>'validate', 'required']) !!}
+							{!! Form::text('nama', $media->nama, ['class'=>'validate', 'required']) !!}
 							<label for="nama">Nama</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s9">
-							{!! Form::textarea('deskripsi', null, ['class'=>'materialize-textarea', 'required']) !!}
+							{!! Form::textarea('deskripsi', $media->deskripsi, ['class'=>'materialize-textarea']) !!}
 							<label for="textarea1">Deskripsi</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s2">
 							<div class="input-field col s12">
-								<select name="tipe" id="tipe" required>
-									<option value="" disabled selected>Pilih Tipe</option>
-									<option value="audio">Audio</option>
-									<option value="gambar">Gambar</option>
-									<option value="dokumen">Dokumen</option>
-								</select>
+								{!! Form::select('tipe', ['audio' => 'Audio', 'gambar' => 'Gambar', 'dokumen' => 'Dokumen'], $media->tipe, ['placeholder' => 'Pilih Tipe']) !!}
 							</div>
 						</div>
 					</div>
@@ -78,7 +73,7 @@
 									{!! Form::file('file', null) !!}
 								</div>
 								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text">
+									<input class="file-path validate" type="text" value="{{ $media->lokasi }}">
 								</div>
 							</div>
 						</div>
