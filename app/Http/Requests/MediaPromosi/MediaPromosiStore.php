@@ -25,6 +25,9 @@ class MediaPromosiStore extends FormRequest
     {
         return [
             //
+            'nama' => 'required',
+            'tipe' => 'required',
+            'file' => 'required',
         ];
     }
 
