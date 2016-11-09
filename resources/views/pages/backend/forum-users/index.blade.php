@@ -24,7 +24,7 @@
 	<div class="container">
 		<div class="section" id="table-container">
 			@include('pages.backend.forum-users._table_pengguna_forum')
-			{{ $penggunaForum->links() }}
+			
 		</div>
 		<!-- Floating Action Button -->
 		<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
