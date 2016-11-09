@@ -119,14 +119,14 @@
 							<div class="portfolio-item">
 								<div class="overlay"></div>
 								<div class="info">
-									<h4 class="title">{{ $pasarAman[$i]->nama_pasar }}</h4>
-									<a class="fancybox" rel="group" href="{{ asset(isset($pasarAman[$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman[$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasarAman[$i]->nama_pasar }}">
+									<h4 class="title">{{ $pasarAman['pasar_aman'][$i]->nama_pasar }}</h4>
+									<a class="fancybox" rel="group" href="{{ asset(isset($pasarAman['pasar_aman'][$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman['pasar_aman'][$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasarAman['pasar_aman'][$i]->nama_pasar }}">
 										<button class="btn btn-primary">Lihat</button>
 									</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset(isset($pasarAman[$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman[$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
-									<br><center>{{ $pasarAman[$i]->nama_pasar }}</center>
+									<img src="{{ asset(isset($pasarAman['pasar_aman'][$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman['pasar_aman'][$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
+									<br><center>{{ $pasarAman['pasar_aman'][$i]->nama_pasar }}</center>
 								</div>
 							</div>
 						</div>
