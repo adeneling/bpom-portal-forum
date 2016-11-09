@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Helpers\PasarHelpers;
+
 class BackController extends Controller
 {
 	/**
@@ -28,6 +30,16 @@ class BackController extends Controller
 	{
 		//
 		return view('pages.backend.dashboard')->withTitle('Dashboard');
+	}
+
+	public function tesPasarAman()
+	{
+		echo "<pre>";
+
+		$pasar = new PasarHelpers;
+		$periode = $pasar->periode();
+
+		echo print_r($periode);
 	}
 
 	/**

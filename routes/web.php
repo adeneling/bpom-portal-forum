@@ -71,6 +71,7 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::resource('profile', 'Profile\ProfileController');
 	// Dashboard
 	Route::resource('dashboard', 'BackController');
+	Route::get('tes', 'BackController@tesPasarAman');
 	// Kelola Banner
 	Route::resource('banner', 'Banner\BannerController');
 	Route::post('banner/enabled/{id}/{isenabled}', 'Banner\BannerController@enabled')->name('banner.enabled');
@@ -104,11 +105,4 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::post('pengguna-forum/isadmin/{id}/{isadmin}', 'ForumUsers\ForumUsersController@admin')->name('forum.users.admin');
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
-});
-
-Route::get('tes', function(){
-	$pasarAman = App\Models\Remote\Propinsi::find(11);
-
-	echo "<pre>";
-	echo print_r($pasarAman->kabupaten);
 });

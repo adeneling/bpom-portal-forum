@@ -4,6 +4,7 @@ namespace App\Models\Remote;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Remote\Pasar;
+use App\Models\Remote\Tahap;
 
 class SamplingDetail extends Model
 {
@@ -16,5 +17,10 @@ class SamplingDetail extends Model
 	public function pasar()
 	{
 		return $this->belongsTo(Pasar::class, 'kode_pasar');
+	}
+
+	public function tahap()
+	{
+		return $this->belongsTo(Tahap::class, 'tahap');
 	}
 }

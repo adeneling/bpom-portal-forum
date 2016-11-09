@@ -103,7 +103,7 @@
 <section class="recent-works">
 	<div class="container">
 		<h2 class="heading">PASAR AMAN DARI BAHAN BERBAHAYA</h2>
-		<h4>Periode pengawasan: Juni-September 2016</h4>
+		<h4>Periode pengawasan: {{ $periode[0] }}-{{ $periode[1] }} {{ date('Y') }}</h4>
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">

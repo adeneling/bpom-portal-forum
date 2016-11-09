@@ -3,6 +3,7 @@
 namespace App\Models\Remote;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Remote\SamplingDetail;
 
 class Tahap extends Model
 {
@@ -11,4 +12,9 @@ class Tahap extends Model
     protected $table = 'tahap';
     protected $primaryKey = 'kode_tahap';
 	public $timestamps = false;
+
+	public function samplingDetail()
+	{
+		return $this->hasMany(SamplingDetail::class, 'tahap');
+	}
 }
