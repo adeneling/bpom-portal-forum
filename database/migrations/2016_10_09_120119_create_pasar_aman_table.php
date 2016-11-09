@@ -38,8 +38,9 @@ class CreatePasarAmanTable extends Migration
             // $table->foreign('provinsi_id')->references('id')->on('provinsi')->onDelete('cascade');
             // $table->foreign('kota_id')->references('id')->on('kota')->onDelete('cascade');
             // $table->foreign('kecamatan_id')->references('id')->on('kecamatan')->onDelete('cascade');
-            
-            $table->string('kode_pasar', 10)->primary();
+
+            $table->increments('id');
+            $table->string('kode_pasar', 10);
             $table->string('nama_pasar')->nullable();
             $table->text('alamat_pasar')->nullable();
             $table->string('nama_kab')->nullable();
