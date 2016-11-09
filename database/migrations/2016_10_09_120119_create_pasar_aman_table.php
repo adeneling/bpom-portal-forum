@@ -48,6 +48,7 @@ class CreatePasarAmanTable extends Migration
             $table->string('photo')->nullable();
             $table->string('kategori')->nullable();
             $table->float('presentase')->nullable();
+            $table->enum('aman', ['aman', 'tidak aman'])->nullable();
             $table->timestamps();
         });
     }
