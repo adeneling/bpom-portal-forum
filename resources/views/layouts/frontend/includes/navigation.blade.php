@@ -38,10 +38,10 @@
 
 		<div class="navbar-header">
 			<a href="http://www.pom.go.id" target="_blank">
-				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="75" width="75">
+				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100">
 			</a>
 			<a href="{{ url('/') }}" >
-				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="70" width="150">
+				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="95" width="200">
 			</a>
 
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
