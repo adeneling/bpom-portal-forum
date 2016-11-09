@@ -103,13 +103,13 @@
 <section class="recent-works">
 	<div class="container">
 		<h2 class="heading">PASAR AMAN DARI BAHAN BERBAHAYA</h2>
-		<h4>Periode pengawasan: {{ $periode[0] }}-{{ $periode[1] }} {{ date('Y') }}</h4>
+		<h4>Periode pengawasan: {{ count($periode) > 1 ? $periode[0].'-'.$periode[1] : $periode[0] }} {{ date('Y') }}</h4>
 		<div class="clearfix"></div>
 		<div class="portfolio-static">
 			<div class="row">
 				<div class="col-md-8">
 					<?php $idx = 0; $i = 1; ?>
-					@foreach($pasarAman as $pasar)
+					@for($i=0; $i<12; $i++)
 
 						@if($idx == 0 || $idx % 4 == 0)
 							<div class="row">
@@ -119,14 +119,14 @@
 							<div class="portfolio-item">
 								<div class="overlay"></div>
 								<div class="info">
-									<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-									<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasar->nama_pasar }}">
+									<h4 class="title">{{ $pasarAman[$i]->nama_pasar }}</h4>
+									<a class="fancybox" rel="group" href="{{ asset(isset($pasarAman[$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman[$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasarAman[$i]->nama_pasar }}">
 										<button class="btn btn-primary">Lihat</button>
 									</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
-									<br><center>{{ $pasar->nama_pasar }}</center>
+									<img src="{{ asset(isset($pasarAman[$i]->photo) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman[$i]->photo) : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
+									<br><center>{{ $pasarAman[$i]->nama_pasar }}</center>
 								</div>
 							</div>
 						</div>
@@ -139,7 +139,7 @@
 						@endif
 
 						<?php $idx++; ?>
-					@endforeach
+					@endfor
 
 				</div>
 				

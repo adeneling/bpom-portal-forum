@@ -37,7 +37,7 @@ class BackController extends Controller
 		echo "<pre>";
 
 		$pasar = new PasarHelpers;
-		$periode = $pasar->periode();
+		$periode = $pasar->pasar_aman();
 
 		echo print_r($periode);
 	}
