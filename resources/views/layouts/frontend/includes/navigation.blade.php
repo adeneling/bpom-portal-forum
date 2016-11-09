@@ -3,7 +3,14 @@
 	<div class="container">
 		<!-- TOPBAR -->
 		<div class="topbar">
-			<ul class="list-inline top-nav">
+			<a href="http://www.pom.go.id" target="_blank">
+				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100" style="float:left;">
+			</a>
+			<a href="{{ url('/') }}" >
+				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="95" width="200" style="float:left;">
+			</a>
+			<ul class="list-inline top-nav">		
+
 				<li><a href="http://sipaman.pom.go.id/" target="_blank">SIPAMAN</a></li>
 				<li><a href="{{ route('thread.index') }}">FORUM FASILITATOR </a></li>
 				<li><a href="{{ route('faq.index') }}">FAQ</a></li>
@@ -11,16 +18,16 @@
 				
 				<li><a href="{{ route('peta-situs.index') }}">PETA SITUS</a></li>
 				@if(auth('forum')->check())
-					<li><b>Hello <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
-					<li>
-						{!! Form::open(['route' => ['logout'], 'method' => 'post', 'id' => 'logout']) !!}
-							<a href="#" onclick="document.getElementById('logout').submit()">Logout</a>
-						{!! Form::close() !!}
-					</li>
-					<li>&nbsp; &nbsp;</li>
+				<li><b>Hello <a href="{{ route('profile.index') }}" style="color: blue">{{ auth('forum')->user()->name }}</a>, </b></li>
+				<li>
+					{!! Form::open(['route' => ['logout'], 'method' => 'post', 'id' => 'logout']) !!}
+					<a href="#" onclick="document.getElementById('logout').submit()">Logout</a>
+					{!! Form::close() !!}
+				</li>
+				<li>&nbsp; &nbsp;</li>
 				@else
-					<li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
-					<li>&nbsp; &nbsp;</li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal">LOGIN</a></li>
+				<li>&nbsp; &nbsp;</li>
 				@endif
 			</ul>
 			<div class="searchbox">
@@ -35,20 +42,11 @@
 			</div>
 		</div>
 		<!-- END TOPBAR -->
-
 		<div class="navbar-header">
-			<a href="http://www.pom.go.id" target="_blank">
-				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100">
-			</a>
-			<a href="{{ url('/') }}" >
-				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="95" width="200">
-			</a>
-
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
 				<span class="sr-only">Toggle Navigation</span>
 				<i class="fa fa-bars"></i>
 			</button>			
-			
 		</div>
 		<!-- MAIN NAVIGATION -->
 		<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu" style="padding-top: 1em;">
