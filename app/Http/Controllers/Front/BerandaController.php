@@ -22,7 +22,9 @@ class BerandaController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
-	{		
+	{
+		$pasar = new PasarHelpers;
+		
 		$data = [
 			'star1' => Polling::count() != 0 ? (Polling::where('polling', '=', 1)->count()/Polling::count())*100 : 0,
 			'star2' => Polling::count() != 0 ? (Polling::where('polling', '=', 2)->count()/Polling::count())*100 : 0,
