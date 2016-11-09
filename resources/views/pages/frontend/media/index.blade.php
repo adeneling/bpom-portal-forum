@@ -17,15 +17,15 @@
 	<div class="container">
 		<div class="multiple-pricing-table">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<a href="{{ route('media.video') }}">
 						<div class="pricing-item">
 							<i class="fa fa-video-camera plan-icon"></i>
-							<strong class="price">VIDEO</strong>
+							<strong class="price">AUDIOVISUAL</strong>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<a href="{{ route('media.audio') }}">
 						<div class="pricing-item">
 							<i class="fa fa-file-audio-o plan-icon"></i>
@@ -33,19 +33,11 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="{{ route('media.gambar') }}">
+				<div class="col-md-4">
+					<a href="{{ route('media.visual') }}">
 						<div class="pricing-item">
 							<i class="fa fa-picture-o plan-icon"></i>
-							<strong class="price">GAMBAR</strong>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="{{ route('media.dokumen') }}">
-						<div class="pricing-item">
-							<i class="fa fa-file plan-icon"></i>
-							<strong class="price">DOKUMEN</strong>
+							<strong class="price">VISUAL</strong>
 						</div>
 					</a>
 				</div>
