@@ -25,7 +25,7 @@ class BannerStore extends FormRequest
 	{
 		return [
 			//
-			'banner' => 'required|image|max:3072'
+			'banner' => 'required|image|max:3072|dimensions:min_width=1900,min_height=500'
 		];
 	}
 
@@ -39,7 +39,8 @@ class BannerStore extends FormRequest
 		return [
 			'banner.required' => 'Gambar belum diinputkan!',
 			'banner.image' => 'Gambar harus dengan format (jpeg, png, bmp, gif, atau svg)!',
-			'banner.max' => 'Ukuran gambar harus lebih kecil dari 3 MB!'
+			'banner.max' => 'Ukuran gambar harus lebih kecil dari 3 MB!',
+			'banner.dimensions' => 'Ukuran gambar minimal panjang 1900px dan tinggi 500px',
 		];
 	}
 }

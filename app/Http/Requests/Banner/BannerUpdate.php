@@ -25,7 +25,7 @@ class BannerUpdate extends FormRequest
 	{
 		return [
 			//
-			'banner' => 'image|max:3072'
+			'banner' => 'image|max:3072|dimensions:min_width=1900,min_height=500'
 		];
 	}
 
@@ -38,7 +38,8 @@ class BannerUpdate extends FormRequest
 	{
 		return [
 			'banner.image' => 'File gambar harus dengan format (jpeg, png, bmp, gif, atau svg)!',
-			'banner.max' => 'Ukuran gambar harus lebih kecil dari 3 MB!'
+			'banner.max' => 'Ukuran gambar harus lebih kecil dari 3 MB!',
+			'banner.dimensions' => 'Ukuran gambar minimal panjang 1900px dan tinggi 500px',
 		];
 	}
 }
