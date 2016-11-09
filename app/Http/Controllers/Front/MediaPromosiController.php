@@ -39,6 +39,13 @@ class MediaPromosiController extends Controller
 		return view('pages.frontend.media.video', compact('videos'));
 	}
 
+	public function visual()
+	{
+		$pictures = MediaPromosi::where('tipe', '=', 'gambar')->get();
+		$docs = MediaPromosi::where('tipe', '=', 'dokumen')->get();
+		return view('pages.frontend.media.visual', compact('pictures','docs'));
+	}
+
 	public function gambar()
 	{
 		$pictures = MediaPromosi::where('tipe', '=', 'gambar')->get();

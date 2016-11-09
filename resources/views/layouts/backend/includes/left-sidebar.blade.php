@@ -64,9 +64,6 @@
 		<li class="bold {{ Request::segment(2) == 'pengguna-forum' ? 'active' : '' }}">
 			<a href="{{ route('admin.pengguna-forum.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Forum</a>
 		</li>
-		<li class="bold {{ Request::segment(2) == 'users' ? 'active' : '' }}">
-			<a href="{{ route('admin.users.index') }}" class="waves-effect waves-cyan"><i class="mdi-action-account-circle"></i> Kelola Pengguna Admin</a>
-		</li>
 		{{-- END  --}}
 		<br><br><br><br><br>
 	</ul>

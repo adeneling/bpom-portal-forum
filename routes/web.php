@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Front'], function(){
 	Route::resource('media-promosi','MediaPromosiController');
 	Route::get('media-informasi/video', 'MediaPromosiController@video')->name('media.video');
 	Route::get('media-informasi/gambar', 'MediaPromosiController@gambar')->name('media.gambar');
+	Route::get('media-informasi/visual', 'MediaPromosiController@visual')->name('media.visual');
 	Route::get('media-informasi/audio', 'MediaPromosiController@audio')->name('media.audio');
 	Route::get('media-informasi/dokumen', 'MediaPromosiController@dokumen')->name('media.dokumen');
 	Route::get('media-informasi/dokumen/{lokasi}/show', 'MediaPromosiController@dokumenShow')->name('media.dokumen.show');
