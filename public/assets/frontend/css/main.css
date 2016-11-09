@@ -5983,7 +5983,7 @@ ul.sidebar-nav ul.submenu li:first-child a {
 }
 /* main features */
 .main-features {
-  padding: 40px 0;
+  padding: 5px 0;
   margin-bottom: 60px;
   text-align: center;
   background-color: #5782b7;
@@ -5994,8 +5994,7 @@ ul.sidebar-nav ul.submenu li:first-child a {
   margin-bottom: 28px;
 }
 .main-features div[class^="col-"]:after {
-  content: '';
-  border-right: 1px dashed #6894ca;
+
   position: absolute;
   height: 80px;
   top: 50%;
