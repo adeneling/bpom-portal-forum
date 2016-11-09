@@ -56,7 +56,7 @@ class BannerSeeder extends Seeder
 		$banner->isenabled = 1;
 		$banner->save();
 
-		$path = public_path('seeder/banner/4.png');
+		$path = public_path('seeder/banner/4.jpg');
 		$lastpath = explode('/', $path);
 		$name = str_replace(' ', '_', explode('.', end($lastpath))[0]);
 		$filename = 'banner/'.str_random(3).'-'.$name.'.'.explode('.', end($lastpath))[1];
