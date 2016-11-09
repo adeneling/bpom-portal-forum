@@ -20,7 +20,7 @@
 				<li class="type-portfolio">
 					<div class="media clearfix">
 						<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="pull-left">
-							<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
+							<img src="{{ asset($pasar->photo != '' ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
 						</a>
 						<div class="media-body">
 							<h3>
@@ -29,13 +29,12 @@
 								</a>
 							</h3>
 							<p>
-								Kota: {{ isset($pasar->kota['kota']) ? $pasar->kota['kota'] : '-' }}
+								Provinsi: {{ $pasar->nama_prop != '' ? $pasar->nama_prop : '-' }}
 								<br>
-								Provinsi: {{ isset($pasar->provinsi['provinsi']) ? $pasar->provinsi['provinsi'] : '-' }}
+								Kab./Kota/Kecamatan: {{ $pasar->nama_kab != '' ? $pasar->nama_kab : '-' }}
 								<br>
-								Kecamatan: {{ isset($pasar->kecamatan['kecamatan']) ? $pasar->kecamatan['kecamatan'] : '-' }}
+								Alamat Pasar: {{ $pasar->alamat_pasar != '' ? $pasar->alamat_pasar : '-' }}
 								<br>
-								Alamat Pasar: {{ isset($pasar->alamat_pasar) ? $pasar->alamat_pasar : '-' }}
 							</p>
 							<div class="news-meta">
 								<span class="news-datetime"><strong>{{ date("d F Y", strtotime($pasar->created_at)) }}</strong></span>

@@ -13,7 +13,7 @@ class PasarAmanController extends Controller
 {
 	public function pasarPengawasan()
 	{
-		$pasars = PasarAman::orderBy('created_at','desc')->paginate(10);
+		$pasars = PasarAman::where('aman', '=', 'tidak aman')->orderBy('created_at','desc')->paginate(10);
         return view('pages.frontend.pasar-aman.pasar-pengawasan', compact('pasars'));
 	}
 	/**
@@ -23,7 +23,7 @@ class PasarAmanController extends Controller
 	 */
 	public function index()
 	{
-		$pasars = PasarAman::orderBy('created_at','desc')->paginate(10);
+		$pasars = PasarAman::where('aman', '=', 'aman')->orderBy('created_at','desc')->paginate(10);
         return view('pages.frontend.pasar-aman.index', compact('pasars'));
 	}
 

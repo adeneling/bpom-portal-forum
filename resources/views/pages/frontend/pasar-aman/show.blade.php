@@ -31,13 +31,11 @@
 						</div>
 						<div class="col-md-10">
 							<p>
-								Kota: {{ isset($pasar->kota['kota']) ? $pasar->kota['kota'] : '-' }}
+								Provinsi: {{ $pasar->nama_prop != '' ? $pasar->nama_prop : '-' }}
 								<br>
-								Provinsi: {{ isset($pasar->provinsi['provinsi']) ? $pasar->provinsi['provinsi'] : '-' }}
+								Kab./Kota/Kecamatan: {{ $pasar->nama_kab != '' ? $pasar->nama_kab : '-' }}
 								<br>
-								Kecamatan: {{ isset($pasar->kecamatan['kecamatan']) ? $pasar->kecamatan['kecamatan'] : '-' }}
-								<br>
-								Alamat Pasar: {{ isset($pasar->alamat_pasar) ? $pasar->alamat_pasar : '-' }}
+								Alamat Pasar: {{ $pasar->alamat_pasar != '' ? $pasar->alamat_pasar : '-' }}
 								<br>
 								{!! $pasar->konten !!}
 							</p>
