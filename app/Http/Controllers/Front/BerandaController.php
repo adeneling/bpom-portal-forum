@@ -22,9 +22,7 @@ class BerandaController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
-	{
-		$pasar = new PasarHelpers;
-		
+	{		
 		$data = [
 			'star1' => Polling::count() != 0 ? (Polling::where('polling', '=', 1)->count()/Polling::count())*100 : 0,
 			'star2' => Polling::count() != 0 ? (Polling::where('polling', '=', 2)->count()/Polling::count())*100 : 0,
@@ -33,8 +31,7 @@ class BerandaController extends Controller
 			'star5' => Polling::count() != 0 ? (Polling::where('polling', '=', 5)->count()/Polling::count())*100 : 0,
 
 			'banner' => Banner::where('isenabled', '=', 1)->get(),
-			// 'pasarAman' => PasarAman::take(12)->get(),
-			'pasarAman' => $pasar->pasar_aman(),
+			'pasarAman' => PasarAman::where('aman' , '=', 'aman')->take(12)->get(),
 			'berita' => Berita::orderBy('id', 'desc')->take(4)->get(),
 			'periode' => $periode = $pasar->periode(),
 		];

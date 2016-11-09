@@ -109,7 +109,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<?php $idx = 0; $i = 1; ?>
-					@for($i=0; $i<12; $i++)
+					@foreach($pasarAman as $pasar)
 
 						@if($idx == 0 || $idx % 4 == 0)
 							<div class="row">
@@ -119,17 +119,17 @@
 							<div class="portfolio-item">
 								<div class="overlay"></div>
 								<div class="info">
-									<h4 class="title">{{ $pasarAman['pasar_aman'][$i]['nama_pasar'] }}</h4>
-									<a class="fancybox" rel="group" href="{{ asset(isset($pasarAman['pasar_aman'][$i]['photo']) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman['pasar_aman'][$i]['photo']) : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasarAman['pasar_aman'][$i]['nama_pasar'] }}">
+									<h4 class="title">{{ $pasar->nama_pasar }}</h4>
+									<a class="fancybox" rel="group" href="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasar->nama_pasar }}">
 										<button class="btn btn-primary">Lihat</button>
 									</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset(isset($pasarAman['pasar_aman'][$i]['photo']) ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarAman['pasar_aman'][$i]['photo']) : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
-									<br><center>{{ $pasarAman['pasar_aman'][$i]['nama_pasar'] }}</center>
+									<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
+									<br><center>{{ $pasar->nama_pasar }}</center>
 								</div>
 							</div>
-						</div>1
+						</div>
 
 						@if($i == 4)
 							</div>
@@ -139,7 +139,7 @@
 						@endif
 
 						<?php $idx++; ?>
-					@endfor
+					@endforeach
 
 				</div>
 				

@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
 		$this->call(BannerSeeder::class);
 		// $this->call(PasarAmanSeeder::class);
 		// $this->call(PasarAmanBaruSeeder::class);
+		$this->call(PasarAmanRemoteSeeder::class);
 		$this->call(BeritaSeeder::class);
 		$this->call(MediaPromosiSeeder::class);
 		$this->call(BeritaBPOMSeeder::class);
