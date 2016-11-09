@@ -107,10 +107,8 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 });
 
 Route::get('tes', function(){
-	$pasarAman = new App\Models\PasarAman\PasarAman;
-	$pasarAman->setConnection('bpom');
+	$pasarAman = App\Models\Remote\Propinsi::find(11);
 
-	$coba = $pasarAman->where('kode_pasar', '=', '1108001')->get();
-
-	echo print_r($coba);
+	echo "<pre>";
+	echo print_r($pasarAman->kabupaten);
 });
