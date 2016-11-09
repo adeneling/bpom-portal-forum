@@ -7,7 +7,7 @@
 				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100" style="float:left;">
 			</a>
 			<a href="{{ url('/') }}" >
-				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="95" width="200" style="float:left;">
+				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="100" width="200" style="float:left;">
 			</a>
 			<ul class="list-inline top-nav">		
 
