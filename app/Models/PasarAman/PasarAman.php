@@ -10,7 +10,7 @@ use App\Models\Alamat\Kecamatan;
 class PasarAman extends Model
 {
     //
-    protected $table = 'pasar_aman';
+    protected $table = 'pasar';
 
     public function provinsi()
     {

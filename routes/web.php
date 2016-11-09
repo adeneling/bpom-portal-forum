@@ -104,3 +104,12 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
 });
+
+Route::get('tes', function(){
+	$pasarAman = new App\Models\PasarAman\PasarAman;
+	$pasarAman->setConnection('bpom');
+
+	$coba = $pasarAman->where('kode_pasar', '=', '1108001')->get();
+
+	echo print_r($coba);
+});

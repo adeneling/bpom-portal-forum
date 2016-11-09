@@ -13,7 +13,7 @@ class CreatePasarAmanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pasar_aman', function (Blueprint $table) {
+        Schema::create('pasar', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('balai_pom')->nullable();
