@@ -54,7 +54,7 @@
 									{!! Form::file('banner', null, ['id' => 'banner']) !!}
 								</div>
 								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text" placeholder="Ukuran Terbaik 1920x500 px">
+									<input class="file-path validate" type="text" placeholder="Ukuran Terbaik 1900x500 px">
 								</div>
 							</div>
 						</div>
