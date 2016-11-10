@@ -8,9 +8,11 @@
 		<section class="tabbed-content">
 			<h2 class="heading">VISUAL</h2>
 			@include('pages.frontend.media._tab')
+			
 			<div class="tab-content product-carousel-content">
 				<div class="tab-pane fade in active">
 					<div class="page-content page-search-result">
+						<h2 class="heading">Leaflet</h2>
 						<ul class="list-unstyled list-results">
 
 							@foreach($docs as $doc)
@@ -41,9 +43,11 @@
 <div class="shop-main">
 	<div class="container">
 		<section class="tabbed-content">
-			<h2 class="heading">GAMBAR</h2>
+			
 			<div class="tab-content product-carousel-content">
+
 				<div class="tab-pane fade in active">
+					<h2 class="heading">Poster</h2>
 					@foreach($pictures as $picture)
 						<div class="col-md-3" style="padding-top: 1em; padding-bottom: 1em;">
 							<div class="portfolio-item">

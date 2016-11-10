@@ -191,15 +191,25 @@
 					<div class="panel-body">
 						<p align="justify">
 							<ul>
-								<li>Contoh pangan yang diduga mengandung formalin: tahu, mie basah, ayam potong, ikan segar, ikan asin. Ciri – cirinya : Tekstur makanan lebih kenyal, tidak mudah hancur, lebih tahan lama, ada aroma yang cukup menyengat.</li>
-								<li>Contoh pangan yang diduga mengandung borak/bleng/pijer : mie basah, bakso, lontong, kerupuk gendar. Ciri –cirinya : tekstur makanan lebih kenyal, untuk mie basah : lebih mengkilap, tidak mudah putus, tidak lengket, kerupuk : lebih renyah.</li>
-								<li>Contoh pangan yang diduga mengandung rhodamin B : kerupuk merah, terasi, sirup dan arumanis berwarna merah. Ciri – ciri nya : Warna merah mencolok, rasa pahit, jika dipegang warna merah akan menempel di kulit.</li>
-								<li>Contoh pangan yang diduga mengandung kuning metanil : kerupuk berwarna kuning, mie basah, tahu kuning. Ciri – cirinya : warna kuning mencolok, rasa pahit, jika dipegang warna kuning akan menempel di kulit.</li>
+								<li>Contoh pangan yang diduga mengandung formalin: tahu, mie basah, ayam potong, ikan segar, ikan asin. <br>Ciri – cirinya : Tekstur makanan lebih kenyal, tidak mudah hancur, lebih tahan lama, ada aroma yang cukup menyengat.</li>
+								<center>
+									<img src="{{ asset('assets/frontend/faq/formalin.JPG') }}" class="img-responsive">
+								</center>
+								<li>Contoh pangan yang diduga mengandung borak/bleng/pijer : mie basah, bakso, lontong, kerupuk gendar. <br>Ciri –cirinya : tekstur makanan lebih kenyal, untuk mie basah : lebih mengkilap, tidak mudah putus, tidak lengket, kerupuk : lebih renyah.</li>
+								<center>
+									<img src="{{ asset('assets/frontend/faq/boraks.JPG') }}" class="img-responsive">
+								</center>
+								<li>Contoh pangan yang diduga mengandung rhodamin B : kerupuk merah, terasi, sirup dan arumanis berwarna merah. <br>Ciri – ciri nya : Warna merah mencolok, rasa pahit, jika dipegang warna merah akan menempel di kulit.</li>
+								<center>
+									<img src="{{ asset('assets/frontend/faq/rhodamin.JPG') }}" class="img-responsive">
+								</center>
+								<li>Contoh pangan yang diduga mengandung kuning metanil : kerupuk berwarna kuning, mie basah, tahu kuning. <br>Ciri – cirinya : warna kuning mencolok, rasa pahit, jika dipegang warna kuning akan menempel di kulit.</li>
+								<center>
+									<img src="{{ asset('assets/frontend/faq/metanil.JPG') }}" class="img-responsive">
+								</center>
 							</ul>
 						</p>
-						<center>
-							<img src="{{ asset('assets/frontend/faq/borak.jpg') }}" class="img-responsive">
-						</center>
+						
 					</div>
 				</div>
 			</div>
