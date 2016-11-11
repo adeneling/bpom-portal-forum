@@ -35,7 +35,7 @@ class BerandaController extends Controller
 			'banner' => Banner::where('isenabled', '=', 1)->get(),
 			'pasarAman' => PasarAman::where('aman' , '=', 'aman')->take(12)->get(),
 			'berita' => Berita::orderBy('id', 'desc')->take(4)->get(),
-			'periode' => $periode = $pasar->periode(),
+			'periode' => $pasar->periode(),
 		];
 		return view('pages.frontend.beranda.index', $data);
 	}
