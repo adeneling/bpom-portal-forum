@@ -43,7 +43,7 @@
 							<br>
 						</p>
 						<div class="news-meta">
-							<span class="news-datetime"><strong>{{ date("d F Y", strtotime($pasar->created_at)) }}</strong></span>
+							<span class="news-datetime"><strong>{{ 'Periode pengawasan: '. $periode['periode'] }}</strong></span>
 						</div>
 					</div>
 				</div>
