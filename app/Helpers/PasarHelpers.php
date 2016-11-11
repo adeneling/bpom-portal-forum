@@ -16,20 +16,6 @@ class PasarHelpers{
 
 	public function periode()
 	{
-		// $periode = [];
-		// $tahap = Tahap::where('tahun', '=', date('Y'))->get();
-		// if(count($tahap) > 1){
-		// 	$tanggal = $tahap[0]->samplingDetail()->orderBy('tanggal', 'asc')->take(1)->first();
-		// 	array_push($periode, date('F', strtotime($tanggal['tanggal'])));
-		// 	$tanggal = $tahap[1]->samplingDetail()->orderBy('tanggal', 'desc')->take(1)->first();
-		// 	array_push($periode, date('F', strtotime($tanggal['tanggal'])));
-		// }else{
-		// 	$tanggal = $tahap[0]->samplingDetail()->orderBy('tanggal', 'asc')->take(1)->first();
-		// 	array_push($periode, date('F', strtotime($tanggal['tanggal'])));
-		// }
-
-		// return $this->translate_bulan($periode);
-
 		$periode = Tahap::orderBy('tahun', 'desc')->take(1)->first();
 		$tahap = str_replace(' - '.$periode->tahun, '', str_replace('Tahap ', '', $periode->nama_tahap));
 		$data = [
@@ -47,29 +33,27 @@ class PasarHelpers{
 	{
 		$list_pasar_aman = [];
 		$list_pasar_tidak_aman = [];
-		$periode = Tahap::orderBy('tahun', 'desc')->take(1)->get();
-		// foreach($tahap as $value){
-			$pasar = $this->daftar_pasar_per_periode($periode);
-			foreach($pasar as $val){
-				$products = SamplingDetail::where('kode_pasar', '=', $val)->where('tahap', '=', $periode->kode_tahap)->get();
-				$hasil_uji = 0;
-				foreach ($products as $product) {
-					$uji = 0;
-					$product->tms_boraks == 1 ? $uji = 1 : $uji = 0;
-					$product->tms_formalin == 1 ? $uji = 1 : $uji = 0;
-					$product->tms_rhodamin == 1 ? $uji = 1 : $uji = 0;
-					$product->tms_methanil == 1 ? $uji = 1 : $uji = 0;
+		$periode = Tahap::orderBy('tahun', 'desc')->take(1)->first();
+		$pasar = $this->daftar_pasar_per_periode($periode);
+		foreach($pasar as $val){
+			$products = SamplingDetail::where('kode_pasar', '=', $val)->where('tahap', '=', $periode->kode_tahap)->get();
+			$hasil_uji = 0;
+			foreach ($products as $product) {
+				$uji = 0;
+				$product->tms_boraks == 1 ? $uji = 1 : $uji = 0;
+				$product->tms_formalin == 1 ? $uji = 1 : $uji = 0;
+				$product->tms_rhodamin == 1 ? $uji = 1 : $uji = 0;
+				$product->tms_methanil == 1 ? $uji = 1 : $uji = 0;
 
-					$uji == 1 ? $hasil_uji++ : '';
-				}
-				$pasar = Pasar::find($val);
-				if($hasil_uji > 0){
-					array_push($list_pasar_tidak_aman, ['kode_pasar' => $pasar->kode_pasar, 'nama_pasar' => $pasar->nama_pasar, 'alamat_pasar' => $pasar->alamat_pasar, 'nama_kab' => $pasar->nama_kab, 'nama_prop' => $pasar->nama_prop, 'nama_kapasar' => $pasar->nama_kapasar, 'photo' => $pasar->photo, 'kategori' => $pasar->kategori, 'presentase' => ($hasil_uji/count($products))*100]);
-				}else{
-					array_push($list_pasar_aman, ['kode_pasar' => $pasar->kode_pasar, 'nama_pasar' => $pasar->nama_pasar, 'alamat_pasar' => $pasar->alamat_pasar, 'nama_kab' => $pasar->nama_kab, 'nama_prop' => $pasar->nama_prop, 'nama_kapasar' => $pasar->nama_kapasar, 'photo' => $pasar->photo, 'kategori' => $pasar->kategori, 'presentase' => ($hasil_uji/count($products))*100]);
-				}
+				$uji == 1 ? $hasil_uji++ : '';
 			}
-		// }
+			$pasar = Pasar::find($val);
+			if($hasil_uji > 0){
+				array_push($list_pasar_tidak_aman, ['kode_pasar' => $pasar->kode_pasar, 'nama_pasar' => $pasar->nama_pasar, 'alamat_pasar' => $pasar->alamat_pasar, 'nama_kab' => $pasar->nama_kab, 'nama_prop' => $pasar->nama_prop, 'nama_kapasar' => $pasar->nama_kapasar, 'photo' => $pasar->photo, 'kategori' => $pasar->kategori, 'presentase' => ($hasil_uji/count($products))*100]);
+			}else{
+				array_push($list_pasar_aman, ['kode_pasar' => $pasar->kode_pasar, 'nama_pasar' => $pasar->nama_pasar, 'alamat_pasar' => $pasar->alamat_pasar, 'nama_kab' => $pasar->nama_kab, 'nama_prop' => $pasar->nama_prop, 'nama_kapasar' => $pasar->nama_kapasar, 'photo' => $pasar->photo, 'kategori' => $pasar->kategori, 'presentase' => ($hasil_uji/count($products))*100]);
+			}
+		}
 		return ['pasar_aman' => $list_pasar_aman, 'pasar_tidak_aman' => $list_pasar_tidak_aman];
 	}
 
