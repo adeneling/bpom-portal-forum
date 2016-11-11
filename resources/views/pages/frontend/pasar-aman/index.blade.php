@@ -15,33 +15,39 @@
 <!-- PAGE CONTENT -->
 <div class="page-content page-search-result">
 	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+				<h3 align="justify">Pasar Aman adalah pasar percontohan yang diintervensi oleh Badan POM, dimana secara periodik dilakukan pengawasan terhadap pangan yang diduga mengandung bahan berbahaya dan dalam periode pengawasan terakhir tidak ditemukan adanya penyalahgunaan bahan berbahaya dalam pangan.</h3>
+			</div>
+		</div>
+		
 		<ul class="list-unstyled list-results">
 			@foreach($pasars as $pasar)
-				<li class="type-portfolio">
-					<div class="media clearfix">
-						<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="pull-left">
-							<img src="{{ asset($pasar->photo != '' ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
-						</a>
-						<div class="media-body">
-							<h3>
-								<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
-									{{ $pasar->nama_pasar }}
-								</a>
-							</h3>
-							<p>
-								Provinsi: {{ $pasar->nama_prop != '' ? $pasar->nama_prop : '-' }}
-								<br>
-								Kab./Kota/Kecamatan: {{ $pasar->nama_kab != '' ? $pasar->nama_kab : '-' }}
-								<br>
-								Alamat Pasar: {{ $pasar->alamat_pasar != '' ? $pasar->alamat_pasar : '-' }}
-								<br>
-							</p>
-							<div class="news-meta">
-								<span class="news-datetime"><strong>{{ date("d F Y", strtotime($pasar->created_at)) }}</strong></span>
-							</div>
+			<li class="type-portfolio">
+				<div class="media clearfix">
+					<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" class="pull-left">
+						<img src="{{ asset($pasar->photo != '' ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="media-object" alt="{{ $pasar->nama_pasar }}">
+					</a>
+					<div class="media-body">
+						<h3>
+							<a href="{{ route('pasar-aman.lihat', [base64_encode(config('app.salt').$pasar->id), str_slug($pasar->nama_pasar, '-')]) }}" type="{{ $pasar->nama_pasar }}">
+								{{ $pasar->nama_pasar }}
+							</a>
+						</h3>
+						<p>
+							Provinsi: {{ $pasar->nama_prop != '' ? $pasar->nama_prop : '-' }}
+							<br>
+							Kab./Kota/Kecamatan: {{ $pasar->nama_kab != '' ? $pasar->nama_kab : '-' }}
+							<br>
+							Alamat Pasar: {{ $pasar->alamat_pasar != '' ? $pasar->alamat_pasar : '-' }}
+							<br>
+						</p>
+						<div class="news-meta">
+							<span class="news-datetime"><strong>{{ date("d F Y", strtotime($pasar->created_at)) }}</strong></span>
 						</div>
 					</div>
-				</li>
+				</div>
+			</li>
 			@endforeach
 		</ul>
 		{{ $pasars->appends(compact('q'))->links() }}

@@ -15,6 +15,11 @@
 <!-- PAGE CONTENT -->
 <div class="page-content page-search-result">
 	<div class="container">
+		<div class="panel panel-success">
+			<div class="panel-body">
+				<h3 align="justify">Pasar dalam Pengawasan adalah pasar percontohan yang diintervensi oleh Badan POM, dimana secara periodik dilakukan pengawasan terhadap pangan yang diduga mengandung bahan berbahaya.</h3>
+			</div>
+		</div>
 		<ul class="list-unstyled list-results">
 			@foreach($pasars as $pasar)
 				<li class="type-portfolio">
