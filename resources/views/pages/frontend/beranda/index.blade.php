@@ -112,7 +112,7 @@
 					@foreach($pasarAman as $pasar)
 
 						@if($idx == 0 || $idx % 4 == 0)
-							<div class="row">
+							<div class="row" style="padding-top: 0.5em; padding-bottom: 0.5em;">
 						@endif
 
 						<div class="col-md-3">
