@@ -3,14 +3,15 @@
 	<div class="container">
 		<!-- TOPBAR -->
 		<div class="topbar">
-			<a href="http://www.pom.go.id" target="_blank">
-				<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100" style="float:left;">
-			</a>
-			<a href="{{ url('/') }}" >
-				<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="100" width="200" style="float:left;">
-			</a>
+			<div class="logo">
+				<a href="http://www.pom.go.id" target="_blank">
+					<img src="{{ asset('assets/frontend/img/logo-bpom.png') }}" height="100" width="100">
+				</a>
+				<a href="{{ url('/') }}" >
+					<img src="{{ asset('assets/frontend/img/logo/logo-pasar-aman.png') }}" height="100" width="200" style="padding-left: 1em;">
+				</a>
+			</div>
 			<ul class="list-inline top-nav">		
-
 				<li><a href="http://sipaman.pom.go.id/" target="_blank">SIPAMAN</a></li>
 				<li><a href="{{ route('thread.index') }}">FORUM FASILITATOR </a></li>
 				<li><a href="{{ route('faq.index') }}">FAQ</a></li>

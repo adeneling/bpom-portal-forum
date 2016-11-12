@@ -3524,7 +3524,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .topbar {
   text-align: right;
   padding-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.topbar .logo {
+  float:left;
 }
 .topbar .top-nav,
 .topbar .searchbox {
@@ -3554,6 +3558,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .topbar {
     text-align: center;
     margin-bottom: 10px;
+  }
+  .topbar .logo {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+  }
+  .topbar .top-nav {
+    padding-top: 15px;
   }
   .topbar .searchbox {
     display: none;
