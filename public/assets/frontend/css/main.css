@@ -5983,8 +5983,8 @@ ul.sidebar-nav ul.submenu li:first-child a {
 }
 /* main features */
 .main-features {
-  padding: 5px 0;
-  margin-bottom: 60px;
+  padding: 15px 0;
+  margin-bottom: 5px;
   text-align: center;
   background-color: #FFF000;
   color: #94b6df;
