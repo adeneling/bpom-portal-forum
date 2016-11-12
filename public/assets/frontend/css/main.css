@@ -5986,12 +5986,12 @@ ul.sidebar-nav ul.submenu li:first-child a {
   padding: 5px 0;
   margin-bottom: 60px;
   text-align: center;
-  background-color: #5782b7;
+  background-color: #FFF000;
   color: #94b6df;
 }
 .main-features i {
   font-size: 5em;
-  margin-bottom: 28px;
+  margin-bottom: 5px;
 }
 .main-features div[class^="col-"]:after {
 
@@ -6007,15 +6007,15 @@ ul.sidebar-nav ul.submenu li:first-child a {
 
 .feature-heading {
   margin: 0;
-  color: #94b6df;
-  font-weight: 300;
+  color: #4567a0;
+  font-weight: bold;
   font-size: 18px;
 }
 
 @media screen and (max-width: 992px) {
   .main-features div[class^="col-"] {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .main-features div[class^="col-"]:after {
     display: none;
