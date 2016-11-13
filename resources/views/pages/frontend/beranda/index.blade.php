@@ -175,7 +175,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// with plugin options
-			$("#star").rating({showCaption: true, showClear: false});
+			$("#star").rating({showCaption: false, showClear: false});
 
 			$(document).on('submit', '#formPolling', function(e){
 				e.preventDefault();
@@ -199,7 +199,7 @@
 							});
 			 
 							// with plugin options
-							$("#star").rating({showCaption: true, showClear: false});
+							$("#star").rating({showCaption: false, showClear: false});
 						}
 					});
 				}
