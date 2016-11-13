@@ -3,7 +3,7 @@
 	<div class="form-group">
 		<label class="col-md-1 control-label">Rate </label>
 		<div class="col-md-11">
-			<div class="stars" style="float:left;">
+			{{-- <div class="stars" style="float:left;">
 				<input type="radio" name="rating-input-1" class="star-1" id="star-1" />
 				<label class="star-1" for="star-1">1</label>
 				<input type="radio" name="rating-input-2" class="star-2" id="star-2" />
@@ -15,7 +15,9 @@
 				<input type="radio" name="rating-input-5" class="star-5" id="star-5" />
 				<label class="star-5" for="star-5">5</label>
 				<span></span>
-			</div>
+			</div> --}}
+
+			<input id="star" name="star" type="number" class="rating" max=5 step=1 data-size="sm" showClear="false">
 
 		</div>
 	</div>

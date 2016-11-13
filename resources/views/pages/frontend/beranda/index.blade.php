@@ -2,6 +2,12 @@
 
 @section('title', 'Beranda')
 
+@section('css')
+	<link href="{{ asset('assets/frontend/plugin/star-polling/css/star-rating.css') }}" media="all" rel="stylesheet" type="text/css" />
+	<!-- optionally if you need to use a theme, then include the theme file as mentioned below -->
+	<link href="{{ asset('assets/frontend/plugin/star-polling/themes/krajee-svg/theme.css') }}" media="all" rel="stylesheet" type="text/css" />
+@endsection
+
 @section('content')
 <!-- SLIDER -->
 <section class="hero-unit-slider slider-responsive no-margin">
@@ -149,7 +155,6 @@
 							<h2 class="panel-title section-heading no-margin" align="justify">Bagaimana pendapat Anda tentang tampilan dan konten website Pusat Informasi Pasar Aman dari Bahan Berbahaya?</h2>
 						</div>
 						<div class="panel-body" id="formPollingContainer">
-							@include('pages.frontend.beranda._css')
 							@include('pages.frontend.beranda._polling')
 						</div>
 					</div>
@@ -162,8 +167,16 @@
 @stop
 
 @section('js')
+	<script src="{{ asset('assets/frontend/plugin/star-polling/js/star-rating.js') }}" type="text/javascript"></script>
+ 
+	<!-- optionally if you need to use a theme, then include the theme file as mentioned below -->
+	<script src="{{ asset('assets/frontend/plugin/star-polling/themes/krajee-svg/theme.js') }}"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
+			// with plugin options
+			$("#star").rating({showCaption: true, showClear: false});
+
 			$(document).on('submit', '#formPolling', function(e){
 				e.preventDefault();
 
@@ -182,8 +195,11 @@
 								text: "Atas Polling yang sudah diberikan",
 								type: "success"
 							}, function(){
-								window.location.href = '{{ url('/') }}';
+								// window.location.href = '{{ url('/') }}';
 							});
+			 
+							// with plugin options
+							$("#star").rating({showCaption: true, showClear: false});
 						}
 					});
 				}

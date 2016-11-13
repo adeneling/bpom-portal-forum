@@ -38,23 +38,9 @@ class PollingController extends Controller
 	public function store(Request $request)
 	{
 		//
-		$polling = '';
-
-		if(!is_null($request->get('rating-input-1'))){
-			$polling = 1;
-		}else if(!is_null($request->get('rating-input-2'))){
-			$polling = 2;
-		}else if(!is_null($request->get('rating-input-3'))){
-			$polling = 3;
-		}else if(!is_null($request->get('rating-input-4'))){
-			$polling = 4;
-		}else if(!is_null($request->get('rating-input-5'))){
-			$polling = 5;
-		}
-
 		$poll = new Polling;
 		$poll->ip = decrypt($request->get('ip'));
-		$poll->polling = $polling;
+		$poll->polling = $request->get('star');
 		$poll->komentar = $request->get('masukan');
 		$poll->save();
 

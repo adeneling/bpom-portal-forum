@@ -35,6 +35,7 @@
 	<link rel="import" href="{{ asset('assets/frontend/bower_resources/paper-audio-player/paper-audio-player.html') }}">
 	{{-- SWEET ALERT --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/bower_resources/bootstrap-sweetalert/dist/sweetalert.css') }}">
+	@yield('css')
 </head>
 
 <body>
