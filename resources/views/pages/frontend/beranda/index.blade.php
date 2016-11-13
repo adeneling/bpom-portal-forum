@@ -180,29 +180,25 @@
 			$(document).on('submit', '#formPolling', function(e){
 				e.preventDefault();
 
-				if($('#masukan').val() == '' && $('rating-input-1-5').val() == '' && $('rating-input-1-4').val() == '' && $('rating-input-1-3').val() == '' && $('rating-input-1-2').val() == '' && $('rating-input-1-1').val() == ''){
-					swal("Oops!", "Silahkan isi semua form.", "danger");
-				}else{
-					$.ajax({
-						method: "POST",
-						url: "{{ route('polling.store') }}",
-						data: $('#formPolling').serialize(),
-						cache: false,
-						success: function(data){
-							$('#formPollingContainer').html(data);
-							swal({
-								title: "Terima Kasih",
-								text: "Atas Polling yang sudah diberikan",
-								type: "success"
-							}, function(){
-								// window.location.href = '{{ url('/') }}';
-							});
-			 
-							// with plugin options
-							$("#star").rating({showCaption: false, showClear: false});
-						}
-					});
-				}
+				$.ajax({
+					method: "POST",
+					url: "{{ route('polling.store') }}",
+					data: $('#formPolling').serialize(),
+					cache: false,
+					success: function(data){
+						$('#formPollingContainer').html(data);
+						swal({
+							title: "Terima Kasih",
+							text: "Atas Polling yang sudah diberikan",
+							type: "success"
+						}, function(){
+							// window.location.href = '{{ url('/') }}';
+						});
+		 
+						// with plugin options
+						$("#star").rating({showCaption: false, showClear: false});
+					}
+				});
 			});
 		});
 	</script>
