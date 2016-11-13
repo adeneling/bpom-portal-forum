@@ -5992,7 +5992,15 @@ ul.sidebar-nav ul.submenu li:first-child a {
 .main-features i {
   font-size: 5em;
   margin-bottom: 5px;
+  /*color: #294356;*/
 }
+
+.main-features i:hover {
+  font-size: 5em;
+  margin-bottom: 5px;
+  /*color: #325a7a;*/
+}
+
 .main-features div[class^="col-"]:after {
 
   position: absolute;
@@ -6007,9 +6015,17 @@ ul.sidebar-nav ul.submenu li:first-child a {
 
 .feature-heading {
   margin: 0;
-  color: #4567a0;
+  color: #294356;
   font-weight: bold;
   font-size: 18px;
+}
+
+.feature-button {
+  color: #294356;
+}
+
+.feature-button i:hover .feature-heading h3:hover {
+  color: #325a7a;
 }
 
 @media screen and (max-width: 992px) {

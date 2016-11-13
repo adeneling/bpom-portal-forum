@@ -11,8 +11,8 @@
 	<link href="{{ asset('assets/frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('assets/frontend/css/main.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/frontend/css/shop-main.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('assets/frontend/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{-- asset('assets/frontend/css/shop-main.css') --}}" rel="stylesheet" type="text/css">
+	<link href="{{-- asset('assets/frontend/css/my-custom-styles.css') --}}" rel="stylesheet" type="text/css">
 	{{-- fancy box --}}
 	<link rel="stylesheet" href="{{ asset('assets/frontend/plugin/fancybox/source/jquery.fancybox.css?v=2.1.5') }}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="{{ asset('assets/frontend/plugin/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5') }}" type="text/css" media="screen" />
