@@ -108,8 +108,12 @@ Breadcrumbs::register('buat-thread', function($breadcrumbs)
 
 // Beranda > Forum Fasilitator > [Thread]
 Breadcrumbs::register('thread', function($breadcrumbs, $thread) {
+
+    $judulThread = '';
+    strlen($thread->judulThread) > 15 ? $judulThread = substr($thread->judulThread, 0, 15)."..." : $judulThread = $thread->judulThread;
+
     $breadcrumbs->parent('forum-fasilitator');
-    $breadcrumbs->push($thread->judulThread, App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread));
+    $breadcrumbs->push($judulThread, App\Helpers\AppHelpers::urlThreadForum($thread->id, $thread->judulThread));
 });
 
 // Beranda > Forum Fasilitator > [Thread] > Tanggapi Thread

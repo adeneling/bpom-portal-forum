@@ -10,7 +10,7 @@
 <!-- BREADCRUMBS -->
 <div class="page-header">
 	<div class="container">
-		<h1 class="page-title pull-left">{{ $thread->judulThread }}</h1>
+		<h1 class="page-title pull-left">{!! strlen($thread->judulThread) > 56 ? substr($thread->judulThread, 0, 56)."<br>".substr($thread->judulThread, 56, strlen($thread->judulThread)) : $thread->judulThread !!}</h1>
 		{!! Breadcrumbs::render('thread', $thread) !!}
 	</div>
 </div>

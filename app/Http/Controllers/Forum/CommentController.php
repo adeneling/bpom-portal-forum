@@ -64,7 +64,7 @@ class CommentController extends Controller
         $comment = Thread::find($id)
                    ->newComment()
                    ->withUser()
-                   ->withComment($request->get('komentar'))
+                   ->withComment(str_replace('<img alt=""', '<img class="img-responsive" alt=""', $request->get('komentar')))
                    ->withCounter($thread->comment()->commentThread($thread->id)->count())
                    ->saveComment();
 
@@ -106,7 +106,7 @@ class CommentController extends Controller
     {
         //
         $comment = Comment::find(decrypt($id));
-        $comment->comment = $request->get('komentar');
+        $comment->comment = str_replace('<img alt=""', '<img class="img-responsive" alt=""', $request->get('komentar'));
         $comment->update();
 
         return redirect()->route('thread.show.detail', [base64_encode(config('app.salt').$comment->thread->id), strtolower(str_replace(' ', '-', $comment->thread->judulThread))]);

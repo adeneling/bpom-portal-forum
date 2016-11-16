@@ -25,7 +25,7 @@ class ForumRequests extends FormRequest
 	{
 		return [
 			//
-			'judul-thread' => 'required',
+			'judul-thread' => 'required|max:112',
 			'konten' => 'required',
 			'g-recaptcha-response' => 'required|recaptcha',
 		];
@@ -40,6 +40,7 @@ class ForumRequests extends FormRequest
 	{
 		return [
 			'judul-thread.required' => 'Judul thread tidak boleh kosong',
+			'judul-thread.max' => 'Judul thread maksimal 112 karakter',
 			'konten.required' => 'Konten thread tidak boleh kosong',
 			'g-recaptcha-response.required'  => 'Google Captcha tidak boleh kosong',
 		];

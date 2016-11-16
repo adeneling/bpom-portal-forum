@@ -78,7 +78,7 @@ class ForumFasilitatorController extends Controller
 		}else{
 			$thread->tipe = 'umum';
 		}
-		$thread->konten = $request->get('konten');
+		$thread->konten = str_replace('<img alt=""', '<img class="img-responsive" alt=""', $request->get('konten'));
 		$thread->save();
 		return redirect()->route('thread.index');
 	}
@@ -131,7 +131,7 @@ class ForumFasilitatorController extends Controller
 		}else{
 			$thread->tipe = 'umum';
 		}
-		$thread->konten = $request->get('konten');
+		$thread->konten = str_replace('<img alt=""', '<img class="img-responsive" alt=""', $request->get('konten'));
 		$thread->update();
 		return redirect()->route('thread.index');
 	}
@@ -174,13 +174,6 @@ class ForumFasilitatorController extends Controller
 	public function threads()
 	{
 		//
-		// $threads = Thread::select(DB::raw('threads.*, count(*) as "aggregate"'))
-		// 			  ->where('tipe', '=', 'umum')
-		// 			  ->join('komentar', 'threads.id', '=', 'komentar.thread_id')
-		// 			  ->groupBy('thread_id')
-		// 			  ->orderBy('aggregate', 'desc')
-		// 			  ->paginate(20);
-
 		$threads = Thread::where('tipe', '=', 'umum')->orderBy('id', 'desc')->paginate(20);
 
 		return view('pages.forum-fasilitator.thread.threads', compact('threads'));
