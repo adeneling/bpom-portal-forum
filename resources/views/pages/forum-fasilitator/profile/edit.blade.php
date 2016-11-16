@@ -44,7 +44,7 @@
 <!-- PAGE CONTENT -->
 <div class="page-content">
 	<div class="container">
-		<div class="col-md-12">
+		<div class="col-md-6">
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h2 class="panel-title section-heading no-margin">Ubah Profile</h2>
@@ -54,20 +54,20 @@
 						<div class="col-md-12">
 							{!! Form::model($user, ['route' => ['profile.update', encrypt($user->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formEditUser', 'name' => 'formEditUser' ,'role' => 'form', 'files' => true, 'method' => 'PUT']) !!}
 								<div class="form-group">
-									<label for="judul-thread" class="col-sm-2 control-label">Photo Profile</label>
-									<div class="col-sm-10">
+									<label for="judul-thread" class="col-sm-4 control-label">Photo Profile</label>
+									<div class="col-sm-8">
 										<image class="avatar img-circle img-thumbnail" src="{{ $user->photo }}" width="64" alt="Generic placeholder image">
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="konten" class="col-sm-2 control-label">Gravatar</label>
-									<div class="col-sm-6">
+									<label for="konten" class="col-sm-4 control-label">Gravatar</label>
+									<div class="col-sm-8">
 										{{ Form::checkbox('gravatar', 'ya', filter_var($user->photo, FILTER_VALIDATE_URL) ? (parse_url($user->photo)['host'] == 'www.gravatar.com' ? true : false) : '', ['id' => 'gravatar']) }} Gunakan Gravatar
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="exampleInputFile" class="col-md-2 control-label">Upload Profile Picture</label>
-									<div class="col-md-3">
+									<label for="exampleInputFile" class="col-md-4 control-label">Upload Profile Picture</label>
+									<div class="col-md-8">
 										{!! Form::file('image', ['id' => 'image', filter_var($user->photo, FILTER_VALIDATE_URL) ? (parse_url($user->photo)['host'] == 'www.gravatar.com' ? 'disabled' : '') : '']) !!}
 										<p class="help-block">
 											<em>Upload your profile picture</em>
@@ -75,21 +75,9 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="namaLengkap" class="col-sm-2 control-label">Nama Lengkap</label>
-									<div class="col-sm-6">
+									<label for="namaLengkap" class="col-sm-4 control-label">Nama Lengkap</label>
+									<div class="col-sm-8">
 										{!! Form::text('namaLengkap', $user->name, ['class' => 'form-control', 'id' => 'namaLengkap']) !!}
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="password" class="col-sm-2 control-label">Password</label>
-									<div class="col-sm-5">
-										{!! Form::password('password', ['class' => 'form-control', 'id' => 'password']) !!}
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="confirmPassword" class="col-sm-2 control-label">Konfirmasi Password</label>
-									<div class="col-sm-5">
-										{!! Form::password('confirmPassword', ['class' => 'form-control', 'id' => 'confirmPassword']) !!}
 									</div>
 								</div>
 								<hr>
@@ -97,6 +85,41 @@
 									<div class="col-sm-12">
 										<center>
 											<button type="submit" class="btn btn-primary">Ubah Profile</button>
+										</center>										
+									</div>
+								</div>
+							{!! Form::close() !!}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h2 class="panel-title section-heading no-margin">Ubah Profile</h2>
+				</div>
+				<div class="panel-body">
+					<div class="form-horizontal">
+						<div class="col-md-12">
+							{!! Form::model($user, ['route' => ['profile.update', encrypt($user->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formEditUser', 'name' => 'formEditUser' ,'role' => 'form', 'files' => true, 'method' => 'PUT']) !!}
+								<div class="form-group">
+									<label for="password" class="col-sm-4 control-label">Password</label>
+									<div class="col-sm-8">
+										{!! Form::password('password', ['class' => 'form-control', 'id' => 'password']) !!}
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="confirmPassword" class="col-sm-4 control-label">Konfirmasi Password</label>
+									<div class="col-sm-8">
+										{!! Form::password('confirmPassword', ['class' => 'form-control', 'id' => 'confirmPassword']) !!}
+									</div>
+								</div>
+								<hr>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<center>
+											<button type="submit" class="btn btn-primary">Ubah Password</button>
 										</center>										
 									</div>
 								</div>
