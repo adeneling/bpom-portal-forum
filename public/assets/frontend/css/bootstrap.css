@@ -1288,6 +1288,7 @@ h6,
   font-size: 12px;
 }
 p {
+  color: black;
   margin: 0 0 10px;
 }
 .lead {
@@ -2276,6 +2277,7 @@ th {
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  color: black;
 }
 .table > thead > tr > th {
   vertical-align: bottom;

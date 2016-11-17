@@ -30,10 +30,10 @@
 			<!--/ profile-page-header -->
 
 			<div id="profile-page-content" class="row">
-				<div id="profile-page-sidebar" class="col s7">
+				<div id="profile-page-sidebar" class="col s6">
 					<div class="card">
 						<div class="card-content white-text">
-							<span class="card-title"><font color="black">Ubah Profile</font></span>
+							<span class="card-title"><font color="black"><center>Ubah Profile</center></font></span>
 							<div class="row">
 								<div class="input-field col s9">
 									{!! Form::text('name', null, ['class'=>'validate']) !!}
@@ -59,6 +59,7 @@
 									</div>
 								</div>
 							</div>
+							<br><br>
 							<div class="row">
 								<center>
 									<button class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
@@ -69,13 +70,10 @@
 						</div>                  
 					</div>					
 				</div>
-			</div>
-
-			<div id="profile-page-content" class="row">
-				<div id="profile-page-sidebar" class="col s7">
+				<div id="profile-page-sidebar" class="col s6">
 					<div class="card">
 						<div class="card-content white-text">
-							<span class="card-title"><font color="black">Ubah Password</font></span>
+							<span class="card-title"><font color="black"><center>Ubah Password</center></font></span>
 							<div class="row">
 								<div class="input-field col s9">
 									{!! Form::text('old_password', null, ['class'=>'validate']) !!}
@@ -94,6 +92,7 @@
 									<label for="password_confirmation">Konfirmasi password</label>
 								</div>
 							</div>
+							<br><br>
 							<div class="row">
 								<center>
 									<button class="btn waves-effect waves-light Cyan" type="submit" name="action">Submit
