@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Remote\Propinsi;
 use App\Models\Remote\Kabupaten;
 use App\Models\Remote\SamplingDetail;
+use App\Models\PasarAman\PasarAman;
 
 class Pasar extends Model
 {
@@ -29,4 +30,10 @@ class Pasar extends Model
 	{
 		return $this->hasMany(SamplingDetail::class, 'kode_pasar');
 	}
+
+
+	public function pasarAman()
+    {
+        return $this->hasMany(PasarAman::class, 'kode_pasar');
+    }
 }

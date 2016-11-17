@@ -47,7 +47,7 @@
 
 				<!-- THREAD BARU -->
 				<h2>Edit Thread</h2>
-				{!! Form::model($thread, ['route' => ['thread.update', encrypt($thread->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formThread', 'name' => 'formThread' ,'role' => 'form', 'files' => true, 'method' => 'PUT']) !!}
+				{!! Form::model($thread, ['route' => ['threads.update', encrypt($thread->id)], 'class' => 'form-horizontal left-aligned', 'id' => 'formThread', 'name' => 'formThread' ,'role' => 'form', 'files' => true, 'method' => 'POST']) !!}
 					<div class="form-group">
 						<label for="judul-thread" class="col-sm-2 control-label">Judul Thread</label>
 						<div class="col-sm-10">

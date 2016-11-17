@@ -6,11 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Alamat\Provinsi;
 use App\Models\Alamat\Kota;
 use App\Models\Alamat\Kecamatan;
+use App\Models\Remote\Pasar;
 
 class PasarAman extends Model
 {
     //
     protected $table = 'pasar';
+
+    public function pasar()
+    {
+        return $this->belongsTo(Pasar::class, 'kode_pasar');
+    }
 
     // public function provinsi()
     // {

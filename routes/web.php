@@ -52,6 +52,7 @@ Route::group(['namespace' => 'Forum', 'prefix' => 'forum-fasilitator'], function
 	Route::get('guides', 'ForumFasilitatorController@guides')->name('guides.all');
 	Route::delete('guides/{id}', 'ForumFasilitatorController@deleteGuides')->name('guides.delete');
 	Route::get('threads', 'ForumFasilitatorController@threads')->name('threads.all');
+	Route::post('threads/update/{id}', 'ForumFasilitatorController@updateThread')->name('threads.update');
 	Route::delete('threads/{id}', 'ForumFasilitatorController@deleteThreads')->name('threads.delete');
 	// Comment
 	Route::resource('comment', 'CommentController');
@@ -77,7 +78,6 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::post('banner/enabled/{id}/{isenabled}', 'Banner\BannerController@enabled')->name('banner.enabled');
 	// Kelola Berita
 	Route::resource('berita', 'Berita\BeritaController');
-	Route::resource('gambar-berita', 'Berita\GambarBeritaController');
 	// Kelola Galeri
 	Route::resource('galeri', 'Galeri\GaleriController');
 	// Kelola Program
@@ -94,10 +94,6 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::get('pasar-aman/get-subdistrict/{province_id}/{city_id}', 'PasarAman\PasarAmanController@getSubdistrict');
 	// pengawasan pasar
 	Route::resource('pengawasan-pasar', 'PasarAman\PengawasanPasarController');
-	// Kelola FAQ
-	Route::resource('faq', 'FAQ\FAQController');
-	// Kelola Hubungi Kami
-	Route::resource('hubungi-kami', 'HubungiKami\HubungiKamiController');
 	// Kelola Bahan Berbahaya
 	Route::resource('bahan-berbahaya', 'BahanBerbahaya\BahanBerbahayaController');
 	// Kelola Forum users
@@ -105,4 +101,13 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 	Route::post('pengguna-forum/isadmin/{id}/{isadmin}', 'ForumUsers\ForumUsersController@admin')->name('forum.users.admin');
 	// User Control
 	Route::resource('users', 'UserControl\UserController');
+});
+
+Route::get('tes', function(){
+	$pasarAman = App\Models\PasarAman\PasarAman::all();
+	foreach($pasarAman as $val){
+		echo "<pre>";
+		echo print_r($val->pasar());
+		echo "<br>";
+	}
 });

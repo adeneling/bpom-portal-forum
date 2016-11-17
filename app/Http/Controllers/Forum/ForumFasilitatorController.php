@@ -120,7 +120,7 @@ class ForumFasilitatorController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(ForumRequests $request, $id)
+	public function updateThread(ForumRequests $request, $id)
 	{
 		//
 		$thread = Thread::find(decrypt($id));
