@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\PasarAman\PasarAman;
+use App\Models\Remote\Pasar;
 
 use App\Helpers\PasarHelpers;
 
@@ -62,10 +63,10 @@ class PasarAmanController extends Controller
 	{
 		//
 		$id = str_replace(config('app.salt'), '', base64_decode($id));
-		$pasar = PasarAman::where('id', '=', $id)->orWhere('nama_pasar', 'like', str_replace('-', ' ', $namaPasar))->first();
+		$pasar = Pasar::where('kode_pasar', '=', $id)->orWhere('nama_pasar', 'like', str_replace('-', ' ', $namaPasar))->first();
 
 		return view('pages.frontend.pasar-aman.show', compact('pasar'));
-	}
+	}	
 
 	/**
 	 * Show the form for editing the specified resource.

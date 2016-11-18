@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
 		$this->call(FirstRunSeeder::class);
 		$this->call(ProvinceSeeder::class);
 		$this->call(CitySeeder::class);
-		$this->call(SubdistrictSeeder::class);
+		// $this->call(SubdistrictSeeder::class);
 		$this->call(BannerSeeder::class);
 		$this->call(PasarAmanRemoteSeeder::class);
 		$this->call(BeritaSeeder::class);
@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(GaleriSeeder::class);
 		$this->call(ProgramSeeder::class);
 		$this->call(ProgramDokumenSeeder::class);
-		$this->call(ForumDummySeeder::class);
+		// $this->call(ForumDummySeeder::class);
 	}
 }

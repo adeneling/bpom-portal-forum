@@ -116,6 +116,7 @@
 				<div class="col-md-8">
 					<?php $idx = 0; $i = 1; ?>
 					@foreach($pasarAman as $pasar)
+						<?php $pasarRemote = App\Models\Remote\Pasar::find($pasar->kode_pasar); ?>
 
 						@if($idx == 0 || $idx % 4 == 0)
 							<div class="row" style="padding-top: 0.5em; padding-bottom: 0.5em;">
@@ -125,14 +126,14 @@
 							<div class="portfolio-item">
 								<div class="overlay"></div>
 								<div class="info">
-									<h4 class="title">{{ $pasar->nama_pasar }}</h4>
-									<a class="fancybox" rel="group" href="{{ asset($pasar->photo != '' ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" title="{{ $pasar->nama_pasar }}">
+									<h4 class="title">{{ $pasarRemote->nama_pasar }}</h4>
+									<a class="fancybox" rel="group" href="{{ $pasarRemote->photo != '' ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarRemote->photo) : asset('assets/frontend/img/logo-bpom.png') }}" title="{{ $pasarRemote->nama_pasar }}">
 										<button class="btn btn-primary">Lihat</button>
 									</a>
 								</div>
 								<div class="media-wrapper">
-									<img src="{{ asset($pasar->photo != '' ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
-									<br><center>{{ $pasar->nama_pasar }}</center>
+									<img src="{{ $pasarRemote->photo != '' ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasarRemote->photo) : asset('assets/frontend/img/logo-bpom.png') }}" alt="Item Thumbnail" width="180" height="140" />
+									<br><center>{{ $pasarRemote->nama_pasar }}</center>
 								</div>
 							</div>
 						</div>

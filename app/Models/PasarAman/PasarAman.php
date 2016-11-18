@@ -15,7 +15,7 @@ class PasarAman extends Model
 
     public function pasar()
     {
-        return $this->belongsTo(Pasar::class, 'kode_pasar');
+        return $this->belongsTo(Pasar::class, 'kode_pasar', 'kode_pasar');
     }
 
     // public function provinsi()

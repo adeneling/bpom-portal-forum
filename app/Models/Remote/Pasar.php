@@ -34,6 +34,6 @@ class Pasar extends Model
 
 	public function pasarAman()
     {
-        return $this->hasMany(PasarAman::class, 'kode_pasar');
+        return $this->hasMany(PasarAman::class, 'kode_pasar', 'kode_pasar');
     }
 }

@@ -41,13 +41,6 @@ class CreatePasarAmanTable extends Migration
 
             $table->increments('id');
             $table->string('kode_pasar', 10);
-            $table->string('nama_pasar')->nullable();
-            $table->text('alamat_pasar')->nullable();
-            $table->string('nama_kab')->nullable();
-            $table->string('nama_prop')->nullable();
-            $table->string('nama_kapasar')->nullable();
-            $table->string('photo')->nullable();
-            $table->string('kategori')->nullable();
             $table->float('presentase')->nullable();
             $table->enum('aman', ['aman', 'tidak aman'])->nullable();
             $table->timestamps();

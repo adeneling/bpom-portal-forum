@@ -104,10 +104,13 @@ Route::group(['namespace' => 'Back', 'prefix' => 'admin', 'as' => 'admin.'], fun
 });
 
 Route::get('tes', function(){
-	$pasarAman = App\Models\PasarAman\PasarAman::all();
-	foreach($pasarAman as $val){
-		echo "<pre>";
-		echo print_r($val->pasar());
-		echo "<br>";
-	}
+	// $pasarAman = App\Models\PasarAman\PasarAman::has('pasar')->count();
+	$pasarRemote = App\Models\Remote\Pasar::doesntHave('samplingDetail')->count();
+	$detail = App\Models\Remote\SamplingDetail::has('pasar')->count();
+
+	echo $pasarRemote;
+
+
+	
+	
 });

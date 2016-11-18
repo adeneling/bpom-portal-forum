@@ -22,7 +22,7 @@
 				<div class="entry-content clearfix">
 					<figure class="featured-image">
 						<center>
-							<img src="{{ asset(isset($pasar->photo) ? $pasar->photo : 'assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="featured-image" />
+							<img src="{{ $pasar->photo != '' ? str_replace('../', 'http://sipaman.pom.go.id/sipaman/', $pasar->photo) : asset('assets/frontend/img/logo-bpom.png') }}" class="img-responsive" alt="featured-image" />
 							<span><strong>Alamat Pasar: {{ $pasar->alamat_pasar }}</strong></span>
 						</center>						
 					</figure>
